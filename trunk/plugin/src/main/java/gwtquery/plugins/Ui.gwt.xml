@@ -1,0 +1,8 @@
+<module>
+  <inherits name='com.google.gwt.query.Query' />
+  <source path="ui" />
+  <script src="jquery-ui/jquery-1.4.2.js" />
+  <script src="jquery-ui/ui/jquery-ui.js" />
+</module>
+    
+
