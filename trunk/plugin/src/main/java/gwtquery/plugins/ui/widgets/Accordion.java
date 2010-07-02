@@ -172,8 +172,8 @@ public class Accordion extends UiWidget<Accordion, Accordion.Options> {
     }-*/;
   }
 
-  public static class AccordionChangeEvent extends JavaScriptObject {
-    protected AccordionChangeEvent() {}
+  public static class ChangeEvent extends JavaScriptObject {
+    protected ChangeEvent() {}
     
     public static final String NAME = "accordionchange";
 
@@ -195,8 +195,8 @@ public class Accordion extends UiWidget<Accordion, Accordion.Options> {
     }-*/;
   }
   
-  public static class AccordionChangeStartEvent extends JavaScriptObject {
-    protected AccordionChangeStartEvent() {}
+  public static class ChangeStartEvent extends JavaScriptObject {
+    protected ChangeStartEvent() {}
     
     public static final String NAME = "accordionchangestart";
 

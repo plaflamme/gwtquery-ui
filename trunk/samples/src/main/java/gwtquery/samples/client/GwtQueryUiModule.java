@@ -5,7 +5,6 @@ import static gwtquery.plugins.ui.Ui.Ui;
 import gwtquery.plugins.ui.widgets.Accordion;
 import gwtquery.plugins.ui.widgets.Button;
 import gwtquery.plugins.ui.widgets.Dialog;
-import gwtquery.plugins.ui.widgets.Accordion.AccordionChangeEvent;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
@@ -64,10 +63,10 @@ public class GwtQueryUiModule implements EntryPoint {
           }
         }));
 
-        $(".accordion").as(Ui).accordion().bind(AccordionChangeEvent.NAME, new Function() {
+        $(".accordion").as(Ui).accordion().bind(Accordion.ChangeEvent.NAME, new Function() {
           @Override
           public boolean f(Event e, Object data) {
-            AccordionChangeEvent accordionChange = ((JavaScriptObject)data).cast();
+            Accordion.ChangeEvent accordionChange = ((JavaScriptObject)data).cast();
             GWT.log("AccordionChange: " + stringify(accordionChange));
             return false;
           }

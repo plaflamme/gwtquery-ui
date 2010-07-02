@@ -1,10 +1,12 @@
 package gwtquery.plugins.ui;
 
 import static gwtquery.plugins.ui.widgets.Accordion.Accordion;
+import static gwtquery.plugins.ui.widgets.Autocomplete.Autocomplete;
 import static gwtquery.plugins.ui.widgets.Button.Button;
-import static gwtquery.plugins.ui.widgets.Menu.Menu;
 import static gwtquery.plugins.ui.widgets.Dialog.Dialog;
+import static gwtquery.plugins.ui.widgets.Menu.Menu;
 import gwtquery.plugins.ui.widgets.Accordion;
+import gwtquery.plugins.ui.widgets.Autocomplete;
 import gwtquery.plugins.ui.widgets.Button;
 import gwtquery.plugins.ui.widgets.Dialog;
 import gwtquery.plugins.ui.widgets.Menu;
@@ -71,6 +73,18 @@ public class Ui extends GQuery {
 
   public final Accordion accordion(String options) {
     return asWidget(Accordion, options);
+  }
+
+  public final Autocomplete Autocomplete() {
+    return asWidget(Autocomplete);
+  }
+
+  public final Autocomplete Autocomplete(Autocomplete.Options options) {
+    return asWidget(Autocomplete, options);
+  }
+
+  public final Autocomplete Autocomplete(String options) {
+    return asWidget(Autocomplete, options);
   }
 
   public final Button button() {
