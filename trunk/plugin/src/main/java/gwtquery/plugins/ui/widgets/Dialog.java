@@ -1,16 +1,22 @@
 package gwtquery.plugins.ui.widgets;
 
 import gwtquery.plugins.ui.Ui;
-import gwtquery.plugins.ui.UiWidget;
 import gwtquery.plugins.ui.UiPlugin;
+import gwtquery.plugins.ui.UiWidget;
 import gwtquery.plugins.ui.WidgetOptions;
-import gwtquery.plugins.ui.widgets.Accordion.Options;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.NodeList;
 import com.google.gwt.query.client.Function;
 
+/**
+ * Implements jQuery-UI's Dialog
+ * 
+ * @see <a href="http://docs.jquery.com/UI/Dialog">jQuery-UI's Dialog</a>
+ * 
+ * @author Philippe Laflamme
+ */
 public class Dialog extends UiWidget<Dialog, Dialog.Options> {
 
   public static class Options extends WidgetOptions<Options> {

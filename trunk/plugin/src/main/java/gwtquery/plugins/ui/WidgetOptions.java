@@ -2,7 +2,14 @@ package gwtquery.plugins.ui;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class WidgetOptions<T extends WidgetOptions<?>> extends JavaScriptObject {
+/**
+ * Base class for widget option structures. This also defines all common widget properties.
+ *
+ * @param <T> the option type for method chaining
+ * 
+ * @author Philippe Laflamme
+ */
+public abstract class WidgetOptions<T extends WidgetOptions<?>> extends JavaScriptObject {
 
   protected WidgetOptions() {
     

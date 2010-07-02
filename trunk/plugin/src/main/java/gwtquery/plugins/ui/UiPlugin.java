@@ -16,16 +16,21 @@
 package gwtquery.plugins.ui;
 
 /**
- * A GQuery plugin. All GQuery plugins must implement this interface.
- *
+ * A GQuery-UI widget plugin. All GQuery-UI widget plugins must implement this interface.
+ * 
  * @param <T> the plugin class
+ * 
+ * @author Philippe Laflamme
  */
 public interface UiPlugin<T extends Ui> {
 
   /**
-   * Called by the GQuery.as() method in order to pass the current matched set.
-   * Typically a plugin will want to call a super class copy constructor in
-   * order to copy the internal matched set of elements.
+   * Called by the Ui.asWidget() method in order to pass the current matched set and widget options.
+   * @param ui the current matched set
+   * @param options the widget options (may be null)
+   * 
+   * @return an instance of the {@code UiPlugin}
    */
   T init(Ui ui, WidgetOptions<?> options);
+
 }

@@ -9,6 +9,13 @@ import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.NodeList;
 
+/**
+ * Implements jQuery-UI's Accordion
+ * 
+ * @see <a href="http://docs.jquery.com/UI/Button">jQuery-UI's Button</a>
+ * 
+ * @author Philippe Laflamme
+ */
 public class Button extends UiWidget<Button, Button.Options> {
 
   public static class Options extends WidgetOptions<Options> {

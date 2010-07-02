@@ -20,6 +20,7 @@ import com.google.gwt.query.client.Plugin;
 
 /**
  * Experimental Gwt Query plugin for integrating JQuery UI.
+ * @author Philippe Laflamme
  */
 public class Ui extends GQuery {
 

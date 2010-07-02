@@ -5,7 +5,15 @@ import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.NodeList;
 import com.google.gwt.query.client.Function;
 
-public abstract class UiWidget<T extends UiWidget<?,?>, O extends WidgetOptions<?>> extends Ui {
+/**
+ * An abstract base class for all JQuery UI widgets.
+ * 
+ * @param <T> the widget type. Used for returning the proper type for method chaining
+ * @param <O> the widget's options class
+ * 
+ * @author Philippe Laflamme
+ */
+public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions<?>> extends Ui {
 
   protected UiWidget(NodeList<Element> nodeList, JavaScriptObject jquery) {
     super(nodeList, jquery);
@@ -36,6 +44,14 @@ public abstract class UiWidget<T extends UiWidget<?,?>, O extends WidgetOptions<
     return getWidgetInstance();
   }
 
+  /**
+   * Binds a custom event to a callback function. This is used by jQuery-ui's event binding system.
+   * 
+   * @param name the widget's custom event name
+   * @param f the callback function. The instance should override {@code Function#f(com.google.gwt.user.client.Event,
+   * Object)}
+   * @return this
+   */
   public native final T bind(String name, Function f) /*-{
     this.@gwtquery.plugins.ui.Ui::jquery = this.@gwtquery.plugins.ui.Ui::jquery.bind(name, function(event, ui) {
       f.@com.google.gwt.query.client.Function::f(Lcom/google/gwt/user/client/Event;Ljava/lang/Object;)(event, ui);
@@ -58,7 +74,7 @@ public abstract class UiWidget<T extends UiWidget<?,?>, O extends WidgetOptions<
   protected void invoke(String method, boolean arg) {
     invoke(getWidgetType(), method, arg);
   }
-  
+
   protected abstract T getWidgetInstance();
 
   protected abstract String getWidgetType();
@@ -66,7 +82,7 @@ public abstract class UiWidget<T extends UiWidget<?,?>, O extends WidgetOptions<
   private native final void invoke(String type, String method) /*-{
     this.@gwtquery.plugins.ui.Ui::jquery = this.@gwtquery.plugins.ui.Ui::jquery[type](method);
   }-*/;
-  
+
   private native final void invoke(String type, String method, Object arg) /*-{
     this.@gwtquery.plugins.ui.Ui::jquery = this.@gwtquery.plugins.ui.Ui::jquery[type](method, arg);
   }-*/;

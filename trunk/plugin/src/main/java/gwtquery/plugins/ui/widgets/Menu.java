@@ -8,8 +8,14 @@ import gwtquery.plugins.ui.WidgetOptions;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.NodeList;
-import com.google.gwt.query.client.GQuery;
 
+/**
+ * Implements jQuery-UI's Menu
+ * 
+ * @see <a href="http://docs.jquery.com/UI/Menu">jQuery-UI's Menu</a>
+ * 
+ * @author Philippe Laflamme
+ */
 public class Menu extends UiWidget<Menu, Menu.Options> {
 
   public static class Options extends WidgetOptions<Options> {

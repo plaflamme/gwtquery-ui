@@ -10,7 +10,6 @@ import gwtquery.plugins.ui.widgets.Accordion.AccordionChangeEvent;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
-import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.query.client.Function;
 import com.google.gwt.user.client.Event;
@@ -20,6 +19,7 @@ public class GwtQueryUiModule implements EntryPoint {
   public void onModuleLoad() {
 
     $(".outer").eq(0).after("<button id='enhance'>Enhance</button>");
+
     $("#enhance").one(Event.ONCLICK, null, new Function() {
       @Override
       public boolean f(Event e) {

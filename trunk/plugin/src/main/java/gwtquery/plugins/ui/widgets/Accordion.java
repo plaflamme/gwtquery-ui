@@ -4,14 +4,19 @@ import gwtquery.plugins.ui.Ui;
 import gwtquery.plugins.ui.UiPlugin;
 import gwtquery.plugins.ui.UiWidget;
 import gwtquery.plugins.ui.WidgetOptions;
-import gwtquery.plugins.ui.widgets.Button.Icons;
-import gwtquery.plugins.ui.widgets.Button.Options;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.NodeList;
 import com.google.gwt.query.client.Function;
 
+/**
+ * Implements jQuery-UI's Accordion
+ * 
+ * @see <a href="http://docs.jquery.com/UI/Accordion">jQuery-UI's Accordion</a>
+ * 
+ * @author Philippe Laflamme
+ */
 public class Accordion extends UiWidget<Accordion, Accordion.Options> {
 
   public static class Options extends WidgetOptions<Options> {
@@ -167,29 +172,12 @@ public class Accordion extends UiWidget<Accordion, Accordion.Options> {
     }-*/;
   }
 
-  public static class Events extends WidgetOptions<Options> {
-    
-    protected Events() {
-      
-    }
-
-    public static native final Events create() /*-{
-      return {};
-    }-*/;
-
-    public native final Events change(Function f)/*-{
-      this["change"] = function(event, ui) {
-      }
-      return this;
-    }-*/;
-
-  }
-  
   public static class AccordionChangeEvent extends JavaScriptObject {
     protected AccordionChangeEvent() {}
     
     public static final String NAME = "accordionchange";
 
+    /* newHeader is a jQuery object. We should probably return a GQuery instance in our case. */
     public native final JavaScriptObject newHeader()/*-{
       return this["newHeader"];
     }-*/;
@@ -228,10 +216,7 @@ public class Accordion extends UiWidget<Accordion, Accordion.Options> {
       return this["oldContent"];
     }-*/;
   }
-  
-  /**
-   * Used to register the plugin.
-   */
+
   private static class AccordionPlugin implements UiPlugin<Accordion> {
 
     public Accordion init(Ui ui, WidgetOptions<?> options) {
@@ -261,10 +246,6 @@ public class Accordion extends UiWidget<Accordion, Accordion.Options> {
 
   public Accordion activateNone() {
     invoke("activate", false);
-    return this;
-  }
-
-  public Accordion option(String name, String value) {
     return this;
   }
 
