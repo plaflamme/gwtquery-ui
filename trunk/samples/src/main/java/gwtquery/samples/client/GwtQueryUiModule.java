@@ -3,6 +3,7 @@ package gwtquery.samples.client;
 import static com.google.gwt.query.client.GQuery.$;
 import static gwtquery.plugins.ui.Ui.Ui;
 import gwtquery.plugins.ui.widgets.Accordion;
+import gwtquery.plugins.ui.widgets.Autocomplete;
 import gwtquery.plugins.ui.widgets.Button;
 import gwtquery.plugins.ui.widgets.Dialog;
 
@@ -50,13 +51,13 @@ public class GwtQueryUiModule implements EntryPoint {
         })).parent().as(Ui).menu().refresh();
 
         $(".accordion").as(Ui).accordion(Accordion.Options.create().collapsible(true).active(false)).after(//
-        $("<button>Activate tab 2</button>").as(Ui).button().click(new Function() {
+        $("<button>Toggle tab 2</button>").as(Ui).button().click(new Function() {
           @Override
           public void f(Element e) {
             $(".accordion").as(Ui).accordion().activate(1);
           }
         })).after(//
-        $("<button>Activate tab 1</button>").as(Ui).button().click(new Function() {
+        $("<button>Toggle tab 1</button>").as(Ui).button().click(new Function() {
           @Override
           public void f(Element e) {
             $(".accordion").as(Ui).accordion().activate(0);
@@ -88,6 +89,7 @@ public class GwtQueryUiModule implements EntryPoint {
           }
         })));
 
+        $(".autocomplete").as(Ui).autocomplete(Autocomplete.Options.create().minLength(2).source("Montreal", "Quebec", "Paris", "London", "San Fransisco", "San Diego", "Santa Barbara"));
         return true;
       }
     });

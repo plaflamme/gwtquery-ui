@@ -75,15 +75,15 @@ public class Ui extends GQuery {
     return asWidget(Accordion, options);
   }
 
-  public final Autocomplete Autocomplete() {
+  public final Autocomplete autocomplete() {
     return asWidget(Autocomplete);
   }
 
-  public final Autocomplete Autocomplete(Autocomplete.Options options) {
+  public final Autocomplete autocomplete(Autocomplete.Options options) {
     return asWidget(Autocomplete, options);
   }
 
-  public final Autocomplete Autocomplete(String options) {
+  public final Autocomplete autocomplete(String options) {
     return asWidget(Autocomplete, options);
   }
 
