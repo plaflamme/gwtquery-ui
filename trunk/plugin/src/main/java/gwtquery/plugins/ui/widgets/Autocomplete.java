@@ -103,51 +103,19 @@ public class Autocomplete extends UiWidget<Autocomplete, Autocomplete.Options> {
 
   }
 
-  public static class SearchEvent extends JavaScriptObject {
-    protected SearchEvent() {}
+  public static class Event extends JavaScriptObject {
     
-    public static final String NAME = "autocompletesearch";
-
-  }
-  
-  public static class OpenEvent extends JavaScriptObject {
-    protected OpenEvent() {}
+    public static final String search = "autocompletesearch";
+    public static final String open = "autocompleteopen";
+    public static final String focus = "autocompletefocus";
+    public static final String select = "autocompleteselect";
+    public static final String close = "autocompleteclose";
+    public static final String change = "autocompletechange";
     
-    public static final String NAME = "autocompleteopen";
-  }
+    protected Event() {
+    }
 
-  public static class FocusEvent extends JavaScriptObject {
-    protected FocusEvent() {}
-    
-    public static final String NAME = "autocompletefocus";
-
-    public native final JavaScriptObject item() /*-{
-      return this["item"];
-    }-*/;
-  }
-
-  public static class SelectEvent extends JavaScriptObject {
-    protected SelectEvent() {}
-    
-    public static final String NAME = "autocompleteselect";
-
-    public native final JavaScriptObject item() /*-{
-      return this["item"];
-    }-*/;
-  }
-
-  public static class CloseEvent extends JavaScriptObject {
-    protected CloseEvent() {}
-    
-    public static final String NAME = "autocompleteclose";
-  }
-
-  public static class ChangeEvent extends JavaScriptObject {
-    protected ChangeEvent() {}
-    
-    public static final String NAME = "autocompletechange";
-
-    public native final JavaScriptObject item() /*-{
+    public native final Source item() /*-{
       return this["item"];
     }-*/;
   }

@@ -171,11 +171,14 @@ public class Accordion extends UiWidget<Accordion, Accordion.Options> {
       return this["icons"];
     }-*/;
   }
+  
+  public static class Event extends JavaScriptObject {
 
-  public static class ChangeEvent extends JavaScriptObject {
-    protected ChangeEvent() {}
-    
-    public static final String NAME = "accordionchange";
+    public static final String change = "accordionchange";
+    public static final String changestart = "accordionchangestart";
+
+    protected Event() {
+    }
 
     /* newHeader is a jQuery object. We should probably return a GQuery instance in our case. */
     public native final JavaScriptObject newHeader()/*-{
@@ -194,28 +197,7 @@ public class Accordion extends UiWidget<Accordion, Accordion.Options> {
       return this["oldContent"];
     }-*/;
   }
-  
-  public static class ChangeStartEvent extends JavaScriptObject {
-    protected ChangeStartEvent() {}
-    
-    public static final String NAME = "accordionchangestart";
 
-    public native final JavaScriptObject newHeader()/*-{
-      return this["newHeader"];
-    }-*/;
-
-    public native final JavaScriptObject newContent()/*-{
-      return this["newContent"];
-    }-*/;
-
-    public native final JavaScriptObject oldHeader()/*-{
-      return this["oldHeader"];
-    }-*/;
-
-    public native final JavaScriptObject oldContent()/*-{
-      return this["oldContent"];
-    }-*/;
-  }
 
   private static class AccordionPlugin implements UiPlugin<Accordion> {
 

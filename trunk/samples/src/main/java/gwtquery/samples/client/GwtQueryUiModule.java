@@ -64,11 +64,11 @@ public class GwtQueryUiModule implements EntryPoint {
           }
         }));
 
-        $(".accordion").as(Ui).accordion().bind(Accordion.ChangeEvent.NAME, new Function() {
+        $(".accordion").as(Ui).accordion().bind(Accordion.Event.change, new Function() {
           @Override
           public boolean f(Event e, Object data) {
-            Accordion.ChangeEvent accordionChange = ((JavaScriptObject)data).cast();
-            GWT.log("AccordionChange: " + stringify(accordionChange));
+            Accordion.Event accordionEvent = ((JavaScriptObject)data).cast();
+            GWT.log("AccordionEvent: " + stringify(accordionEvent));
             return false;
           }
         });
@@ -89,7 +89,15 @@ public class GwtQueryUiModule implements EntryPoint {
           }
         })));
 
-        $(".autocomplete").as(Ui).autocomplete(Autocomplete.Options.create().minLength(2).source("Montreal", "Quebec", "Paris", "London", "San Fransisco", "San Diego", "Santa Barbara"));
+        $(".autocomplete").as(Ui).autocomplete(Autocomplete.Options.create().minLength(2).source("Montreal", "Quebec", "Paris", "London", "San Fransisco", "San Diego", "Santa Barbara"))//
+        .bind(Autocomplete.Event.change + " " + Autocomplete.Event.focus+ " " + Autocomplete.Event.close+ " " + Autocomplete.Event.open+ " " + Autocomplete.Event.search+ " " + Autocomplete.Event.select, new Function() {
+          @Override
+          public boolean f(Event e, Object data) {
+            Autocomplete.Event autocompleteEvent = ((JavaScriptObject)data).cast();
+            GWT.log("AccordionEvent: " + stringify(autocompleteEvent));
+            return false;
+          }
+        });
         return true;
       }
     });
