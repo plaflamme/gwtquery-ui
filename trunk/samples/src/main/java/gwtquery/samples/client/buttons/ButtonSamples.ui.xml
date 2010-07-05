@@ -1,0 +1,17 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+  <g:DockLayoutPanel unit="EM">
+    <g:east size="20">
+      <g:HTMLPanel ui:field="demoLinks">
+        <a id="Buttons">Default Functionality</a>
+        <a id="Radios">Radios</a>
+        <a id="Checkboxes">Checkboxes</a>
+        <a id="Icons">Icons</a>
+      </g:HTMLPanel>
+    </g:east>
+    <g:center>
+      <g:FlowPanel ui:field="center"/>
+    </g:center>
+  </g:DockLayoutPanel>
+
+</ui:UiBinder>
