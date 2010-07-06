@@ -3,11 +3,13 @@ package gwtquery.plugins.ui;
 import static gwtquery.plugins.ui.widgets.Accordion.Accordion;
 import static gwtquery.plugins.ui.widgets.Autocomplete.Autocomplete;
 import static gwtquery.plugins.ui.widgets.Button.Button;
+import static gwtquery.plugins.ui.widgets.Buttonset.Buttonset;
 import static gwtquery.plugins.ui.widgets.Dialog.Dialog;
 import static gwtquery.plugins.ui.widgets.Menu.Menu;
 import gwtquery.plugins.ui.widgets.Accordion;
 import gwtquery.plugins.ui.widgets.Autocomplete;
 import gwtquery.plugins.ui.widgets.Button;
+import gwtquery.plugins.ui.widgets.Buttonset;
 import gwtquery.plugins.ui.widgets.Dialog;
 import gwtquery.plugins.ui.widgets.Menu;
 
@@ -41,7 +43,7 @@ public class Ui extends GQuery {
   static {
     GQuery.registerPlugin(Ui.class, new UiGQueryPlugin());
   }
-  
+
   private static JsMap<Class<? extends Ui>, UiPlugin<? extends Ui>> plugins;
 
   protected JavaScriptObject jquery = null;
@@ -62,7 +64,7 @@ public class Ui extends GQuery {
     super(list);
     this.jquery = jquery;
   }
-  
+
   public final Accordion accordion() {
     return asWidget(Accordion);
   }
@@ -98,7 +100,19 @@ public class Ui extends GQuery {
   public final Button button(String options) {
     return asWidget(Button, options);
   }
-  
+
+  public final Buttonset buttonset() {
+    return asWidget(Buttonset);
+  }
+
+  public final Buttonset buttonset(Button.Options options) {
+    return asWidget(Buttonset, options);
+  }
+
+  public final Buttonset buttonset(String options) {
+    return asWidget(Buttonset, options);
+  }
+
   public final Dialog dialog() {
     return asWidget(Dialog);
   }
@@ -124,30 +138,29 @@ public class Ui extends GQuery {
   }
 
   public static void registerPlugin(Class<? extends Ui> plugin, UiPlugin<? extends Ui> pluginFactory) {
-    if (plugins == null) {
+    if(plugins == null) {
       plugins = JsMap.createObject().cast();
     }
     plugins.put(plugin, pluginFactory);
   }
 
-  
   public <T extends Ui> T asWidget(Class<T> plugin) {
-    return asWidget(plugin, (WidgetOptions<?>)null);
+    return asWidget(plugin, (WidgetOptions<?>) null);
   }
-  
+
   public <T extends Ui> T asWidget(Class<T> plugin, String options) {
-    return asWidget(plugin, (WidgetOptions<?>)JsonUtils.unsafeEval(options));
+    return asWidget(plugin, (WidgetOptions<?>) JsonUtils.unsafeEval(options));
   }
-  
+
   /**
    * Convert to Plugin interface provided by Class literal.
    */
   @SuppressWarnings("unchecked")
   public <T extends Ui> T asWidget(Class<T> plugin, WidgetOptions<?> options) {
     // GQuery is not a plugin for itself
-    if (plugin == Ui) {
+    if(plugin == Ui) {
       return (T) $(this);
-    } else if (plugins != null) {
+    } else if(plugins != null) {
       return (T) plugins.get(plugin).init(this, options);
     }
     throw new RuntimeException("No plugin registered for class " + plugin);

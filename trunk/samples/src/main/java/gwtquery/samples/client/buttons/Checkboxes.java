@@ -17,9 +17,8 @@ public class Checkboxes implements Demo {
   }
 
   public void setupDemoElement(Element demo) {
-    // TODO: implement buttonset
     $("#check", demo).as(Ui).button();
-    $("#format", demo).as(Ui).button();
+    $("#format", demo).as(Ui).buttonset();
   }
 
 }

@@ -17,7 +17,6 @@ public class Radios implements Demo {
   }
 
   public void setupDemoElement(Element demo) {
-    // TODO: implement buttonset
-    $("#radio", demo).as(Ui).button();
+    $("#radio", demo).as(Ui).buttonset();
   }
 }

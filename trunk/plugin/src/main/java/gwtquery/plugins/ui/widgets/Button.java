@@ -10,7 +10,7 @@ import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.NodeList;
 
 /**
- * Implements jQuery-UI's Accordion
+ * Implements jQuery-UI's Button
  * 
  * @see <a href="http://docs.jquery.com/UI/Button">jQuery-UI's Button</a>
  * 
@@ -108,10 +108,6 @@ public class Button extends UiWidget<Button, Button.Options> {
 
   public Button refresh() {
     invoke("refresh");
-    return this;
-  }
-
-  public Button option(String name, String value) {
     return this;
   }
 
