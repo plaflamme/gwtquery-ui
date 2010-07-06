@@ -14,7 +14,7 @@
       </g:HTMLPanel>
     </g:west>
     <g:center>
-      <g:FlowPanel ui:field="center" height="100%"/>
+      <g:ScrollPanel ui:field="center"/>
     </g:center>
   </g:DockLayoutPanel>
 

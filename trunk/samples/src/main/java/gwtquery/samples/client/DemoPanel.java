@@ -9,8 +9,8 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiTemplate;
 import com.google.gwt.user.client.Event;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HTMLPanel;
+import com.google.gwt.user.client.ui.HasWidgets;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Widget;
 
@@ -26,7 +26,7 @@ public class DemoPanel extends Composite {
   Label title;
 
   @UiField
-  FlowPanel center;
+  HasWidgets center;
 
   @UiField
   HTMLPanel demoLinks;
@@ -43,6 +43,7 @@ public class DemoPanel extends Composite {
           HTMLPanel p = new HTMLPanel(d.getDemoHtml());
           center.add(p);
           d.setupDemoElement($(".demo", p.getElement()).elements()[0]);
+          center.add(new ViewSourcePanel(d));
           return false;
         }
       }));
