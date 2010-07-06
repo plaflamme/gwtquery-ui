@@ -2,26 +2,35 @@ package gwtquery.samples.client.buttons;
 
 import static com.google.gwt.query.client.GQuery.$;
 import static gwtquery.plugins.ui.Ui.Ui;
+import gwtquery.samples.client.Demo;
 
-import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
-import com.google.gwt.uibinder.client.UiBinder;
-import com.google.gwt.uibinder.client.UiTemplate;
-import com.google.gwt.user.client.ui.Widget;
 
-public class Radios extends BaseDemoPanel {
+public class Radios implements Demo {
 
-  @UiTemplate("Radios.ui.xml")
-  interface MyBinder extends UiBinder<Widget, Radios> {
+  public String getName() {
+    return "Radios";
   }
 
-  private static MyBinder uiBinder = GWT.create(MyBinder.class);
-
-  public Radios() {
-    initWidget(uiBinder.createAndBindUi(this));
+  public String getDemoHtml() {
+    return new StringBuilder() //
+    .append("<div class=\"demo\">") //
+    .append("<form>") //
+    .append("<div id=\"radio\">") //
+    .append("<input type=\"radio\" id=\"radio1\" name=\"radio\" />") //
+    .append("<label for=\"radio1\">Choice 1</label>") //
+    .append("<input type=\"radio\" id=\"radio2\" name=\"radio\" checked=\"checked\"/>") //
+    .append("<label for=\"radio2\">Choice 2</label>") //
+    .append("<input type=\"radio\" id=\"radio1\" name=\"radio\" />") //
+    .append("<label for=\"radio1\">Choice 1</label>") //
+    .append("</div></form>") //
+    .append("</div>") //
+    .append("<div class=\"demo-description\">") //
+    .append("<p>A set of three radio buttons transformed into a button set.</p>") //
+    .append("</div>").toString();
   }
 
-  public void setupDemo(Element demo) {
+  public void setupDemoElement(Element demo) {
     // TODO: implement buttonset
     $("#radio", demo).as(Ui).button();
   }
