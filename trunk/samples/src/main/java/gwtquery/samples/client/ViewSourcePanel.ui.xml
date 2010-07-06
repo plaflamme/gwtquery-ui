@@ -6,11 +6,19 @@
       <g:HTMLPanel>
         <fieldset class="source" title="HTML Source">
           <legend>HTML Source</legend>
-          <g:Label ui:field="htmlSource">Html</g:Label>
+          <pre>
+            <code>
+              <g:Label ui:field="htmlSource">Html</g:Label>
+            </code>
+          </pre>
         </fieldset>
         <fieldset class="source" title="Java Source">
           <legend>Java Source</legend>
-          <g:Label ui:field="javaSource">Java</g:Label>
+          <pre>
+            <code>
+              <g:Label ui:field="javaSource">Java</g:Label>
+            </code>
+          </pre>
         </fieldset>
       </g:HTMLPanel>
     </g:FlowPanel>

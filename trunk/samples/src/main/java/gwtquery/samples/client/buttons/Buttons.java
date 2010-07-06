@@ -15,15 +15,7 @@ public class Buttons implements Demo {
   }
   
   public String getDemoHtml() {
-    return new StringBuilder()
-    .append("<div class=\"demo\">\n") //
-    .append("<button>A button element</button>") //
-    .append("<input value=\"A submit button\" type=\"submit\" />") //
-    .append("<a href=\"#\">An anchor</a>") //
-    .append("</div>") //
-    .append("<div class=\"demo-description\">") //
-    .append("<p>Examples of the markup that can be used for buttons: A button element, an input of type submit and an anchor.</p>")//
-    .append("</div>").toString();
+    return "buttons/buttons.html";
   }
 
   public void setupDemoElement(Element demo) {

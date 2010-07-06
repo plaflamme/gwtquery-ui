@@ -3,6 +3,11 @@ package gwtquery.samples.client;
 import static com.google.gwt.query.client.GQuery.$;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.http.client.Request;
+import com.google.gwt.http.client.RequestBuilder;
+import com.google.gwt.http.client.RequestCallback;
+import com.google.gwt.http.client.RequestException;
+import com.google.gwt.http.client.Response;
 import com.google.gwt.query.client.Function;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
@@ -31,7 +36,7 @@ public class DemoPanel extends Composite {
   @UiField
   HTMLPanel demoLinks;
 
-  public DemoPanel(String title, Demo ... demos) {
+  public DemoPanel(String title, Demo... demos) {
     initWidget(uiBinder.createAndBindUi(this));
 
     this.title.setText(title);
@@ -40,13 +45,33 @@ public class DemoPanel extends Composite {
         @Override
         public boolean f(Event e) {
           center.clear();
-          HTMLPanel p = new HTMLPanel(d.getDemoHtml());
-          center.add(p);
-          d.setupDemoElement($(".demo", p.getElement()).elements()[0]);
-          center.add(new ViewSourcePanel(d));
+          fetchHtml(d, new RequestCallback() {
+
+            public void onResponseReceived(Request request, Response response) {
+              String html = response.getText();
+              HTMLPanel p = new HTMLPanel(html);
+              center.add(p);
+              d.setupDemoElement($(".demo", p.getElement()).elements()[0]);
+              center.add(new ViewSourcePanel(d, html));
+            }
+
+            public void onError(Request request, Throwable exception) {
+              // TODO, tell the user something horrible just happened.
+            }
+          });
           return false;
         }
       }));
+    }
+  }
+
+  protected void fetchHtml(Demo demo, RequestCallback htmlCallback) {
+    RequestBuilder rb = new RequestBuilder(RequestBuilder.GET, GWT.getModuleBaseURL() + demo.getDemoHtml());
+    rb.setCallback(htmlCallback);
+    try {
+      rb.send();
+    } catch(RequestException e) {
+      // TODO, tell the user something horrible just happened.
     }
   }
 }

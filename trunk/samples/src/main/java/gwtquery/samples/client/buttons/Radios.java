@@ -13,21 +13,7 @@ public class Radios implements Demo {
   }
 
   public String getDemoHtml() {
-    return new StringBuilder() //
-    .append("<div class=\"demo\">") //
-    .append("<form>") //
-    .append("<div id=\"radio\">") //
-    .append("<input type=\"radio\" id=\"radio1\" name=\"radio\" />") //
-    .append("<label for=\"radio1\">Choice 1</label>") //
-    .append("<input type=\"radio\" id=\"radio2\" name=\"radio\" checked=\"checked\"/>") //
-    .append("<label for=\"radio2\">Choice 2</label>") //
-    .append("<input type=\"radio\" id=\"radio1\" name=\"radio\" />") //
-    .append("<label for=\"radio1\">Choice 1</label>") //
-    .append("</div></form>") //
-    .append("</div>") //
-    .append("<div class=\"demo-description\">") //
-    .append("<p>A set of three radio buttons transformed into a button set.</p>") //
-    .append("</div>").toString();
+    return "buttons/radios.html";
   }
 
   public void setupDemoElement(Element demo) {

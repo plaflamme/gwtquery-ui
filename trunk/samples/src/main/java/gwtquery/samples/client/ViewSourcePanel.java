@@ -22,9 +22,10 @@ public class ViewSourcePanel extends Composite {
   @UiField
   HasText javaSource;
 
-  public ViewSourcePanel(Demo demo) {
+  public ViewSourcePanel(Demo demo, String html) {
     initWidget(uiBinder.createAndBindUi(this));
-    htmlSource.setText(demo.getDemoHtml());
+    htmlSource.setText(html);
     javaSource.setText("TODO");
   }
+
 }
