@@ -16,7 +16,6 @@ import com.google.gwt.user.client.Event;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.HasWidgets;
-import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Widget;
 
 public class DemoPanel extends Composite {
@@ -28,31 +27,24 @@ public class DemoPanel extends Composite {
   private static MyBinder uiBinder = GWT.create(MyBinder.class);
 
   @UiField
-  Label title;
+  HTMLPanel html;
 
-  @UiField
-  HasWidgets center;
-
-  @UiField
-  HTMLPanel demoLinks;
-
-  public DemoPanel(String title, Demo... demos) {
+  public DemoPanel(String title, final HasWidgets demo, Demo... demos) {
     initWidget(uiBinder.createAndBindUi(this));
-
-    this.title.setText(title);
+    $("h3", html.getElement()).text(title);
     for(final Demo d : demos) {
-      $("ul", demoLinks.getElement()).append($("<li><a href=\"#\">" + d.getName() + "</a></li>").click(new Function() {
+      $("ul", html.getElement()).append($("<li><a href=\"#\">" + d.getName() + "</a></li>").click(new Function() {
         @Override
         public boolean f(Event e) {
-          center.clear();
+          demo.clear();
           fetchHtml(d, new RequestCallback() {
 
             public void onResponseReceived(Request request, Response response) {
               String html = response.getText();
               HTMLPanel p = new HTMLPanel(html);
-              center.add(p);
+              demo.add(p);
               d.setupDemoElement($(".demo", p.getElement()).elements()[0]);
-              center.add(new ViewSourcePanel(d, html));
+              demo.add(new ViewSourcePanel(d, html));
             }
 
             public void onError(Request request, Throwable exception) {

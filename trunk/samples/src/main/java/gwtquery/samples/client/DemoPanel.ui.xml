@@ -1,20 +1,10 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
 
-  <g:DockLayoutPanel unit="EM" height="100%">
-    <g:north size="4">
-      <g:HTMLPanel>
-        <h2><g:Label ui:field="title">jQuery UI Title</g:Label></h2>
-      </g:HTMLPanel>
-    </g:north>
-    <g:east size="20">
-      <g:HTMLPanel ui:field="demoLinks">
-        <ul>
-        </ul>
-      </g:HTMLPanel>
-    </g:east>
-    <g:center>
-      <g:FlowPanel ui:field="center" />
-    </g:center>
-  </g:DockLayoutPanel>
+  <g:HTMLPanel ui:field="html">
+    <h3>jQuery UI Title</h3>
+    <div class="demoLinks">
+      <ul></ul>
+    </div>
+  </g:HTMLPanel>
 
 </ui:UiBinder>
