@@ -3,6 +3,7 @@
   <g:DockLayoutPanel unit="EM">
     <g:west size="10">
       <g:HTMLPanel ui:field="demoLinks">
+        <div id="switcher"></div>
         <ul>
           <li>
             <a href="AccordionSamples">Accordion</a>
@@ -11,6 +12,11 @@
             <a href="ButtonSamples">Button</a>
           </li>
         </ul>
+        <script>
+          $(document).ready(function(){
+            $('#switcher').themeswitcher({height:400, width:"100%"});
+          });
+        </script>
       </g:HTMLPanel>
     </g:west>
     <g:center>

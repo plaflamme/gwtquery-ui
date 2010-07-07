@@ -26,7 +26,7 @@ public class GwtQueryUiModule implements EntryPoint {
   }
 
   private static Binder uiBinder = GWT.create(Binder.class);
-  
+
   private final Widget app;
 
   private final Map<String, Widget> samples = new HashMap<String, Widget>();
@@ -36,7 +36,7 @@ public class GwtQueryUiModule implements EntryPoint {
 
   @UiField
   HasWidgets center;
-  
+
   public GwtQueryUiModule() {
     samples.put("AccordionSamples", new AccordionSamples());
     samples.put("ButtonSamples", new ButtonSamples());
@@ -54,6 +54,7 @@ public class GwtQueryUiModule implements EntryPoint {
         return false;
       }
     });
+
   }
 
 }

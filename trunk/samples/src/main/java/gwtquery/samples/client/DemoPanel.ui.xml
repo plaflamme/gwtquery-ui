@@ -3,7 +3,7 @@
   <g:DockLayoutPanel unit="EM" height="100%">
     <g:north size="4">
       <g:HTMLPanel>
-        <h2><g:Label ui:field="title">jQuery UI Buttons</g:Label></h2>
+        <h2><g:Label ui:field="title">jQuery UI Title</g:Label></h2>
       </g:HTMLPanel>
     </g:north>
     <g:east size="20">
