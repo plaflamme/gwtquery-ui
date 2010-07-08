@@ -15,6 +15,10 @@ public class Checkboxes implements Demo {
   public String getDemoHtml() {
     return "buttons/checkboxes.html";
   }
+  
+  public String getJavaSource() {
+    return "buttons/Checkboxes.java";
+  }
 
   public void setupDemoElement(Element demo) {
     $("#check", demo).as(Ui).button();

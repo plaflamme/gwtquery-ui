@@ -16,6 +16,10 @@ public class Radios implements Demo {
     return "buttons/radios.html";
   }
 
+  public String getJavaSource() {
+    return "buttons/Radios.java";
+  }
+
   public void setupDemoElement(Element demo) {
     $("#radio", demo).as(Ui).buttonset();
   }

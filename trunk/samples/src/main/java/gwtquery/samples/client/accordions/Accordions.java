@@ -15,6 +15,10 @@ public class Accordions implements Demo {
   public String getDemoHtml() {
     return "accordions/accordions.html";
   }
+  
+  public String getJavaSource() {
+    return "accordions/Accordions.java";
+  }
 
   public void setupDemoElement(Element demo) {
     $("#accordion", demo).as(Ui).accordion();

@@ -17,6 +17,10 @@ public class Buttons implements Demo {
   public String getDemoHtml() {
     return "buttons/buttons.html";
   }
+  
+  public String getJavaSource() {
+    return "buttons/Buttons.java";
+  }
 
   public void setupDemoElement(Element demo) {
     $("button, a, input", demo).as(Ui).button();

@@ -17,6 +17,10 @@ public class Icons implements Demo {
     return "buttons/icons.html";
   }
 
+  public String getJavaSource() {
+    return "buttons/Icons.java";
+  }
+
   public void setupDemoElement(Element demo) {
     $("button", demo).eq(0) //
     .as(Ui).button(Button.Options.create().icons(Button.Icons.create().primary("ui-icon-locked")).text(false)).next()//
