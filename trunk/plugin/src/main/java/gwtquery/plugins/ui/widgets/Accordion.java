@@ -213,7 +213,7 @@ public class Accordion extends UiWidget<Accordion, Accordion.Options> {
   }
 
   public Accordion(NodeList<Element> list, Accordion.Options options) {
-    super(list, initUiWidget(list, options));
+    super(list, "accordion", options);
   }
 
   public Accordion resize() {
@@ -230,19 +230,5 @@ public class Accordion extends UiWidget<Accordion, Accordion.Options> {
     invoke("activate", false);
     return this;
   }
-
-  @Override
-  protected String getWidgetType() {
-    return "accordion";
-  }
-  
-  @Override
-  protected Accordion getWidgetInstance() {
-    return this;
-  }
-
-  private static native final JavaScriptObject initUiWidget(NodeList<Element> list, Accordion.Options options) /*-{
-    return $wnd.jQuery(list).accordion(options);
-  }-*/;
 
 }

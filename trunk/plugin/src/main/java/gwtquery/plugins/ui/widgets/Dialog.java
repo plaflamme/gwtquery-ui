@@ -276,7 +276,7 @@ public class Dialog extends UiWidget<Dialog, Dialog.Options> {
   }
 
   public Dialog(NodeList<Element> list, Dialog.Options options) {
-    super(list, initUiWidget(list, options));
+    super(list, "dialog", options);
   }
 
   public Dialog close() {
@@ -293,19 +293,5 @@ public class Dialog extends UiWidget<Dialog, Dialog.Options> {
     invoke("open");
     return this;
   }
-  
-  @Override
-  protected String getWidgetType() {
-    return "dialog";
-  }
-  
-  @Override
-  protected Dialog getWidgetInstance() {
-    return this;
-  }
-
-  private static native final JavaScriptObject initUiWidget(NodeList<Element> list, Dialog.Options options) /*-{
-    return $wnd.jQuery(list).dialog(options);
-  }-*/;
 
 }

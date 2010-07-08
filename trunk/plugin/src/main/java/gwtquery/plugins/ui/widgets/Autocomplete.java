@@ -134,7 +134,7 @@ public class Autocomplete extends UiWidget<Autocomplete, Autocomplete.Options> {
   }
 
   public Autocomplete(NodeList<Element> list, Autocomplete.Options options) {
-    super(list, initUiWidget(list, options));
+    super(list, "autocomplete", options);
   }
 
   public Autocomplete search() {
@@ -151,19 +151,5 @@ public class Autocomplete extends UiWidget<Autocomplete, Autocomplete.Options> {
     invoke("close");
     return this;
   }
-
-  @Override
-  protected String getWidgetType() {
-    return "autocomplete";
-  }
   
-  @Override
-  protected Autocomplete getWidgetInstance() {
-    return this;
-  }
-
-  private static native final JavaScriptObject initUiWidget(NodeList<Element> list, Autocomplete.Options options) /*-{
-    return $wnd.jQuery(list).autocomplete(options);
-  }-*/;
-
 }

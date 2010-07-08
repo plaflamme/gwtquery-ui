@@ -15,8 +15,20 @@ import com.google.gwt.query.client.Function;
  */
 public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions<?>> extends Ui {
 
-  protected UiWidget(NodeList<Element> nodeList, JavaScriptObject jquery) {
-    super(nodeList, jquery);
+  protected final String widgetType;
+  protected JavaScriptObject ui = null;
+
+  /**
+   * Constructor for building a jQuery-UI widget.
+   * 
+   * @param nodeList the current selection
+   * @param widgetType the type of widget to build (button, accordion, etc.)
+   * @param options the widget options (may be null).
+   */
+  protected UiWidget(NodeList<Element> nodeList, String widgetType, O options) {
+    super(nodeList);
+    this.widgetType = widgetType;
+    ui = initUiWidget(widgetType, nodeList, options);
   }
 
   public T destroy() {
@@ -53,45 +65,50 @@ public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions
    * @return this
    */
   public native final T bind(String name, Function f) /*-{
-    this.@gwtquery.plugins.ui.Ui::jquery = this.@gwtquery.plugins.ui.Ui::jquery.bind(name, function(event, ui) {
+    this.@gwtquery.plugins.ui.UiWidget::ui = this.@gwtquery.plugins.ui.UiWidget::ui.bind(name, function(event, ui) {
       f.@com.google.gwt.query.client.Function::f(Lcom/google/gwt/user/client/Event;Ljava/lang/Object;)(event, ui);
     });
     return this;
   }-*/;
 
   protected void invoke(String method) {
-    invoke(getWidgetType(), method);
+    ui = invoke(ui, widgetType, method);
   }
 
   protected void invoke(String method, Object arg) {
-    invoke(getWidgetType(), method, arg);
+    ui = invoke(ui, widgetType, method, arg);
   }
 
   protected void invoke(String method, int arg) {
-    invoke(getWidgetType(), method, arg);
+    ui = invoke(ui, widgetType, method, arg);
   }
 
   protected void invoke(String method, boolean arg) {
-    invoke(getWidgetType(), method, arg);
+    ui = invoke(ui, widgetType, method, arg);
   }
 
-  protected abstract T getWidgetInstance();
-
-  protected abstract String getWidgetType();
-
-  private native final void invoke(String type, String method) /*-{
-    this.@gwtquery.plugins.ui.Ui::jquery = this.@gwtquery.plugins.ui.Ui::jquery[type](method);
+  protected native final T getWidgetInstance() /*-{
+    return this;
   }-*/;
 
-  private native final void invoke(String type, String method, Object arg) /*-{
-    this.@gwtquery.plugins.ui.Ui::jquery = this.@gwtquery.plugins.ui.Ui::jquery[type](method, arg);
+  private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method) /*-{
+    return ui[type](method);
   }-*/;
 
-  private native final void invoke(String type, String method, int arg) /*-{
-    this.@gwtquery.plugins.ui.Ui::jquery = this.@gwtquery.plugins.ui.Ui::jquery[type](method, arg);
+  private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method, Object arg) /*-{
+    return ui[type](method, arg);
   }-*/;
 
-  private native final void invoke(String type, String method, boolean arg) /*-{
-    this.@gwtquery.plugins.ui.Ui::jquery = this.@gwtquery.plugins.ui.Ui::jquery[type](method, arg);
+  private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method, int arg) /*-{
+    return ui[type](method, arg);
   }-*/;
+
+  private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method, boolean arg) /*-{
+    return ui[type](method, arg);
+  }-*/;
+
+  private native final JavaScriptObject initUiWidget(String type, NodeList<Element> list, O options) /*-{
+    return $wnd.jQuery(list)[type](options);
+  }-*/;
+
 }

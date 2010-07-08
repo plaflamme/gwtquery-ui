@@ -46,8 +46,6 @@ public class Ui extends GQuery {
 
   private static JsMap<Class<? extends Ui>, UiPlugin<? extends Ui>> plugins;
 
-  protected JavaScriptObject jquery = null;
-
   public Ui(Element element) {
     super(element);
   }
@@ -58,11 +56,6 @@ public class Ui extends GQuery {
 
   public Ui(NodeList<Element> list) {
     super(list);
-  }
-
-  protected Ui(NodeList<Element> list, JavaScriptObject jquery) {
-    super(list);
-    this.jquery = jquery;
   }
 
   public final Accordion accordion() {

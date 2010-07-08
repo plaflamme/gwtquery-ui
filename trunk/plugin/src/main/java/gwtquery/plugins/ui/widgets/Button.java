@@ -103,26 +103,12 @@ public class Button extends UiWidget<Button, Button.Options> {
   }
 
   public Button(NodeList<Element> list, Button.Options options) {
-    super(list, initUiWidget(list, options));
+    super(list, "button", options);
   }
 
   public Button refresh() {
     invoke("refresh");
     return this;
   }
-
-  @Override
-  protected String getWidgetType() {
-    return "button";
-  }
-  
-  @Override
-  protected Button getWidgetInstance() {
-    return this;
-  }
-
-  private static native final JavaScriptObject initUiWidget(NodeList<Element> list, Button.Options options) /*-{
-    return $wnd.jQuery(list).button(options);
-  }-*/;
 
 }

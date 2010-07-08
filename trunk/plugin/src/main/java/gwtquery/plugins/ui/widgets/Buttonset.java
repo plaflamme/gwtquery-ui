@@ -5,7 +5,6 @@ import gwtquery.plugins.ui.UiPlugin;
 import gwtquery.plugins.ui.UiWidget;
 import gwtquery.plugins.ui.WidgetOptions;
 
-import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.NodeList;
 
@@ -35,26 +34,12 @@ public class Buttonset extends UiWidget<Buttonset, Button.Options> {
   }
 
   public Buttonset(NodeList<Element> list, Button.Options options) {
-    super(list, initUiWidget(list, options));
+    super(list, "buttonset", options);
   }
 
   public Buttonset refresh() {
     invoke("refresh");
     return this;
   }
-
-  @Override
-  protected String getWidgetType() {
-    return "buttonset";
-  }
-
-  @Override
-  protected Buttonset getWidgetInstance() {
-    return this;
-  }
-
-  private static native final JavaScriptObject initUiWidget(NodeList<Element> list, Button.Options options) /*-{
-    return $wnd.jQuery(list).buttonset(options);
-  }-*/;
 
 }

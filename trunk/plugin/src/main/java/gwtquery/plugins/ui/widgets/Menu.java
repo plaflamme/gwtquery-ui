@@ -5,7 +5,6 @@ import gwtquery.plugins.ui.UiPlugin;
 import gwtquery.plugins.ui.UiWidget;
 import gwtquery.plugins.ui.WidgetOptions;
 
-import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.NodeList;
 
@@ -47,26 +46,12 @@ public class Menu extends UiWidget<Menu, Menu.Options> {
   }
 
   public Menu(NodeList<Element> list, Menu.Options options) {
-    super(list, initUiWidget(list));
+    super(list, "menu", options);
   }
   
   public Menu refresh() {
     invoke("refresh");
     return this;
   }
-  
-  @Override
-  protected String getWidgetType() {
-    return "menu";
-  }
-  
-  @Override
-  protected Menu getWidgetInstance() {
-    return this;
-  }
-
-  private static native final JavaScriptObject initUiWidget(NodeList<Element> list) /*-{
-    return $wnd.jQuery(list).menu();
-  }-*/;
 
 }
