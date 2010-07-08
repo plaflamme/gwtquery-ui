@@ -1,11 +1,15 @@
 package gwtquery.plugins.ui;
 
+import static gwtquery.plugins.ui.interactions.Resizable.Resizable;
+import static gwtquery.plugins.ui.interactions.Sortable.Sortable;
 import static gwtquery.plugins.ui.widgets.Accordion.Accordion;
 import static gwtquery.plugins.ui.widgets.Autocomplete.Autocomplete;
 import static gwtquery.plugins.ui.widgets.Button.Button;
 import static gwtquery.plugins.ui.widgets.Buttonset.Buttonset;
 import static gwtquery.plugins.ui.widgets.Dialog.Dialog;
 import static gwtquery.plugins.ui.widgets.Menu.Menu;
+import gwtquery.plugins.ui.interactions.Resizable;
+import gwtquery.plugins.ui.interactions.Sortable;
 import gwtquery.plugins.ui.widgets.Accordion;
 import gwtquery.plugins.ui.widgets.Autocomplete;
 import gwtquery.plugins.ui.widgets.Button;
@@ -13,7 +17,6 @@ import gwtquery.plugins.ui.widgets.Buttonset;
 import gwtquery.plugins.ui.widgets.Dialog;
 import gwtquery.plugins.ui.widgets.Menu;
 
-import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.NodeList;
@@ -128,6 +131,30 @@ public class Ui extends GQuery {
 
   public final Menu menu(String options) {
     return asWidget(Menu, options);
+  }
+
+  public final Resizable resizable() {
+    return asWidget(Resizable);
+  }
+
+  public final Resizable resizable(Resizable.Options options) {
+    return asWidget(Resizable, options);
+  }
+
+  public final Resizable resizable(String options) {
+    return asWidget(Resizable, options);
+  }
+
+  public final Sortable sortable() {
+    return asWidget(Sortable);
+  }
+
+  public final Sortable sortable(Sortable.Options options) {
+    return asWidget(Sortable, options);
+  }
+
+  public final Sortable sortable(String options) {
+    return asWidget(Sortable, options);
   }
 
   public static void registerPlugin(Class<? extends Ui> plugin, UiPlugin<? extends Ui> pluginFactory) {

@@ -2,24 +2,19 @@ package gwtquery.samples.client.buttons;
 
 import static com.google.gwt.query.client.GQuery.$;
 import static gwtquery.plugins.ui.Ui.Ui;
-import gwtquery.samples.client.Demo;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.query.client.Function;
 import com.google.gwt.user.client.Event;
 
-public class Buttons implements Demo {
+public class Buttons extends AbstractButtonDemo {
+  
+  public Buttons() {
+    super("Buttons");
+  }
   
   public String getName() {
     return "Default Functionality";
-  }
-  
-  public String getDemoHtml() {
-    return "buttons/buttons.html";
-  }
-  
-  public String getJavaSource() {
-    return "buttons/Buttons.java";
   }
 
   public void setupDemoElement(Element demo) {

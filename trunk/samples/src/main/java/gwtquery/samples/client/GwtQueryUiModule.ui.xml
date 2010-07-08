@@ -20,7 +20,7 @@
     </g:west>
     <g:center>
       <g:ScrollPanel>
-        <g:FlowPanel ui:field="demo" />
+        <g:FlowPanel ui:field="demo" width="95%" />
       </g:ScrollPanel>
     </g:center>
   </g:DockLayoutPanel>

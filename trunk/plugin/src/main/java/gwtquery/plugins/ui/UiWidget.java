@@ -56,6 +56,10 @@ public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions
     return getWidgetInstance();
   }
 
+  public T option(String options, Object value) {
+    invoke("option", options, value);
+    return getWidgetInstance();
+  }
   /**
    * Binds a custom event to a callback function. This is used by jQuery-ui's event binding system.
    * 
@@ -87,6 +91,10 @@ public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions
     ui = invoke(ui, widgetType, method, arg);
   }
 
+  protected void invoke(String method, String option, Object value) {
+    invoke(ui, widgetType, method, option, value);
+  }
+
   protected native final T getWidgetInstance() /*-{
     return this;
   }-*/;
@@ -105,6 +113,10 @@ public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions
 
   private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method, boolean arg) /*-{
     return ui[type](method, arg);
+  }-*/;
+
+  private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method, String option, Object value) /*-{
+    return ui[type](method, option, value);
   }-*/;
 
   private native final JavaScriptObject initUiWidget(String type, NodeList<Element> list, O options) /*-{

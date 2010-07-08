@@ -2,22 +2,17 @@ package gwtquery.samples.client.buttons;
 
 import static com.google.gwt.query.client.GQuery.$;
 import static gwtquery.plugins.ui.Ui.Ui;
-import gwtquery.samples.client.Demo;
 
 import com.google.gwt.dom.client.Element;
 
-public class Checkboxes implements Demo {
+public class Checkboxes extends AbstractButtonDemo {
+
+  public Checkboxes() {
+    super("Checkboxes");
+  }
 
   public String getName() {
     return "Checkboxes";
-  }
-
-  public String getDemoHtml() {
-    return "buttons/checkboxes.html";
-  }
-  
-  public String getJavaSource() {
-    return "buttons/Checkboxes.java";
   }
 
   public void setupDemoElement(Element demo) {
