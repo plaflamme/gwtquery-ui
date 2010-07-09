@@ -2,6 +2,7 @@ package gwtquery.samples.client;
 
 import gwtquery.samples.client.accordions.AccordionSamples;
 import gwtquery.samples.client.buttons.ButtonSamples;
+import gwtquery.samples.client.selectables.SelectableSamples;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
@@ -35,6 +36,7 @@ public class GwtQueryUiModule implements EntryPoint {
 
   public void onModuleLoad() {
     RootLayoutPanel.get().add(app);
+    demos.add(new SelectableSamples(demo));
     demos.add(new AccordionSamples(demo));
     demos.add(new ButtonSamples(demo));
   }

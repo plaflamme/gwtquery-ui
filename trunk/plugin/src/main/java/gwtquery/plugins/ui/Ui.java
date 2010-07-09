@@ -2,6 +2,7 @@ package gwtquery.plugins.ui;
 
 import static gwtquery.plugins.ui.interactions.Resizable.Resizable;
 import static gwtquery.plugins.ui.interactions.Sortable.Sortable;
+import static gwtquery.plugins.ui.interactions.Selectable.Selectable;
 import static gwtquery.plugins.ui.widgets.Accordion.Accordion;
 import static gwtquery.plugins.ui.widgets.Autocomplete.Autocomplete;
 import static gwtquery.plugins.ui.widgets.Button.Button;
@@ -10,6 +11,7 @@ import static gwtquery.plugins.ui.widgets.Dialog.Dialog;
 import static gwtquery.plugins.ui.widgets.Menu.Menu;
 import gwtquery.plugins.ui.interactions.Resizable;
 import gwtquery.plugins.ui.interactions.Sortable;
+import gwtquery.plugins.ui.interactions.Selectable;
 import gwtquery.plugins.ui.widgets.Accordion;
 import gwtquery.plugins.ui.widgets.Autocomplete;
 import gwtquery.plugins.ui.widgets.Button;
@@ -143,6 +145,18 @@ public class Ui extends GQuery {
 
   public final Resizable resizable(String options) {
     return asWidget(Resizable, options);
+  }
+
+  public final Selectable selectable() {
+    return asWidget(Selectable);
+  }
+
+  public final Selectable selectable(Selectable.Options options) {
+    return asWidget(Selectable, options);
+  }
+
+  public final Selectable selectable(String options) {
+    return asWidget(Selectable, options);
   }
 
   public final Sortable sortable() {
