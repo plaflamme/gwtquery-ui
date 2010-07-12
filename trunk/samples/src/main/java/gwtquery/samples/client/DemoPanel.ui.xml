@@ -2,9 +2,7 @@
 
   <g:HTMLPanel ui:field="html">
     <h3>jQuery UI Title</h3>
-    <div class="demoLinks">
-      <ul></ul>
-    </div>
+    <ul></ul>
   </g:HTMLPanel>
 
 </ui:UiBinder>

@@ -7,11 +7,13 @@ import gwtquery.samples.client.selectables.SelectableSamples;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiTemplate;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HasWidgets;
+import com.google.gwt.user.client.ui.LayoutPanel;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.Widget;
 
@@ -36,11 +38,15 @@ public class GwtQueryUiModule implements EntryPoint {
   }
 
   public void onModuleLoad() {
-    RootLayoutPanel.get().add(app);
     demos.add(new SelectableSamples(demo));
     demos.add(new AccordionSamples(demo));
     demos.add(new ButtonSamples(demo));
     demos.add(new DialogSamples(demo));
+
+    LayoutPanel layout = RootLayoutPanel.get();
+    layout.add(app);
+    layout.setWidgetLeftRight(app, 15, Unit.PCT, 15, Unit.PCT);
+    layout.setWidgetTopBottom(app, 1, Unit.EM, 1, Unit.EM);
   }
 
 }

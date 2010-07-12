@@ -1,8 +1,9 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
 
-  <g:DockLayoutPanel unit="EM">
+  <g:DockLayoutPanel unit="EM" addStyleNames="dock">
     <g:north size="4">
       <g:HTMLPanel>
+        <h1 style="display:inline">GWT Query UI Demos</h1>
         <div id="switcher" style="float:right"></div>
         <script>
           $(document).ready(function(){
@@ -11,16 +12,30 @@
         </script>
       </g:HTMLPanel>
     </g:north>
-    <g:west size="20">
-      <g:HTMLPanel>
-        <div class="demos">
-          <g:FlowPanel ui:field="demos" />
-        </div>
-      </g:HTMLPanel>
+    <g:west size="15">
+      <g:ScrollPanel>
+        <g:HTMLPanel addStyleNames="navbar">
+          <div class="demos">
+            <g:FlowPanel ui:field="demos" />
+          </div>
+        </g:HTMLPanel>
+      </g:ScrollPanel>
     </g:west>
     <g:center>
-      <g:ScrollPanel>
-        <g:FlowPanel ui:field="demo" width="95%" />
+      <g:ScrollPanel addStyleNames="demo-panel">
+        <g:FlowPanel ui:field="demo" width="95%">
+          <g:HTMLPanel>
+
+            <h3>A re-implementation of the jQuery-UI demos <a href="http://jqueryui.com/demos/">here</a>.</h3>
+
+            <p>Each sample shows the required HTML and GWT (Java) code for producing the demo.</p>
+
+            <p>Each sample re-uses the original HTML source. The original JavaScript source was copy-pasted to the Java class and then incrementally re-written into Java. The resulting Java code is thus quite close to the original JavaScript code.</p>
+
+            <p>You can switch themes using theme switcher widget located at the top-right</p>
+
+          </g:HTMLPanel>
+        </g:FlowPanel>
       </g:ScrollPanel>
     </g:center>
   </g:DockLayoutPanel>
