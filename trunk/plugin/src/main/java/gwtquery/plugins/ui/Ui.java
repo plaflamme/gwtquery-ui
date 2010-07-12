@@ -119,7 +119,7 @@ public class Ui extends GQuery {
     return asWidget(Dialog, options);
   }
 
-  public final Dialog Didialogalog(String options) {
+  public final Dialog dialog(String options) {
     return asWidget(Dialog, options);
   }
 
