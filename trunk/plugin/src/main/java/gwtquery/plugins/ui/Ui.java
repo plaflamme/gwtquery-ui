@@ -1,23 +1,25 @@
 package gwtquery.plugins.ui;
 
 import static gwtquery.plugins.ui.interactions.Resizable.Resizable;
-import static gwtquery.plugins.ui.interactions.Sortable.Sortable;
 import static gwtquery.plugins.ui.interactions.Selectable.Selectable;
+import static gwtquery.plugins.ui.interactions.Sortable.Sortable;
 import static gwtquery.plugins.ui.widgets.Accordion.Accordion;
 import static gwtquery.plugins.ui.widgets.Autocomplete.Autocomplete;
 import static gwtquery.plugins.ui.widgets.Button.Button;
 import static gwtquery.plugins.ui.widgets.Buttonset.Buttonset;
 import static gwtquery.plugins.ui.widgets.Dialog.Dialog;
 import static gwtquery.plugins.ui.widgets.Menu.Menu;
+import static gwtquery.plugins.ui.widgets.Progressbar.Progressbar;
 import gwtquery.plugins.ui.interactions.Resizable;
-import gwtquery.plugins.ui.interactions.Sortable;
 import gwtquery.plugins.ui.interactions.Selectable;
+import gwtquery.plugins.ui.interactions.Sortable;
 import gwtquery.plugins.ui.widgets.Accordion;
 import gwtquery.plugins.ui.widgets.Autocomplete;
 import gwtquery.plugins.ui.widgets.Button;
 import gwtquery.plugins.ui.widgets.Buttonset;
 import gwtquery.plugins.ui.widgets.Dialog;
 import gwtquery.plugins.ui.widgets.Menu;
+import gwtquery.plugins.ui.widgets.Progressbar;
 
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.dom.client.Element;
@@ -142,6 +144,18 @@ public class Ui extends GQuery {
     return asWidget(Menu, options);
   }
 
+  public final Progressbar progressbar() {
+    return asWidget(Progressbar);
+  }
+
+  public final Progressbar progressbar(Progressbar.Options options) {
+    return asWidget(Progressbar, options);
+  }
+
+  public final Progressbar progressbar(String options) {
+    return asWidget(Progressbar, options);
+  }
+  
   public final Resizable resizable() {
     return asWidget(Resizable);
   }
