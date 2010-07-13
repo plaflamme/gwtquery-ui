@@ -49,6 +49,13 @@ public class Ui extends GQuery {
     GQuery.registerPlugin(Ui.class, new UiGQueryPlugin());
   }
 
+  public static void registerPlugin(Class<? extends Ui> plugin, UiPlugin<? extends Ui> pluginFactory) {
+    if(plugins == null) {
+      plugins = JsMap.createObject().cast();
+    }
+    plugins.put(plugin, pluginFactory);
+  }
+
   private static JsMap<Class<? extends Ui>, UiPlugin<? extends Ui>> plugins;
 
   public Ui(Element element) {
@@ -171,13 +178,6 @@ public class Ui extends GQuery {
     return asWidget(Sortable, options);
   }
 
-  public static void registerPlugin(Class<? extends Ui> plugin, UiPlugin<? extends Ui> pluginFactory) {
-    if(plugins == null) {
-      plugins = JsMap.createObject().cast();
-    }
-    plugins.put(plugin, pluginFactory);
-  }
-
   public <T extends Ui> T asWidget(Class<T> plugin) {
     return asWidget(plugin, (WidgetOptions<?>) null);
   }
@@ -187,7 +187,7 @@ public class Ui extends GQuery {
   }
 
   /**
-   * Convert to Plugin interface provided by Class literal.
+   * Convert to the widget's interface provided by Class literal and using the specified options (may be null).
    */
   @SuppressWarnings("unchecked")
   public <T extends Ui> T asWidget(Class<T> plugin, WidgetOptions<?> options) {
