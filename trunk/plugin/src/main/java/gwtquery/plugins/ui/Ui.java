@@ -10,6 +10,7 @@ import static gwtquery.plugins.ui.widgets.Buttonset.Buttonset;
 import static gwtquery.plugins.ui.widgets.Dialog.Dialog;
 import static gwtquery.plugins.ui.widgets.Menu.Menu;
 import static gwtquery.plugins.ui.widgets.Progressbar.Progressbar;
+import static gwtquery.plugins.ui.widgets.Slider.Slider;
 import gwtquery.plugins.ui.interactions.Resizable;
 import gwtquery.plugins.ui.interactions.Selectable;
 import gwtquery.plugins.ui.interactions.Sortable;
@@ -20,6 +21,7 @@ import gwtquery.plugins.ui.widgets.Buttonset;
 import gwtquery.plugins.ui.widgets.Dialog;
 import gwtquery.plugins.ui.widgets.Menu;
 import gwtquery.plugins.ui.widgets.Progressbar;
+import gwtquery.plugins.ui.widgets.Slider;
 
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.dom.client.Element;
@@ -178,6 +180,18 @@ public class Ui extends GQuery {
 
   public final Selectable selectable(String options) {
     return asWidget(Selectable, options);
+  }
+
+  public final Slider slider() {
+    return asWidget(Slider);
+  }
+
+  public final Slider slider(Slider.Options options) {
+    return asWidget(Slider, options);
+  }
+
+  public final Slider slider(String options) {
+    return asWidget(Slider, options);
   }
 
   public final Sortable sortable() {
