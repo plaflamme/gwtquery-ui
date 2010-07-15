@@ -11,6 +11,7 @@ import static gwtquery.plugins.ui.widgets.Dialog.Dialog;
 import static gwtquery.plugins.ui.widgets.Menu.Menu;
 import static gwtquery.plugins.ui.widgets.Progressbar.Progressbar;
 import static gwtquery.plugins.ui.widgets.Slider.Slider;
+import static gwtquery.plugins.ui.widgets.Tabs.Tabs;
 import gwtquery.plugins.ui.interactions.Resizable;
 import gwtquery.plugins.ui.interactions.Selectable;
 import gwtquery.plugins.ui.interactions.Sortable;
@@ -22,6 +23,7 @@ import gwtquery.plugins.ui.widgets.Dialog;
 import gwtquery.plugins.ui.widgets.Menu;
 import gwtquery.plugins.ui.widgets.Progressbar;
 import gwtquery.plugins.ui.widgets.Slider;
+import gwtquery.plugins.ui.widgets.Tabs;
 
 import com.google.gwt.core.client.JsonUtils;
 import com.google.gwt.dom.client.Element;
@@ -204,6 +206,18 @@ public class Ui extends GQuery {
 
   public final Sortable sortable(String options) {
     return asWidget(Sortable, options);
+  }
+
+  public final Tabs tabs() {
+    return asWidget(Tabs);
+  }
+
+  public final Tabs tabs(Tabs.Options options) {
+    return asWidget(Tabs, options);
+  }
+
+  public final Tabs tabs(String options) {
+    return asWidget(Tabs, options);
   }
 
   public <T extends Ui> T asWidget(Class<T> plugin) {

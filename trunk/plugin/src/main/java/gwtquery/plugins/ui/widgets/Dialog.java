@@ -258,6 +258,25 @@ public class Dialog extends UiWidget<Dialog, Dialog.Options> {
       return this;
     }-*/;
   }
+  
+  public static class Event extends JavaScriptObject {
+
+    public static final String beforeclose = "dialogbeforeclose";
+    public static final String open = "dialogopen";
+    public static final String focus = "dialogfocus";
+    public static final String dragStart = "dialogdragstart";
+    public static final String drag = "dialogdrag";
+    public static final String dragStop = "dialogdragstop";
+    public static final String resizeStart = "dialogresizestart";
+    public static final String resize = "dialogresize";
+    public static final String resizeStop = "dialogresizestop";
+    public static final String close = "dialogclose";
+
+    protected Event() {
+    }
+
+  }
+
 
   /**
    * Used to register the plugin.

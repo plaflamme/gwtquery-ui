@@ -99,6 +99,10 @@ public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions
     return this;
   }-*/;
 
+  protected native final int invokeForInt(JavaScriptObject ui, String type, String method) /*-{
+    return ui[type](method);
+  }-*/;
+
   private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method) /*-{
     return ui[type](method);
   }-*/;
@@ -107,16 +111,16 @@ public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions
     return ui[type](method, arg);
   }-*/;
 
+  private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method, Object arg1, Object arg2) /*-{
+    return ui[type](method, arg1, arg2);
+  }-*/;
+
   private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method, int arg) /*-{
     return ui[type](method, arg);
   }-*/;
 
   private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method, boolean arg) /*-{
     return ui[type](method, arg);
-  }-*/;
-
-  private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method, String option, Object value) /*-{
-    return ui[type](method, option, value);
   }-*/;
 
   private native final JavaScriptObject initUiWidget(String type, NodeList<Element> list, O options) /*-{

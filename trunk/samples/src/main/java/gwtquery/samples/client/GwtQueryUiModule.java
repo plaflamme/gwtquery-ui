@@ -6,6 +6,7 @@ import gwtquery.samples.client.dialogs.DialogSamples;
 import gwtquery.samples.client.progressbars.ProgressbarSamples;
 import gwtquery.samples.client.selectables.SelectableSamples;
 import gwtquery.samples.client.sliders.SliderSamples;
+import gwtquery.samples.client.tabs.TabsSamples;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
@@ -46,6 +47,7 @@ public class GwtQueryUiModule implements EntryPoint {
     demos.add(new DialogSamples(demo));
     demos.add(new ProgressbarSamples(demo));
     demos.add(new SliderSamples(demo));
+    demos.add(new TabsSamples(demo));
 
     LayoutPanel layout = RootLayoutPanel.get();
     layout.add(app);

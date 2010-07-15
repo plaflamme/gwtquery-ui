@@ -184,7 +184,7 @@ public class Slider extends UiWidget<Slider, Slider.Options> {
   }
   
   public int intValue() {
-    return invoke(ui, widgetType, "value");
+    return invokeForInt(ui, widgetType, "value");
   }
 
   public int intValues(int index) {
@@ -195,10 +195,6 @@ public class Slider extends UiWidget<Slider, Slider.Options> {
     ui = invoke(ui, widgetType, "values", index, values);
     return this;
   }
-
-  private native final int invoke(JavaScriptObject ui, String type, String method) /*-{
-    return ui[type](method);
-  }-*/;
 
   private native final int invoke(JavaScriptObject ui, String type, String method, int index) /*-{
     return ui[type](method, index);
