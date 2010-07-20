@@ -1,10 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.google.gwt</groupId>
   <artifactId>gwtquery-ui-parent</artifactId>
   <packaging>pom</packaging>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>r40</version>
   <name>GwtQuery UI Plugin Project</name>
   <url>http://gwtquery-ui.googlecode.com</url>
   <description>GwtQuery UI is a plugin for GwtQuery for integrating JQuery UI.</description>
@@ -27,9 +26,9 @@
   </developers>
 
   <scm>
-    <connection>scm:svn:http://gwtquery-ui.googlecode.com/svn/trunk</connection>
-    <developerConnection>scm:svn:https://gwtquery-ui.googlecode.com/svn/trunk</developerConnection>
-    <url>http://code.google.com/p/gwtquery-ui/source/browse/trunk</url>
+    <connection>scm:svn:http://gwtquery-ui.googlecode.com/svn/tags/r40</connection>
+    <developerConnection>scm:svn:https://gwtquery-ui.googlecode.com/svn/tags/r40</developerConnection>
+    <url>http://code.google.com/p/gwtquery-ui/source/browse/tags/r40</url>
   </scm>
 
   <modules>
@@ -124,7 +123,7 @@
         <gwtquery.version>1.0.0-SNAPSHOT</gwtquery.version>
         <gwt.loglevel>INFO</gwt.loglevel>
         <gwt.outputstyle>PRETTY</gwt.outputstyle>
-        <gwt.modulesuffix></gwt.modulesuffix>
+        <gwt.modulesuffix />
       </properties>
     </profile>
 
@@ -146,7 +145,7 @@
         <gwtquery.version>1.0.0-SNAPSHOT</gwtquery.version>
         <gwt.loglevel>ERROR</gwt.loglevel>
         <gwt.outputstyle>OBF</gwt.outputstyle>
-        <gwt.modulesuffix></gwt.modulesuffix>
+        <gwt.modulesuffix />
       </properties>
     </profile>
 
