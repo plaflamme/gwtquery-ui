@@ -1,8 +1,10 @@
 package gwtquery.plugins.ui;
 
+import static gwtquery.plugins.ui.interactions.Draggable.Draggable;
 import static gwtquery.plugins.ui.interactions.Resizable.Resizable;
 import static gwtquery.plugins.ui.interactions.Selectable.Selectable;
 import static gwtquery.plugins.ui.interactions.Sortable.Sortable;
+import static gwtquery.plugins.ui.utilities.Position.Position;
 import static gwtquery.plugins.ui.widgets.Accordion.Accordion;
 import static gwtquery.plugins.ui.widgets.Autocomplete.Autocomplete;
 import static gwtquery.plugins.ui.widgets.Button.Button;
@@ -12,9 +14,11 @@ import static gwtquery.plugins.ui.widgets.Menu.Menu;
 import static gwtquery.plugins.ui.widgets.Progressbar.Progressbar;
 import static gwtquery.plugins.ui.widgets.Slider.Slider;
 import static gwtquery.plugins.ui.widgets.Tabs.Tabs;
+import gwtquery.plugins.ui.interactions.Draggable;
 import gwtquery.plugins.ui.interactions.Resizable;
 import gwtquery.plugins.ui.interactions.Selectable;
 import gwtquery.plugins.ui.interactions.Sortable;
+import gwtquery.plugins.ui.utilities.Position;
 import gwtquery.plugins.ui.widgets.Accordion;
 import gwtquery.plugins.ui.widgets.Autocomplete;
 import gwtquery.plugins.ui.widgets.Button;
@@ -136,6 +140,18 @@ public class Ui extends GQuery {
     return asWidget(Dialog, options);
   }
 
+  public final Draggable draggable() {
+    return asWidget(Draggable);
+  }
+
+  public final Draggable draggable(Draggable.Options options) {
+    return asWidget(Draggable, options);
+  }
+
+  public final Draggable draggable(String options) {
+    return asWidget(Draggable, options);
+  }
+
   public final Menu menu() {
     return asWidget(Menu);
   }
@@ -159,7 +175,15 @@ public class Ui extends GQuery {
   public final Progressbar progressbar(String options) {
     return asWidget(Progressbar, options);
   }
-  
+
+  public final Position position(Position.Options options) {
+    return asWidget(Position, options);
+  }
+
+  public final Position position(String options) {
+    return asWidget(Position, options);
+  }
+
   public final Resizable resizable() {
     return asWidget(Resizable);
   }

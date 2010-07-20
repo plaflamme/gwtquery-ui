@@ -16,6 +16,7 @@ import com.google.gwt.query.client.Function;
 public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions<?>> extends Ui {
 
   protected final String widgetType;
+
   protected JavaScriptObject ui = null;
 
   /**
@@ -60,6 +61,7 @@ public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions
     invoke("option", options, value);
     return getWidgetInstance();
   }
+
   /**
    * Binds a custom event to a callback function. This is used by jQuery-ui's event binding system.
    * 

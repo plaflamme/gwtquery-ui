@@ -8,6 +8,7 @@ import gwtquery.plugins.ui.WidgetOptions;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.NodeList;
+import com.google.gwt.query.client.GQuery;
 
 /**
  * Implements jQuery-UI's Selectable
@@ -43,6 +44,16 @@ public class Selectable extends UiWidget<Selectable, Selectable.Options> {
       return this;
     }-*/;
 
+    public native final Options cancel(NodeList<?> selector) /*-{
+      this["cancel"] = selector;
+      return this;
+    }-*/;
+
+    public final Options cancel(GQuery selector) {
+      this.cancel(selector.get());
+      return this;
+    }
+
     public native final String cancel() /*-{
       return this["cancel"];
     }-*/;
@@ -69,6 +80,16 @@ public class Selectable extends UiWidget<Selectable, Selectable.Options> {
       this["filter"] = filter;
       return this;
     }-*/;
+
+    public native final Options filter(NodeList<?> selector) /*-{
+      this["filter"] = selector;
+      return this;
+    }-*/;
+
+    public final Options filter(GQuery selector) {
+      this.filter(selector.get());
+      return this;
+    }
 
     public native final String filter() /*-{
       return this["filter"];
