@@ -15,7 +15,6 @@
       <groupId>${groupId}</groupId>
       <artifactId>gwtquery-ui</artifactId>
       <version>${version}</version>
-      <type>jar</type>
       <scope>provided</scope>
     </dependency>
   </dependencies>

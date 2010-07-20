@@ -45,6 +45,17 @@
     </repository>
   </distributionManagement>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.google.gwt</groupId>
+        <artifactId>gwtquery</artifactId>
+        <version>${gwtquery.version}</version>
+        <type>jar</type>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
   <build>
     <plugins>
       <plugin>
@@ -110,6 +121,7 @@
 
       <properties>
         <gwt.version>2.0.3</gwt.version>
+        <gwtquery.version>1.0.0-SNAPSHOT</gwtquery.version>
         <gwt.loglevel>INFO</gwt.loglevel>
         <gwt.outputstyle>PRETTY</gwt.outputstyle>
         <gwt.modulesuffix></gwt.modulesuffix>
@@ -120,6 +132,7 @@
       <id>dev</id>
       <properties>
         <gwt.version>2.0.3</gwt.version>
+        <gwtquery.version>1.0.0-SNAPSHOT</gwtquery.version>
         <gwt.loglevel>WARN</gwt.loglevel>
         <gwt.modulesuffix>Dev</gwt.modulesuffix>
         <gwt.outputstyle>PRETTY</gwt.outputstyle>
@@ -130,6 +143,7 @@
       <id>prod</id>
       <properties>
         <gwtversion>2.0.3</gwtversion>
+        <gwtquery.version>1.0.0-SNAPSHOT</gwtquery.version>
         <gwt.loglevel>ERROR</gwt.loglevel>
         <gwt.outputstyle>OBF</gwt.outputstyle>
         <gwt.modulesuffix></gwt.modulesuffix>
