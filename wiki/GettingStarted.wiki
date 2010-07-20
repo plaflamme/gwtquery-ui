@@ -1,0 +1,75 @@
+#summary Setting up a gwtquery-ui project
+
+<wiki:toc max_depth="1" />
+
+= Introduction =
+
+GWT Query-ui is a plugin for GWT Query that enables the use of jQuery-ui widgets. This guide assumes that you are already familiar with GWT Query. If not, please read their [http://code.google.com/p/gwtquery/wiki/GettingStarted guide] first.
+
+= Setting up a project =
+
+== Using Maven ==
+
+First, add a new repository to your POM file:
+
+{{{
+  <repositories>
+    <repository>
+      <id>gwtquery-ui-repository</id>
+      <url>http://gwtquery-ui.googlecode.com/svn/mavenrepo</url>
+    </repository>
+  </repositories>
+}}}
+
+Then, add the following dependency:
+
+{{{
+  <dependencies>
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwtquery-ui</artifactId>
+      <version>r40</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+}}}
+
+Please note that at of this writing, the only available version of gwtquery-ui is r40. Look [http://gwtquery-ui.googlecode.com/svn/mavenrepo/com/google/gwt/gwtquery-ui/ here] to see if more recent version(s) exist.
+
+== Using another build tool ==
+
+Directly download the Jar file from the maven repository [http://gwtquery-ui.googlecode.com/svn/mavenrepo/com/google/gwt/gwtquery-ui/ here] and configure your build tool accordingly.
+
+== Configure your GWT module ==
+
+Your GWT module must inherit from the plugin in order to use it. Add the following line to your GWT module descriptor (Module.gwt.xml):
+
+{{{
+  <inherits name='gwtquery.plugins.Ui' />
+}}}
+
+= Using the plugin = 
+
+To use any widget or interaction, you must obtain an instance of the gwtquery.plugins.ui.Ui class. This is done through the plugin system of GWT Query.
+
+First, define a static import for the plugin instance:
+
+{{{
+import static gwtquery.plugins.ui.Ui.Ui;
+}}}
+
+Then, from any GQuery instance, obtain an instance of the Ui class:
+
+{{{
+  $("button").as(Ui).button();
+}}}
+
+Please refer to the [http://gwtquery-ui.googlecode.com/svn/demos samples] for a more complete set of examples. Java source is available for each demo, simply expand the "View Source" widget in the sample's page.
+
+= jQuery-ui JavaScript dependency = 
+
+TODO
+
+= Themeing = 
+
+TODO
