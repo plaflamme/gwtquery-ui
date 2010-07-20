@@ -1,4 +1,5 @@
 #summary Setting up a gwtquery-ui project
+#labels Featured
 
 <wiki:toc max_depth="1" />
 
@@ -64,7 +65,7 @@ Then, from any GQuery instance, obtain an instance of the Ui class:
   $("button").as(Ui).button();
 }}}
 
-Please refer to the [http://gwtquery-ui.googlecode.com/svn/demos samples] for a more complete set of examples. Java source is available for each demo, simply expand the "View Source" widget in the sample's page.
+Please refer to the [http://gwtquery-ui.googlecode.com/svn/demos/GwtQueryUi.html samples] for a more complete set of examples. Java source is available for each demo, simply expand the "View Source" widget in the sample's page.
 
 = jQuery-ui JavaScript dependency = 
 
