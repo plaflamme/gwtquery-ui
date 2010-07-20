@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.google.gwt</groupId>
+  <artifactId>gwtquery-ui</artifactId>
+  <version>r40</version>
+  <versioning>
+    <release>r40</release>
+    <versions>
+      <version>r40</version>
+    </versions>
+    <lastUpdated>20100720142415</lastUpdated>
+  </versioning>
+</metadata>
