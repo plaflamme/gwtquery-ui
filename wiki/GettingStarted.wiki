@@ -67,7 +67,7 @@ Then, from any GQuery instance, obtain an instance of the Ui class:
 
 Please refer to the [http://gwtquery-ui.googlecode.com/svn/demos/GwtQueryUi.html samples] for a more complete set of examples. Java source is available for each demo, simply expand the "View Source" widget in the sample's page.
 
-= jQuery-ui JavaScript dependency = 
+= jQuery-ui !JavaScript dependency = 
 
 TODO
 
