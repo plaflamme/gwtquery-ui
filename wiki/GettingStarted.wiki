@@ -69,7 +69,9 @@ Please refer to the [http://gwtquery-ui.googlecode.com/svn/demos/GwtQueryUi.html
 
 = jQuery-ui !JavaScript dependency = 
 
-TODO
+Currently, jQuery-ui and jQuery !JavaScript dependencies are embedded with the plugin and will be added to your GWT distribution when you inherit from the plugin.
+
+We plan to have other ways of getting those dependencies, such as using CDNs or custom setups. Please see issue 1 to track progress of this feature.
 
 = Themeing = 
 
