@@ -1,5 +1,5 @@
 <module>
-  <inherits name='gwtquery.plugins.Ui' />
+  <inherits name='gwtquery.plugins.UiGoogleCdn' />
   <entry-point class='gwtquery.samples.client.GwtQueryUiModule' />
   <script src="http://jqueryui.com/themeroller/themeswitchertool/"/>
   <stylesheet src="themes/base/jquery-ui.css" />
