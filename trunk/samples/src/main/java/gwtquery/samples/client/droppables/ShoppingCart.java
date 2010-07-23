@@ -30,14 +30,12 @@ public class ShoppingCart extends AbstractDroppableDemo {
     .accept(":not(.ui-sortable-helper)")).bind(Droppable.Event.drop, new Function() {
       public boolean f(Event e, Object ui) {
         Droppable.Event dropevent = (Droppable.Event) ui;
-        GWT.log($(e).toString());
-        
-        GWT.log(stringify(dropevent));
         $(e).find(".placeholder").remove();
         $("<li></li>").text($(dropevent.draggable()).text()).appendTo($(e));
         return false;
       }
     }).as(Ui).sortable("{items: 'li:not(.placeholder)'}");
+
     // TODO add this when sortable events are implemented:
     /*
      sort: function() {
