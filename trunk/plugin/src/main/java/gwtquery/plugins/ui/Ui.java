@@ -1,6 +1,7 @@
 package gwtquery.plugins.ui;
 
 import static gwtquery.plugins.ui.interactions.Draggable.Draggable;
+import static gwtquery.plugins.ui.interactions.Droppable.Droppable;
 import static gwtquery.plugins.ui.interactions.Resizable.Resizable;
 import static gwtquery.plugins.ui.interactions.Selectable.Selectable;
 import static gwtquery.plugins.ui.interactions.Sortable.Sortable;
@@ -15,6 +16,7 @@ import static gwtquery.plugins.ui.widgets.Progressbar.Progressbar;
 import static gwtquery.plugins.ui.widgets.Slider.Slider;
 import static gwtquery.plugins.ui.widgets.Tabs.Tabs;
 import gwtquery.plugins.ui.interactions.Draggable;
+import gwtquery.plugins.ui.interactions.Droppable;
 import gwtquery.plugins.ui.interactions.Resizable;
 import gwtquery.plugins.ui.interactions.Selectable;
 import gwtquery.plugins.ui.interactions.Sortable;
@@ -150,6 +152,18 @@ public class Ui extends GQuery {
 
   public final Draggable draggable(String options) {
     return asWidget(Draggable, options);
+  }
+
+  public final Droppable droppable() {
+    return asWidget(Droppable);
+  }
+
+  public final Droppable droppable(Droppable.Options options) {
+    return asWidget(Droppable, options);
+  }
+
+  public final Droppable droppable(String options) {
+    return asWidget(Droppable, options);
   }
 
   public final Menu menu() {
