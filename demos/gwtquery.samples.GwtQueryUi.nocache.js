@@ -245,18 +245,18 @@ function gwtquery_samples_GwtQueryUi(){
   $stats && $stats({moduleName:'gwtquery.samples.GwtQueryUi', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'bootstrap', millis:(new Date).getTime(), type:'selectingPermutation'});
   if (!isHostedMode()) {
     try {
-      unflattenKeylistIntoAnswers(['js', 'gecko'], '01BA988B519A0C4EE2930E6663AFFBBA');
-      unflattenKeylistIntoAnswers(['js', 'gecko1_8'], '223B6526BC237064740A9B8D3382E4DE');
-      unflattenKeylistIntoAnswers(['native', 'opera'], '44FEE4887DC45CC97F448A22EDCC736F');
-      unflattenKeylistIntoAnswers(['native', 'gecko1_8'], '4A124BF4719A301C316D12BE131419ED');
-      unflattenKeylistIntoAnswers(['js', 'safari'], '52D076A92D4CFA291E8565F5A4EE4B54');
-      unflattenKeylistIntoAnswers(['js', 'ie8'], '9889113EE74FACFC7A94E8B76C0E2F24');
-      unflattenKeylistIntoAnswers(['js', 'ie6'], 'C143AE714DA0808B0AA01C91CFD3ED28');
-      unflattenKeylistIntoAnswers(['native', 'safari'], 'C378EAA9412A9C95AB05C521CE105953');
-      unflattenKeylistIntoAnswers(['native', 'ie8'], 'E09F9AFA3DD858D81A5BE8127924CDB8');
-      unflattenKeylistIntoAnswers(['js', 'opera'], 'E1463EDD0976BFA08C622F37FE3BCF1A');
-      unflattenKeylistIntoAnswers(['native', 'ie6'], 'E9C1F024E5C00F472F210788454621BB');
-      unflattenKeylistIntoAnswers(['native', 'gecko'], 'EA71AABE7E5794F899593371A0DCEB97');
+      unflattenKeylistIntoAnswers(['js', 'ie8'], '372206D6CD419BD9634236429BC5AC89');
+      unflattenKeylistIntoAnswers(['native', 'gecko'], '380D99278D958294C57602B275D185AD');
+      unflattenKeylistIntoAnswers(['native', 'safari'], '3F6AD760DF486E9407F196FDBD23AA15');
+      unflattenKeylistIntoAnswers(['js', 'ie6'], '4921EFEC679EF967063BBFF06B7D887B');
+      unflattenKeylistIntoAnswers(['native', 'ie8'], '4C8824B05B6FA946891ADFA2EADD31D5');
+      unflattenKeylistIntoAnswers(['native', 'gecko1_8'], '736CC27DB0DCB11CF0FB5AE58A6413C3');
+      unflattenKeylistIntoAnswers(['js', 'safari'], 'ABCFE4ED1907710044527D40B5A69CB7');
+      unflattenKeylistIntoAnswers(['native', 'opera'], 'C344A95C724E8104DE7C1137BDB4A8C4');
+      unflattenKeylistIntoAnswers(['js', 'gecko1_8'], 'EDE6AD3ED9939BDFAFCA9D92D08CC07E');
+      unflattenKeylistIntoAnswers(['js', 'gecko'], 'F81530ECCEB2F377054278F376D9BCF6');
+      unflattenKeylistIntoAnswers(['native', 'ie6'], 'F95FE472FEBABC2304A0D38A345F2D37');
+      unflattenKeylistIntoAnswers(['js', 'opera'], 'F9A0EB7A897497DCFB5F7015EE98CC19');
       strongName = answers[computePropValue('selectorCapability')][computePropValue('user.agent')];
       initialHtml = strongName + '.cache.html';
     }
@@ -301,13 +301,13 @@ function gwtquery_samples_GwtQueryUi(){
   , 50);
   $stats && $stats({moduleName:'gwtquery.samples.GwtQueryUi', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'bootstrap', millis:(new Date).getTime(), type:'end'});
   $stats && $stats({moduleName:'gwtquery.samples.GwtQueryUi', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'loadExternalRefs', millis:(new Date).getTime(), type:'begin'});
-  if (!__gwt_scriptsLoaded['jquery-ui/jquery-1.4.2.js']) {
-    __gwt_scriptsLoaded['jquery-ui/jquery-1.4.2.js'] = true;
-    document.write('<script language="javascript" src="' + base + 'jquery-ui/jquery-1.4.2.js"><\/script>');
+  if (!__gwt_scriptsLoaded['http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js']) {
+    __gwt_scriptsLoaded['http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'] = true;
+    document.write('<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"><\/script>');
   }
-  if (!__gwt_scriptsLoaded['jquery-ui/ui/jquery-ui.js']) {
-    __gwt_scriptsLoaded['jquery-ui/ui/jquery-ui.js'] = true;
-    document.write('<script language="javascript" src="' + base + 'jquery-ui/ui/jquery-ui.js"><\/script>');
+  if (!__gwt_scriptsLoaded['http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js']) {
+    __gwt_scriptsLoaded['http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js'] = true;
+    document.write('<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js"><\/script>');
   }
   if (!__gwt_scriptsLoaded['http://jqueryui.com/themeroller/themeswitchertool/']) {
     __gwt_scriptsLoaded['http://jqueryui.com/themeroller/themeswitchertool/'] = true;
