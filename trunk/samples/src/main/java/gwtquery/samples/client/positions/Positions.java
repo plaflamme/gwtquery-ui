@@ -1,4 +1,4 @@
-package gwtquery.samples.client.position;
+package gwtquery.samples.client.positions;
 
 import static com.google.gwt.query.client.GQuery.$;
 import static gwtquery.plugins.ui.Ui.Ui;

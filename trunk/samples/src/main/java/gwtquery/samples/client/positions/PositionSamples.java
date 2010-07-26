@@ -1,4 +1,4 @@
-package gwtquery.samples.client.position;
+package gwtquery.samples.client.positions;
 
 import gwtquery.samples.client.DemoPanel;
 
