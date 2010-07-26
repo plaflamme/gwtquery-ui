@@ -2,6 +2,7 @@ package gwtquery.samples.client;
 
 import gwtquery.samples.client.accordions.AccordionSamples;
 import gwtquery.samples.client.buttons.ButtonSamples;
+import gwtquery.samples.client.datepickers.DatepickerSamples;
 import gwtquery.samples.client.dialogs.DialogSamples;
 import gwtquery.samples.client.droppables.DroppableSamples;
 import gwtquery.samples.client.positions.PositionSamples;
@@ -47,6 +48,7 @@ public class GwtQueryUiModule implements EntryPoint {
     demos.add(new SelectableSamples(demo));
     demos.add(new AccordionSamples(demo));
     demos.add(new ButtonSamples(demo));
+    demos.add(new DatepickerSamples(demo));
     demos.add(new DialogSamples(demo));
     demos.add(new ProgressbarSamples(demo));
     demos.add(new SliderSamples(demo));

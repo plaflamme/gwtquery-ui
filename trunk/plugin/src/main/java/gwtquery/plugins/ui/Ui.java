@@ -10,6 +10,7 @@ import static gwtquery.plugins.ui.widgets.Accordion.Accordion;
 import static gwtquery.plugins.ui.widgets.Autocomplete.Autocomplete;
 import static gwtquery.plugins.ui.widgets.Button.Button;
 import static gwtquery.plugins.ui.widgets.Buttonset.Buttonset;
+import static gwtquery.plugins.ui.widgets.Datepicker.Datepicker;
 import static gwtquery.plugins.ui.widgets.Dialog.Dialog;
 import static gwtquery.plugins.ui.widgets.Menu.Menu;
 import static gwtquery.plugins.ui.widgets.Progressbar.Progressbar;
@@ -25,6 +26,7 @@ import gwtquery.plugins.ui.widgets.Accordion;
 import gwtquery.plugins.ui.widgets.Autocomplete;
 import gwtquery.plugins.ui.widgets.Button;
 import gwtquery.plugins.ui.widgets.Buttonset;
+import gwtquery.plugins.ui.widgets.Datepicker;
 import gwtquery.plugins.ui.widgets.Dialog;
 import gwtquery.plugins.ui.widgets.Menu;
 import gwtquery.plugins.ui.widgets.Progressbar;
@@ -128,6 +130,18 @@ public class Ui extends GQuery {
 
   public final Buttonset buttonset(String options) {
     return asWidget(Buttonset, options);
+  }
+
+  public final Datepicker datepicker() {
+    return asWidget(Datepicker);
+  }
+
+  public final Datepicker datepicker(Datepicker.Options options) {
+    return asWidget(Datepicker, options);
+  }
+
+  public final Datepicker datepicker(String options) {
+    return asWidget(Datepicker, options);
   }
 
   public final Dialog dialog() {
