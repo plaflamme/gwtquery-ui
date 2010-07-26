@@ -18,27 +18,28 @@ import com.google.gwt.dom.client.NodeList;
 public class Resizable extends UiWidget<Resizable, Resizable.Options> {
 
   public static class Options extends WidgetOptions<Options> {
-    
+
     protected Options() {
-      
+
     }
 
-    public static native final Options create() /*-{
+    public static native final Options create()
+    /*-{
       return {};
     }-*/;
-    
+
     // TODO: implement options
   }
-  
+
   // TODO: expose events
- 
+
   /**
    * Used to register the plugin.
    */
   private static class ResizablePlugin implements UiPlugin<Resizable> {
 
     public Resizable init(Ui ui, WidgetOptions<?> options) {
-      return new Resizable(ui.get(), (Resizable.Options)options.cast());
+      return new Resizable(ui.get(), (Resizable.Options) options.cast());
     }
 
   }

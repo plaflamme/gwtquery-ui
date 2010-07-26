@@ -20,263 +20,318 @@ import com.google.gwt.query.client.Function;
 public class Dialog extends UiWidget<Dialog, Dialog.Options> {
 
   public static class Options extends WidgetOptions<Options> {
-    
+
     protected Options() {
-      
+
     }
 
-    public static native final Options create() /*-{
+    public static native final Options create()
+    /*-{
       return {};
     }-*/;
 
-    public native final Options autoOpen(boolean autoOpen) /*-{
+    public native final Options autoOpen(boolean autoOpen)
+    /*-{
       this["autoOpen"] = autoOpen;
       return this;
     }-*/;
 
-    public native final boolean autoOpen() /*-{
-      return this["autoOpen"] || true;
+    public native final boolean autoOpen()
+    /*-{
+      return this["autoOpen"];
     }-*/;
-    
-    public native final Options buttons(Buttons buttons) /*-{
+
+    public native final Options buttons(Buttons buttons)
+    /*-{
       this["buttons"] = buttons;
       return this;
     }-*/;
 
-    public native final Buttons buttons() /*-{
+    public native final Buttons buttons()
+    /*-{
       return this["buttons"];
     }-*/;
-    
-    public native final Options closeOnEscape(boolean closeOnEscape) /*-{
+
+    public native final Options closeOnEscape(boolean closeOnEscape)
+    /*-{
       this["closeOnEscape"] = closeOnEscape;
       return this;
     }-*/;
 
-    public native final boolean closeOnEscape() /*-{
-      return this["closeOnEscape"] || true;
+    public native final boolean closeOnEscape()
+    /*-{
+      return this["closeOnEscape"];
     }-*/;
-    
-    public native final Options closeText(String closeText) /*-{
+
+    public native final Options closeText(String closeText)
+    /*-{
       this["closeText"] = closeText;
       return this;
     }-*/;
 
-    public native final boolean closeText() /*-{
+    public native final boolean closeText()
+    /*-{
       return this["closeText"];
     }-*/;
 
-    public native final Options dialogClass(String dialogClass) /*-{
+    public native final Options dialogClass(String dialogClass)
+    /*-{
       this["dialogClass"] = dialogClass;
       return this;
     }-*/;
 
-    public native final boolean dialogClass() /*-{
+    public native final boolean dialogClass()
+    /*-{
       return this["dialogClass"];
     }-*/;
 
-    public native final Options draggable(boolean draggable) /*-{
+    public native final Options draggable(boolean draggable)
+    /*-{
       this["draggable"] = draggable;
       return this;
     }-*/;
 
-    public native final boolean draggable() /*-{
-      return this["draggable"] || true;
+    public native final boolean draggable()
+    /*-{
+      return this["draggable"];
     }-*/;
 
-    public native final Options height(int height) /*-{
+    public native final Options height(int height)
+    /*-{
       this["height"] = height;
       return this;
     }-*/;
 
-    public native final Options height(float height) /*-{
+    public native final Options height(float height)
+    /*-{
       this["height"] = height;
       return this;
     }-*/;
 
-    public native final Number height() /*-{
+    public native final Number height()
+    /*-{
       return this["height"];
     }-*/;
-    
-    public native final Options hide(String hide) /*-{
+
+    public native final Options hide(String hide)
+    /*-{
       this["hide"] = hide;
       return this;
     }-*/;
 
-    public native final String hide() /*-{
+    public native final String hide()
+    /*-{
       return this["hide"];
     }-*/;
 
-    public native final Options maxHeight(int maxHeight) /*-{
+    public native final Options maxHeight(int maxHeight)
+    /*-{
       this["maxHeight"] = maxHeight;
       return this;
     }-*/;
 
-    public native final Options maxHeight(float maxHeight) /*-{
+    public native final Options maxHeight(float maxHeight)
+    /*-{
       this["maxHeight"] = maxHeight;
       return this;
     }-*/;
 
-    public native final Number maxHeight() /*-{
+    public native final Number maxHeight()
+    /*-{
       return this["maxHeight"];
     }-*/;
 
-    public native final Options maxWidth(int maxWidth) /*-{
+    public native final Options maxWidth(int maxWidth)
+    /*-{
       this["maxWidth"] = maxWidth;
       return this;
     }-*/;
-  
-    public native final Options maxWidth(float maxWidth) /*-{
+
+    public native final Options maxWidth(float maxWidth)
+    /*-{
       this["maxWidth"] = maxWidth;
       return this;
     }-*/;
-  
-    public native final Number maxWidth() /*-{
+
+    public native final Number maxWidth()
+    /*-{
       return this["maxWidth"];
     }-*/;
-    
-    public native final Options minHeight(int minHeight) /*-{
+
+    public native final Options minHeight(int minHeight)
+    /*-{
       this["minHeight"] = minHeight;
       return this;
     }-*/;
-  
-    public native final Options minHeight(float minHeight) /*-{
+
+    public native final Options minHeight(float minHeight)
+    /*-{
       this["maxHeight"] = maxHeight;
       return this;
     }-*/;
-  
-    public native final Number minHeight() /*-{
+
+    public native final Number minHeight()
+    /*-{
       return this["minHeight"];
     }-*/;
-  
-    public native final Options minWidth(int minWidth) /*-{
+
+    public native final Options minWidth(int minWidth)
+    /*-{
       this["minWidth"] = minWidth;
       return this;
     }-*/;
-  
+
     public native final Options minWidth(float minWidth) /*-{
-      this["minWidth"] = minWidth;
-      return this;
-    }-*/;
-  
-    public native final Number minWidth() /*-{
+                                                         this["minWidth"] = minWidth;
+                                                         return this;
+                                                         }-*/;
+
+    public native final Number minWidth()
+    /*-{
       return this["minWidth"];
     }-*/;
-  
-    public native final Options modal(boolean modal) /*-{
+
+    public native final Options modal(boolean modal)
+    /*-{
       this["modal"] = modal;
       return this;
     }-*/;
-  
-    public native final boolean modal() /*-{
-      return this["modal"] || false;
+
+    public native final boolean modal()
+    /*-{
+      return this["modal"];
     }-*/;
-    
-    public native final Options position(String position) /*-{
+
+    public native final Options position(String position)
+    /*-{
       this["position"] = position;
       return this;
     }-*/;
 
-    public native final String position() /*-{
+    public native final String position()
+    /*-{
       return this["position"];
     }-*/;
-  
-    public native final Options resizable(boolean resizable) /*-{
+
+    public native final Options resizable(boolean resizable)
+    /*-{
       this["resizable"] = resizable;
       return this;
     }-*/;
-  
-    public native final boolean resizable() /*-{
-      return this["resizable"] || false;
+
+    public native final boolean resizable()
+    /*-{
+      return this["resizable"];
     }-*/;
-    
-    public native final Options show(String show) /*-{
+
+    public native final Options show(String show)
+    /*-{
       this["show"] = show;
       return this;
     }-*/;
 
-    public native final String show() /*-{
+    public native final String show()
+    /*-{
       return this["show"];
     }-*/;
 
-    public native final Options stack(boolean stack) /*-{
+    public native final Options stack(boolean stack)
+    /*-{
       this["stack"] = stack;
       return this;
     }-*/;
 
-    public native final boolean stack() /*-{
-      return this["stack"] || true;
+    public native final boolean stack()
+    /*-{
+      return this["stack"];
     }-*/;
 
-    public native final Options title(String title) /*-{
+    public native final Options title(String title)
+    /*-{
       this["title"] = title;
       return this;
     }-*/;
 
-    public native final String title() /*-{
+    public native final String title()
+    /*-{
       return this["title"];
     }-*/;
-    
-    public native final Options width(int width) /*-{
+
+    public native final Options width(int width)
+    /*-{
       this["width"] = width;
       return this;
     }-*/;
 
-    public native final Options width(float width) /*-{
+    public native final Options width(float width)
+    /*-{
       this["width"] = width;
       return this;
     }-*/;
 
-    public native final Number width() /*-{
+    public native final Number width()
+    /*-{
       return this["width"];
     }-*/;
-  
 
-    public native final Options zIndex(int zIndex) /*-{
+    public native final Options zIndex(int zIndex)
+    /*-{
       this["zIndex"] = zIndex;
       return this;
     }-*/;
 
-    public native final int zIndex() /*-{
+    public native final int zIndex()
+    /*-{
       return this["zIndex"];
     }-*/;
   }
-  
+
   public static class Buttons extends JavaScriptObject {
 
     protected Buttons() {
-      
+
     }
 
-    public static native final Buttons create() /*-{
+    public static native final Buttons create()
+    /*-{
       return {};
     }-*/;
 
-    public native final Buttons define(String button, Function f) /*-{
+    public native final Buttons define(String button, Function f)
+    /*-{
       this[button] = function(event) {
         f.@com.google.gwt.query.client.Function::f(Lcom/google/gwt/user/client/Event;)(event);
       }
       return this;
     }-*/;
   }
-  
+
   public static class Event extends JavaScriptObject {
 
     public static final String beforeclose = "dialogbeforeclose";
+
     public static final String open = "dialogopen";
+
     public static final String focus = "dialogfocus";
+
     public static final String dragStart = "dialogdragstart";
+
     public static final String drag = "dialogdrag";
+
     public static final String dragStop = "dialogdragstop";
+
     public static final String resizeStart = "dialogresizestart";
+
     public static final String resize = "dialogresize";
+
     public static final String resizeStop = "dialogresizestop";
+
     public static final String close = "dialogclose";
 
     protected Event() {
     }
 
   }
-
 
   /**
    * Used to register the plugin.
@@ -288,7 +343,7 @@ public class Dialog extends UiWidget<Dialog, Dialog.Options> {
     }
   }
 
-  public static final Class< Dialog> Dialog = Dialog.class;
+  public static final Class<Dialog> Dialog = Dialog.class;
 
   static {
     registerPlugin(Dialog.class, new DialogPlugin());
@@ -307,7 +362,7 @@ public class Dialog extends UiWidget<Dialog, Dialog.Options> {
     invoke("moveToTop");
     return this;
   }
-  
+
   public Dialog open() {
     invoke("open");
     return this;

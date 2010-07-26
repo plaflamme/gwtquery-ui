@@ -23,7 +23,8 @@ public class Draggable extends UiWidget<Draggable, Draggable.Options> {
 
     }
 
-    public static native final Options create() /*-{
+    public static native final Options create() 
+    /*-{
       return {};
     }-*/;
 

@@ -70,7 +70,8 @@ public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions
    * Object)}
    * @return this
    */
-  public native final T bind(String name, Function f) /*-{
+  public native final T bind(String name, Function f)
+  /*-{
     this.@gwtquery.plugins.ui.UiWidget::ui = this.@gwtquery.plugins.ui.UiWidget::ui.bind(name, function(event, ui) {
       f.@com.google.gwt.query.client.Function::f(Lcom/google/gwt/user/client/Event;Ljava/lang/Object;)(event, ui);
     });
@@ -97,35 +98,43 @@ public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions
     invoke(ui, widgetType, method, option, value);
   }
 
-  protected native final T getWidgetInstance() /*-{
+  protected native final T getWidgetInstance()
+  /*-{
     return this;
   }-*/;
 
-  protected native final int invokeForInt(JavaScriptObject ui, String type, String method) /*-{
+  protected native final int invokeForInt(JavaScriptObject ui, String type, String method)
+  /*-{
     return ui[type](method);
   }-*/;
 
-  private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method) /*-{
+  private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method)
+  /*-{
     return ui[type](method);
   }-*/;
 
-  private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method, Object arg) /*-{
+  private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method, Object arg)
+  /*-{
     return ui[type](method, arg);
   }-*/;
 
-  private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method, Object arg1, Object arg2) /*-{
+  private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method, Object arg1, Object arg2)
+  /*-{
     return ui[type](method, arg1, arg2);
   }-*/;
 
-  private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method, int arg) /*-{
+  private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method, int arg)
+  /*-{
     return ui[type](method, arg);
   }-*/;
 
-  private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method, boolean arg) /*-{
+  private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method, boolean arg)
+  /*-{
     return ui[type](method, arg);
   }-*/;
 
-  private native final JavaScriptObject initUiWidget(String type, NodeList<Element> list, O options) /*-{
+  private native final JavaScriptObject initUiWidget(String type, NodeList<Element> list, O options)
+  /*-{
     return $wnd.jQuery(list)[type](options);
   }-*/;
 

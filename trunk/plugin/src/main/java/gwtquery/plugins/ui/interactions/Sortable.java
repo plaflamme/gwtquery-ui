@@ -23,7 +23,8 @@ public class Sortable extends UiWidget<Sortable, Sortable.Options> {
       
     }
 
-    public static native final Options create() /*-{
+    public static native final Options create() 
+    /*-{
       return {};
     }-*/;
     

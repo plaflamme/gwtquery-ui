@@ -20,184 +20,219 @@ import com.google.gwt.query.client.Function;
 public class Accordion extends UiWidget<Accordion, Accordion.Options> {
 
   public static class Options extends WidgetOptions<Options> {
-    
+
     protected Options() {
-      
+
     }
 
-    public static native final Options create() /*-{
+    public static native final Options create()
+    /*-{
       return {};
     }-*/;
 
-    public native final Options active(boolean active) /*-{
+    public native final Options active(boolean active)
+    /*-{
       this["active"] = active;
       return this;
     }-*/;
 
-    public native final Options animated(boolean animated) /*-{
-      this["animated"] = animated;
-      return this;
-    }-*/;
-    
-    public native final boolean isAnimated() /*-{
-      return this["animated"] ? true : false;
-    }-*/;
-    
-    public native final Options animated(String animated) /*-{
+    public native final Options animated(boolean animated)
+    /*-{
       this["animated"] = animated;
       return this;
     }-*/;
 
-    public native final String animated() /*-{
+    public native final Options animated(String animated)
+    /*-{
+      this["animated"] = animated;
+      return this;
+    }-*/;
+
+    public native final boolean isAnimated()
+    /*-{
       return this["animated"];
     }-*/;
 
-    public native final Options autoHeight(boolean autoHeight) /*-{
+    public native final String animated()
+    /*-{
+      return this["animated"];
+    }-*/;
+
+    public native final Options autoHeight(boolean autoHeight)
+    /*-{
       this["autoHeight"] = autoHeight;
       return this;
     }-*/;
 
-    public native final boolean autoHeight() /*-{
-      return this["autoHeight"] || true;
+    public native final boolean autoHeight()
+    /*-{
+      return this["autoHeight"];
     }-*/;
 
-    public native final Options clearStyle(boolean clearStyle) /*-{
+    public native final Options clearStyle(boolean clearStyle)
+    /*-{
       this["clearStyle"] = clearStyle;
       return this;
     }-*/;
 
-    public native final boolean clearStyle() /*-{
-      return this["clearStyle"] || false;
+    public native final boolean clearStyle()
+    /*-{
+      return this["clearStyle"];
     }-*/;
 
-    public native final Options collapsible(boolean collapsible) /*-{
+    public native final Options collapsible(boolean collapsible)
+    /*-{
       this["collapsible"] = collapsible;
       return this;
     }-*/;
 
-    public native final boolean collapsible() /*-{
-      return this["collapsible"] || false;
+    public native final boolean collapsible()
+    /*-{
+      return this["collapsible"];
     }-*/;
 
-    public native final Options event(String event) /*-{
+    public native final Options event(String event)
+    /*-{
       this["event"] = event;
       return this;
     }-*/;
 
-    public native final String event() /*-{
-      return this["event"] || "click";
+    public native final String event()
+    /*-{
+      return this["event"];
     }-*/;
-    
-    public native final Options fillSpace(boolean fillSpace) /*-{
+
+    public native final Options fillSpace(boolean fillSpace)
+    /*-{
       this["fillSpace"] = fillSpace;
       return this;
     }-*/;
 
-    public native final boolean fillSpace() /*-{
-      return this["fillSpace"] || false;
+    public native final boolean fillSpace()
+    /*-{
+      return this["fillSpace"];
     }-*/;
 
-    public native final Options header(String header) /*-{
+    public native final Options header(String header)
+    /*-{
       this["header"] = header;
       return this;
     }-*/;
 
-    public native final String header() /*-{
+    public native final String header()
+    /*-{
       return this["header"];
     }-*/;
 
-    public native final Options icons(Icons icons) /*-{
+    public native final Options icons(Icons icons)
+    /*-{
       this["icons"] = icons;
       return this;
     }-*/;
 
-    public native final Icons icons() /*-{
+    public native final Icons icons()
+    /*-{
       return this["icons"];
     }-*/;
 
-    public native final Options navigation(boolean navigation) /*-{
+    public native final Options navigation(boolean navigation)
+    /*-{
       this["navigation"] = navigation;
       return this;
     }-*/;
 
-    public native final boolean navigation() /*-{
-      return this["navigation"] || false;
+    public native final boolean navigation()
+    /*-{
+      return this["navigation"];
     }-*/;
 
-    public native final Options navigationFilter(Function f) /*-{
+    public native final Options navigationFilter(Function f)
+    /*-{
       this["navigationFilter"] = f;
       return this;
     }-*/;
 
-    public native final Function navigationFilter() /*-{
+    public native final Function navigationFilter()
+    /*-{
       return this["navigationFilter"];
     }-*/;
   }
-  
+
   public static class Icons extends JavaScriptObject {
 
     protected Icons() {
-      
+
     }
 
-    public static native final Icons create() /*-{
+    public static native final Icons create()
+    /*-{
       return {};
     }-*/;
 
-    public native final Icons header(String header) /*-{
+    public native final Icons header(String header)
+    /*-{
       this["header"] = header;
       return this;
     }-*/;
-    
-    public native final String header() /*-{
-      return this["header"] || 'ui-icon-triangle-1-e';
+
+    public native final String header()
+    /*-{
+      return this["header"];
     }-*/;
-    
-    public native final Icons headerSelected(String headerSelected) /*-{
+
+    public native final Icons headerSelected(String headerSelected)
+    /*-{
       this["headerSelected"] = headerSelected;
       return this;
     }-*/;
-  
-    public native final String headerSelected() /*-{
-      return this["headerSelected"] || 'ui-icon-triangle-1-s';
+
+    public native final String headerSelected()
+    /*-{
+      return this["headerSelected"];
     }-*/;
 
-    public native final Options icons(Icons icons) /*-{
+    public native final Options icons(Icons icons)
+    /*-{
       this["icons"] = icons;
       return this;
     }-*/;
 
-    public native final Icons icons() /*-{
+    public native final Icons icons()
+    /*-{
       return this["icons"];
     }-*/;
   }
-  
+
   public static class Event extends JavaScriptObject {
 
     public static final String change = "accordionchange";
+
     public static final String changestart = "accordionchangestart";
 
     protected Event() {
     }
 
     /* newHeader is a jQuery object. We should probably return a GQuery instance in our case. */
-    public native final JavaScriptObject newHeader()/*-{
+    public native final JavaScriptObject newHeader()
+    /*-{
       return this["newHeader"];
     }-*/;
 
-    public native final JavaScriptObject newContent()/*-{
+    public native final JavaScriptObject newContent()
+    /*-{
       return this["newContent"];
     }-*/;
 
-    public native final JavaScriptObject oldHeader()/*-{
+    public native final JavaScriptObject oldHeader()
+    /*-{
       return this["oldHeader"];
     }-*/;
 
-    public native final JavaScriptObject oldContent()/*-{
+    public native final JavaScriptObject oldContent()
+    /*-{
       return this["oldContent"];
     }-*/;
   }
-
 
   private static class AccordionPlugin implements UiPlugin<Accordion> {
 
@@ -206,7 +241,7 @@ public class Accordion extends UiWidget<Accordion, Accordion.Options> {
     }
   }
 
-  public static final Class< Accordion> Accordion = Accordion.class;
+  public static final Class<Accordion> Accordion = Accordion.class;
 
   static {
     registerPlugin(Accordion.class, new AccordionPlugin());
@@ -230,6 +265,5 @@ public class Accordion extends UiWidget<Accordion, Accordion.Options> {
     invoke("activate", false);
     return this;
   }
-
 
 }

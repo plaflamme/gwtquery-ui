@@ -64,7 +64,7 @@ public class Selectable extends UiWidget<Selectable, Selectable.Options> {
     }-*/;
 
     public native final int delay() /*-{
-      return this["delay"]||0;
+      return this["delay"];
     }-*/;
 
     public native final Options distance(int distance) /*-{
@@ -73,7 +73,7 @@ public class Selectable extends UiWidget<Selectable, Selectable.Options> {
     }-*/;
 
     public native final int distance() /*-{
-      return this["distance"]||0;
+      return this["distance"];
     }-*/;
 
     public native final Options filter(String filter) /*-{

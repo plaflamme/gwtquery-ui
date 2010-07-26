@@ -18,42 +18,47 @@ import com.google.gwt.dom.client.NodeList;
 public class Progressbar extends UiWidget<Progressbar, Progressbar.Options> {
 
   public static class Options extends WidgetOptions<Options> {
-    
+
     protected Options() {
-      
+
     }
 
-    public static native final Options create() /*-{
+    public static native final Options create()
+    /*-{
       return {};
     }-*/;
 
-    public native final Options value(int value) /*-{
+    public native final Options value(int value)
+    /*-{
       this["value"] = value;
       return this;
     }-*/;
-    
-    public native final Options value(float value) /*-{
+
+    public native final Options value(float value)
+    /*-{
       this["value"] = value;
       return this;
     }-*/;
-    
-    public native final Options value(Number value) /*-{
+
+    public native final Options value(Number value)
+    /*-{
       this["value"] = value;
       return this;
     }-*/;
-  
-    public native final Number value() /*-{
+
+    public native final Number value()
+    /*-{
       return this["value"];
     }-*/;
   }
- 
+
   /**
    * Used to register the plugin.
    */
   private static class ProgressbarPlugin implements UiPlugin<Progressbar> {
 
     public Progressbar init(Ui ui, WidgetOptions<?> options) {
-      return new Progressbar(ui.get(), (Progressbar.Options)options.cast());
+      return new Progressbar(ui.get(), (Progressbar.Options) options.cast());
     }
 
   }
@@ -68,7 +73,8 @@ public class Progressbar extends UiWidget<Progressbar, Progressbar.Options> {
     super(list, "progressbar", options);
   }
 
-  public native final Number value() /*-{
+  public native final Number value()
+  /*-{
     return this.@gwtquery.plugins.ui.UiWidget::ui["progressbar"]("value");
   }-*/;
 

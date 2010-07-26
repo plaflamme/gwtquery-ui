@@ -20,44 +20,52 @@ import com.google.gwt.query.client.GQuery;
 public class Position extends UiWidget<Position, Position.Options> {
 
   public static class Options extends WidgetOptions<Options> {
-    
+
     protected Options() {
-      
+
     }
 
-    public static native final Options create() /*-{
+    public static native final Options create()
+    /*-{
       return {};
     }-*/;
 
-    public native final Options my(String value) /*-{
+    public native final Options my(String value)
+    /*-{
       this["my"] = value;
       return this;
     }-*/;
 
-    public native final String my() /*-{
+    public native final String my()
+    /*-{
       return this["my"];
     }-*/;
 
-    public native final Options at(String value) /*-{
+    public native final Options at(String value)
+    /*-{
       this["at"] = value;
       return this;
     }-*/;
 
-    public native final String at() /*-{
+    public native final String at()
+    /*-{
       return this["at"];
     }-*/;
 
-    public native final Options of(String value) /*-{
+    public native final Options of(String value)
+    /*-{
       this["of"] = value;
       return this;
     }-*/;
 
-    public native final Options of(Element value) /*-{
+    public native final Options of(Element value)
+    /*-{
       this["of"] = value;
       return this;
     }-*/;
 
-    public native final Options of(NodeList<?> value) /*-{
+    public native final Options of(NodeList<?> value)
+    /*-{
       this["of"] = value;
       return this;
     }-*/;
@@ -67,25 +75,30 @@ public class Position extends UiWidget<Position, Position.Options> {
       return this;
     };
 
-    public native final JavaScriptObject of() /*-{
+    public native final JavaScriptObject of()
+    /*-{
       return this["of"];
     }-*/;
 
-    public native final Options offset(String offset) /*-{
+    public native final Options offset(String offset)
+    /*-{
       this["offset"] = offset;
       return this;
     }-*/;
-  
-    public native final String offset() /*-{
+
+    public native final String offset()
+    /*-{
       return this["offset"];
     }-*/;
 
-    public native final Options collision(String collision) /*-{
+    public native final Options collision(String collision)
+    /*-{
       this["collision"] = collision;
       return this;
     }-*/;
 
-    public native final String collision() /*-{
+    public native final String collision()
+    /*-{
       return this["collision"];
     }-*/;
 
@@ -98,7 +111,7 @@ public class Position extends UiWidget<Position, Position.Options> {
   private static class PositionPlugin implements UiPlugin<Position> {
 
     public Position init(Ui ui, WidgetOptions<?> options) {
-      return new Position(ui.get(), (Position.Options)options.cast());
+      return new Position(ui.get(), (Position.Options) options.cast());
     }
 
   }

@@ -15,17 +15,20 @@ public abstract class WidgetOptions<T extends WidgetOptions<?>> extends JavaScri
     
   }
 
-  public native final String stringify() /*-{
+  public native final String stringify() 
+  /*-{
     return JSON.stringify(this);
   }-*/;
 
-  public native final T disabled(boolean disabled) /*-{
+  public native final T disabled(boolean disabled) 
+  /*-{
     this["disabled"] = disabled;
     return this;
   }-*/;
 
-  public native final boolean disabled() /*-{
-    return this["disabled"] || false;
+  public native final boolean disabled() 
+  /*-{
+    return this["disabled"];
   }-*/;
 
 }

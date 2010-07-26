@@ -20,102 +20,121 @@ import com.google.gwt.dom.client.NodeList;
 public class Autocomplete extends UiWidget<Autocomplete, Autocomplete.Options> {
 
   public static class Options extends WidgetOptions<Options> {
-    
+
     protected Options() {
-      
+
     }
 
-    public static native final Options create() /*-{
+    public static native final Options create()
+    /*-{
       return {};
     }-*/;
 
-    public native final Options delay(int delay) /*-{
+    public native final Options delay(int delay)
+    /*-{
       this["delay"] = delay;
       return this;
     }-*/;
 
-    public native final int delay() /*-{
-      return this["delay"] || 300;
+    public native final int delay()
+    /*-{
+      return this["delay"];
     }-*/;
-    
 
-    public native final Options minLength(int minLength) /*-{
+    public native final Options minLength(int minLength)
+    /*-{
       this["minLength"] = minLength;
       return this;
     }-*/;
 
-    public native final int minLength() /*-{
-      return this["minLength"] || 1;
+    public native final int minLength()
+    /*-{
+      return this["minLength"];
     }-*/;
 
-    public native final Options source(JsArrayString source) /*-{
+    public native final Options source(JsArrayString source)
+    /*-{
       this["source"] = source;
       return this;
     }-*/;
 
     public final Options source(String... source) {
       JsArrayString a = JavaScriptObject.createArray().cast();
-      for(String s : source) a.push(s);
+      for(String s : source)
+        a.push(s);
       source(a);
       return this;
     };
 
-    public native final Options source(Source[] source) /*-{
+    public native final Options source(Source[] source)
+    /*-{
       this["source"] = source;
       return this;
     }-*/;
 
-    public native final Options source(String url) /*-{
+    public native final Options source(String url)
+    /*-{
       this["source"] = url;
       return this;
     }-*/;
-    
+
     // TODO: another flavor of source is a callback function
   }
-  
+
   public static class Source extends JavaScriptObject {
 
     protected Source() {
-      
+
     }
 
-    public static native final Source create() /*-{
+    public static native final Source create()
+    /*-{
       return {};
     }-*/;
 
-    public native final Source label(String label) /*-{
+    public native final Source label(String label)
+    /*-{
       this["label"] = label;
       return this;
     }-*/;
-    
-    public native final String label() /*-{
+
+    public native final String label()
+    /*-{
       return this["label"];
     }-*/;
-    
-    public native final Source value(String value) /*-{
+
+    public native final Source value(String value)
+    /*-{
       this["value"] = value;
       return this;
     }-*/;
-  
-    public native final String value() /*-{
+
+    public native final String value()
+    /*-{
       return this["value"];
     }-*/;
 
   }
 
   public static class Event extends JavaScriptObject {
-    
+
     public static final String search = "autocompletesearch";
+
     public static final String open = "autocompleteopen";
+
     public static final String focus = "autocompletefocus";
+
     public static final String select = "autocompleteselect";
+
     public static final String close = "autocompleteclose";
+
     public static final String change = "autocompletechange";
-    
+
     protected Event() {
     }
 
-    public native final Source item() /*-{
+    public native final Source item()
+    /*-{
       return this["item"];
     }-*/;
   }
@@ -127,7 +146,7 @@ public class Autocomplete extends UiWidget<Autocomplete, Autocomplete.Options> {
     }
   }
 
-  public static final Class< Autocomplete> Autocomplete = Autocomplete.class;
+  public static final Class<Autocomplete> Autocomplete = Autocomplete.class;
 
   static {
     registerPlugin(Autocomplete.class, new AutocompletePlugin());
@@ -151,5 +170,5 @@ public class Autocomplete extends UiWidget<Autocomplete, Autocomplete.Options> {
     invoke("close");
     return this;
   }
-  
+
 }

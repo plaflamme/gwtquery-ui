@@ -138,12 +138,13 @@ public class Droppable extends UiWidget<Droppable, Droppable.Options> {
 
     protected Event() {
     }
-    
+
     // TODO: ideally we should return a Draggable instance here.
     // This requires that we construct a new Draggable instance by passing the jQuery object to the ctor.
-    public native final Element draggable() /*-{
+    public native final Element draggable()
+    /*-{
       return this["draggable"].get(0);
-    }-*/; 
+    }-*/;
 
   }
 
