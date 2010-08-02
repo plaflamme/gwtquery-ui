@@ -5,7 +5,7 @@ var $gwt_version = "2.0.3";
 var $wnd = parent;
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
-var $strongName = 'F95FE472FEBABC2304A0D38A345F2D37';
+var $strongName = '22BE79F019A3ABA9089CB1F8E4BB0530';
 var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent(a);} : null,
 $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;
 $stats && $stats({moduleName:'gwtquery.samples.GwtQueryUi',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalStart'});
@@ -111,7 +111,7 @@ function onStart(){
 
 function updateAnimations(){
   var animation, animation$array, animation$index, animation$max, curAnimations, curTime;
-  curAnimations = initDim(_3Lcom_google_gwt_animation_client_Animation_2_classLit, 237, 9, animations.size, 0);
+  curAnimations = initDim(_3Lcom_google_gwt_animation_client_Animation_2_classLit, 244, 9, animations.size, 0);
   curAnimations = dynamicCast($toArray(animations, curAnimations), 2);
   curTime = (new Date).getTime();
   for (animation$array = curAnimations , animation$index = 0 , animation$max = animation$array.length; animation$index < animation$max; ++animation$index) {
@@ -222,7 +222,7 @@ function $initCause(this$static, cause){
 
 function $setStackTrace(stackTrace){
   var c, copy, i;
-  copy = initDim(_3Ljava_lang_StackTraceElement_2_classLit, 261, 30, stackTrace.length, 0);
+  copy = initDim(_3Ljava_lang_StackTraceElement_2_classLit, 268, 30, stackTrace.length, 0);
   for (i = 0 , c = stackTrace.length; i < c; ++i) {
     if (!stackTrace[i]) {
       throw $NullPointerException(new NullPointerException);
@@ -610,7 +610,7 @@ function $collect(this$static){
 function $createStackTrace(e){
   var i, j, stack, stackTrace;
   stack = (instanceOfJso(e.e)?dynamicCastJso(e.e):null , []);
-  stackTrace = initDim(_3Ljava_lang_StackTraceElement_2_classLit, 261, 30, stack.length, 0);
+  stackTrace = initDim(_3Ljava_lang_StackTraceElement_2_classLit, 268, 30, stack.length, 0);
   for (i = 0 , j = stackTrace.length; i < j; ++i) {
     stackTrace[i] = $StackTraceElement(new StackTraceElement, 'Unknown', stack[i], 'Unknown source', 0);
   }
@@ -620,7 +620,7 @@ function $createStackTrace(e){
 function $fillInStackTrace(){
   var i, j, stack, stackTrace;
   stack = $collect(new StackTraceCreator$Collector);
-  stackTrace = initDim(_3Ljava_lang_StackTraceElement_2_classLit, 261, 30, stack.length, 0);
+  stackTrace = initDim(_3Ljava_lang_StackTraceElement_2_classLit, 268, 30, stack.length, 0);
   for (i = 0 , j = stackTrace.length; i < j; ++i) {
     stackTrace[i] = $StackTraceElement(new StackTraceElement, 'Unknown', stack[i], 'Unknown source', 0);
   }
@@ -680,6 +680,10 @@ function $addClassName(this$static, className){
   }
 }
 
+function $getFirstChildElement(this$static){
+  return $getFirstChildElement_0(($clinit_30() , this$static));
+}
+
 function $removeClassName(this$static, className){
   var begin, end, idx, last, lastPos, newClassName, oldStyle;
   className = $trim(className);
@@ -716,7 +720,7 @@ function $createScriptElement(doc, source){
   return elem;
 }
 
-function $getFirstChildElement(elem){
+function $getFirstChildElement_0(elem){
   var child = elem.firstChild;
   while (child && child.nodeType != 1)
     child = child.nextSibling;
@@ -750,7 +754,7 @@ function $createElement(doc, tagName){
   if (tagName.indexOf(':') != -1) {
     container = (!doc.__gwt_container && (doc.__gwt_container = doc.createElement('div')) , doc.__gwt_container);
     container.innerHTML = '<' + tagName + '/>' || '';
-    elem = $getFirstChildElement(($clinit_30() , container));
+    elem = $getFirstChildElement_0(($clinit_30() , container));
     container.removeChild(elem);
     return elem;
   }
@@ -989,7 +993,7 @@ function getClass_18(){
 
 function values_0(){
   $clinit_44();
-  return initValues(_3Lcom_google_gwt_dom_client_Style$Overflow_2_classLit, 240, 12, [VISIBLE, HIDDEN, SCROLL, AUTO]);
+  return initValues(_3Lcom_google_gwt_dom_client_Style$Overflow_2_classLit, 247, 12, [VISIBLE, HIDDEN, SCROLL, AUTO]);
 }
 
 function Style$Overflow(){
@@ -1101,7 +1105,7 @@ function getClass_23(){
 
 function values_1(){
   $clinit_49();
-  return initValues(_3Lcom_google_gwt_dom_client_Style$Position_2_classLit, 241, 13, [STATIC, RELATIVE, ABSOLUTE, FIXED]);
+  return initValues(_3Lcom_google_gwt_dom_client_Style$Position_2_classLit, 248, 13, [STATIC, RELATIVE, ABSOLUTE, FIXED]);
 }
 
 function Style$Position(){
@@ -1212,15 +1216,15 @@ function $clinit_54(){
   MM = $Style$Unit$9(new Style$Unit$9, 'MM', 8);
 }
 
+--></script>
+<script><!--
 function getClass_28(){
   return Lcom_google_gwt_dom_client_Style$Unit_2_classLit;
 }
 
---></script>
-<script><!--
 function values_2(){
   $clinit_54();
-  return initValues(_3Lcom_google_gwt_dom_client_Style$Unit_2_classLit, 242, 14, [PX, PCT, EM, EX, PT, PC, IN, CM, MM]);
+  return initValues(_3Lcom_google_gwt_dom_client_Style$Unit_2_classLit, 249, 14, [PX, PCT, EM, EX, PT, PC, IN, CM, MM]);
 }
 
 function Style$Unit(){
@@ -2213,7 +2217,7 @@ function throwClassCastExceptionUnlessNull(o){
   return o;
 }
 
-var typeIdArray = [{}, {}, {1:1, 24:1, 25:1, 26:1}, {9:1}, {41:1}, {41:1}, {24:1, 31:1}, {24:1, 31:1}, {3:1, 24:1, 31:1}, {3:1, 24:1, 31:1, 34:1}, {24:1, 26:1, 27:1}, {11:1, 12:1, 24:1, 26:1, 27:1}, {11:1, 12:1, 24:1, 26:1, 27:1}, {11:1, 12:1, 24:1, 26:1, 27:1}, {11:1, 12:1, 24:1, 26:1, 27:1}, {11:1, 12:1, 24:1, 26:1, 27:1}, {11:1, 13:1, 24:1, 26:1, 27:1}, {11:1, 13:1, 24:1, 26:1, 27:1}, {11:1, 13:1, 24:1, 26:1, 27:1}, {11:1, 13:1, 24:1, 26:1, 27:1}, {11:1, 13:1, 24:1, 26:1, 27:1}, {14:1, 24:1, 26:1, 27:1}, {14:1, 24:1, 26:1, 27:1}, {14:1, 24:1, 26:1, 27:1}, {14:1, 24:1, 26:1, 27:1}, {14:1, 24:1, 26:1, 27:1}, {14:1, 24:1, 26:1, 27:1}, {14:1, 24:1, 26:1, 27:1}, {14:1, 24:1, 26:1, 27:1}, {14:1, 24:1, 26:1, 27:1}, {14:1, 24:1, 26:1, 27:1}, {7:1}, {41:1}, {24:1, 31:1, 59:1}, {24:1, 31:1, 59:1}, {24:1, 31:1, 59:1}, {9:1}, {17:1, 24:1, 26:1, 27:1}, {35:1}, {6:1, 33:1}, {18:1}, {38:1}, {18:1}, {37:1, 38:1}, {36:1}, {19:1}, {39:1}, {3:1, 24:1, 31:1}, {41:1}, {41:1}, {4:1, 33:1}, {15:1}, {40:1}, {40:1}, {21:1}, {15:1, 19:1, 21:1, 22:1}, {15:1, 19:1, 21:1, 22:1, 46:1}, {15:1, 19:1, 21:1, 22:1, 46:1}, {15:1, 19:1, 21:1, 22:1, 46:1}, {3:1, 24:1, 31:1}, {15:1, 19:1, 21:1, 22:1, 46:1}, {15:1, 19:1, 21:1, 22:1}, {15:1, 19:1, 21:1, 22:1, 46:1}, {15:1, 19:1, 21:1, 22:1, 46:1}, {15:1, 19:1, 21:1, 22:1, 46:1}, {9:1}, {4:1, 5:1, 15:1, 19:1, 21:1, 22:1, 33:1}, {15:1, 19:1, 21:1, 22:1, 43:1, 46:1}, {20:1, 24:1, 26:1, 27:1}, {44:1}, {15:1, 19:1, 21:1, 22:1, 46:1}, {15:1, 19:1, 21:1, 22:1, 46:1}, {15:1, 19:1, 21:1, 22:1}, {15:1, 19:1, 21:1, 22:1}, {15:1, 19:1, 21:1, 22:1, 43:1, 46:1}, {15:1, 19:1, 21:1, 22:1, 43:1, 46:1}, {6:1, 33:1}, {15:1, 19:1, 21:1, 22:1, 45:1, 46:1}, {4:1, 33:1}, {15:1, 19:1, 21:1, 22:1, 45:1, 46:1}, {15:1, 19:1, 21:1, 22:1, 43:1, 46:1}, {15:1, 19:1, 21:1, 22:1, 46:1}, {40:1}, {40:1}, {38:1, 60:1}, {36:1}, {38:1, 60:1}, {38:1, 51:1, 60:1}, {58:1}, {38:1, 52:1, 60:1}, {58:1}, {38:1, 60:1, 61:1}, {58:1}, {38:1, 60:1, 63:1}, {58:1}, {38:1, 56:1, 60:1}, {58:1}, {38:1, 54:1, 60:1}, {58:1}, {38:1, 47:1, 60:1}, {58:1}, {38:1, 48:1, 60:1}, {58:1}, {38:1, 60:1, 62:1}, {58:1}, {38:1, 49:1, 60:1}, {58:1}, {38:1, 50:1, 60:1}, {58:1}, {38:1, 53:1, 60:1}, {58:1}, {38:1, 55:1, 60:1}, {58:1}, {38:1, 57:1, 60:1}, {58:1}, {15:1, 19:1, 21:1, 22:1}, {18:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {23:1}, {23:1}, {18:1}, {18:1}, {23:1}, {18:1}, {23:1}, {23:1}, {23:1}, {18:1}, {18:1}, {23:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {18:1}, {23:1}, {23:1}, {23:1}, {23:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {23:1}, {18:1}, {23:1}, {23:1}, {23:1}, {18:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {23:1}, {23:1}, {18:1}, {23:1}, {23:1}, {18:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {18:1}, {23:1}, {18:1}, {18:1}, {23:1}, {18:1}, {23:1}, {18:1}, {23:1}, {18:1}, {18:1}, {23:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {18:1}, {18:1}, {23:1}, {23:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {23:1}, {23:1}, {23:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {23:1}, {18:1}, {18:1}, {23:1}, {23:1}, {18:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {23:1}, {18:1}, {23:1}, {23:1}, {23:1}, {23:1}, {18:1}, {18:1}, {18:1}, {18:1}, {18:1}, {18:1}, {18:1}, {18:1}, {23:1}, {23:1}, {15:1, 19:1, 21:1, 22:1}, {3:1, 24:1, 31:1}, {3:1, 24:1, 31:1}, {24:1, 31:1}, {24:1, 31:1}, {24:1, 26:1, 64:1}, {3:1, 24:1, 31:1}, {24:1, 29:1}, {24:1, 26:1, 29:1, 65:1}, {3:1, 24:1, 31:1}, {3:1, 24:1, 31:1}, {3:1, 24:1, 31:1}, {24:1, 26:1, 28:1, 29:1}, {3:1, 24:1, 31:1}, {3:1, 24:1, 31:1}, {24:1, 30:1}, {25:1}, {3:1, 24:1, 31:1}, {68:1}, {68:1}, {66:1}, {66:1}, {66:1}, {68:1}, {8:1, 24:1}, {24:1, 67:1}, {24:1, 68:1}, {66:1}, {3:1, 24:1, 31:1}, {24:1}, {2:1, 24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1, 32:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1, 42:1}, {24:1}];
+var typeIdArray = [{}, {}, {1:1, 24:1, 25:1, 26:1}, {9:1}, {41:1}, {41:1}, {24:1, 31:1}, {24:1, 31:1}, {3:1, 24:1, 31:1}, {3:1, 24:1, 31:1, 34:1}, {24:1, 26:1, 27:1}, {11:1, 12:1, 24:1, 26:1, 27:1}, {11:1, 12:1, 24:1, 26:1, 27:1}, {11:1, 12:1, 24:1, 26:1, 27:1}, {11:1, 12:1, 24:1, 26:1, 27:1}, {11:1, 12:1, 24:1, 26:1, 27:1}, {11:1, 13:1, 24:1, 26:1, 27:1}, {11:1, 13:1, 24:1, 26:1, 27:1}, {11:1, 13:1, 24:1, 26:1, 27:1}, {11:1, 13:1, 24:1, 26:1, 27:1}, {11:1, 13:1, 24:1, 26:1, 27:1}, {14:1, 24:1, 26:1, 27:1}, {14:1, 24:1, 26:1, 27:1}, {14:1, 24:1, 26:1, 27:1}, {14:1, 24:1, 26:1, 27:1}, {14:1, 24:1, 26:1, 27:1}, {14:1, 24:1, 26:1, 27:1}, {14:1, 24:1, 26:1, 27:1}, {14:1, 24:1, 26:1, 27:1}, {14:1, 24:1, 26:1, 27:1}, {14:1, 24:1, 26:1, 27:1}, {7:1}, {41:1}, {24:1, 31:1, 59:1}, {24:1, 31:1, 59:1}, {24:1, 31:1, 59:1}, {9:1}, {17:1, 24:1, 26:1, 27:1}, {35:1}, {6:1, 33:1}, {18:1}, {38:1}, {18:1}, {37:1, 38:1}, {36:1}, {19:1}, {39:1}, {3:1, 24:1, 31:1}, {41:1}, {41:1}, {4:1, 33:1}, {15:1}, {40:1}, {40:1}, {21:1}, {15:1, 19:1, 21:1, 22:1}, {15:1, 19:1, 21:1, 22:1, 46:1}, {15:1, 19:1, 21:1, 22:1, 46:1}, {15:1, 19:1, 21:1, 22:1, 46:1}, {3:1, 24:1, 31:1}, {15:1, 19:1, 21:1, 22:1, 46:1}, {15:1, 19:1, 21:1, 22:1}, {15:1, 19:1, 21:1, 22:1, 46:1}, {15:1, 19:1, 21:1, 22:1, 46:1}, {15:1, 19:1, 21:1, 22:1, 46:1}, {9:1}, {4:1, 5:1, 15:1, 19:1, 21:1, 22:1, 33:1}, {15:1, 19:1, 21:1, 22:1, 43:1, 46:1}, {20:1, 24:1, 26:1, 27:1}, {44:1}, {15:1, 19:1, 21:1, 22:1, 46:1}, {15:1, 19:1, 21:1, 22:1, 46:1}, {15:1, 19:1, 21:1, 22:1}, {15:1, 19:1, 21:1, 22:1}, {15:1, 19:1, 21:1, 22:1, 43:1, 46:1}, {15:1, 19:1, 21:1, 22:1, 43:1, 46:1}, {6:1, 33:1}, {15:1, 19:1, 21:1, 22:1, 45:1, 46:1}, {4:1, 33:1}, {15:1, 19:1, 21:1, 22:1, 45:1, 46:1}, {15:1, 19:1, 21:1, 22:1, 43:1, 46:1}, {15:1, 19:1, 21:1, 22:1, 46:1}, {40:1}, {40:1}, {38:1, 60:1}, {36:1}, {38:1, 60:1}, {38:1, 51:1, 60:1}, {58:1}, {38:1, 52:1, 60:1}, {58:1}, {38:1, 60:1, 61:1}, {58:1}, {38:1, 60:1, 63:1}, {58:1}, {38:1, 56:1, 60:1}, {58:1}, {38:1, 54:1, 60:1}, {58:1}, {38:1, 47:1, 60:1}, {58:1}, {38:1, 48:1, 60:1}, {58:1}, {38:1, 60:1, 62:1}, {58:1}, {38:1, 49:1, 60:1}, {58:1}, {38:1, 50:1, 60:1}, {58:1}, {38:1, 53:1, 60:1}, {58:1}, {38:1, 55:1, 60:1}, {58:1}, {38:1, 57:1, 60:1}, {58:1}, {15:1, 19:1, 21:1, 22:1}, {18:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {23:1}, {23:1}, {18:1}, {18:1}, {23:1}, {18:1}, {23:1}, {23:1}, {23:1}, {18:1}, {18:1}, {23:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {18:1}, {23:1}, {23:1}, {23:1}, {23:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {23:1}, {18:1}, {23:1}, {23:1}, {23:1}, {18:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {23:1}, {23:1}, {18:1}, {23:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {23:1}, {18:1}, {18:1}, {18:1}, {23:1}, {23:1}, {18:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {18:1}, {23:1}, {18:1}, {18:1}, {23:1}, {18:1}, {23:1}, {18:1}, {23:1}, {18:1}, {18:1}, {23:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {18:1}, {18:1}, {23:1}, {23:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {23:1}, {23:1}, {23:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {23:1}, {18:1}, {18:1}, {23:1}, {23:1}, {18:1}, {15:1, 19:1, 21:1, 22:1}, {23:1}, {23:1}, {18:1}, {23:1}, {23:1}, {23:1}, {23:1}, {18:1}, {18:1}, {18:1}, {18:1}, {18:1}, {18:1}, {18:1}, {18:1}, {23:1}, {23:1}, {15:1, 19:1, 21:1, 22:1}, {3:1, 24:1, 31:1}, {3:1, 24:1, 31:1}, {24:1, 31:1}, {24:1, 31:1}, {24:1, 26:1, 64:1}, {3:1, 24:1, 31:1}, {24:1, 29:1}, {24:1, 26:1, 29:1, 65:1}, {3:1, 24:1, 31:1}, {3:1, 24:1, 31:1}, {3:1, 24:1, 31:1}, {24:1, 26:1, 28:1, 29:1}, {3:1, 24:1, 31:1}, {3:1, 24:1, 31:1}, {24:1, 30:1}, {25:1}, {3:1, 24:1, 31:1}, {68:1}, {68:1}, {66:1}, {66:1}, {66:1}, {68:1}, {8:1, 24:1}, {24:1, 67:1}, {24:1, 68:1}, {66:1}, {3:1, 24:1, 31:1}, {24:1}, {2:1, 24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1, 32:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1}, {24:1, 42:1}, {24:1}];
 function init(){
   !!$stats && onModuleStart('com.google.gwt.query.client.css.CSS');
   !!$stats && onModuleStart('gwtquery.samples.client.GwtQueryUiModule');
@@ -2239,6 +2243,8 @@ function $Layout(this$static, parent_0){
   return this$static;
 }
 
+--></script>
+<script><!--
 function $adjustHorizontalConstraints(this$static, parentWidth, l){
   var leftPx, rightPx, widthPx;
   leftPx = l.left_0 * $getUnitSize(this$static, l.leftUnit, false);
@@ -2285,8 +2291,6 @@ function $adjustHorizontalConstraints(this$static, parentWidth, l){
   l.widthUnit = l.targetWidthUnit;
 }
 
---></script>
-<script><!--
 function $adjustVerticalConstraints(this$static, parentHeight, l){
   var bottomPx, heightPx, topPx;
   topPx = l.top_0 * $getUnitSize(this$static, l.topUnit, true);
@@ -2477,7 +2481,7 @@ function getClass_60(){
 
 function values_3(){
   $clinit_119();
-  return initValues(_3Lcom_google_gwt_layout_client_Layout$Alignment_2_classLit, 245, 17, [BEGIN, END, STRETCH]);
+  return initValues(_3Lcom_google_gwt_layout_client_Layout$Alignment_2_classLit, 252, 17, [BEGIN, END, STRETCH]);
 }
 
 function Layout$Alignment(){
@@ -3166,6 +3170,13 @@ function $addClass(this$static, classes){
   return this$static;
 }
 
+function $allNextSiblingElements(firstChildElement, result, elem){
+  while (firstChildElement) {
+    firstChildElement != elem && (result[result.length] = firstChildElement , undefined);
+    firstChildElement = $getNextSiblingElement(($clinit_30() , firstChildElement));
+  }
+}
+
 function $appendTo(this$static, other){
   $domManip_0(other, this$static, 1);
   return this$static;
@@ -3183,13 +3194,15 @@ function $as(this$static, plugin){
 
 function $bindOrFire(this$static, eventbits, data, funcs){
   if (funcs.length == 0) {
-    return this$static.trigger(eventbits, initValues(_3I_classLit, 253, -1, []));
+    return this$static.trigger(eventbits, initValues(_3I_classLit, 260, -1, []));
   }
    else {
     return this$static.bind_0(eventbits, data, funcs);
   }
 }
 
+--></script>
+<script><!--
 function $css(this$static, prop_0, val){
   var e, e$array, e$index, e$max;
   for (e$array = ($clinit_128() , this$static.elements) , e$index = 0 , e$max = e$array.length; e$index < e$max; ++e$index) {
@@ -3245,8 +3258,6 @@ function $domManip_0(this$static, g, func){
   return this$static;
 }
 
---></script>
-<script><!--
 function $each(this$static, f){
   var f1, f1$array, f1$index, f1$max, i;
   if (f != null) {
@@ -3285,6 +3296,20 @@ function $find(this$static, filters){
     }
   }
   return $pushStack(unique(array), filters[0]);
+}
+
+function $hasClass(this$static, classes){
+  var clz, clz$array, clz$index, clz$max, e, e$array, e$index, e$max;
+  for (e$array = ($clinit_128() , this$static.elements) , e$index = 0 , e$max = e$array.length; e$index < e$max; ++e$index) {
+    e = e$array[e$index];
+    for (clz$array = classes , clz$index = 0 , clz$max = clz$array.length; clz$index < clz$max; ++clz$index) {
+      clz = clz$array[clz$index];
+      if ($matches(' ' + e.className + ' ', '.*\\s' + clz + '\\s.*')) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 function $html(this$static, html){
@@ -3355,6 +3380,18 @@ function $remove(this$static){
   return this$static;
 }
 
+function $removeClass(this$static, classes){
+  var clz, clz$array, clz$index, clz$max, e, e$array, e$index, e$max;
+  for (e$array = ($clinit_128() , this$static.elements) , e$index = 0 , e$max = e$array.length; e$index < e$max; ++e$index) {
+    e = e$array[e$index];
+    for (clz$array = classes , clz$index = 0 , clz$max = clz$array.length; clz$index < clz$max; ++clz$index) {
+      clz = clz$array[clz$index];
+      $removeClassName(e, clz);
+    }
+  }
+  return this$static;
+}
+
 function $removeData(item){
   var id;
   if (!dataCache) {
@@ -3364,6 +3401,16 @@ function $removeData(item){
   item = item == window_0?windowData:item;
   id = item.$H || (item.$H = ++sNextHashId);
   delete dataCache[id];
+}
+
+function $siblings(this$static){
+  var e, e$array, e$index, e$max, result, parent_0;
+  result = [];
+  for (e$array = ($clinit_128() , this$static.elements) , e$index = 0 , e$max = e$array.length; e$index < e$max; ++e$index) {
+    e = e$array[e$index];
+    $allNextSiblingElements($getFirstChildElement((parent_0 = ($clinit_30() , e).parentNode , (!parent_0 || parent_0.nodeType != 1) && (parent_0 = null) , parent_0)), result, e);
+  }
+  return $GQuery(new GQuery, unique(result));
 }
 
 function $text(this$static){
@@ -3456,7 +3503,7 @@ function $vals(this$static){
         return result;
       }
        else if (se.selectedIndex >= 0) {
-        return initValues(_3Ljava_lang_String_2_classLit, 262, 1, [($clinit_30() , se).options[se.selectedIndex].value]);
+        return initValues(_3Ljava_lang_String_2_classLit, 269, 1, [($clinit_30() , se).options[se.selectedIndex].value]);
       }
     }
      else if ($equalsIgnoreCase(e.nodeName, 'input')) {
@@ -3467,28 +3514,28 @@ function $vals(this$static){
           if ($equalsIgnoreCase('input', e2.nodeName)) {
             ie2 = e2;
             if ($equalsIgnoreCase('radio', ie2.type) && !!ie2.checked && $equals_1(ie.name, ie2.name)) {
-              return initValues(_3Ljava_lang_String_2_classLit, 262, 1, [ie2.value]);
+              return initValues(_3Ljava_lang_String_2_classLit, 269, 1, [ie2.value]);
             }
           }
         }
       }
        else if ($equalsIgnoreCase('checkbox', ie.type)) {
         if (ie.checked) {
-          return initValues(_3Ljava_lang_String_2_classLit, 262, 1, [ie.value]);
+          return initValues(_3Ljava_lang_String_2_classLit, 269, 1, [ie.value]);
         }
       }
        else {
-        return initValues(_3Ljava_lang_String_2_classLit, 262, 1, [ie.value]);
+        return initValues(_3Ljava_lang_String_2_classLit, 269, 1, [ie.value]);
       }
     }
      else if ($equalsIgnoreCase(e.nodeName, 'textarea')) {
-      return initValues(_3Ljava_lang_String_2_classLit, 262, 1, [e.value]);
+      return initValues(_3Ljava_lang_String_2_classLit, 269, 1, [e.value]);
     }
      else if ($equalsIgnoreCase(e.nodeName, 'button')) {
-      return initValues(_3Ljava_lang_String_2_classLit, 262, 1, [e.value]);
+      return initValues(_3Ljava_lang_String_2_classLit, 269, 1, [e.value]);
     }
   }
-  return initDim(_3Ljava_lang_String_2_classLit, 262, 1, 0, 0);
+  return initDim(_3Ljava_lang_String_2_classLit, 269, 1, 0, 0);
 }
 
 function bind(eventbits, data, funcs){
@@ -4083,6 +4130,8 @@ function filter_0(expr, set, inplace, not){
   return curLoop;
 }
 
+--></script>
+<script><!--
 function find(expr, context){
   var set, match;
   if (!expr) {
@@ -4149,8 +4198,6 @@ function posProcess(selector, context){
   return filter_0(later, tmpSet, false);
 }
 
---></script>
-<script><!--
 function select_1(selector, context, results, seed){
   var ret_0;
   results = results || [];
@@ -4932,6 +4979,8 @@ function $maybeInitializeEventSystem(){
 }
 
 var eventSystemIsInitialized = false;
+--></script>
+<script><!--
 function $initEventSystem(){
   $wnd.__gwt_globalEventArray == null && ($wnd.__gwt_globalEventArray = new Array);
   $wnd.__gwt_globalEventArray[$wnd.__gwt_globalEventArray.length] = $entry(function(){
@@ -4995,8 +5044,6 @@ function $sinkEvents(elem, bits){
   $sinkEventsImpl(elem, bits);
 }
 
---></script>
-<script><!--
 function $sinkEventsImpl(elem, bits){
   var chMask = (elem.__eventBits || 0) ^ bits;
   elem.__eventBits = bits;
@@ -5416,7 +5463,7 @@ function $clinit_196(){
 
 function $AttachDetachException(this$static, causes){
   $clinit_196();
-  $Throwable(this$static, 'One or more exceptions caught, see full set in AttachDetachException#getCauses', causes.map.size == 0?null:dynamicCast(causes.toArray(initDim(_3Ljava_lang_Throwable_2_classLit, 263, 31, 0, 0)), 42)[0]);
+  $Throwable(this$static, 'One or more exceptions caught, see full set in AttachDetachException#getCauses', causes.map.size == 0?null:dynamicCast(causes.toArray(initDim(_3Ljava_lang_Throwable_2_classLit, 270, 31, 0, 0)), 42)[0]);
   return this$static;
 }
 
@@ -5642,7 +5689,7 @@ function getClass_99(){
 }
 
 function iterator_0(){
-  return $WidgetIterators$1(new WidgetIterators$1, initValues(_3Lcom_google_gwt_user_client_ui_Widget_2_classLit, 250, 22, [this.contentWrapper.widget]));
+  return $WidgetIterators$1(new WidgetIterators$1, initValues(_3Lcom_google_gwt_user_client_ui_Widget_2_classLit, 257, 22, [this.contentWrapper.widget]));
 }
 
 function remove_1(w){
@@ -5940,6 +5987,8 @@ function $doLayout(this$static){
   }
 }
 
+--></script>
+<script><!--
 function $insert(this$static, widget, direction, size){
   var children, data, layer;
   $removeFromParent_0(widget);
@@ -6009,8 +6058,6 @@ function $clinit_211(){
   LINE_END = $DockLayoutPanel$Direction(new DockLayoutPanel$Direction, 'LINE_END', 6);
 }
 
---></script>
-<script><!--
 function $DockLayoutPanel$Direction(this$static, enum$name, enum$ordinal){
   $clinit_211();
   this$static.name_0 = enum$name;
@@ -6024,7 +6071,7 @@ function getClass_106(){
 
 function values_4(){
   $clinit_211();
-  return initValues(_3Lcom_google_gwt_user_client_ui_DockLayoutPanel$Direction_2_classLit, 248, 20, [NORTH, EAST, SOUTH, WEST, CENTER, LINE_START, LINE_END]);
+  return initValues(_3Lcom_google_gwt_user_client_ui_DockLayoutPanel$Direction_2_classLit, 255, 20, [NORTH, EAST, SOUTH, WEST, CENTER, LINE_START, LINE_END]);
 }
 
 function DockLayoutPanel$Direction(){
@@ -6685,7 +6732,7 @@ _.getClass$ = getClass_128;
 _.remove = remove_5;
 _.typeId$ = 81;
 function $WidgetCollection(this$static){
-  this$static.array = initDim(_3Lcom_google_gwt_user_client_ui_Widget_2_classLit, 250, 22, 4, 0);
+  this$static.array = initDim(_3Lcom_google_gwt_user_client_ui_Widget_2_classLit, 257, 22, 4, 0);
   return this$static;
 }
 
@@ -6709,7 +6756,7 @@ function $insert_1(this$static, w, beforeIndex){
     throw $IndexOutOfBoundsException(new IndexOutOfBoundsException);
   }
   if (this$static.size == this$static.array.length) {
-    newArray = initDim(_3Lcom_google_gwt_user_client_ui_Widget_2_classLit, 250, 22, this$static.array.length * 2, 0);
+    newArray = initDim(_3Lcom_google_gwt_user_client_ui_Widget_2_classLit, 257, 22, this$static.array.length * 2, 0);
     for (i = 0; i < this$static.array.length; ++i) {
       setCheck(newArray, i, this$static.array[i]);
     }
@@ -6889,7 +6936,7 @@ function $adjust_0(clipper, url, left, top_0, width, height){
   }
   clipper.style['width'] = width + ($clinit_54() , 'px');
   clipper.style['height'] = height + 'px';
-  img = $getFirstChildElement(($clinit_30() , clipper));
+  img = $getFirstChildElement_0(($clinit_30() , clipper));
   img.style['filter'] = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + url + "',sizingMethod='crop')";
   img.style['marginLeft'] = -left + 'px';
   img.style['marginTop'] = -top_0 + 'px';
@@ -6902,10 +6949,10 @@ function $adjust_0(clipper, url, left, top_0, width, height){
 function $createStructure_0(url, left, top_0, width, height){
   var clipper, img, tmp, tmp_0;
   if (!isIE6_1) {
-    return tmp = $createElement(($clinit_30() , $doc), 'span') , tmp.innerHTML = $getHTML_0(url, left, top_0, width, height) || '' , $getFirstChildElement(tmp);
+    return tmp = $createElement(($clinit_30() , $doc), 'span') , tmp.innerHTML = $getHTML_0(url, left, top_0, width, height) || '' , $getFirstChildElement_0(tmp);
   }
-  clipper = (tmp_0 = $createElement(($clinit_30() , $doc), 'span') , tmp_0.innerHTML = $getHTML_0(url, left, top_0, width, height) || '' , $getFirstChildElement(tmp_0));
-  img = $getFirstChildElement(clipper);
+  clipper = (tmp_0 = $createElement(($clinit_30() , $doc), 'span') , tmp_0.innerHTML = $getHTML_0(url, left, top_0, width, height) || '' , $getFirstChildElement_0(tmp_0));
+  img = $getFirstChildElement_0(clipper);
   $maybeInitializeEventSystem();
   $sinkEventsImpl(img, 32768);
   return clipper;
@@ -6967,7 +7014,7 @@ function execute_10(){
   var clipper, evt, img, evt_0;
   evt = (evt_0 = ($clinit_30() , $doc).createEventObject() , evt_0.type = 'load' , evt_0);
   clipper = this.val$image.element;
-  img = $getFirstChildElement(clipper);
+  img = $getFirstChildElement_0(clipper);
   img.fireEvent('on' + evt.type, evt);
 }
 
@@ -6999,6 +7046,8 @@ function $setOnReadyStateChange(this$static, handler){
   );
 }
 
+--></script>
+<script><!--
 function create_1(){
   if ($wnd.XMLHttpRequest) {
     return new XMLHttpRequest;
@@ -7068,8 +7117,6 @@ function $draggable(this$static, options){
   return dynamicCast($asWidget(this$static, ($clinit_265() , Lgwtquery_plugins_ui_interactions_Draggable_2_classLit), ($clinit_14() , eval('(' + options + ')'))), 51);
 }
 
---></script>
-<script><!--
 function $droppable(this$static, options){
   return dynamicCast($asWidget(this$static, ($clinit_267() , Lgwtquery_plugins_ui_interactions_Droppable_2_classLit), options), 52);
 }
@@ -7954,7 +8001,7 @@ function $DemoPanel(this$static, title, demo, demos){
   $text_0($_0('h3', this$static.html.element), title);
   for (d$array = demos , d$index = 0 , d$max = d$array.length; d$index < d$max; ++d$index) {
     d = d$array[d$index];
-    $domManip_0($_0('ul', this$static.html.element), $bindOrFire($('<li><a href="#">' + d.getName() + '<\/a><\/li>'), 1, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 246, 18, [$DemoPanel$1(new DemoPanel$1, demo, d)])), 1);
+    $domManip_0($_0('ul', this$static.html.element), $bindOrFire($('<li><a href="#">' + d.getName() + '<\/a><\/li>'), 1, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 253, 18, [$DemoPanel$1(new DemoPanel$1, demo, d)])), 1);
   }
   return this$static;
 }
@@ -8051,6 +8098,7 @@ function $GwtQueryUiModule(this$static){
 
 function $onModuleLoad(this$static){
   var layout;
+  $add_5(this$static.demos, $DraggableSamples(new DraggableSamples, this$static.demo));
   $add_5(this$static.demos, $DroppableSamples(new DroppableSamples, this$static.demo));
   $add_5(this$static.demos, $SelectableSamples(new SelectableSamples, this$static.demo));
   $add_5(this$static.demos, $AccordionSamples(new AccordionSamples, this$static.demo));
@@ -8074,6 +8122,8 @@ function getClass_168(){
 function GwtQueryUiModule(){
 }
 
+--></script>
+<script><!--
 _ = GwtQueryUiModule.prototype = new Object_0;
 _.getClass$ = getClass_168;
 _.typeId$ = 0;
@@ -8103,8 +8153,6 @@ function $fetchJava(this$static, demo){
   }
 }
 
---></script>
-<script><!--
 function getClass_169(){
   return Lgwtquery_samples_client_ViewSourcePanel_2_classLit;
 }
@@ -8164,7 +8212,7 @@ _.getJavaSource = getJavaSource;
 _.typeId$ = 118;
 _.sourceSuffix = null;
 function $AccordionSamples(this$static, demo){
-  $DemoPanel(this$static, 'Accordions', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 252, 23, [$Accordions(new Accordions), $FillSpace(new FillSpace), $NoAutoHeight(new NoAutoHeight), $CollapseContent(new CollapseContent), $OpenOnMouseOver(new OpenOnMouseOver), $CustomizeIcons(new CustomizeIcons), $Sortable_0(new Sortable_0)]));
+  $DemoPanel(this$static, 'Accordions', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 259, 23, [$Accordions(new Accordions), $FillSpace(new FillSpace), $NoAutoHeight(new NoAutoHeight), $CollapseContent(new CollapseContent), $OpenOnMouseOver(new OpenOnMouseOver), $CustomizeIcons(new CustomizeIcons), $Sortable_0(new Sortable_0)]));
   return this$static;
 }
 
@@ -8245,7 +8293,7 @@ function setupDemoElement_1(demo){
   var icons;
   icons = $headerSelected($header({}, 'ui-icon-circle-arrow-e'), 'ui-icon-circle-arrow-s');
   $accordion(dynamicCast($as($_0('#accordion', demo), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), $icons({}, icons));
-  $bindOrFire(dynamicCast($asWidget(dynamicCast($as($_0('#toggle', demo), Lgwtquery_plugins_ui_Ui_2_classLit), 60), ($clinit_284() , Lgwtquery_plugins_ui_widgets_Button_2_classLit), null), 48), 1, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 246, 18, [$GQuery$1(new GQuery$1, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 246, 18, [new CustomizeIcons$1, $CustomizeIcons$2(new CustomizeIcons$2, icons)]))]));
+  $bindOrFire(dynamicCast($asWidget(dynamicCast($as($_0('#toggle', demo), Lgwtquery_plugins_ui_Ui_2_classLit), 60), ($clinit_284() , Lgwtquery_plugins_ui_widgets_Button_2_classLit), null), 48), 1, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 253, 18, [$GQuery$1(new GQuery$1, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 253, 18, [new CustomizeIcons$1, $CustomizeIcons$2(new CustomizeIcons$2, icons)]))]));
 }
 
 function CustomizeIcons(){
@@ -8257,7 +8305,7 @@ _.getName = getName_2;
 _.setupDemoElement = setupDemoElement_1;
 _.typeId$ = 122;
 function f_5(e){
-  $option_0(dynamicCast($asWidget(dynamicCast($as($('#accordion'), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_280() , Lgwtquery_plugins_ui_widgets_Accordion_2_classLit), null), 47), 'icons', ($clinit_412() , $clinit_412() , FALSE));
+  $option_0(dynamicCast($asWidget(dynamicCast($as($('#accordion'), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_280() , Lgwtquery_plugins_ui_widgets_Accordion_2_classLit), null), 47), 'icons', ($clinit_419() , $clinit_419() , FALSE));
   return true;
 }
 
@@ -8408,7 +8456,7 @@ function getName_6(){
 function setupDemoElement_5(demo){
   var stop;
   stop = new Sortable$Stop;
-  $bindOrFire($_0('#accordion h3', demo), 1, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 246, 18, [$Sortable$1(new Sortable$1, stop)]));
+  $bindOrFire($_0('#accordion h3', demo), 1, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 253, 18, [$Sortable$1(new Sortable$1, stop)]));
   $bind_2($sortable($accordion_0(dynamicCast($as($_0('#accordion', demo), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), '{header: "> div > h3"}'), '{axis: "y", handle: "h3"}'), 'sortstop', $Sortable$2(new Sortable$2, stop));
 }
 
@@ -8501,7 +8549,7 @@ _.getJavaSource = getJavaSource_0;
 _.typeId$ = 132;
 _.sourceSuffix = null;
 function $ButtonSamples(this$static, demo){
-  $DemoPanel(this$static, 'Buttons', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 252, 23, [$Buttons(new Buttons), $Radios(new Radios), $Checkboxes(new Checkboxes), $Icons(new Icons)]));
+  $DemoPanel(this$static, 'Buttons', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 259, 23, [$Buttons(new Buttons), $Radios(new Radios), $Checkboxes(new Checkboxes), $Icons(new Icons)]));
   return this$static;
 }
 
@@ -8530,7 +8578,7 @@ function getName_7(){
 
 function setupDemoElement_6(demo){
   dynamicCast($asWidget(dynamicCast($as($_0('button, a, input', demo), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_284() , Lgwtquery_plugins_ui_widgets_Button_2_classLit), null), 48);
-  $bindOrFire($_0('a', demo), 1, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 246, 18, [new Buttons$1]));
+  $bindOrFire($_0('a', demo), 1, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 253, 18, [new Buttons$1]));
 }
 
 function Buttons(){
@@ -8654,7 +8702,7 @@ _.getJavaSource = getJavaSource_1;
 _.typeId$ = 139;
 _.sourceSuffix = null;
 function $DatepickerSamples(this$static, demo){
-  $DemoPanel(this$static, 'Datepickers', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 252, 23, [$Datepickers(new Datepickers), $Format(new Format), $RestrictRange(new RestrictRange)]));
+  $DemoPanel(this$static, 'Datepickers', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 259, 23, [$Datepickers(new Datepickers), $Format(new Format), $RestrictRange(new RestrictRange)]));
   return this$static;
 }
 
@@ -8708,7 +8756,7 @@ function getName_12(){
 
 function setupDemoElement_11(demo){
   dynamicCast($asWidget(dynamicCast($as($_0('#datepicker', demo), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_290() , Lgwtquery_plugins_ui_widgets_Datepicker_2_classLit), null), 49);
-  $bindOrFire($('#format'), 1024, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 246, 18, [new Format$1]));
+  $bindOrFire($('#format'), 1024, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 253, 18, [new Format$1]));
 }
 
 function Format(){
@@ -8797,7 +8845,7 @@ function getName_14(){
 
 function setupDemoElement_13(demo){
   $dialog_0(dynamicCast($as($('#dialog'), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), "{autoOpen: false, show: 'blind', hide: 'explode'}");
-  $bindOrFire($('#opener'), 1, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 246, 18, [new Animated$1]));
+  $bindOrFire($('#opener'), 1, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 253, 18, [new Animated$1]));
 }
 
 function Animated(){
@@ -8825,7 +8873,7 @@ _.f_1 = f_12;
 _.getClass$ = getClass_201;
 _.typeId$ = 147;
 function $DialogSamples(this$static, demo){
-  $DemoPanel(this$static, 'Dialogs', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 252, 23, [$Dialogs(new Dialogs), $Animated(new Animated), $ModalDialog(new ModalDialog), $ModalMessage(new ModalMessage)]));
+  $DemoPanel(this$static, 'Dialogs', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 259, 23, [$Dialogs(new Dialogs), $Animated(new Animated), $ModalDialog(new ModalDialog), $ModalMessage(new ModalMessage)]));
   return this$static;
 }
 
@@ -8931,14 +8979,187 @@ _.f_1 = f_13;
 _.getClass$ = getClass_206;
 _.typeId$ = 152;
 function getClass_207(){
-  return Lgwtquery_samples_client_droppables_AbstractDroppableDemo_2_classLit;
+  return Lgwtquery_samples_client_draggables_AbstractDraggableDemo_2_classLit;
 }
 
 function getDemoHtml_3(){
-  return 'droppables/' + this.sourceSuffix + '.html';
+  return 'draggables/' + this.sourceSuffix + '.html';
 }
 
 function getJavaSource_3(){
+  return 'draggables/' + this.sourceSuffix + '.java';
+}
+
+function AbstractDraggableDemo(){
+}
+
+_ = AbstractDraggableDemo.prototype = new Object_0;
+_.getClass$ = getClass_207;
+_.getDemoHtml = getDemoHtml_3;
+_.getJavaSource = getJavaSource_3;
+_.typeId$ = 153;
+_.sourceSuffix = null;
+function $DraggableSamples(this$static, demo){
+  $DemoPanel(this$static, 'Draggables', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 259, 23, [$Draggables(new Draggables), $Event(new Event)]));
+  return this$static;
+}
+
+function getClass_208(){
+  return Lgwtquery_samples_client_draggables_DraggableSamples_2_classLit;
+}
+
+function DraggableSamples(){
+}
+
+_ = DraggableSamples.prototype = new DemoPanel;
+_.getClass$ = getClass_208;
+_.typeId$ = 154;
+function $Draggables(this$static){
+  this$static.sourceSuffix = 'Draggables';
+  return this$static;
+}
+
+function getClass_209(){
+  return Lgwtquery_samples_client_draggables_Draggables_2_classLit;
+}
+
+function getName_18(){
+  return 'Default Functionality';
+}
+
+function setupDemoElement_17(demo){
+  dynamicCast($asWidget(dynamicCast($as($_0('#draggable', demo), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_265() , Lgwtquery_plugins_ui_interactions_Draggable_2_classLit), null), 51);
+}
+
+function Draggables(){
+}
+
+_ = Draggables.prototype = new AbstractDraggableDemo;
+_.getClass$ = getClass_209;
+_.getName = getName_18;
+_.setupDemoElement = setupDemoElement_17;
+_.typeId$ = 155;
+function $Event(this$static){
+  this$static.sourceSuffix = 'Event';
+  return this$static;
+}
+
+function $updateCounterStatus(event_counter, new_count){
+  !$hasClass(event_counter, initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['ui-state-hover'])) && $removeClass($siblings($addClass(event_counter, initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['ui-state-hover']))), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['ui-state-hover']));
+  $text_0($_0('span.count', event_counter.elements[0]), '' + new_count);
+}
+
+function getClass_210(){
+  return Lgwtquery_samples_client_draggables_Event_2_classLit;
+}
+
+function getName_19(){
+  return 'Events';
+}
+
+function setupDemoElement_18(demo){
+  var counts, drag_counter, start_counter, stop_counter;
+  start_counter = $('#event-start');
+  drag_counter = $('#event-drag');
+  stop_counter = $('#event-stop');
+  counts = initValues(_3I_classLit, 260, -1, [0, 0, 0]);
+  $bind_2(dynamicCast($bind_2(dynamicCast($bind_2(dynamicCast($asWidget(dynamicCast($as($('#draggable'), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_265() , Lgwtquery_plugins_ui_interactions_Draggable_2_classLit), null), 51), 'dragstart', $Event$1(new Event$1, counts, start_counter)), 51), 'drag', $Event$2(new Event$2, counts, drag_counter)), 51), 'dragstop', $Event$3(new Event$3, counts, stop_counter));
+}
+
+function Event(){
+}
+
+_ = Event.prototype = new AbstractDraggableDemo;
+_.getClass$ = getClass_210;
+_.getName = getName_19;
+_.setupDemoElement = setupDemoElement_18;
+_.typeId$ = 156;
+function $Event$1(this$static, val$counts, val$start_counter){
+  this$static.val$counts = val$counts;
+  this$static.val$start_counter = val$start_counter;
+  return this$static;
+}
+
+function f_14(e, data){
+  ++this.val$counts[0];
+  $updateCounterStatus(this.val$start_counter, this.val$counts[0]);
+  return false;
+}
+
+function getClass_211(){
+  return Lgwtquery_samples_client_draggables_Event$1_2_classLit;
+}
+
+function Event$1(){
+}
+
+_ = Event$1.prototype = new Function_0;
+_.f_0 = f_14;
+_.getClass$ = getClass_211;
+_.typeId$ = 157;
+_.val$counts = null;
+_.val$start_counter = null;
+function $Event$2(this$static, val$counts, val$drag_counter){
+  this$static.val$counts = val$counts;
+  this$static.val$drag_counter = val$drag_counter;
+  return this$static;
+}
+
+--></script>
+<script><!--
+function f_15(e, data){
+  ++this.val$counts[1];
+  $updateCounterStatus(this.val$drag_counter, this.val$counts[1]);
+  return false;
+}
+
+function getClass_212(){
+  return Lgwtquery_samples_client_draggables_Event$2_2_classLit;
+}
+
+function Event$2(){
+}
+
+_ = Event$2.prototype = new Function_0;
+_.f_0 = f_15;
+_.getClass$ = getClass_212;
+_.typeId$ = 158;
+_.val$counts = null;
+_.val$drag_counter = null;
+function $Event$3(this$static, val$counts, val$stop_counter){
+  this$static.val$counts = val$counts;
+  this$static.val$stop_counter = val$stop_counter;
+  return this$static;
+}
+
+function f_16(e, data){
+  ++this.val$counts[2];
+  $updateCounterStatus(this.val$stop_counter, this.val$counts[2]);
+  return false;
+}
+
+function getClass_213(){
+  return Lgwtquery_samples_client_draggables_Event$3_2_classLit;
+}
+
+function Event$3(){
+}
+
+_ = Event$3.prototype = new Function_0;
+_.f_0 = f_16;
+_.getClass$ = getClass_213;
+_.typeId$ = 159;
+_.val$counts = null;
+_.val$stop_counter = null;
+function getClass_214(){
+  return Lgwtquery_samples_client_droppables_AbstractDroppableDemo_2_classLit;
+}
+
+function getDemoHtml_4(){
+  return 'droppables/' + this.sourceSuffix + '.html';
+}
+
+function getJavaSource_4(){
   return 'droppables/' + this.sourceSuffix + '.java';
 }
 
@@ -8946,25 +9167,25 @@ function AbstractDroppableDemo(){
 }
 
 _ = AbstractDroppableDemo.prototype = new Object_0;
-_.getClass$ = getClass_207;
-_.getDemoHtml = getDemoHtml_3;
-_.getJavaSource = getJavaSource_3;
-_.typeId$ = 153;
+_.getClass$ = getClass_214;
+_.getDemoHtml = getDemoHtml_4;
+_.getJavaSource = getJavaSource_4;
+_.typeId$ = 160;
 _.sourceSuffix = null;
 function $AcceptedElements(this$static){
   this$static.sourceSuffix = 'AcceptedElements';
   return this$static;
 }
 
-function getClass_208(){
+function getClass_215(){
   return Lgwtquery_samples_client_droppables_AcceptedElements_2_classLit;
 }
 
-function getName_18(){
+function getName_20(){
   return 'Accepted Elements';
 }
 
-function setupDemoElement_17(demo){
+function setupDemoElement_19(demo){
   dynamicCast($asWidget(dynamicCast($as($('#draggable, #draggable-nonvalid'), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_265() , Lgwtquery_plugins_ui_interactions_Draggable_2_classLit), null), 51);
   $bind_2($droppable(dynamicCast($as($('#droppable'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), $hoverClass($activeClass($accept({}, '#draggable'), 'ui-state-hover'), 'ui-state-active')), 'drop', new AcceptedElements$1);
 }
@@ -8973,15 +9194,15 @@ function AcceptedElements(){
 }
 
 _ = AcceptedElements.prototype = new AbstractDroppableDemo;
-_.getClass$ = getClass_208;
-_.getName = getName_18;
-_.setupDemoElement = setupDemoElement_17;
-_.typeId$ = 154;
-function f_14(e){
-  $html($find($addClass(($clinit_128() , $GQuery(new GQuery, [e])), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['ui-state-highlight'])), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['p'])), 'Dropped!');
+_.getClass$ = getClass_215;
+_.getName = getName_20;
+_.setupDemoElement = setupDemoElement_19;
+_.typeId$ = 161;
+function f_17(e){
+  $html($find($addClass(($clinit_128() , $GQuery(new GQuery, [e])), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['ui-state-highlight'])), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['p'])), 'Dropped!');
 }
 
-function getClass_209(){
+function getClass_216(){
   return Lgwtquery_samples_client_droppables_AcceptedElements$1_2_classLit;
 }
 
@@ -8989,15 +9210,15 @@ function AcceptedElements$1(){
 }
 
 _ = AcceptedElements$1.prototype = new Function_0;
-_.f = f_14;
-_.getClass$ = getClass_209;
-_.typeId$ = 155;
+_.f = f_17;
+_.getClass$ = getClass_216;
+_.typeId$ = 162;
 function $DroppableSamples(this$static, demo){
-  $DemoPanel(this$static, 'Droppables', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 252, 23, [$Droppables(new Droppables), $AcceptedElements(new AcceptedElements), $PreventPropagation(new PreventPropagation), $VisualFeedback(new VisualFeedback), $Revert(new Revert), $ShoppingCart(new ShoppingCart)]));
+  $DemoPanel(this$static, 'Droppables', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 259, 23, [$Droppables(new Droppables), $AcceptedElements(new AcceptedElements), $PreventPropagation(new PreventPropagation), $VisualFeedback(new VisualFeedback), $Revert(new Revert), $ShoppingCart(new ShoppingCart)]));
   return this$static;
 }
 
-function getClass_210(){
+function getClass_217(){
   return Lgwtquery_samples_client_droppables_DroppableSamples_2_classLit;
 }
 
@@ -9005,22 +9226,22 @@ function DroppableSamples(){
 }
 
 _ = DroppableSamples.prototype = new DemoPanel;
-_.getClass$ = getClass_210;
-_.typeId$ = 156;
+_.getClass$ = getClass_217;
+_.typeId$ = 163;
 function $Droppables(this$static){
   this$static.sourceSuffix = 'Droppables';
   return this$static;
 }
 
-function getClass_211(){
+function getClass_218(){
   return Lgwtquery_samples_client_droppables_Droppables_2_classLit;
 }
 
-function getName_19(){
+function getName_21(){
   return 'Default Functionality';
 }
 
-function setupDemoElement_18(demo){
+function setupDemoElement_20(demo){
   dynamicCast($asWidget(dynamicCast($as($('#draggable'), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_265() , Lgwtquery_plugins_ui_interactions_Draggable_2_classLit), null), 51);
   $bind_2(dynamicCast($asWidget(dynamicCast($as($('#droppable'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), ($clinit_267() , Lgwtquery_plugins_ui_interactions_Droppable_2_classLit), null), 52), 'drop', new Droppables$1);
 }
@@ -9029,15 +9250,15 @@ function Droppables(){
 }
 
 _ = Droppables.prototype = new AbstractDroppableDemo;
-_.getClass$ = getClass_211;
-_.getName = getName_19;
-_.setupDemoElement = setupDemoElement_18;
-_.typeId$ = 157;
-function f_15(e){
-  $html($find($addClass(($clinit_128() , $GQuery(new GQuery, [e])), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['ui-state-highlight'])), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['p'])), 'Dropped!');
+_.getClass$ = getClass_218;
+_.getName = getName_21;
+_.setupDemoElement = setupDemoElement_20;
+_.typeId$ = 164;
+function f_18(e){
+  $html($find($addClass(($clinit_128() , $GQuery(new GQuery, [e])), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['ui-state-highlight'])), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['p'])), 'Dropped!');
 }
 
-function getClass_212(){
+function getClass_219(){
   return Lgwtquery_samples_client_droppables_Droppables$1_2_classLit;
 }
 
@@ -9045,23 +9266,23 @@ function Droppables$1(){
 }
 
 _ = Droppables$1.prototype = new Function_0;
-_.f = f_15;
-_.getClass$ = getClass_212;
-_.typeId$ = 158;
+_.f = f_18;
+_.getClass$ = getClass_219;
+_.typeId$ = 165;
 function $PreventPropagation(this$static){
   this$static.sourceSuffix = 'PreventPropagation';
   return this$static;
 }
 
-function getClass_213(){
+function getClass_220(){
   return Lgwtquery_samples_client_droppables_PreventPropagation_2_classLit;
 }
 
-function getName_20(){
+function getName_22(){
   return 'Prevent propagation';
 }
 
-function setupDemoElement_19(demo){
+function setupDemoElement_21(demo){
   dynamicCast($asWidget(dynamicCast($as($('#draggable'), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_265() , Lgwtquery_plugins_ui_interactions_Draggable_2_classLit), null), 51);
   $bind_2($droppable_0(dynamicCast($as($('#droppable, #droppable-inner'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), "{activeClass:'ui-state-hover', hoverClass:'ui-state-active'}"), 'drop', new PreventPropagation$1);
   $bind_2($droppable_0(dynamicCast($as($('#droppable2, #droppable2-inner'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), "{greedy:true, activeClass:'ui-state-hover', hoverClass:'ui-state-active'}"), 'drop', new PreventPropagation$2);
@@ -9071,16 +9292,16 @@ function PreventPropagation(){
 }
 
 _ = PreventPropagation.prototype = new AbstractDroppableDemo;
-_.getClass$ = getClass_213;
-_.getName = getName_20;
-_.setupDemoElement = setupDemoElement_19;
-_.typeId$ = 159;
-function f_16(e){
-  $html($find($addClass(($clinit_128() , $GQuery(new GQuery, [($clinit_30() , $clinit_31() , currentEventTarget)])), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['ui-state-highlight'])), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['p'])), 'Dropped!');
+_.getClass$ = getClass_220;
+_.getName = getName_22;
+_.setupDemoElement = setupDemoElement_21;
+_.typeId$ = 166;
+function f_19(e){
+  $html($find($addClass(($clinit_128() , $GQuery(new GQuery, [($clinit_30() , $clinit_31() , currentEventTarget)])), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['ui-state-highlight'])), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['p'])), 'Dropped!');
   return false;
 }
 
-function getClass_214(){
+function getClass_221(){
   return Lgwtquery_samples_client_droppables_PreventPropagation$1_2_classLit;
 }
 
@@ -9088,14 +9309,14 @@ function PreventPropagation$1(){
 }
 
 _ = PreventPropagation$1.prototype = new Function_0;
-_.f_1 = f_16;
-_.getClass$ = getClass_214;
-_.typeId$ = 160;
-function f_17(e){
-  $html($find($addClass(($clinit_128() , $GQuery(new GQuery, [e])), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['ui-state-highlight'])), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['p'])), 'Dropped!');
+_.f_1 = f_19;
+_.getClass$ = getClass_221;
+_.typeId$ = 167;
+function f_20(e){
+  $html($find($addClass(($clinit_128() , $GQuery(new GQuery, [e])), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['ui-state-highlight'])), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['p'])), 'Dropped!');
 }
 
-function getClass_215(){
+function getClass_222(){
   return Lgwtquery_samples_client_droppables_PreventPropagation$2_2_classLit;
 }
 
@@ -9103,25 +9324,23 @@ function PreventPropagation$2(){
 }
 
 _ = PreventPropagation$2.prototype = new Function_0;
-_.f = f_17;
-_.getClass$ = getClass_215;
-_.typeId$ = 161;
+_.f = f_20;
+_.getClass$ = getClass_222;
+_.typeId$ = 168;
 function $Revert(this$static){
   this$static.sourceSuffix = 'Revert';
   return this$static;
 }
 
-function getClass_216(){
+function getClass_223(){
   return Lgwtquery_samples_client_droppables_Revert_2_classLit;
 }
 
---></script>
-<script><!--
-function getName_21(){
+function getName_23(){
   return 'Revert draggable position';
 }
 
-function setupDemoElement_20(demo){
+function setupDemoElement_22(demo){
   $draggable(dynamicCast($as($('#draggable'), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), "{revert: 'valid'}");
   $draggable(dynamicCast($as($('#draggable2'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), "{revert: 'invalid'}");
   $bind_2($droppable(dynamicCast($as($('#droppable'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), $hoverClass($activeClass({}, 'ui-state-hover'), 'ui-state-active')), 'drop', new Revert$1);
@@ -9131,15 +9350,15 @@ function Revert(){
 }
 
 _ = Revert.prototype = new AbstractDroppableDemo;
-_.getClass$ = getClass_216;
-_.getName = getName_21;
-_.setupDemoElement = setupDemoElement_20;
-_.typeId$ = 162;
-function f_18(e){
-  $html($find($addClass(($clinit_128() , $GQuery(new GQuery, [e])), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['ui-state-highlight'])), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['p'])), 'Dropped!');
+_.getClass$ = getClass_223;
+_.getName = getName_23;
+_.setupDemoElement = setupDemoElement_22;
+_.typeId$ = 169;
+function f_21(e){
+  $html($find($addClass(($clinit_128() , $GQuery(new GQuery, [e])), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['ui-state-highlight'])), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['p'])), 'Dropped!');
 }
 
-function getClass_217(){
+function getClass_224(){
   return Lgwtquery_samples_client_droppables_Revert$1_2_classLit;
 }
 
@@ -9147,23 +9366,23 @@ function Revert$1(){
 }
 
 _ = Revert$1.prototype = new Function_0;
-_.f = f_18;
-_.getClass$ = getClass_217;
-_.typeId$ = 163;
+_.f = f_21;
+_.getClass$ = getClass_224;
+_.typeId$ = 170;
 function $ShoppingCart(this$static){
   this$static.sourceSuffix = 'ShoppingCart';
   return this$static;
 }
 
-function getClass_218(){
+function getClass_225(){
   return Lgwtquery_samples_client_droppables_ShoppingCart_2_classLit;
 }
 
-function getName_22(){
+function getName_24(){
   return 'Shopping Cart';
 }
 
-function setupDemoElement_21(demo){
+function setupDemoElement_23(demo){
   dynamicCast($asWidget(dynamicCast($as($('#catalog'), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_280() , Lgwtquery_plugins_ui_widgets_Accordion_2_classLit), null), 47);
   $draggable(dynamicCast($as($('#catalog li'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), "{appendTo: 'body', helper: 'clone'}");
   $sortable(dynamicCast($as(dynamicCast($bind_2($droppable(dynamicCast($as($('#cart ol'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), $accept($hoverClass($activeClass({}, 'ui-state-default'), 'ui-state-hover'), ':not(.ui-sortable-helper)')), 'drop', new ShoppingCart$1), 52), Lgwtquery_plugins_ui_Ui_2_classLit), 60), "{items: 'li:not(.placeholder)'}");
@@ -9173,19 +9392,19 @@ function ShoppingCart(){
 }
 
 _ = ShoppingCart.prototype = new AbstractDroppableDemo;
-_.getClass$ = getClass_218;
-_.getName = getName_22;
-_.setupDemoElement = setupDemoElement_21;
-_.typeId$ = 164;
-function f_19(e, ui){
+_.getClass$ = getClass_225;
+_.getName = getName_24;
+_.setupDemoElement = setupDemoElement_23;
+_.typeId$ = 171;
+function f_22(e, ui){
   var dropevent;
   dropevent = dynamicCastJso(ui);
-  $remove($find(($clinit_128() , $GQuery(new GQuery, [($clinit_30() , $clinit_31() , currentEventTarget)])), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['.placeholder'])));
+  $remove($find(($clinit_128() , $GQuery(new GQuery, [($clinit_30() , $clinit_31() , currentEventTarget)])), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['.placeholder'])));
   $appendTo($text_0($('<li><\/li>'), $text($GQuery(new GQuery, [dropevent['draggable'].get(0)]))), $GQuery(new GQuery, [currentEventTarget]));
   return false;
 }
 
-function getClass_219(){
+function getClass_226(){
   return Lgwtquery_samples_client_droppables_ShoppingCart$1_2_classLit;
 }
 
@@ -9193,23 +9412,23 @@ function ShoppingCart$1(){
 }
 
 _ = ShoppingCart$1.prototype = new Function_0;
-_.f_0 = f_19;
-_.getClass$ = getClass_219;
-_.typeId$ = 165;
+_.f_0 = f_22;
+_.getClass$ = getClass_226;
+_.typeId$ = 172;
 function $VisualFeedback(this$static){
   this$static.sourceSuffix = 'VisualFeedback';
   return this$static;
 }
 
-function getClass_220(){
+function getClass_227(){
   return Lgwtquery_samples_client_droppables_VisualFeedback_2_classLit;
 }
 
-function getName_23(){
+function getName_25(){
   return 'Visual feedback';
 }
 
-function setupDemoElement_22(demo){
+function setupDemoElement_24(demo){
   dynamicCast($asWidget(dynamicCast($as($('#draggable'), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_265() , Lgwtquery_plugins_ui_interactions_Draggable_2_classLit), null), 51);
   $bind_2($droppable(dynamicCast($as($('#droppable'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), $hoverClass($accept({}, '#draggable'), 'ui-state-active')), 'drop', new VisualFeedback$1);
   dynamicCast($asWidget(dynamicCast($as($('#draggable2'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), Lgwtquery_plugins_ui_interactions_Draggable_2_classLit, null), 51);
@@ -9220,15 +9439,15 @@ function VisualFeedback(){
 }
 
 _ = VisualFeedback.prototype = new AbstractDroppableDemo;
-_.getClass$ = getClass_220;
-_.getName = getName_23;
-_.setupDemoElement = setupDemoElement_22;
-_.typeId$ = 166;
-function f_20(e){
-  $html($find($addClass(($clinit_128() , $GQuery(new GQuery, [e])), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['ui-state-highlight'])), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['p'])), 'Dropped!');
+_.getClass$ = getClass_227;
+_.getName = getName_25;
+_.setupDemoElement = setupDemoElement_24;
+_.typeId$ = 173;
+function f_23(e){
+  $html($find($addClass(($clinit_128() , $GQuery(new GQuery, [e])), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['ui-state-highlight'])), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['p'])), 'Dropped!');
 }
 
-function getClass_221(){
+function getClass_228(){
   return Lgwtquery_samples_client_droppables_VisualFeedback$1_2_classLit;
 }
 
@@ -9236,14 +9455,14 @@ function VisualFeedback$1(){
 }
 
 _ = VisualFeedback$1.prototype = new Function_0;
-_.f = f_20;
-_.getClass$ = getClass_221;
-_.typeId$ = 167;
-function f_21(e){
-  $html($find($addClass(($clinit_128() , $GQuery(new GQuery, [e])), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['ui-state-highlight'])), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['p'])), 'Dropped!');
+_.f = f_23;
+_.getClass$ = getClass_228;
+_.typeId$ = 174;
+function f_24(e){
+  $html($find($addClass(($clinit_128() , $GQuery(new GQuery, [e])), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['ui-state-highlight'])), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['p'])), 'Dropped!');
 }
 
-function getClass_222(){
+function getClass_229(){
   return Lgwtquery_samples_client_droppables_VisualFeedback$2_2_classLit;
 }
 
@@ -9251,18 +9470,18 @@ function VisualFeedback$2(){
 }
 
 _ = VisualFeedback$2.prototype = new Function_0;
-_.f = f_21;
-_.getClass$ = getClass_222;
-_.typeId$ = 168;
-function getClass_223(){
+_.f = f_24;
+_.getClass$ = getClass_229;
+_.typeId$ = 175;
+function getClass_230(){
   return Lgwtquery_samples_client_positions_AbstractPositionDemo_2_classLit;
 }
 
-function getDemoHtml_4(){
+function getDemoHtml_5(){
   return 'positions/' + this.sourceSuffix + '.html';
 }
 
-function getJavaSource_4(){
+function getJavaSource_5(){
   return 'positions/' + this.sourceSuffix + '.java';
 }
 
@@ -9270,17 +9489,17 @@ function AbstractPositionDemo(){
 }
 
 _ = AbstractPositionDemo.prototype = new Object_0;
-_.getClass$ = getClass_223;
-_.getDemoHtml = getDemoHtml_4;
-_.getJavaSource = getJavaSource_4;
-_.typeId$ = 169;
+_.getClass$ = getClass_230;
+_.getDemoHtml = getDemoHtml_5;
+_.getJavaSource = getJavaSource_5;
+_.typeId$ = 176;
 _.sourceSuffix = null;
 function $PositionSamples(this$static, demo){
-  $DemoPanel(this$static, 'Position', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 252, 23, [$Positions(new Positions)]));
+  $DemoPanel(this$static, 'Position', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 259, 23, [$Positions(new Positions)]));
   return this$static;
 }
 
-function getClass_224(){
+function getClass_231(){
   return Lgwtquery_samples_client_positions_PositionSamples_2_classLit;
 }
 
@@ -9288,27 +9507,27 @@ function PositionSamples(){
 }
 
 _ = PositionSamples.prototype = new DemoPanel;
-_.getClass$ = getClass_224;
-_.typeId$ = 170;
+_.getClass$ = getClass_231;
+_.typeId$ = 177;
 function $Positions(this$static){
   this$static.sourceSuffix = 'Positions';
   return this$static;
 }
 
-function getClass_225(){
+function getClass_232(){
   return Lgwtquery_samples_client_positions_Positions_2_classLit;
 }
 
-function getName_24(){
+function getName_26(){
   return 'Default Functionality';
 }
 
-function setupDemoElement_23(demo){
+function setupDemoElement_25(demo){
   var position, v, v_0, v_1, v_2, v_3, v_4, v_5;
   position = new Positions$1;
   $css($('.positionable'), 'opacity', '0.5');
-  $('input').bind_0(1537, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 246, 18, [position]));
-  $('select').bind_0(1024, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 246, 18, [position]));
+  $('input').bind_0(1537, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 253, 18, [position]));
+  $('select').bind_0(1024, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 253, 18, [position]));
   $bind_2(dynamicCast($asWidget(dynamicCast($as($('#parent'), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_265() , Lgwtquery_plugins_ui_interactions_Draggable_2_classLit), null), 51), 'drag', position);
   $bind_2(dynamicCast($asWidget(dynamicCast($as($('.positionable'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), Lgwtquery_plugins_ui_interactions_Draggable_2_classLit, null), 51), 'drag', new Positions$2);
   $position(dynamicCast($as($('.positionable'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), $collision($offset($at($my($of_0({}, $('#parent')), (v = $vals($('#my_horizontal')) , v != null && v.length > 0?v[0]:'') + ' ' + (v_0 = $vals($('#my_vertical')) , v_0 != null && v_0.length > 0?v_0[0]:'')), (v_1 = $vals($('#at_horizontal')) , v_1 != null && v_1.length > 0?v_1[0]:'') + ' ' + (v_2 = $vals($('#at_vertical')) , v_2 != null && v_2.length > 0?v_2[0]:'')), (v_3 = $vals($('#offset')) , v_3 != null && v_3.length > 0?v_3[0]:'')), (v_4 = $vals($('#collision_horizontal')) , v_4 != null && v_4.length > 0?v_4[0]:'') + ' ' + (v_5 = $vals($('#collision_vertical')) , v_5 != null && v_5.length > 0?v_5[0]:'')));
@@ -9318,16 +9537,16 @@ function Positions(){
 }
 
 _ = Positions.prototype = new AbstractPositionDemo;
-_.getClass$ = getClass_225;
-_.getName = getName_24;
-_.setupDemoElement = setupDemoElement_23;
-_.typeId$ = 171;
-function f_22(e){
+_.getClass$ = getClass_232;
+_.getName = getName_26;
+_.setupDemoElement = setupDemoElement_25;
+_.typeId$ = 178;
+function f_25(e){
   var v, v_0, v_1, v_2, v_3, v_4, v_5;
   $position(dynamicCast($as($('.positionable'), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), $collision($offset($at($my($of_0({}, $('#parent')), (v = $vals($('#my_horizontal')) , v != null && v.length > 0?v[0]:'') + ' ' + (v_0 = $vals($('#my_vertical')) , v_0 != null && v_0.length > 0?v_0[0]:'')), (v_1 = $vals($('#at_horizontal')) , v_1 != null && v_1.length > 0?v_1[0]:'') + ' ' + (v_2 = $vals($('#at_vertical')) , v_2 != null && v_2.length > 0?v_2[0]:'')), (v_3 = $vals($('#offset')) , v_3 != null && v_3.length > 0?v_3[0]:'')), (v_4 = $vals($('#collision_horizontal')) , v_4 != null && v_4.length > 0?v_4[0]:'') + ' ' + (v_5 = $vals($('#collision_vertical')) , v_5 != null && v_5.length > 0?v_5[0]:'')));
 }
 
-function getClass_226(){
+function getClass_233(){
   return Lgwtquery_samples_client_positions_Positions$1_2_classLit;
 }
 
@@ -9335,15 +9554,15 @@ function Positions$1(){
 }
 
 _ = Positions$1.prototype = new Function_0;
-_.f = f_22;
-_.getClass$ = getClass_226;
-_.typeId$ = 172;
-function f_23(e, data){
-  $val_0($('#offset'), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['0']));
+_.f = f_25;
+_.getClass$ = getClass_233;
+_.typeId$ = 179;
+function f_26(e, data){
+  $val_0($('#offset'), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['0']));
   return false;
 }
 
-function getClass_227(){
+function getClass_234(){
   return Lgwtquery_samples_client_positions_Positions$2_2_classLit;
 }
 
@@ -9351,18 +9570,18 @@ function Positions$2(){
 }
 
 _ = Positions$2.prototype = new Function_0;
-_.f_0 = f_23;
-_.getClass$ = getClass_227;
-_.typeId$ = 173;
-function getClass_228(){
+_.f_0 = f_26;
+_.getClass$ = getClass_234;
+_.typeId$ = 180;
+function getClass_235(){
   return Lgwtquery_samples_client_progressbars_AbstractProgressbarDemo_2_classLit;
 }
 
-function getDemoHtml_5(){
+function getDemoHtml_6(){
   return 'progressbars/' + this.sourceSuffix + '.html';
 }
 
-function getJavaSource_5(){
+function getJavaSource_6(){
   return 'progressbars/' + this.sourceSuffix + '.java';
 }
 
@@ -9370,25 +9589,25 @@ function AbstractProgressbarDemo(){
 }
 
 _ = AbstractProgressbarDemo.prototype = new Object_0;
-_.getClass$ = getClass_228;
-_.getDemoHtml = getDemoHtml_5;
-_.getJavaSource = getJavaSource_5;
-_.typeId$ = 174;
+_.getClass$ = getClass_235;
+_.getDemoHtml = getDemoHtml_6;
+_.getJavaSource = getJavaSource_6;
+_.typeId$ = 181;
 _.sourceSuffix = null;
 function $Animated_0(this$static){
   this$static.sourceSuffix = 'Animated';
   return this$static;
 }
 
-function getClass_229(){
+function getClass_236(){
   return Lgwtquery_samples_client_progressbars_Animated_2_classLit;
 }
 
-function getName_25(){
+function getName_27(){
   return 'Animated';
 }
 
-function setupDemoElement_24(demo){
+function setupDemoElement_26(demo){
   $progressbar_0(dynamicCast($as($_0('#progressbar', demo), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), '{value:59}');
 }
 
@@ -9396,16 +9615,16 @@ function Animated_0(){
 }
 
 _ = Animated_0.prototype = new AbstractProgressbarDemo;
-_.getClass$ = getClass_229;
-_.getName = getName_25;
-_.setupDemoElement = setupDemoElement_24;
-_.typeId$ = 175;
+_.getClass$ = getClass_236;
+_.getName = getName_27;
+_.setupDemoElement = setupDemoElement_26;
+_.typeId$ = 182;
 function $ProgressbarSamples(this$static, demo){
-  $DemoPanel(this$static, 'Progressbars', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 252, 23, [$Progressbars(new Progressbars), $Animated_0(new Animated_0), $Resizable_0(new Resizable_0)]));
+  $DemoPanel(this$static, 'Progressbars', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 259, 23, [$Progressbars(new Progressbars), $Animated_0(new Animated_0), $Resizable_0(new Resizable_0)]));
   return this$static;
 }
 
-function getClass_230(){
+function getClass_237(){
   return Lgwtquery_samples_client_progressbars_ProgressbarSamples_2_classLit;
 }
 
@@ -9413,22 +9632,22 @@ function ProgressbarSamples(){
 }
 
 _ = ProgressbarSamples.prototype = new DemoPanel;
-_.getClass$ = getClass_230;
-_.typeId$ = 176;
+_.getClass$ = getClass_237;
+_.typeId$ = 183;
 function $Progressbars(this$static){
   this$static.sourceSuffix = 'Progressbars';
   return this$static;
 }
 
-function getClass_231(){
+function getClass_238(){
   return Lgwtquery_samples_client_progressbars_Progressbars_2_classLit;
 }
 
-function getName_26(){
+function getName_28(){
   return 'Default Functionality';
 }
 
-function setupDemoElement_25(demo){
+function setupDemoElement_27(demo){
   $progressbar(dynamicCast($as($_0('#progressbar', demo), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), $value({}, 37));
 }
 
@@ -9436,24 +9655,24 @@ function Progressbars(){
 }
 
 _ = Progressbars.prototype = new AbstractProgressbarDemo;
-_.getClass$ = getClass_231;
-_.getName = getName_26;
-_.setupDemoElement = setupDemoElement_25;
-_.typeId$ = 177;
+_.getClass$ = getClass_238;
+_.getName = getName_28;
+_.setupDemoElement = setupDemoElement_27;
+_.typeId$ = 184;
 function $Resizable_0(this$static){
   this$static.sourceSuffix = 'Resizable';
   return this$static;
 }
 
-function getClass_232(){
+function getClass_239(){
   return Lgwtquery_samples_client_progressbars_Resizable_2_classLit;
 }
 
-function getName_27(){
+function getName_29(){
   return 'Resizable';
 }
 
-function setupDemoElement_26(demo){
+function setupDemoElement_28(demo){
   $progressbar_0(dynamicCast($as($('#progressbar'), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), '{value: 37}');
   dynamicCast($asWidget(dynamicCast($as($('#progressbarWrapper'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), ($clinit_271() , Lgwtquery_plugins_ui_interactions_Resizable_2_classLit), null), 61);
 }
@@ -9462,19 +9681,19 @@ function Resizable_0(){
 }
 
 _ = Resizable_0.prototype = new AbstractProgressbarDemo;
-_.getClass$ = getClass_232;
-_.getName = getName_27;
-_.setupDemoElement = setupDemoElement_26;
-_.typeId$ = 178;
-function getClass_233(){
+_.getClass$ = getClass_239;
+_.getName = getName_29;
+_.setupDemoElement = setupDemoElement_28;
+_.typeId$ = 185;
+function getClass_240(){
   return Lgwtquery_samples_client_selectables_AbstractSelectableDemo_2_classLit;
 }
 
-function getDemoHtml_6(){
+function getDemoHtml_7(){
   return 'selectables/' + this.sourceSuffix + '.html';
 }
 
-function getJavaSource_6(){
+function getJavaSource_7(){
   return 'selectables/' + this.sourceSuffix + '.java';
 }
 
@@ -9482,25 +9701,25 @@ function AbstractSelectableDemo(){
 }
 
 _ = AbstractSelectableDemo.prototype = new Object_0;
-_.getClass$ = getClass_233;
-_.getDemoHtml = getDemoHtml_6;
-_.getJavaSource = getJavaSource_6;
-_.typeId$ = 179;
+_.getClass$ = getClass_240;
+_.getDemoHtml = getDemoHtml_7;
+_.getJavaSource = getJavaSource_7;
+_.typeId$ = 186;
 _.sourceSuffix = null;
 function $DisplayAsGrid(this$static){
   this$static.sourceSuffix = 'DisplayAsGrid';
   return this$static;
 }
 
-function getClass_234(){
+function getClass_241(){
   return Lgwtquery_samples_client_selectables_DisplayAsGrid_2_classLit;
 }
 
-function getName_28(){
+function getName_30(){
   return 'Display as grid';
 }
 
-function setupDemoElement_27(demo){
+function setupDemoElement_29(demo){
   dynamicCast($asWidget(dynamicCast($as($_0('#selectable', demo), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_273() , Lgwtquery_plugins_ui_interactions_Selectable_2_classLit), null), 63);
 }
 
@@ -9508,16 +9727,16 @@ function DisplayAsGrid(){
 }
 
 _ = DisplayAsGrid.prototype = new AbstractSelectableDemo;
-_.getClass$ = getClass_234;
-_.getName = getName_28;
-_.setupDemoElement = setupDemoElement_27;
-_.typeId$ = 180;
+_.getClass$ = getClass_241;
+_.getName = getName_30;
+_.setupDemoElement = setupDemoElement_29;
+_.typeId$ = 187;
 function $SelectableSamples(this$static, demo){
-  $DemoPanel(this$static, 'Selectables', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 252, 23, [$Selectables(new Selectables), $Serialize(new Serialize), $DisplayAsGrid(new DisplayAsGrid)]));
+  $DemoPanel(this$static, 'Selectables', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 259, 23, [$Selectables(new Selectables), $Serialize(new Serialize), $DisplayAsGrid(new DisplayAsGrid)]));
   return this$static;
 }
 
-function getClass_235(){
+function getClass_242(){
   return Lgwtquery_samples_client_selectables_SelectableSamples_2_classLit;
 }
 
@@ -9525,22 +9744,22 @@ function SelectableSamples(){
 }
 
 _ = SelectableSamples.prototype = new DemoPanel;
-_.getClass$ = getClass_235;
-_.typeId$ = 181;
+_.getClass$ = getClass_242;
+_.typeId$ = 188;
 function $Selectables(this$static){
   this$static.sourceSuffix = 'Selectables';
   return this$static;
 }
 
-function getClass_236(){
+function getClass_243(){
   return Lgwtquery_samples_client_selectables_Selectables_2_classLit;
 }
 
-function getName_29(){
+function getName_31(){
   return 'Default Functionality';
 }
 
-function setupDemoElement_28(demo){
+function setupDemoElement_30(demo){
   dynamicCast($asWidget(dynamicCast($as($_0('#selectable', demo), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_273() , Lgwtquery_plugins_ui_interactions_Selectable_2_classLit), null), 63);
 }
 
@@ -9548,24 +9767,24 @@ function Selectables(){
 }
 
 _ = Selectables.prototype = new AbstractSelectableDemo;
-_.getClass$ = getClass_236;
-_.getName = getName_29;
-_.setupDemoElement = setupDemoElement_28;
-_.typeId$ = 182;
+_.getClass$ = getClass_243;
+_.getName = getName_31;
+_.setupDemoElement = setupDemoElement_30;
+_.typeId$ = 189;
 function $Serialize(this$static){
   this$static.sourceSuffix = 'Serialize';
   return this$static;
 }
 
-function getClass_237(){
+function getClass_244(){
   return Lgwtquery_samples_client_selectables_Serialize_2_classLit;
 }
 
-function getName_30(){
+function getName_32(){
   return 'Serialize';
 }
 
-function setupDemoElement_29(demo){
+function setupDemoElement_31(demo){
   $bind_2(dynamicCast($asWidget(dynamicCast($as($('#selectable'), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_273() , Lgwtquery_plugins_ui_interactions_Selectable_2_classLit), null), 63), 'selectablestop', new Serialize$1);
 }
 
@@ -9573,18 +9792,18 @@ function Serialize(){
 }
 
 _ = Serialize.prototype = new AbstractSelectableDemo;
-_.getClass$ = getClass_237;
-_.getName = getName_30;
-_.setupDemoElement = setupDemoElement_29;
-_.typeId$ = 183;
-function f_24(e, o){
+_.getClass$ = getClass_244;
+_.getName = getName_32;
+_.setupDemoElement = setupDemoElement_31;
+_.typeId$ = 190;
+function f_27(e, o){
   var result;
   result = $empty($('#select-result'));
-  $each($('.ui-selected'), initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 246, 18, [$Serialize$1$1(new Serialize$1$1, result)]));
+  $each($('.ui-selected'), initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 253, 18, [$Serialize$1$1(new Serialize$1$1, result)]));
   return true;
 }
 
-function getClass_238(){
+function getClass_245(){
   return Lgwtquery_samples_client_selectables_Serialize$1_2_classLit;
 }
 
@@ -9592,21 +9811,21 @@ function Serialize$1(){
 }
 
 _ = Serialize$1.prototype = new Function_0;
-_.f_0 = f_24;
-_.getClass$ = getClass_238;
-_.typeId$ = 184;
+_.f_0 = f_27;
+_.getClass$ = getClass_245;
+_.typeId$ = 191;
 function $Serialize$1$1(this$static, val$result){
   this$static.val$result = val$result;
   return this$static;
 }
 
-function f_25(e){
+function f_28(e){
   var index;
   index = $index($('#selectable li'), e);
   $domManip(this.val$result, ' #' + (index + 1), 1);
 }
 
-function getClass_239(){
+function getClass_246(){
   return Lgwtquery_samples_client_selectables_Serialize$1$1_2_classLit;
 }
 
@@ -9614,19 +9833,19 @@ function Serialize$1$1(){
 }
 
 _ = Serialize$1$1.prototype = new Function_0;
-_.f = f_25;
-_.getClass$ = getClass_239;
-_.typeId$ = 185;
+_.f = f_28;
+_.getClass$ = getClass_246;
+_.typeId$ = 192;
 _.val$result = null;
-function getClass_240(){
+function getClass_247(){
   return Lgwtquery_samples_client_sliders_AbstractSliderDemo_2_classLit;
 }
 
-function getDemoHtml_7(){
+function getDemoHtml_8(){
   return 'sliders/' + this.sourceSuffix + '.html';
 }
 
-function getJavaSource_7(){
+function getJavaSource_8(){
   return 'sliders/' + this.sourceSuffix + '.java';
 }
 
@@ -9634,45 +9853,45 @@ function AbstractSliderDemo(){
 }
 
 _ = AbstractSliderDemo.prototype = new Object_0;
-_.getClass$ = getClass_240;
-_.getDemoHtml = getDemoHtml_7;
-_.getJavaSource = getJavaSource_7;
-_.typeId$ = 186;
+_.getClass$ = getClass_247;
+_.getDemoHtml = getDemoHtml_8;
+_.getJavaSource = getJavaSource_8;
+_.typeId$ = 193;
 _.sourceSuffix = null;
 function $RangeSlider(this$static){
   this$static.sourceSuffix = 'RangeSlider';
   return this$static;
 }
 
-function getClass_241(){
+function getClass_248(){
   return Lgwtquery_samples_client_sliders_RangeSlider_2_classLit;
 }
 
-function getName_31(){
+function getName_33(){
   return 'Range slider';
 }
 
-function setupDemoElement_30(demo){
+function setupDemoElement_32(demo){
   $bind_2($slider(dynamicCast($as($('#slider-range'), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), $values($max($min($range({}, true), valueOf(0)), valueOf(500)), 75, 300)), 'slide', new RangeSlider$1);
-  $val_0($('#amount'), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['$' + $intValues(dynamicCast($asWidget(dynamicCast($as($('#slider-range'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), ($clinit_300() , Lgwtquery_plugins_ui_widgets_Slider_2_classLit), null), 55), 0) + ' - $' + $intValues(dynamicCast($asWidget(dynamicCast($as($('#slider-range'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), Lgwtquery_plugins_ui_widgets_Slider_2_classLit, null), 55), 1)]));
+  $val_0($('#amount'), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['$' + $intValues(dynamicCast($asWidget(dynamicCast($as($('#slider-range'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), ($clinit_300() , Lgwtquery_plugins_ui_widgets_Slider_2_classLit), null), 55), 0) + ' - $' + $intValues(dynamicCast($asWidget(dynamicCast($as($('#slider-range'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), Lgwtquery_plugins_ui_widgets_Slider_2_classLit, null), 55), 1)]));
 }
 
 function RangeSlider(){
 }
 
 _ = RangeSlider.prototype = new AbstractSliderDemo;
-_.getClass$ = getClass_241;
-_.getName = getName_31;
-_.setupDemoElement = setupDemoElement_30;
-_.typeId$ = 187;
-function f_26(e, data){
+_.getClass$ = getClass_248;
+_.getName = getName_33;
+_.setupDemoElement = setupDemoElement_32;
+_.typeId$ = 194;
+function f_29(e, data){
   var slideEvent;
   slideEvent = dynamicCastJso(data);
-  $val_0($('#amount'), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['$' + slideEvent['values'][0] + ' - $' + slideEvent['values'][1]]));
+  $val_0($('#amount'), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['$' + slideEvent['values'][0] + ' - $' + slideEvent['values'][1]]));
   return false;
 }
 
-function getClass_242(){
+function getClass_249(){
   return Lgwtquery_samples_client_sliders_RangeSlider$1_2_classLit;
 }
 
@@ -9680,15 +9899,15 @@ function RangeSlider$1(){
 }
 
 _ = RangeSlider$1.prototype = new Function_0;
-_.f_0 = f_26;
-_.getClass$ = getClass_242;
-_.typeId$ = 188;
+_.f_0 = f_29;
+_.getClass$ = getClass_249;
+_.typeId$ = 195;
 function $SliderSamples(this$static, demo){
-  $DemoPanel(this$static, 'Sliders', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 252, 23, [$Sliders(new Sliders), $SnapToIncrement(new SnapToIncrement), $RangeSlider(new RangeSlider)]));
+  $DemoPanel(this$static, 'Sliders', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 259, 23, [$Sliders(new Sliders), $SnapToIncrement(new SnapToIncrement), $RangeSlider(new RangeSlider)]));
   return this$static;
 }
 
-function getClass_243(){
+function getClass_250(){
   return Lgwtquery_samples_client_sliders_SliderSamples_2_classLit;
 }
 
@@ -9696,22 +9915,22 @@ function SliderSamples(){
 }
 
 _ = SliderSamples.prototype = new DemoPanel;
-_.getClass$ = getClass_243;
-_.typeId$ = 189;
+_.getClass$ = getClass_250;
+_.typeId$ = 196;
 function $Sliders(this$static){
   this$static.sourceSuffix = 'Sliders';
   return this$static;
 }
 
-function getClass_244(){
+function getClass_251(){
   return Lgwtquery_samples_client_sliders_Sliders_2_classLit;
 }
 
-function getName_32(){
+function getName_34(){
   return 'Default Functionality';
 }
 
-function setupDemoElement_31(demo){
+function setupDemoElement_33(demo){
   dynamicCast($asWidget(dynamicCast($as($_0('#slider', demo), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_300() , Lgwtquery_plugins_ui_widgets_Slider_2_classLit), null), 55);
 }
 
@@ -9719,44 +9938,44 @@ function Sliders(){
 }
 
 _ = Sliders.prototype = new AbstractSliderDemo;
-_.getClass$ = getClass_244;
-_.getName = getName_32;
-_.setupDemoElement = setupDemoElement_31;
-_.typeId$ = 190;
+_.getClass$ = getClass_251;
+_.getName = getName_34;
+_.setupDemoElement = setupDemoElement_33;
+_.typeId$ = 197;
 function $SnapToIncrement(this$static){
   this$static.sourceSuffix = 'SnapToIncrement';
   return this$static;
 }
 
-function getClass_245(){
+function getClass_252(){
   return Lgwtquery_samples_client_sliders_SnapToIncrement_2_classLit;
 }
 
-function getName_33(){
+function getName_35(){
   return 'Snap to increments';
 }
 
-function setupDemoElement_32(demo){
+function setupDemoElement_34(demo){
   $bind_2($slider_0(dynamicCast($as($('#slider'), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), '{value:100, min: 0, max: 500, step: 50}'), 'slide', new SnapToIncrement$1);
-  $val_0($('#amount'), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['$' + $intValue(dynamicCast($asWidget(dynamicCast($as($('#slider'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), ($clinit_300() , Lgwtquery_plugins_ui_widgets_Slider_2_classLit), null), 55))]));
+  $val_0($('#amount'), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['$' + $intValue(dynamicCast($asWidget(dynamicCast($as($('#slider'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), ($clinit_300() , Lgwtquery_plugins_ui_widgets_Slider_2_classLit), null), 55))]));
 }
 
 function SnapToIncrement(){
 }
 
 _ = SnapToIncrement.prototype = new AbstractSliderDemo;
-_.getClass$ = getClass_245;
-_.getName = getName_33;
-_.setupDemoElement = setupDemoElement_32;
-_.typeId$ = 191;
-function f_27(e, data){
+_.getClass$ = getClass_252;
+_.getName = getName_35;
+_.setupDemoElement = setupDemoElement_34;
+_.typeId$ = 198;
+function f_30(e, data){
   var slideEvent;
   slideEvent = dynamicCastJso(data);
-  $val_0($('#amount'), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['$' + slideEvent['value']]));
+  $val_0($('#amount'), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['$' + slideEvent['value']]));
   return false;
 }
 
-function getClass_246(){
+function getClass_253(){
   return Lgwtquery_samples_client_sliders_SnapToIncrement$1_2_classLit;
 }
 
@@ -9764,18 +9983,18 @@ function SnapToIncrement$1(){
 }
 
 _ = SnapToIncrement$1.prototype = new Function_0;
-_.f_0 = f_27;
-_.getClass$ = getClass_246;
-_.typeId$ = 192;
-function getClass_247(){
+_.f_0 = f_30;
+_.getClass$ = getClass_253;
+_.typeId$ = 199;
+function getClass_254(){
   return Lgwtquery_samples_client_tabs_AbstractTabsDemo_2_classLit;
 }
 
-function getDemoHtml_8(){
+function getDemoHtml_9(){
   return 'tabs/' + this.sourceSuffix + '.html';
 }
 
-function getJavaSource_8(){
+function getJavaSource_9(){
   return 'tabs/' + this.sourceSuffix + '.java';
 }
 
@@ -9783,25 +10002,25 @@ function AbstractTabsDemo(){
 }
 
 _ = AbstractTabsDemo.prototype = new Object_0;
-_.getClass$ = getClass_247;
-_.getDemoHtml = getDemoHtml_8;
-_.getJavaSource = getJavaSource_8;
-_.typeId$ = 193;
+_.getClass$ = getClass_254;
+_.getDemoHtml = getDemoHtml_9;
+_.getJavaSource = getJavaSource_9;
+_.typeId$ = 200;
 _.sourceSuffix = null;
 function $Collapsible(this$static){
   this$static.sourceSuffix = 'Collapsible';
   return this$static;
 }
 
-function getClass_248(){
+function getClass_255(){
   return Lgwtquery_samples_client_tabs_Collapsible_2_classLit;
 }
 
-function getName_34(){
+function getName_36(){
   return 'Collapse content';
 }
 
-function setupDemoElement_33(demo){
+function setupDemoElement_35(demo){
   $tabs(dynamicCast($as($_0('#tabs', demo), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), $collapsible_0({}, true));
 }
 
@@ -9809,24 +10028,26 @@ function Collapsible(){
 }
 
 _ = Collapsible.prototype = new AbstractTabsDemo;
-_.getClass$ = getClass_248;
-_.getName = getName_34;
-_.setupDemoElement = setupDemoElement_33;
-_.typeId$ = 194;
+_.getClass$ = getClass_255;
+_.getName = getName_36;
+_.setupDemoElement = setupDemoElement_35;
+_.typeId$ = 201;
 function $OpenOnMouseOver_0(this$static){
   this$static.sourceSuffix = 'OpenOnMouseOver';
   return this$static;
 }
 
-function getClass_249(){
+function getClass_256(){
   return Lgwtquery_samples_client_tabs_OpenOnMouseOver_2_classLit;
 }
 
-function getName_35(){
+--></script>
+<script><!--
+function getName_37(){
   return 'Open on mouseover';
 }
 
-function setupDemoElement_34(demo){
+function setupDemoElement_36(demo){
   $tabs(dynamicCast($as($_0('#tabs', demo), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), $event_0({}, 'mouseover'));
 }
 
@@ -9834,54 +10055,54 @@ function OpenOnMouseOver_0(){
 }
 
 _ = OpenOnMouseOver_0.prototype = new AbstractTabsDemo;
-_.getClass$ = getClass_249;
-_.getName = getName_35;
-_.setupDemoElement = setupDemoElement_34;
-_.typeId$ = 195;
+_.getClass$ = getClass_256;
+_.getName = getName_37;
+_.setupDemoElement = setupDemoElement_36;
+_.typeId$ = 202;
 function $SimpleManipulation(this$static){
   this$static.sourceSuffix = 'SimpleManipulation';
   return this$static;
 }
 
-function getClass_250(){
+function getClass_257(){
   return Lgwtquery_samples_client_tabs_SimpleManipulation_2_classLit;
 }
 
-function getName_36(){
+function getName_38(){
   return 'Simple manipulation';
 }
 
-function setupDemoElement_35(demo){
+function setupDemoElement_37(demo){
   var addTab, dialog, removeTab, tab_content_input, tab_title_input, tabs;
   tab_title_input = $('#tab_title');
   tab_content_input = $('#tab_content');
   this.tab_counter = 2;
   removeTab = new SimpleManipulation$1;
   tabs = dynamicCast($bind_2($tabs(dynamicCast($as($('#tabs'), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), $tabTemplate({}, '<li><a href="#{href}">#{label}<\/a> <span class="ui-icon ui-icon-close">Remove Tab<\/span><\/li>')), 'tabsadd', $SimpleManipulation$2(new SimpleManipulation$2, this, tab_content_input, removeTab)), 57);
-  $bindOrFire($('#tabs span.ui-icon-close'), 1, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 246, 18, [removeTab]));
+  $bindOrFire($('#tabs span.ui-icon-close'), 1, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 253, 18, [removeTab]));
   addTab = $SimpleManipulation$3(new SimpleManipulation$3, this, tab_title_input, tabs);
   dialog = $dialog(dynamicCast($as($('#dialog'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), $buttons($modal($autoOpen({}, false), true), $define($define({}, 'Add', $SimpleManipulation$4(new SimpleManipulation$4, addTab)), 'Cancel', new SimpleManipulation$5)));
   $bind_2(dynamicCast($bind_2(dialog, 'dialogopen', $SimpleManipulation$6(new SimpleManipulation$6, tab_title_input)), 50), 'dialogclose', $SimpleManipulation$7(new SimpleManipulation$7, dialog));
-  $bindOrFire(dynamicCast($asWidget(dynamicCast($as($('#add_tab'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), ($clinit_284() , Lgwtquery_plugins_ui_widgets_Button_2_classLit), null), 48), 1, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 246, 18, [$SimpleManipulation$8(new SimpleManipulation$8, dialog)]));
+  $bindOrFire(dynamicCast($asWidget(dynamicCast($as($('#add_tab'), Lgwtquery_plugins_ui_Ui_2_classLit), 60), ($clinit_284() , Lgwtquery_plugins_ui_widgets_Button_2_classLit), null), 48), 1, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 253, 18, [$SimpleManipulation$8(new SimpleManipulation$8, dialog)]));
 }
 
 function SimpleManipulation(){
 }
 
 _ = SimpleManipulation.prototype = new AbstractTabsDemo;
-_.getClass$ = getClass_250;
-_.getName = getName_36;
-_.setupDemoElement = setupDemoElement_35;
-_.typeId$ = 196;
+_.getClass$ = getClass_257;
+_.getName = getName_38;
+_.setupDemoElement = setupDemoElement_37;
+_.typeId$ = 203;
 _.tab_counter = 0;
-function f_28(close_0){
+function f_31(close_0){
   var index;
   index = $index($('#tabs li'), $parent(($clinit_128() , $GQuery(new GQuery, [($clinit_30() , $clinit_31() , currentEventTarget)]))).elements[0]);
   $remove_5(dynamicCast($asWidget(dynamicCast($as($('#tabs'), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_304() , Lgwtquery_plugins_ui_widgets_Tabs_2_classLit), null), 57), index);
   return false;
 }
 
-function getClass_251(){
+function getClass_258(){
   return Lgwtquery_samples_client_tabs_SimpleManipulation$1_2_classLit;
 }
 
@@ -9889,9 +10110,9 @@ function SimpleManipulation$1(){
 }
 
 _ = SimpleManipulation$1.prototype = new Function_0;
-_.f_1 = f_28;
-_.getClass$ = getClass_251;
-_.typeId$ = 197;
+_.f_1 = f_31;
+_.getClass$ = getClass_258;
+_.typeId$ = 204;
 function $SimpleManipulation$2(this$static, this$0, val$tab_content_input, val$removeTab){
   this$static.this$0 = this$0;
   this$static.val$tab_content_input = val$tab_content_input;
@@ -9899,17 +10120,17 @@ function $SimpleManipulation$2(this$static, this$0, val$tab_content_input, val$r
   return this$static;
 }
 
-function f_29(e, data){
+function f_32(e, data){
   var event_0, tab_content, v, parent_0;
   event_0 = dynamicCastJso(data);
   tab_content = (v = $vals(this.val$tab_content_input) , v != null && v.length > 0?v[0]:'');
   (tab_content == null || !tab_content.length) && (tab_content = 'Tab ' + this.this$0.tab_counter + ' content.');
   $domManip(($clinit_128() , $GQuery(new GQuery, [event_0['panel']])), '<p>' + tab_content + '<\/p>', 1);
-  $bindOrFire($_0('span.ui-icon-close', (parent_0 = ($clinit_30() , event_0['tab']).parentNode , (!parent_0 || parent_0.nodeType != 1) && (parent_0 = null) , parent_0)), 1, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 246, 18, [this.val$removeTab]));
+  $bindOrFire($_0('span.ui-icon-close', (parent_0 = ($clinit_30() , event_0['tab']).parentNode , (!parent_0 || parent_0.nodeType != 1) && (parent_0 = null) , parent_0)), 1, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 253, 18, [this.val$removeTab]));
   return false;
 }
 
-function getClass_252(){
+function getClass_259(){
   return Lgwtquery_samples_client_tabs_SimpleManipulation$2_2_classLit;
 }
 
@@ -9917,9 +10138,9 @@ function SimpleManipulation$2(){
 }
 
 _ = SimpleManipulation$2.prototype = new Function_0;
-_.f_0 = f_29;
-_.getClass$ = getClass_252;
-_.typeId$ = 198;
+_.f_0 = f_32;
+_.getClass$ = getClass_259;
+_.typeId$ = 205;
 _.this$0 = null;
 _.val$removeTab = null;
 _.val$tab_content_input = null;
@@ -9938,11 +10159,11 @@ function $f_0(this$static){
   ++this$static.this$0.tab_counter;
 }
 
-function f_30(e){
+function f_33(e){
   $f_0(this);
 }
 
-function getClass_253(){
+function getClass_260(){
   return Lgwtquery_samples_client_tabs_SimpleManipulation$3_2_classLit;
 }
 
@@ -9950,9 +10171,9 @@ function SimpleManipulation$3(){
 }
 
 _ = SimpleManipulation$3.prototype = new Function_0;
-_.f = f_30;
-_.getClass$ = getClass_253;
-_.typeId$ = 199;
+_.f = f_33;
+_.getClass$ = getClass_260;
+_.typeId$ = 206;
 _.this$0 = null;
 _.val$tab_title_input = null;
 _.val$tabs = null;
@@ -9961,13 +10182,13 @@ function $SimpleManipulation$4(this$static, val$addTab){
   return this$static;
 }
 
-function f_31(e){
+function f_34(e){
   $f_0(this.val$addTab);
   $close(dynamicCast($asWidget(dynamicCast($as($('#dialog'), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_293() , Lgwtquery_plugins_ui_widgets_Dialog_2_classLit), null), 50));
   return false;
 }
 
-function getClass_254(){
+function getClass_261(){
   return Lgwtquery_samples_client_tabs_SimpleManipulation$4_2_classLit;
 }
 
@@ -9975,16 +10196,16 @@ function SimpleManipulation$4(){
 }
 
 _ = SimpleManipulation$4.prototype = new Function_0;
-_.f_1 = f_31;
-_.getClass$ = getClass_254;
-_.typeId$ = 200;
+_.f_1 = f_34;
+_.getClass$ = getClass_261;
+_.typeId$ = 207;
 _.val$addTab = null;
-function f_32(e){
+function f_35(e){
   $close(dynamicCast($asWidget(dynamicCast($as($('#dialog'), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_293() , Lgwtquery_plugins_ui_widgets_Dialog_2_classLit), null), 50));
   return false;
 }
 
-function getClass_255(){
+function getClass_262(){
   return Lgwtquery_samples_client_tabs_SimpleManipulation$5_2_classLit;
 }
 
@@ -9992,19 +10213,19 @@ function SimpleManipulation$5(){
 }
 
 _ = SimpleManipulation$5.prototype = new Function_0;
-_.f_1 = f_32;
-_.getClass$ = getClass_255;
-_.typeId$ = 201;
+_.f_1 = f_35;
+_.getClass$ = getClass_262;
+_.typeId$ = 208;
 function $SimpleManipulation$6(this$static, val$tab_title_input){
   this$static.val$tab_title_input = val$tab_title_input;
   return this$static;
 }
 
-function f_33(e){
-  $bindOrFire(this.val$tab_title_input, 2048, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 246, 18, []));
+function f_36(e){
+  $bindOrFire(this.val$tab_title_input, 2048, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 253, 18, []));
 }
 
-function getClass_256(){
+function getClass_263(){
   return Lgwtquery_samples_client_tabs_SimpleManipulation$6_2_classLit;
 }
 
@@ -10012,24 +10233,22 @@ function SimpleManipulation$6(){
 }
 
 _ = SimpleManipulation$6.prototype = new Function_0;
-_.f = f_33;
-_.getClass$ = getClass_256;
-_.typeId$ = 202;
+_.f = f_36;
+_.getClass$ = getClass_263;
+_.typeId$ = 209;
 _.val$tab_title_input = null;
 function $SimpleManipulation$7(this$static, val$dialog){
   this$static.val$dialog = val$dialog;
   return this$static;
 }
 
---></script>
-<script><!--
-function f_34(e){
+function f_37(e){
   var form;
   form = ($clinit_128() , $_0('form', this.val$dialog.elements[0]).elements)[0];
   form.reset();
 }
 
-function getClass_257(){
+function getClass_264(){
   return Lgwtquery_samples_client_tabs_SimpleManipulation$7_2_classLit;
 }
 
@@ -10037,21 +10256,21 @@ function SimpleManipulation$7(){
 }
 
 _ = SimpleManipulation$7.prototype = new Function_0;
-_.f = f_34;
-_.getClass$ = getClass_257;
-_.typeId$ = 203;
+_.f = f_37;
+_.getClass$ = getClass_264;
+_.typeId$ = 210;
 _.val$dialog = null;
 function $SimpleManipulation$8(this$static, val$dialog){
   this$static.val$dialog = val$dialog;
   return this$static;
 }
 
-function f_35(e){
+function f_38(e){
   $open_0(this.val$dialog);
   return false;
 }
 
-function getClass_258(){
+function getClass_265(){
   return Lgwtquery_samples_client_tabs_SimpleManipulation$8_2_classLit;
 }
 
@@ -10059,49 +10278,49 @@ function SimpleManipulation$8(){
 }
 
 _ = SimpleManipulation$8.prototype = new Function_0;
-_.f_1 = f_35;
-_.getClass$ = getClass_258;
-_.typeId$ = 204;
+_.f_1 = f_38;
+_.getClass$ = getClass_265;
+_.typeId$ = 211;
 _.val$dialog = null;
 function $Sortable_1(this$static){
   this$static.sourceSuffix = 'Sortable';
   return this$static;
 }
 
-function getClass_259(){
+function getClass_266(){
   return Lgwtquery_samples_client_tabs_Sortable_2_classLit;
 }
 
-function getName_37(){
+function getName_39(){
   return 'Sortable';
 }
 
-function setupDemoElement_36(demo){
-  $sortable(dynamicCast($as($find(dynamicCast($asWidget(dynamicCast($as($_0('#tabs', demo), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_304() , Lgwtquery_plugins_ui_widgets_Tabs_2_classLit), null), 57), initValues(_3Ljava_lang_String_2_classLit, 262, 1, ['.ui-tabs-nav'])), Lgwtquery_plugins_ui_Ui_2_classLit), 60), "{axis:'x'}");
+function setupDemoElement_38(demo){
+  $sortable(dynamicCast($as($find(dynamicCast($asWidget(dynamicCast($as($_0('#tabs', demo), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_304() , Lgwtquery_plugins_ui_widgets_Tabs_2_classLit), null), 57), initValues(_3Ljava_lang_String_2_classLit, 269, 1, ['.ui-tabs-nav'])), Lgwtquery_plugins_ui_Ui_2_classLit), 60), "{axis:'x'}");
 }
 
 function Sortable_1(){
 }
 
 _ = Sortable_1.prototype = new AbstractTabsDemo;
-_.getClass$ = getClass_259;
-_.getName = getName_37;
-_.setupDemoElement = setupDemoElement_36;
-_.typeId$ = 205;
+_.getClass$ = getClass_266;
+_.getName = getName_39;
+_.setupDemoElement = setupDemoElement_38;
+_.typeId$ = 212;
 function $Tabs_0(this$static){
   this$static.sourceSuffix = 'Tabs';
   return this$static;
 }
 
-function getClass_260(){
+function getClass_267(){
   return Lgwtquery_samples_client_tabs_Tabs_2_classLit;
 }
 
-function getName_38(){
+function getName_40(){
   return 'Default Functionality';
 }
 
-function setupDemoElement_37(demo){
+function setupDemoElement_39(demo){
   dynamicCast($asWidget(dynamicCast($as($_0('#tabs', demo), ($clinit_260() , Lgwtquery_plugins_ui_Ui_2_classLit)), 60), ($clinit_304() , Lgwtquery_plugins_ui_widgets_Tabs_2_classLit), null), 57);
 }
 
@@ -10109,16 +10328,16 @@ function Tabs_0(){
 }
 
 _ = Tabs_0.prototype = new AbstractTabsDemo;
-_.getClass$ = getClass_260;
-_.getName = getName_38;
-_.setupDemoElement = setupDemoElement_37;
-_.typeId$ = 206;
+_.getClass$ = getClass_267;
+_.getName = getName_40;
+_.setupDemoElement = setupDemoElement_39;
+_.typeId$ = 213;
 function $TabsSamples(this$static, demo){
-  $DemoPanel(this$static, 'Tabs', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 252, 23, [$Tabs_0(new Tabs_0), $OpenOnMouseOver_0(new OpenOnMouseOver_0), $Collapsible(new Collapsible), $Sortable_1(new Sortable_1), $SimpleManipulation(new SimpleManipulation)]));
+  $DemoPanel(this$static, 'Tabs', demo, initValues(_3Lgwtquery_samples_client_Demo_2_classLit, 259, 23, [$Tabs_0(new Tabs_0), $OpenOnMouseOver_0(new OpenOnMouseOver_0), $Collapsible(new Collapsible), $Sortable_1(new Sortable_1), $SimpleManipulation(new SimpleManipulation)]));
   return this$static;
 }
 
-function getClass_261(){
+function getClass_268(){
   return Lgwtquery_samples_client_tabs_TabsSamples_2_classLit;
 }
 
@@ -10126,14 +10345,14 @@ function TabsSamples(){
 }
 
 _ = TabsSamples.prototype = new DemoPanel;
-_.getClass$ = getClass_261;
-_.typeId$ = 207;
+_.getClass$ = getClass_268;
+_.typeId$ = 214;
 function $ArrayStoreException(this$static){
   $fillInStackTrace();
   return this$static;
 }
 
-function getClass_262(){
+function getClass_269(){
   return Ljava_lang_ArrayStoreException_2_classLit;
 }
 
@@ -10141,16 +10360,16 @@ function ArrayStoreException(){
 }
 
 _ = ArrayStoreException.prototype = new RuntimeException;
-_.getClass$ = getClass_262;
-_.typeId$ = 209;
-function $clinit_412(){
-  $clinit_412 = nullMethod;
+_.getClass$ = getClass_269;
+_.typeId$ = 216;
+function $clinit_419(){
+  $clinit_419 = nullMethod;
   FALSE = $Boolean(new Boolean_0, false);
   $Boolean(new Boolean_0, true);
 }
 
 function $Boolean(this$static, value){
-  $clinit_412();
+  $clinit_419();
   this$static.value_0 = value;
   return this$static;
 }
@@ -10159,7 +10378,7 @@ function equals_2(o){
   return o != null && canCast(o.typeId$, 64) && dynamicCast(o, 64).value_0 == this.value_0;
 }
 
-function getClass_263(){
+function getClass_270(){
   return Ljava_lang_Boolean_2_classLit;
 }
 
@@ -10176,10 +10395,10 @@ function Boolean_0(){
 
 _ = Boolean_0.prototype = new Object_0;
 _.equals$ = equals_2;
-_.getClass$ = getClass_263;
+_.getClass$ = getClass_270;
 _.hashCode$ = hashCode_4;
 _.toString$ = toString_10;
-_.typeId$ = 212;
+_.typeId$ = 219;
 _.value_0 = false;
 var FALSE;
 function createForArray(packageName, className){
@@ -10205,7 +10424,7 @@ function createForEnum(packageName, className, enumConstantsFunc){
   return clazz;
 }
 
-function getClass_264(){
+function getClass_271(){
   return Ljava_lang_Class_2_classLit;
 }
 
@@ -10217,7 +10436,7 @@ function Class(){
 }
 
 _ = Class.prototype = new Object_0;
-_.getClass$ = getClass_264;
+_.getClass$ = getClass_271;
 _.toString$ = toString_11;
 _.typeId$ = 0;
 _.modifiers = 0;
@@ -10227,7 +10446,7 @@ function $ClassCastException(this$static){
   return this$static;
 }
 
-function getClass_265(){
+function getClass_272(){
   return Ljava_lang_ClassCastException_2_classLit;
 }
 
@@ -10235,8 +10454,8 @@ function ClassCastException(){
 }
 
 _ = ClassCastException.prototype = new RuntimeException;
-_.getClass$ = getClass_265;
-_.typeId$ = 213;
+_.getClass$ = getClass_272;
+_.typeId$ = 220;
 function __parseAndValidateDouble(s){
   var toReturn;
   toReturn = __parseDouble(s);
@@ -10257,7 +10476,7 @@ function __parseDouble(str){
   }
 }
 
-function getClass_266(){
+function getClass_273(){
   return Ljava_lang_Number_2_classLit;
 }
 
@@ -10265,8 +10484,8 @@ function Number_0(){
 }
 
 _ = Number_0.prototype = new Object_0;
-_.getClass$ = getClass_266;
-_.typeId$ = 214;
+_.getClass$ = getClass_273;
+_.typeId$ = 221;
 var floatRegex_0 = null;
 function $Double(this$static, value){
   this$static.value_0 = value;
@@ -10277,7 +10496,7 @@ function equals_3(o){
   return o != null && canCast(o.typeId$, 65) && dynamicCast(o, 65).value_0 == this.value_0;
 }
 
-function getClass_267(){
+function getClass_274(){
   return Ljava_lang_Double_2_classLit;
 }
 
@@ -10294,10 +10513,10 @@ function Double(){
 
 _ = Double.prototype = new Number_0;
 _.equals$ = equals_3;
-_.getClass$ = getClass_267;
+_.getClass$ = getClass_274;
 _.hashCode$ = hashCode_5;
 _.toString$ = toString_12;
-_.typeId$ = 215;
+_.typeId$ = 222;
 _.value_0 = 0;
 function $IllegalArgumentException(this$static){
   $fillInStackTrace();
@@ -10310,7 +10529,7 @@ function $IllegalArgumentException_0(this$static, message){
   return this$static;
 }
 
-function getClass_268(){
+function getClass_275(){
   return Ljava_lang_IllegalArgumentException_2_classLit;
 }
 
@@ -10318,15 +10537,15 @@ function IllegalArgumentException(){
 }
 
 _ = IllegalArgumentException.prototype = new RuntimeException;
-_.getClass$ = getClass_268;
-_.typeId$ = 216;
+_.getClass$ = getClass_275;
+_.typeId$ = 223;
 function $IllegalStateException(this$static, s){
   $fillInStackTrace();
   this$static.detailMessage = s;
   return this$static;
 }
 
-function getClass_269(){
+function getClass_276(){
   return Ljava_lang_IllegalStateException_2_classLit;
 }
 
@@ -10334,8 +10553,8 @@ function IllegalStateException(){
 }
 
 _ = IllegalStateException.prototype = new RuntimeException;
-_.getClass$ = getClass_269;
-_.typeId$ = 217;
+_.getClass$ = getClass_276;
+_.typeId$ = 224;
 function $IndexOutOfBoundsException(this$static){
   $fillInStackTrace();
   return this$static;
@@ -10347,7 +10566,7 @@ function $IndexOutOfBoundsException_0(this$static, message){
   return this$static;
 }
 
-function getClass_270(){
+function getClass_277(){
   return Ljava_lang_IndexOutOfBoundsException_2_classLit;
 }
 
@@ -10355,8 +10574,8 @@ function IndexOutOfBoundsException(){
 }
 
 _ = IndexOutOfBoundsException.prototype = new RuntimeException;
-_.getClass$ = getClass_270;
-_.typeId$ = 218;
+_.getClass$ = getClass_277;
+_.typeId$ = 225;
 function $Integer(this$static, value){
   this$static.value_0 = value;
   return this$static;
@@ -10366,7 +10585,7 @@ function equals_4(o){
   return o != null && canCast(o.typeId$, 28) && dynamicCast(o, 28).value_0 == this.value_0;
 }
 
-function getClass_271(){
+function getClass_278(){
   return Ljava_lang_Integer_2_classLit;
 }
 
@@ -10378,8 +10597,8 @@ function toPowerOfTwoString(value, shift){
   var bitMask, buf, bufSize, digits, pos;
   bufSize = ~~(32 / shift);
   bitMask = (1 << shift) - 1;
-  buf = initDim(_3C_classLit, 236, -1, bufSize, 1);
-  digits = ($clinit_428() , digits_0);
+  buf = initDim(_3C_classLit, 243, -1, bufSize, 1);
+  digits = ($clinit_435() , digits_0);
   pos = bufSize - 1;
   if (value >= 0) {
     while (value > bitMask) {
@@ -10405,7 +10624,7 @@ function valueOf(i){
   var rebase, result;
   if (i > -129 && i < 128) {
     rebase = i + 128;
-    result = ($clinit_424() , boxedValues)[rebase];
+    result = ($clinit_431() , boxedValues)[rebase];
     !result && (result = boxedValues[rebase] = $Integer(new Integer, i));
     return result;
   }
@@ -10417,14 +10636,14 @@ function Integer(){
 
 _ = Integer.prototype = new Number_0;
 _.equals$ = equals_4;
-_.getClass$ = getClass_271;
+_.getClass$ = getClass_278;
 _.hashCode$ = hashCode_6;
 _.toString$ = toString_13;
-_.typeId$ = 219;
+_.typeId$ = 226;
 _.value_0 = 0;
-function $clinit_424(){
-  $clinit_424 = nullMethod;
-  boxedValues = initDim(_3Ljava_lang_Integer_2_classLit, 258, 28, 256, 0);
+function $clinit_431(){
+  $clinit_431 = nullMethod;
+  boxedValues = initDim(_3Ljava_lang_Integer_2_classLit, 265, 28, 256, 0);
 }
 
 var boxedValues;
@@ -10439,7 +10658,7 @@ function $NullPointerException_0(this$static, message){
   return this$static;
 }
 
-function getClass_272(){
+function getClass_279(){
   return Ljava_lang_NullPointerException_2_classLit;
 }
 
@@ -10447,11 +10666,11 @@ function NullPointerException(){
 }
 
 _ = NullPointerException.prototype = new RuntimeException;
-_.getClass$ = getClass_272;
-_.typeId$ = 220;
-function $clinit_428(){
-  $clinit_428 = nullMethod;
-  digits_0 = initValues(_3C_classLit, 236, -1, [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122]);
+_.getClass$ = getClass_279;
+_.typeId$ = 227;
+function $clinit_435(){
+  $clinit_435 = nullMethod;
+  digits_0 = initValues(_3C_classLit, 243, -1, [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122]);
 }
 
 var digits_0;
@@ -10461,7 +10680,7 @@ function $NumberFormatException(this$static, message){
   return this$static;
 }
 
-function getClass_273(){
+function getClass_280(){
   return Ljava_lang_NumberFormatException_2_classLit;
 }
 
@@ -10469,8 +10688,8 @@ function NumberFormatException(){
 }
 
 _ = NumberFormatException.prototype = new IllegalArgumentException;
-_.getClass$ = getClass_273;
-_.typeId$ = 221;
+_.getClass$ = getClass_280;
+_.typeId$ = 228;
 function $StackTraceElement(this$static, className, methodName, fileName, lineNumber){
   this$static.className_0 = className;
   this$static.methodName = methodName;
@@ -10479,7 +10698,7 @@ function $StackTraceElement(this$static, className, methodName, fileName, lineNu
   return this$static;
 }
 
-function getClass_274(){
+function getClass_281(){
   return Ljava_lang_StackTraceElement_2_classLit;
 }
 
@@ -10491,9 +10710,9 @@ function StackTraceElement(){
 }
 
 _ = StackTraceElement.prototype = new Object_0;
-_.getClass$ = getClass_274;
+_.getClass$ = getClass_281;
 _.toString$ = toString_14;
-_.typeId$ = 222;
+_.typeId$ = 229;
 _.className_0 = null;
 _.fileName = null;
 _.lineNumber = 0;
@@ -10513,6 +10732,11 @@ function $equalsIgnoreCase(this$static, other){
 
 function $indexOf_0(this$static, str){
   return this$static.indexOf(str);
+}
+
+function $matches(this$static, regex){
+  var matchObj = (new RegExp(regex)).exec(this$static);
+  return matchObj == null?false:this$static == matchObj[0];
 }
 
 function $substring(this$static, beginIndex){
@@ -10549,7 +10773,7 @@ function fromCodePoint(codePoint){
   }
 }
 
-function getClass_275(){
+function getClass_282(){
   return Ljava_lang_String_2_classLit;
 }
 
@@ -10563,12 +10787,12 @@ function toString_15(){
 
 _ = String.prototype;
 _.equals$ = equals_5;
-_.getClass$ = getClass_275;
+_.getClass$ = getClass_282;
 _.hashCode$ = hashCode_7;
 _.toString$ = toString_15;
 _.typeId$ = 2;
-function $clinit_432(){
-  $clinit_432 = nullMethod;
+function $clinit_439(){
+  $clinit_439 = nullMethod;
   back = {};
   front = {};
 }
@@ -10590,7 +10814,7 @@ function compute(str){
 }
 
 function getHashCode_0(str){
-  $clinit_432();
+  $clinit_439();
   var key = ':' + str;
   var result = front[key];
   if (result != null) {
@@ -10623,7 +10847,7 @@ function $append_0(this$static, x){
   return this$static;
 }
 
-function getClass_276(){
+function getClass_283(){
   return Ljava_lang_StringBuffer_2_classLit;
 }
 
@@ -10635,16 +10859,16 @@ function StringBuffer(){
 }
 
 _ = StringBuffer.prototype = new Object_0;
-_.getClass$ = getClass_276;
+_.getClass$ = getClass_283;
 _.toString$ = toString_16;
-_.typeId$ = 223;
+_.typeId$ = 230;
 function $UnsupportedOperationException(this$static, message){
   $fillInStackTrace();
   this$static.detailMessage = message;
   return this$static;
 }
 
-function getClass_277(){
+function getClass_284(){
   return Ljava_lang_UnsupportedOperationException_2_classLit;
 }
 
@@ -10652,8 +10876,8 @@ function UnsupportedOperationException(){
 }
 
 _ = UnsupportedOperationException.prototype = new RuntimeException;
-_.getClass$ = getClass_277;
-_.typeId$ = 224;
+_.getClass$ = getClass_284;
+_.typeId$ = 231;
 function $advanceToFind(iter, o){
   var t;
   while (iter.hasNext()) {
@@ -10689,7 +10913,7 @@ function contains_0(o){
   return !!iter;
 }
 
-function getClass_278(){
+function getClass_285(){
   return Ljava_util_AbstractCollection_2_classLit;
 }
 
@@ -10716,7 +10940,7 @@ function AbstractCollection(){
 _ = AbstractCollection.prototype = new Object_0;
 _.add = add_0;
 _.contains_0 = contains_0;
-_.getClass$ = getClass_278;
+_.getClass$ = getClass_285;
 _.toArray = toArray;
 _.toString$ = toString_17;
 _.typeId$ = 0;
@@ -10752,7 +10976,7 @@ function equals_6(obj){
   return true;
 }
 
-function getClass_279(){
+function getClass_286(){
   return Ljava_util_AbstractMap_2_classLit;
 }
 
@@ -10786,7 +11010,7 @@ function AbstractMap(){
 
 _ = AbstractMap.prototype = new Object_0;
 _.equals$ = equals_6;
-_.getClass$ = getClass_279;
+_.getClass$ = getClass_286;
 _.hashCode$ = hashCode_8;
 _.toString$ = toString_18;
 _.typeId$ = 0;
@@ -10909,6 +11133,8 @@ function $remove_6(this$static, key){
   return !key?$removeNullSlot(this$static):$removeHashValue(this$static, key, ~~(key.$H || (key.$H = ++sNextHashId)));
 }
 
+--></script>
+<script><!--
 function $removeHashValue(this$static, key, hashCode){
   var array = this$static.hashCodeMap[hashCode];
   if (array) {
@@ -10940,7 +11166,7 @@ function equalsBridge(value1, value2){
   return (value1 == null?null:value1) === (value2 == null?null:value2) || value1 != null && equals__devirtual$(value1, value2);
 }
 
-function getClass_280(){
+function getClass_287(){
   return Ljava_util_AbstractHashMap_2_classLit;
 }
 
@@ -10949,7 +11175,7 @@ function AbstractHashMap(){
 
 _ = AbstractHashMap.prototype = new AbstractMap;
 _.equalsBridge = equalsBridge;
-_.getClass$ = getClass_280;
+_.getClass$ = getClass_287;
 _.typeId$ = 0;
 _.hashCodeMap = null;
 _.nullSlot = null;
@@ -10977,7 +11203,7 @@ function equals_7(o){
   return true;
 }
 
-function getClass_281(){
+function getClass_288(){
   return Ljava_util_AbstractSet_2_classLit;
 }
 
@@ -10999,9 +11225,9 @@ function AbstractSet(){
 
 _ = AbstractSet.prototype = new AbstractCollection;
 _.equals$ = equals_7;
-_.getClass$ = getClass_281;
+_.getClass$ = getClass_288;
 _.hashCode$ = hashCode_9;
-_.typeId$ = 225;
+_.typeId$ = 232;
 function $AbstractHashMap$EntrySet(this$static, this$0){
   this$static.this$0 = this$0;
   return this$static;
@@ -11024,7 +11250,7 @@ function contains_1(o){
   return $contains(this, o);
 }
 
-function getClass_282(){
+function getClass_289(){
   return Ljava_util_AbstractHashMap$EntrySet_2_classLit;
 }
 
@@ -11041,10 +11267,10 @@ function AbstractHashMap$EntrySet(){
 
 _ = AbstractHashMap$EntrySet.prototype = new AbstractSet;
 _.contains_0 = contains_1;
-_.getClass$ = getClass_282;
+_.getClass$ = getClass_289;
 _.iterator_0 = iterator_3;
 _.size_0 = size_0;
-_.typeId$ = 226;
+_.typeId$ = 233;
 _.this$0 = null;
 function $AbstractHashMap$EntrySetIterator(this$static, this$0){
   var list;
@@ -11057,7 +11283,7 @@ function $AbstractHashMap$EntrySetIterator(this$static, this$0){
   return this$static;
 }
 
-function getClass_283(){
+function getClass_290(){
   return Ljava_util_AbstractHashMap$EntrySetIterator_2_classLit;
 }
 
@@ -11073,7 +11299,7 @@ function AbstractHashMap$EntrySetIterator(){
 }
 
 _ = AbstractHashMap$EntrySetIterator.prototype = new Object_0;
-_.getClass$ = getClass_283;
+_.getClass$ = getClass_290;
 _.hasNext = hasNext_3;
 _.next_0 = next_4;
 _.typeId$ = 0;
@@ -11090,7 +11316,7 @@ function equals_8(other){
   return false;
 }
 
-function getClass_284(){
+function getClass_291(){
   return Ljava_util_AbstractMapEntry_2_classLit;
 }
 
@@ -11112,16 +11338,16 @@ function AbstractMapEntry(){
 
 _ = AbstractMapEntry.prototype = new Object_0;
 _.equals$ = equals_8;
-_.getClass$ = getClass_284;
+_.getClass$ = getClass_291;
 _.hashCode$ = hashCode_10;
 _.toString$ = toString_19;
-_.typeId$ = 227;
+_.typeId$ = 234;
 function $AbstractHashMap$MapEntryNull(this$static, this$0){
   this$static.this$0 = this$0;
   return this$static;
 }
 
-function getClass_285(){
+function getClass_292(){
   return Ljava_util_AbstractHashMap$MapEntryNull_2_classLit;
 }
 
@@ -11141,11 +11367,11 @@ function AbstractHashMap$MapEntryNull(){
 }
 
 _ = AbstractHashMap$MapEntryNull.prototype = new AbstractMapEntry;
-_.getClass$ = getClass_285;
+_.getClass$ = getClass_292;
 _.getKey = getKey;
 _.getValue = getValue;
 _.setValue = setValue;
-_.typeId$ = 228;
+_.typeId$ = 235;
 _.this$0 = null;
 function $AbstractHashMap$MapEntryString(this$static, key, this$0){
   this$static.this$0 = this$0;
@@ -11153,7 +11379,7 @@ function $AbstractHashMap$MapEntryString(this$static, key, this$0){
   return this$static;
 }
 
-function getClass_286(){
+function getClass_293(){
   return Ljava_util_AbstractHashMap$MapEntryString_2_classLit;
 }
 
@@ -11177,11 +11403,11 @@ function AbstractHashMap$MapEntryString(){
 }
 
 _ = AbstractHashMap$MapEntryString.prototype = new AbstractMapEntry;
-_.getClass$ = getClass_286;
+_.getClass$ = getClass_293;
 _.getKey = getKey_0;
 _.getValue = getValue_0;
 _.setValue = setValue_0;
-_.typeId$ = 229;
+_.typeId$ = 236;
 _.key = null;
 _.this$0 = null;
 function add_1(obj){
@@ -11217,7 +11443,7 @@ function equals_9(o){
   return true;
 }
 
-function getClass_287(){
+function getClass_294(){
   return Ljava_util_AbstractList_2_classLit;
 }
 
@@ -11233,8 +11459,6 @@ function hashCode_11(){
   return k;
 }
 
---></script>
-<script><!--
 function indexOutOfBounds(index, size){
   throw $IndexOutOfBoundsException_0(new IndexOutOfBoundsException, 'Index: ' + index + ', Size: ' + size);
 }
@@ -11249,7 +11473,7 @@ function AbstractList(){
 _ = AbstractList.prototype = new AbstractCollection;
 _.add = add_1;
 _.equals$ = equals_9;
-_.getClass$ = getClass_287;
+_.getClass$ = getClass_294;
 _.hashCode$ = hashCode_11;
 _.iterator_0 = iterator_4;
 _.typeId$ = 0;
@@ -11269,7 +11493,7 @@ function $next_6(this$static){
   return $get_6(this$static.this$0, this$static.i++);
 }
 
-function getClass_288(){
+function getClass_295(){
   return Ljava_util_AbstractList$IteratorImpl_2_classLit;
 }
 
@@ -11285,7 +11509,7 @@ function AbstractList$IteratorImpl(){
 }
 
 _ = AbstractList$IteratorImpl.prototype = new Object_0;
-_.getClass$ = getClass_288;
+_.getClass$ = getClass_295;
 _.hasNext = hasNext_4;
 _.next_0 = next_5;
 _.typeId$ = 0;
@@ -11301,7 +11525,7 @@ function contains_2(key){
   return $containsKey(this.this$0, key);
 }
 
-function getClass_289(){
+function getClass_296(){
   return Ljava_util_AbstractMap$1_2_classLit;
 }
 
@@ -11319,10 +11543,10 @@ function AbstractMap$1(){
 
 _ = AbstractMap$1.prototype = new AbstractSet;
 _.contains_0 = contains_2;
-_.getClass$ = getClass_289;
+_.getClass$ = getClass_296;
 _.iterator_0 = iterator_5;
 _.size_0 = size_1;
-_.typeId$ = 230;
+_.typeId$ = 237;
 _.this$0 = null;
 _.val$entrySet = null;
 function $AbstractMap$1$1(this$static, val$outerIter){
@@ -11330,7 +11554,7 @@ function $AbstractMap$1$1(this$static, val$outerIter){
   return this$static;
 }
 
-function getClass_290(){
+function getClass_297(){
   return Ljava_util_AbstractMap$1$1_2_classLit;
 }
 
@@ -11348,13 +11572,13 @@ function AbstractMap$1$1(){
 }
 
 _ = AbstractMap$1$1.prototype = new Object_0;
-_.getClass$ = getClass_290;
+_.getClass$ = getClass_297;
 _.hasNext = hasNext_5;
 _.next_0 = next_6;
 _.typeId$ = 0;
 _.val$outerIter = null;
 function $ArrayList(this$static){
-  this$static.array = initDim(_3Ljava_lang_Object_2_classLit, 260, 0, 0, 0);
+  this$static.array = initDim(_3Ljava_lang_Object_2_classLit, 267, 0, 0, 0);
   return this$static;
 }
 
@@ -11419,7 +11643,7 @@ function contains_3(o){
   return $indexOf_2(this, o, 0) != -1;
 }
 
-function getClass_291(){
+function getClass_298(){
   return Ljava_util_ArrayList_2_classLit;
 }
 
@@ -11437,10 +11661,10 @@ function ArrayList(){
 _ = ArrayList.prototype = new AbstractList;
 _.add = add_2;
 _.contains_0 = contains_3;
-_.getClass$ = getClass_291;
+_.getClass$ = getClass_298;
 _.size_0 = size_2;
 _.toArray = toArray_0;
-_.typeId$ = 231;
+_.typeId$ = 238;
 _.size = 0;
 function $HashMap(this$static){
   $clearImpl(this$static);
@@ -11451,7 +11675,7 @@ function $equals_2(value1, value2){
   return (value1 == null?null:value1) === (value2 == null?null:value2) || value1 != null && equals__devirtual$(value1, value2);
 }
 
-function getClass_292(){
+function getClass_299(){
   return Ljava_util_HashMap_2_classLit;
 }
 
@@ -11459,8 +11683,8 @@ function HashMap(){
 }
 
 _ = HashMap.prototype = new AbstractHashMap;
-_.getClass$ = getClass_292;
-_.typeId$ = 232;
+_.getClass$ = getClass_299;
+_.typeId$ = 239;
 function $HashSet(this$static){
   this$static.map = $HashMap(new HashMap);
   return this$static;
@@ -11481,7 +11705,7 @@ function contains_4(o){
   return $containsKey(this.map, o);
 }
 
-function getClass_293(){
+function getClass_300(){
   return Ljava_util_HashSet_2_classLit;
 }
 
@@ -11504,11 +11728,11 @@ function HashSet(){
 _ = HashSet.prototype = new AbstractSet;
 _.add = add_3;
 _.contains_0 = contains_4;
-_.getClass$ = getClass_293;
+_.getClass$ = getClass_300;
 _.iterator_0 = iterator_6;
 _.size_0 = size_3;
 _.toString$ = toString_20;
-_.typeId$ = 233;
+_.typeId$ = 240;
 _.map = null;
 function $MapEntryImpl(this$static, key, value){
   this$static.key = key;
@@ -11516,7 +11740,7 @@ function $MapEntryImpl(this$static, key, value){
   return this$static;
 }
 
-function getClass_294(){
+function getClass_301(){
   return Ljava_util_MapEntryImpl_2_classLit;
 }
 
@@ -11539,11 +11763,11 @@ function MapEntryImpl(){
 }
 
 _ = MapEntryImpl.prototype = new AbstractMapEntry;
-_.getClass$ = getClass_294;
+_.getClass$ = getClass_301;
 _.getKey = getKey_1;
 _.getValue = getValue_1;
 _.setValue = setValue_1;
-_.typeId$ = 234;
+_.typeId$ = 241;
 _.key = null;
 _.value_0 = null;
 function $NoSuchElementException(this$static){
@@ -11551,7 +11775,7 @@ function $NoSuchElementException(this$static){
   return this$static;
 }
 
-function getClass_295(){
+function getClass_302(){
   return Ljava_util_NoSuchElementException_2_classLit;
 }
 
@@ -11559,8 +11783,8 @@ function NoSuchElementException(){
 }
 
 _ = NoSuchElementException.prototype = new RuntimeException;
-_.getClass$ = getClass_295;
-_.typeId$ = 235;
+_.getClass$ = getClass_302;
+_.typeId$ = 242;
 function equalsWithNullCheck(a, b){
   return (a == null?null:a) === (b == null?null:b) || a != null && equals__devirtual$(a, b);
 }
@@ -11583,7 +11807,7 @@ function gwtOnLoad(errFn, modName, modBase){
 
 --></script>
 <script><!--
-var Ljava_lang_Object_2_classLit = createForClass('java.lang.', 'Object'), Lcom_google_gwt_animation_client_Animation_2_classLit = createForClass('com.google.gwt.animation.client.', 'Animation'), _3Lcom_google_gwt_animation_client_Animation_2_classLit = createForArray('[Lcom.google.gwt.animation.client.', 'Animation;'), Lcom_google_gwt_user_client_Timer_2_classLit = createForClass('com.google.gwt.user.client.', 'Timer'), Lcom_google_gwt_animation_client_Animation$1_2_classLit = createForClass('com.google.gwt.animation.client.', 'Animation$1'), _3I_classLit = createForArray('', '[I'), Ljava_lang_Throwable_2_classLit = createForClass('java.lang.', 'Throwable'), Ljava_lang_Exception_2_classLit = createForClass('java.lang.', 'Exception'), Ljava_lang_RuntimeException_2_classLit = createForClass('java.lang.', 'RuntimeException'), Lcom_google_gwt_core_client_Scheduler_2_classLit = createForClass('com.google.gwt.core.client.', 'Scheduler'), Lcom_google_gwt_core_client_impl_SchedulerImpl_2_classLit = createForClass('com.google.gwt.core.client.impl.', 'SchedulerImpl'), Lcom_google_gwt_core_client_impl_SchedulerImpl$1_2_classLit = createForClass('com.google.gwt.core.client.impl.', 'SchedulerImpl$1'), Lcom_google_gwt_core_client_impl_SchedulerImpl$2_2_classLit = createForClass('com.google.gwt.core.client.impl.', 'SchedulerImpl$2'), Lcom_google_gwt_core_client_impl_StackTraceCreator$Collector_2_classLit = createForClass('com.google.gwt.core.client.impl.', 'StackTraceCreator$Collector'), Ljava_lang_StackTraceElement_2_classLit = createForClass('java.lang.', 'StackTraceElement'), _3Ljava_lang_StackTraceElement_2_classLit = createForArray('[Ljava.lang.', 'StackTraceElement;'), Lcom_google_gwt_core_client_JavaScriptException_2_classLit = createForClass('com.google.gwt.core.client.', 'JavaScriptException'), Lcom_google_gwt_core_client_JavaScriptObject_2_classLit = createForClass('com.google.gwt.core.client.', 'JavaScriptObject$'), Lcom_google_gwt_dom_client_DOMImpl_2_classLit = createForClass('com.google.gwt.dom.client.', 'DOMImpl'), Lcom_google_gwt_dom_client_DOMImplTrident_2_classLit = createForClass('com.google.gwt.dom.client.', 'DOMImplTrident'), Lcom_google_gwt_dom_client_DOMImplIE6_2_classLit = createForClass('com.google.gwt.dom.client.', 'DOMImplIE6'), Ljava_lang_String_2_classLit = createForClass('java.lang.', 'String'), _3Ljava_lang_String_2_classLit = createForArray('[Ljava.lang.', 'String;'), Ljava_lang_Enum_2_classLit = createForClass('java.lang.', 'Enum'), Lcom_google_gwt_dom_client_Style$Unit_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Unit', values_2), _3Lcom_google_gwt_dom_client_Style$Unit_2_classLit = createForArray('[Lcom.google.gwt.dom.client.', 'Style$Unit;'), Lcom_google_gwt_dom_client_Style$Unit$1_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Unit$1', null), Lcom_google_gwt_dom_client_Style$Unit$2_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Unit$2', null), Lcom_google_gwt_dom_client_Style$Unit$3_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Unit$3', null), Lcom_google_gwt_dom_client_Style$Unit$4_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Unit$4', null), Lcom_google_gwt_dom_client_Style$Unit$5_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Unit$5', null), Lcom_google_gwt_dom_client_Style$Unit$6_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Unit$6', null), Lcom_google_gwt_dom_client_Style$Unit$7_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Unit$7', null), Lcom_google_gwt_dom_client_Style$Unit$8_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Unit$8', null), Lcom_google_gwt_dom_client_Style$Unit$9_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Unit$9', null), Lcom_google_gwt_dom_client_Style$Overflow_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Overflow', values_0), _3Lcom_google_gwt_dom_client_Style$Overflow_2_classLit = createForArray('[Lcom.google.gwt.dom.client.', 'Style$Overflow;'), Lcom_google_gwt_dom_client_Style$Overflow$1_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Overflow$1', null), Lcom_google_gwt_dom_client_Style$Overflow$2_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Overflow$2', null), Lcom_google_gwt_dom_client_Style$Overflow$3_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Overflow$3', null), Lcom_google_gwt_dom_client_Style$Overflow$4_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Overflow$4', null), Lcom_google_gwt_dom_client_Style$Position_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Position', values_1), _3Lcom_google_gwt_dom_client_Style$Position_2_classLit = createForArray('[Lcom.google.gwt.dom.client.', 'Style$Position;'), Lcom_google_gwt_dom_client_Style$Position$1_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Position$1', null), Lcom_google_gwt_dom_client_Style$Position$2_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Position$2', null), Lcom_google_gwt_dom_client_Style$Position$3_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Position$3', null), Lcom_google_gwt_dom_client_Style$Position$4_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Position$4', null), Lcom_google_gwt_event_shared_GwtEvent_2_classLit = createForClass('com.google.gwt.event.shared.', 'GwtEvent'), Lcom_google_gwt_event_shared_GwtEvent$Type_2_classLit = createForClass('com.google.gwt.event.shared.', 'GwtEvent$Type'), Lcom_google_gwt_event_logical_shared_CloseEvent_2_classLit = createForClass('com.google.gwt.event.logical.shared.', 'CloseEvent'), Lcom_google_gwt_event_logical_shared_OpenEvent_2_classLit = createForClass('com.google.gwt.event.logical.shared.', 'OpenEvent'), Lcom_google_gwt_event_logical_shared_ResizeEvent_2_classLit = createForClass('com.google.gwt.event.logical.shared.', 'ResizeEvent'), Lcom_google_gwt_event_shared_DefaultHandlerRegistration_2_classLit = createForClass('com.google.gwt.event.shared.', 'DefaultHandlerRegistration'), Lcom_google_gwt_event_shared_HandlerManager_2_classLit = createForClass('com.google.gwt.event.shared.', 'HandlerManager'), Lcom_google_gwt_event_shared_HandlerManager$HandlerRegistry_2_classLit = createForClass('com.google.gwt.event.shared.', 'HandlerManager$HandlerRegistry'), Lcom_google_gwt_event_shared_HandlerManager$1_2_classLit = createForClass('com.google.gwt.event.shared.', 'HandlerManager$1'), Lcom_google_gwt_http_client_Request_2_classLit = createForClass('com.google.gwt.http.client.', 'Request'), Lcom_google_gwt_http_client_Response_2_classLit = createForClass('com.google.gwt.http.client.', 'Response'), Lcom_google_gwt_http_client_Request$1_2_classLit = createForClass('com.google.gwt.http.client.', 'Request$1'), Lcom_google_gwt_http_client_Request$3_2_classLit = createForClass('com.google.gwt.http.client.', 'Request$3'), Lcom_google_gwt_http_client_RequestBuilder_2_classLit = createForClass('com.google.gwt.http.client.', 'RequestBuilder'), Lcom_google_gwt_http_client_RequestBuilder$Method_2_classLit = createForClass('com.google.gwt.http.client.', 'RequestBuilder$Method'), Lcom_google_gwt_http_client_RequestBuilder$1_2_classLit = createForClass('com.google.gwt.http.client.', 'RequestBuilder$1'), Lcom_google_gwt_http_client_RequestException_2_classLit = createForClass('com.google.gwt.http.client.', 'RequestException'), Lcom_google_gwt_http_client_RequestPermissionException_2_classLit = createForClass('com.google.gwt.http.client.', 'RequestPermissionException'), Lcom_google_gwt_http_client_RequestTimeoutException_2_classLit = createForClass('com.google.gwt.http.client.', 'RequestTimeoutException'), Lcom_google_gwt_layout_client_LayoutImpl_2_classLit = createForClass('com.google.gwt.layout.client.', 'LayoutImpl'), Lcom_google_gwt_layout_client_Layout_2_classLit = createForClass('com.google.gwt.layout.client.', 'Layout'), Lcom_google_gwt_layout_client_Layout$Alignment_2_classLit = createForEnum('com.google.gwt.layout.client.', 'Layout$Alignment', values_3), _3Lcom_google_gwt_layout_client_Layout$Alignment_2_classLit = createForArray('[Lcom.google.gwt.layout.client.', 'Layout$Alignment;'), Lcom_google_gwt_layout_client_Layout$Layer_2_classLit = createForClass('com.google.gwt.layout.client.', 'Layout$Layer'), Lcom_google_gwt_layout_client_Layout$1_2_classLit = createForClass('com.google.gwt.layout.client.', 'Layout$1'), Lcom_google_gwt_layout_client_LayoutImplIE8_2_classLit = createForClass('com.google.gwt.layout.client.', 'LayoutImplIE8'), Lcom_google_gwt_layout_client_LayoutImplIE6_2_classLit = createForClass('com.google.gwt.layout.client.', 'LayoutImplIE6'), Lcom_google_gwt_layout_client_LayoutImplIE6$1_2_classLit = createForClass('com.google.gwt.layout.client.', 'LayoutImplIE6$1'), _3Ljava_lang_Object_2_classLit = createForArray('[Ljava.lang.', 'Object;'), Lcom_google_gwt_query_client_GQuery_2_classLit = createForClass('com.google.gwt.query.client.', 'GQuery'), Lcom_google_gwt_query_client_Function_2_classLit = createForClass('com.google.gwt.query.client.', 'Function'), _3Lcom_google_gwt_query_client_Function_2_classLit = createForArray('[Lcom.google.gwt.query.client.', 'Function;'), Lcom_google_gwt_query_client_plugins_Events_2_classLit = createForClass('com.google.gwt.query.client.plugins.', 'Events'), Lcom_google_gwt_query_client_plugins_Events$1_2_classLit = createForClass('com.google.gwt.query.client.plugins.', 'Events$1'), Lcom_google_gwt_query_client_plugins_EventsListener_2_classLit = createForClass('com.google.gwt.query.client.plugins.', 'EventsListener'), Lcom_google_gwt_query_client_plugins_EventsListener$BindFunction_2_classLit = createForClass('com.google.gwt.query.client.plugins.', 'EventsListener$BindFunction'), Lcom_google_gwt_query_client_GQuery$1_2_classLit = createForClass('com.google.gwt.query.client.', 'GQuery$1'), Lcom_google_gwt_query_client_SelectorEngine_2_classLit = createForClass('com.google.gwt.query.client.', 'SelectorEngine'), Lcom_google_gwt_resources_client_impl_ImageResourcePrototype_2_classLit = createForClass('com.google.gwt.resources.client.impl.', 'ImageResourcePrototype'), Lcom_google_gwt_uibinder_client_UiBinderUtil$TempAttachment_2_classLit = createForClass('com.google.gwt.uibinder.client.', 'UiBinderUtil$TempAttachment'), Lcom_google_gwt_user_client_impl_WindowImplIE$1_2_classLit = createForClass('com.google.gwt.user.client.impl.', 'WindowImplIE$1'), Lcom_google_gwt_user_client_impl_WindowImplIE$2_2_classLit = createForClass('com.google.gwt.user.client.impl.', 'WindowImplIE$2'), Lcom_google_gwt_user_client_impl_com_1google_1gwt_1user_1client_1impl_1WindowImplIE_1Resources_1default_1StaticClientBundleGenerator$1_2_classLit = createForClass('com.google.gwt.user.client.impl.', 'com_google_gwt_user_client_impl_WindowImplIE_Resources_default_StaticClientBundleGenerator$1'), Lcom_google_gwt_user_client_impl_com_1google_1gwt_1user_1client_1impl_1WindowImplIE_1Resources_1default_1StaticClientBundleGenerator$2_2_classLit = createForClass('com.google.gwt.user.client.impl.', 'com_google_gwt_user_client_impl_WindowImplIE_Resources_default_StaticClientBundleGenerator$2'), Lcom_google_gwt_user_client_ui_impl_ClippedImageImpl$1_2_classLit = createForClass('com.google.gwt.user.client.ui.impl.', 'ClippedImageImpl$1'), Lcom_google_gwt_user_client_ui_impl_ClippedImageImplIE6$1_2_classLit = createForClass('com.google.gwt.user.client.ui.impl.', 'ClippedImageImplIE6$1'), Lcom_google_gwt_user_client_ui_UIObject_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'UIObject'), Lcom_google_gwt_user_client_ui_Widget_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'Widget'), Lcom_google_gwt_user_client_ui_Panel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'Panel'), Lcom_google_gwt_user_client_ui_ComplexPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'ComplexPanel'), Lcom_google_gwt_user_client_ui_AbsolutePanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'AbsolutePanel'), _3Ljava_lang_Throwable_2_classLit = createForArray('[Ljava.lang.', 'Throwable;'), Lcom_google_gwt_user_client_ui_AttachDetachException_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'AttachDetachException'), Lcom_google_gwt_user_client_ui_AttachDetachException$1_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'AttachDetachException$1'), Lcom_google_gwt_user_client_ui_AttachDetachException$2_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'AttachDetachException$2'), Lcom_google_gwt_user_client_ui_CellPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'CellPanel'), Lcom_google_gwt_user_client_ui_ComplexPanel$1_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'ComplexPanel$1'), Lcom_google_gwt_user_client_ui_Composite_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'Composite'), Lcom_google_gwt_user_client_ui_SimplePanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'SimplePanel'), _3Lcom_google_gwt_user_client_ui_Widget_2_classLit = createForArray('[Lcom.google.gwt.user.client.ui.', 'Widget;'), Lcom_google_gwt_user_client_ui_DisclosurePanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'DisclosurePanel'), Lcom_google_gwt_user_client_ui_DisclosurePanel$ClickableHeader_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'DisclosurePanel$ClickableHeader'), Lcom_google_gwt_user_client_ui_DisclosurePanel$ContentAnimation_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'DisclosurePanel$ContentAnimation'), Lcom_google_gwt_user_client_ui_DisclosurePanel$DefaultHeader_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'DisclosurePanel$DefaultHeader'), Lcom_google_gwt_user_client_ui_DisclosurePanel$DefaultHeader$2_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'DisclosurePanel$DefaultHeader$2'), Lcom_google_gwt_user_client_ui_DockLayoutPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'DockLayoutPanel'), Lcom_google_gwt_user_client_ui_DockLayoutPanel$Direction_2_classLit = createForEnum('com.google.gwt.user.client.ui.', 'DockLayoutPanel$Direction', values_4), _3Lcom_google_gwt_user_client_ui_DockLayoutPanel$Direction_2_classLit = createForArray('[Lcom.google.gwt.user.client.ui.', 'DockLayoutPanel$Direction;'), Lcom_google_gwt_user_client_ui_DockLayoutPanel$LayoutData_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'DockLayoutPanel$LayoutData'), Lcom_google_gwt_user_client_ui_LayoutCommand_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'LayoutCommand'), Lcom_google_gwt_user_client_ui_DockLayoutPanel$DockAnimateCommand_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'DockLayoutPanel$DockAnimateCommand'), Lcom_google_gwt_user_client_ui_FlowPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'FlowPanel'), Lcom_google_gwt_user_client_ui_Label_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'Label'), Lcom_google_gwt_user_client_ui_HTMLPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'HTMLPanel'), Lcom_google_gwt_user_client_ui_HasHorizontalAlignment$HorizontalAlignmentConstant_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'HasHorizontalAlignment$HorizontalAlignmentConstant'), Lcom_google_gwt_user_client_ui_HasVerticalAlignment$VerticalAlignmentConstant_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'HasVerticalAlignment$VerticalAlignmentConstant'), Lcom_google_gwt_user_client_ui_Image_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'Image'), Lcom_google_gwt_user_client_ui_Image$State_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'Image$State'), Lcom_google_gwt_user_client_ui_Image$ClippedState_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'Image$ClippedState'), Ljava_util_AbstractCollection_2_classLit = createForClass('java.util.', 'AbstractCollection'), Ljava_util_AbstractList_2_classLit = createForClass('java.util.', 'AbstractList'), Ljava_util_ArrayList_2_classLit = createForClass('java.util.', 'ArrayList'), Lcom_google_gwt_user_client_ui_LayoutCommand$1_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'LayoutCommand$1'), Lcom_google_gwt_user_client_ui_LayoutPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'LayoutPanel'), _3C_classLit = createForArray('', '[C'), Lcom_google_gwt_user_client_ui_RootLayoutPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'RootLayoutPanel'), Lcom_google_gwt_user_client_ui_RootLayoutPanel$1_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'RootLayoutPanel$1'), Lcom_google_gwt_user_client_ui_RootPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'RootPanel'), Lcom_google_gwt_user_client_ui_RootPanel$DefaultRootPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'RootPanel$DefaultRootPanel'), Lcom_google_gwt_user_client_ui_RootPanel$1_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'RootPanel$1'), Lcom_google_gwt_user_client_ui_RootPanel$2_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'RootPanel$2'), Lcom_google_gwt_user_client_ui_ScrollPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'ScrollPanel'), Lcom_google_gwt_user_client_ui_SimplePanel$1_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'SimplePanel$1'), Lcom_google_gwt_user_client_ui_VerticalPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'VerticalPanel'), Lcom_google_gwt_user_client_ui_WidgetCollection_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'WidgetCollection'), Lcom_google_gwt_user_client_ui_WidgetCollection$WidgetIterator_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'WidgetCollection$WidgetIterator'), Lcom_google_gwt_user_client_ui_WidgetIterators$1_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'WidgetIterators$1'), Lcom_google_gwt_user_client_CommandCanceledException_2_classLit = createForClass('com.google.gwt.user.client.', 'CommandCanceledException'), Lcom_google_gwt_user_client_CommandExecutor_2_classLit = createForClass('com.google.gwt.user.client.', 'CommandExecutor'), Lcom_google_gwt_user_client_CommandExecutor$CircularIterator_2_classLit = createForClass('com.google.gwt.user.client.', 'CommandExecutor$CircularIterator'), Lcom_google_gwt_user_client_CommandExecutor$1_2_classLit = createForClass('com.google.gwt.user.client.', 'CommandExecutor$1'), Lcom_google_gwt_user_client_CommandExecutor$2_2_classLit = createForClass('com.google.gwt.user.client.', 'CommandExecutor$2'), Lcom_google_gwt_user_client_Timer$1_2_classLit = createForClass('com.google.gwt.user.client.', 'Timer$1'), Lcom_google_gwt_user_client_Window$ClosingEvent_2_classLit = createForClass('com.google.gwt.user.client.', 'Window$ClosingEvent'), Lcom_google_gwt_user_client_Window$WindowHandlers_2_classLit = createForClass('com.google.gwt.user.client.', 'Window$WindowHandlers'), Lgwtquery_plugins_ui_Ui_2_classLit = createForClass('gwtquery.plugins.ui.', 'Ui'), Lgwtquery_plugins_ui_UiWidget_2_classLit = createForClass('gwtquery.plugins.ui.', 'UiWidget'), Lgwtquery_plugins_ui_interactions_Draggable_2_classLit = createForClass('gwtquery.plugins.ui.interactions.', 'Draggable'), Lgwtquery_plugins_ui_interactions_Draggable$DraggablePlugin_2_classLit = createForClass('gwtquery.plugins.ui.interactions.', 'Draggable$DraggablePlugin'), Lgwtquery_plugins_ui_interactions_Droppable_2_classLit = createForClass('gwtquery.plugins.ui.interactions.', 'Droppable'), Lgwtquery_plugins_ui_interactions_Droppable$DroppablePlugin_2_classLit = createForClass('gwtquery.plugins.ui.interactions.', 'Droppable$DroppablePlugin'), Lgwtquery_plugins_ui_interactions_Resizable_2_classLit = createForClass('gwtquery.plugins.ui.interactions.', 'Resizable'), Lgwtquery_plugins_ui_interactions_Resizable$ResizablePlugin_2_classLit = createForClass('gwtquery.plugins.ui.interactions.', 'Resizable$ResizablePlugin'), Lgwtquery_plugins_ui_interactions_Selectable_2_classLit = createForClass('gwtquery.plugins.ui.interactions.', 'Selectable'), Lgwtquery_plugins_ui_interactions_Selectable$SelectablePlugin_2_classLit = createForClass('gwtquery.plugins.ui.interactions.', 'Selectable$SelectablePlugin'), Lgwtquery_plugins_ui_interactions_Sortable_2_classLit = createForClass('gwtquery.plugins.ui.interactions.', 'Sortable'), Lgwtquery_plugins_ui_interactions_Sortable$SortablePlugin_2_classLit = createForClass('gwtquery.plugins.ui.interactions.', 'Sortable$SortablePlugin'), Lgwtquery_plugins_ui_utilities_Position_2_classLit = createForClass('gwtquery.plugins.ui.utilities.', 'Position'), Lgwtquery_plugins_ui_utilities_Position$PositionPlugin_2_classLit = createForClass('gwtquery.plugins.ui.utilities.', 'Position$PositionPlugin'), Lgwtquery_plugins_ui_widgets_Accordion_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Accordion'), Lgwtquery_plugins_ui_widgets_Accordion$AccordionPlugin_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Accordion$AccordionPlugin'), Lgwtquery_plugins_ui_widgets_Button_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Button'), Lgwtquery_plugins_ui_widgets_Button$ButtonPlugin_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Button$ButtonPlugin'), Lgwtquery_plugins_ui_widgets_Buttonset_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Buttonset'), Lgwtquery_plugins_ui_widgets_Buttonset$ButtonPlugin_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Buttonset$ButtonPlugin'), Lgwtquery_plugins_ui_widgets_Datepicker_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Datepicker'), Lgwtquery_plugins_ui_widgets_Datepicker$DatepickerPlugin_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Datepicker$DatepickerPlugin'), Lgwtquery_plugins_ui_widgets_Dialog_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Dialog'), Lgwtquery_plugins_ui_widgets_Dialog$DialogPlugin_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Dialog$DialogPlugin'), Lgwtquery_plugins_ui_widgets_Progressbar_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Progressbar'), Lgwtquery_plugins_ui_widgets_Progressbar$ProgressbarPlugin_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Progressbar$ProgressbarPlugin'), Lgwtquery_plugins_ui_widgets_Slider_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Slider'), Lgwtquery_plugins_ui_widgets_Slider$SliderPlugin_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Slider$SliderPlugin'), Lgwtquery_plugins_ui_widgets_Tabs_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Tabs'), Lgwtquery_plugins_ui_widgets_Tabs$TabsPlugin_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Tabs$TabsPlugin'), Lgwtquery_plugins_ui_Ui$UiGQueryPlugin_2_classLit = createForClass('gwtquery.plugins.ui.', 'Ui$UiGQueryPlugin'), Lgwtquery_samples_client_accordions_AbstractAccordionDemo_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'AbstractAccordionDemo'), _3Lgwtquery_samples_client_Demo_2_classLit = createForArray('[Lgwtquery.samples.client.', 'Demo;'), Lgwtquery_samples_client_DemoPanel_2_classLit = createForClass('gwtquery.samples.client.', 'DemoPanel'), Lgwtquery_samples_client_accordions_AccordionSamples_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'AccordionSamples'), Lgwtquery_samples_client_accordions_Accordions_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'Accordions'), Lgwtquery_samples_client_accordions_CollapseContent_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'CollapseContent'), Lgwtquery_samples_client_accordions_CustomizeIcons_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'CustomizeIcons'), Lgwtquery_samples_client_accordions_CustomizeIcons$1_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'CustomizeIcons$1'), Lgwtquery_samples_client_accordions_CustomizeIcons$2_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'CustomizeIcons$2'), Lgwtquery_samples_client_accordions_FillSpace_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'FillSpace'), Lgwtquery_samples_client_accordions_FillSpace$1_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'FillSpace$1'), Lgwtquery_samples_client_accordions_NoAutoHeight_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'NoAutoHeight'), Lgwtquery_samples_client_accordions_OpenOnMouseOver_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'OpenOnMouseOver'), Lgwtquery_samples_client_accordions_Sortable_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'Sortable'), Lgwtquery_samples_client_accordions_Sortable$Stop_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'Sortable$Stop'), Lgwtquery_samples_client_accordions_Sortable$1_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'Sortable$1'), Lgwtquery_samples_client_accordions_Sortable$2_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'Sortable$2'), Lgwtquery_samples_client_buttons_AbstractButtonDemo_2_classLit = createForClass('gwtquery.samples.client.buttons.', 'AbstractButtonDemo'), Lgwtquery_samples_client_buttons_ButtonSamples_2_classLit = createForClass('gwtquery.samples.client.buttons.', 'ButtonSamples'), Lgwtquery_samples_client_buttons_Buttons_2_classLit = createForClass('gwtquery.samples.client.buttons.', 'Buttons'), Lgwtquery_samples_client_buttons_Buttons$1_2_classLit = createForClass('gwtquery.samples.client.buttons.', 'Buttons$1'), Lgwtquery_samples_client_buttons_Checkboxes_2_classLit = createForClass('gwtquery.samples.client.buttons.', 'Checkboxes'), Lgwtquery_samples_client_buttons_Icons_2_classLit = createForClass('gwtquery.samples.client.buttons.', 'Icons'), Lgwtquery_samples_client_buttons_Radios_2_classLit = createForClass('gwtquery.samples.client.buttons.', 'Radios'), Lgwtquery_samples_client_datepickers_AbstractDatepickerDemo_2_classLit = createForClass('gwtquery.samples.client.datepickers.', 'AbstractDatepickerDemo'), Lgwtquery_samples_client_datepickers_DatepickerSamples_2_classLit = createForClass('gwtquery.samples.client.datepickers.', 'DatepickerSamples'), Lgwtquery_samples_client_datepickers_Datepickers_2_classLit = createForClass('gwtquery.samples.client.datepickers.', 'Datepickers'), Lgwtquery_samples_client_datepickers_Format_2_classLit = createForClass('gwtquery.samples.client.datepickers.', 'Format'), Lgwtquery_samples_client_datepickers_Format$1_2_classLit = createForClass('gwtquery.samples.client.datepickers.', 'Format$1'), Lgwtquery_samples_client_datepickers_RestrictRange_2_classLit = createForClass('gwtquery.samples.client.datepickers.', 'RestrictRange'), Lgwtquery_samples_client_dialogs_AbstractDialogDemo_2_classLit = createForClass('gwtquery.samples.client.dialogs.', 'AbstractDialogDemo'), Lgwtquery_samples_client_dialogs_Animated_2_classLit = createForClass('gwtquery.samples.client.dialogs.', 'Animated'), Lgwtquery_samples_client_dialogs_Animated$1_2_classLit = createForClass('gwtquery.samples.client.dialogs.', 'Animated$1'), Lgwtquery_samples_client_dialogs_DialogSamples_2_classLit = createForClass('gwtquery.samples.client.dialogs.', 'DialogSamples'), Lgwtquery_samples_client_dialogs_Dialogs_2_classLit = createForClass('gwtquery.samples.client.dialogs.', 'Dialogs'), Lgwtquery_samples_client_dialogs_ModalDialog_2_classLit = createForClass('gwtquery.samples.client.dialogs.', 'ModalDialog'), Lgwtquery_samples_client_dialogs_ModalMessage_2_classLit = createForClass('gwtquery.samples.client.dialogs.', 'ModalMessage'), Lgwtquery_samples_client_dialogs_ModalMessage$1_2_classLit = createForClass('gwtquery.samples.client.dialogs.', 'ModalMessage$1'), Lgwtquery_samples_client_droppables_AbstractDroppableDemo_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'AbstractDroppableDemo'), Lgwtquery_samples_client_droppables_AcceptedElements_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'AcceptedElements'), Lgwtquery_samples_client_droppables_AcceptedElements$1_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'AcceptedElements$1'), Lgwtquery_samples_client_droppables_DroppableSamples_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'DroppableSamples'), Lgwtquery_samples_client_droppables_Droppables_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'Droppables'), Lgwtquery_samples_client_droppables_Droppables$1_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'Droppables$1'), Lgwtquery_samples_client_droppables_PreventPropagation_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'PreventPropagation'), Lgwtquery_samples_client_droppables_PreventPropagation$1_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'PreventPropagation$1'), Lgwtquery_samples_client_droppables_PreventPropagation$2_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'PreventPropagation$2'), Lgwtquery_samples_client_droppables_Revert_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'Revert'), Lgwtquery_samples_client_droppables_Revert$1_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'Revert$1'), Lgwtquery_samples_client_droppables_ShoppingCart_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'ShoppingCart'), Lgwtquery_samples_client_droppables_ShoppingCart$1_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'ShoppingCart$1'), Lgwtquery_samples_client_droppables_VisualFeedback_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'VisualFeedback'), Lgwtquery_samples_client_droppables_VisualFeedback$1_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'VisualFeedback$1'), Lgwtquery_samples_client_droppables_VisualFeedback$2_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'VisualFeedback$2'), Lgwtquery_samples_client_positions_AbstractPositionDemo_2_classLit = createForClass('gwtquery.samples.client.positions.', 'AbstractPositionDemo'), Lgwtquery_samples_client_positions_PositionSamples_2_classLit = createForClass('gwtquery.samples.client.positions.', 'PositionSamples'), Lgwtquery_samples_client_positions_Positions_2_classLit = createForClass('gwtquery.samples.client.positions.', 'Positions'), Lgwtquery_samples_client_positions_Positions$1_2_classLit = createForClass('gwtquery.samples.client.positions.', 'Positions$1'), Lgwtquery_samples_client_positions_Positions$2_2_classLit = createForClass('gwtquery.samples.client.positions.', 'Positions$2'), Lgwtquery_samples_client_progressbars_AbstractProgressbarDemo_2_classLit = createForClass('gwtquery.samples.client.progressbars.', 'AbstractProgressbarDemo'), Lgwtquery_samples_client_progressbars_Animated_2_classLit = createForClass('gwtquery.samples.client.progressbars.', 'Animated'), Lgwtquery_samples_client_progressbars_ProgressbarSamples_2_classLit = createForClass('gwtquery.samples.client.progressbars.', 'ProgressbarSamples'), Lgwtquery_samples_client_progressbars_Progressbars_2_classLit = createForClass('gwtquery.samples.client.progressbars.', 'Progressbars'), Lgwtquery_samples_client_progressbars_Resizable_2_classLit = createForClass('gwtquery.samples.client.progressbars.', 'Resizable'), Lgwtquery_samples_client_selectables_AbstractSelectableDemo_2_classLit = createForClass('gwtquery.samples.client.selectables.', 'AbstractSelectableDemo'), Lgwtquery_samples_client_selectables_DisplayAsGrid_2_classLit = createForClass('gwtquery.samples.client.selectables.', 'DisplayAsGrid'), Lgwtquery_samples_client_selectables_SelectableSamples_2_classLit = createForClass('gwtquery.samples.client.selectables.', 'SelectableSamples'), Lgwtquery_samples_client_selectables_Selectables_2_classLit = createForClass('gwtquery.samples.client.selectables.', 'Selectables'), Lgwtquery_samples_client_selectables_Serialize_2_classLit = createForClass('gwtquery.samples.client.selectables.', 'Serialize'), Lgwtquery_samples_client_selectables_Serialize$1_2_classLit = createForClass('gwtquery.samples.client.selectables.', 'Serialize$1'), Lgwtquery_samples_client_selectables_Serialize$1$1_2_classLit = createForClass('gwtquery.samples.client.selectables.', 'Serialize$1$1'), Lgwtquery_samples_client_sliders_AbstractSliderDemo_2_classLit = createForClass('gwtquery.samples.client.sliders.', 'AbstractSliderDemo'), Lgwtquery_samples_client_sliders_RangeSlider_2_classLit = createForClass('gwtquery.samples.client.sliders.', 'RangeSlider'), Lgwtquery_samples_client_sliders_RangeSlider$1_2_classLit = createForClass('gwtquery.samples.client.sliders.', 'RangeSlider$1'), Lgwtquery_samples_client_sliders_SliderSamples_2_classLit = createForClass('gwtquery.samples.client.sliders.', 'SliderSamples'), Lgwtquery_samples_client_sliders_Sliders_2_classLit = createForClass('gwtquery.samples.client.sliders.', 'Sliders'), Lgwtquery_samples_client_sliders_SnapToIncrement_2_classLit = createForClass('gwtquery.samples.client.sliders.', 'SnapToIncrement'), Lgwtquery_samples_client_sliders_SnapToIncrement$1_2_classLit = createForClass('gwtquery.samples.client.sliders.', 'SnapToIncrement$1'), Lgwtquery_samples_client_tabs_AbstractTabsDemo_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'AbstractTabsDemo'), Lgwtquery_samples_client_tabs_Collapsible_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'Collapsible'), Lgwtquery_samples_client_tabs_OpenOnMouseOver_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'OpenOnMouseOver'), Lgwtquery_samples_client_tabs_SimpleManipulation_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'SimpleManipulation'), Lgwtquery_samples_client_tabs_SimpleManipulation$1_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'SimpleManipulation$1'), Lgwtquery_samples_client_tabs_SimpleManipulation$2_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'SimpleManipulation$2'), Lgwtquery_samples_client_tabs_SimpleManipulation$3_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'SimpleManipulation$3'), Lgwtquery_samples_client_tabs_SimpleManipulation$4_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'SimpleManipulation$4'), Lgwtquery_samples_client_tabs_SimpleManipulation$5_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'SimpleManipulation$5'), Lgwtquery_samples_client_tabs_SimpleManipulation$6_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'SimpleManipulation$6'), Lgwtquery_samples_client_tabs_SimpleManipulation$7_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'SimpleManipulation$7'), Lgwtquery_samples_client_tabs_SimpleManipulation$8_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'SimpleManipulation$8'), Lgwtquery_samples_client_tabs_Sortable_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'Sortable'), Lgwtquery_samples_client_tabs_Tabs_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'Tabs'), Lgwtquery_samples_client_tabs_TabsSamples_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'TabsSamples'), Lgwtquery_samples_client_DemoPanel$1_2_classLit = createForClass('gwtquery.samples.client.', 'DemoPanel$1'), Lgwtquery_samples_client_DemoPanel$1$1_2_classLit = createForClass('gwtquery.samples.client.', 'DemoPanel$1$1'), Lgwtquery_samples_client_GwtQueryUiModule_2_classLit = createForClass('gwtquery.samples.client.', 'GwtQueryUiModule'), Lgwtquery_samples_client_ViewSourcePanel_2_classLit = createForClass('gwtquery.samples.client.', 'ViewSourcePanel'), Lgwtquery_samples_client_ViewSourcePanel$1_2_classLit = createForClass('gwtquery.samples.client.', 'ViewSourcePanel$1'), Ljava_lang_IndexOutOfBoundsException_2_classLit = createForClass('java.lang.', 'IndexOutOfBoundsException'), Ljava_lang_ArrayStoreException_2_classLit = createForClass('java.lang.', 'ArrayStoreException'), Ljava_lang_Boolean_2_classLit = createForClass('java.lang.', 'Boolean'), Ljava_lang_Number_2_classLit = createForClass('java.lang.', 'Number'), Ljava_lang_Class_2_classLit = createForClass('java.lang.', 'Class'), Ljava_lang_ClassCastException_2_classLit = createForClass('java.lang.', 'ClassCastException'), Ljava_lang_Double_2_classLit = createForClass('java.lang.', 'Double'), Ljava_lang_IllegalArgumentException_2_classLit = createForClass('java.lang.', 'IllegalArgumentException'), Ljava_lang_IllegalStateException_2_classLit = createForClass('java.lang.', 'IllegalStateException'), Ljava_lang_Integer_2_classLit = createForClass('java.lang.', 'Integer'), _3Ljava_lang_Integer_2_classLit = createForArray('[Ljava.lang.', 'Integer;'), Ljava_lang_NullPointerException_2_classLit = createForClass('java.lang.', 'NullPointerException'), Ljava_lang_NumberFormatException_2_classLit = createForClass('java.lang.', 'NumberFormatException'), Ljava_lang_StringBuffer_2_classLit = createForClass('java.lang.', 'StringBuffer'), Ljava_lang_UnsupportedOperationException_2_classLit = createForClass('java.lang.', 'UnsupportedOperationException'), Ljava_util_AbstractMap_2_classLit = createForClass('java.util.', 'AbstractMap'), Ljava_util_AbstractHashMap_2_classLit = createForClass('java.util.', 'AbstractHashMap'), Ljava_util_AbstractSet_2_classLit = createForClass('java.util.', 'AbstractSet'), Ljava_util_AbstractHashMap$EntrySet_2_classLit = createForClass('java.util.', 'AbstractHashMap$EntrySet'), Ljava_util_AbstractHashMap$EntrySetIterator_2_classLit = createForClass('java.util.', 'AbstractHashMap$EntrySetIterator'), Ljava_util_AbstractMapEntry_2_classLit = createForClass('java.util.', 'AbstractMapEntry'), Ljava_util_AbstractHashMap$MapEntryNull_2_classLit = createForClass('java.util.', 'AbstractHashMap$MapEntryNull'), Ljava_util_AbstractHashMap$MapEntryString_2_classLit = createForClass('java.util.', 'AbstractHashMap$MapEntryString'), Ljava_util_AbstractList$IteratorImpl_2_classLit = createForClass('java.util.', 'AbstractList$IteratorImpl'), Ljava_util_AbstractMap$1_2_classLit = createForClass('java.util.', 'AbstractMap$1'), Ljava_util_AbstractMap$1$1_2_classLit = createForClass('java.util.', 'AbstractMap$1$1'), Ljava_util_HashMap_2_classLit = createForClass('java.util.', 'HashMap'), Ljava_util_HashSet_2_classLit = createForClass('java.util.', 'HashSet'), Ljava_util_MapEntryImpl_2_classLit = createForClass('java.util.', 'MapEntryImpl'), Ljava_util_NoSuchElementException_2_classLit = createForClass('java.util.', 'NoSuchElementException');
+var Ljava_lang_Object_2_classLit = createForClass('java.lang.', 'Object'), Lcom_google_gwt_animation_client_Animation_2_classLit = createForClass('com.google.gwt.animation.client.', 'Animation'), _3Lcom_google_gwt_animation_client_Animation_2_classLit = createForArray('[Lcom.google.gwt.animation.client.', 'Animation;'), Lcom_google_gwt_user_client_Timer_2_classLit = createForClass('com.google.gwt.user.client.', 'Timer'), Lcom_google_gwt_animation_client_Animation$1_2_classLit = createForClass('com.google.gwt.animation.client.', 'Animation$1'), _3I_classLit = createForArray('', '[I'), Ljava_lang_Throwable_2_classLit = createForClass('java.lang.', 'Throwable'), Ljava_lang_Exception_2_classLit = createForClass('java.lang.', 'Exception'), Ljava_lang_RuntimeException_2_classLit = createForClass('java.lang.', 'RuntimeException'), Lcom_google_gwt_core_client_Scheduler_2_classLit = createForClass('com.google.gwt.core.client.', 'Scheduler'), Lcom_google_gwt_core_client_impl_SchedulerImpl_2_classLit = createForClass('com.google.gwt.core.client.impl.', 'SchedulerImpl'), Lcom_google_gwt_core_client_impl_SchedulerImpl$1_2_classLit = createForClass('com.google.gwt.core.client.impl.', 'SchedulerImpl$1'), Lcom_google_gwt_core_client_impl_SchedulerImpl$2_2_classLit = createForClass('com.google.gwt.core.client.impl.', 'SchedulerImpl$2'), Lcom_google_gwt_core_client_impl_StackTraceCreator$Collector_2_classLit = createForClass('com.google.gwt.core.client.impl.', 'StackTraceCreator$Collector'), Ljava_lang_StackTraceElement_2_classLit = createForClass('java.lang.', 'StackTraceElement'), _3Ljava_lang_StackTraceElement_2_classLit = createForArray('[Ljava.lang.', 'StackTraceElement;'), Lcom_google_gwt_core_client_JavaScriptException_2_classLit = createForClass('com.google.gwt.core.client.', 'JavaScriptException'), Lcom_google_gwt_core_client_JavaScriptObject_2_classLit = createForClass('com.google.gwt.core.client.', 'JavaScriptObject$'), Lcom_google_gwt_dom_client_DOMImpl_2_classLit = createForClass('com.google.gwt.dom.client.', 'DOMImpl'), Lcom_google_gwt_dom_client_DOMImplTrident_2_classLit = createForClass('com.google.gwt.dom.client.', 'DOMImplTrident'), Lcom_google_gwt_dom_client_DOMImplIE6_2_classLit = createForClass('com.google.gwt.dom.client.', 'DOMImplIE6'), Ljava_lang_String_2_classLit = createForClass('java.lang.', 'String'), _3Ljava_lang_String_2_classLit = createForArray('[Ljava.lang.', 'String;'), Ljava_lang_Enum_2_classLit = createForClass('java.lang.', 'Enum'), Lcom_google_gwt_dom_client_Style$Unit_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Unit', values_2), _3Lcom_google_gwt_dom_client_Style$Unit_2_classLit = createForArray('[Lcom.google.gwt.dom.client.', 'Style$Unit;'), Lcom_google_gwt_dom_client_Style$Unit$1_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Unit$1', null), Lcom_google_gwt_dom_client_Style$Unit$2_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Unit$2', null), Lcom_google_gwt_dom_client_Style$Unit$3_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Unit$3', null), Lcom_google_gwt_dom_client_Style$Unit$4_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Unit$4', null), Lcom_google_gwt_dom_client_Style$Unit$5_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Unit$5', null), Lcom_google_gwt_dom_client_Style$Unit$6_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Unit$6', null), Lcom_google_gwt_dom_client_Style$Unit$7_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Unit$7', null), Lcom_google_gwt_dom_client_Style$Unit$8_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Unit$8', null), Lcom_google_gwt_dom_client_Style$Unit$9_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Unit$9', null), Lcom_google_gwt_dom_client_Style$Overflow_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Overflow', values_0), _3Lcom_google_gwt_dom_client_Style$Overflow_2_classLit = createForArray('[Lcom.google.gwt.dom.client.', 'Style$Overflow;'), Lcom_google_gwt_dom_client_Style$Overflow$1_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Overflow$1', null), Lcom_google_gwt_dom_client_Style$Overflow$2_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Overflow$2', null), Lcom_google_gwt_dom_client_Style$Overflow$3_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Overflow$3', null), Lcom_google_gwt_dom_client_Style$Overflow$4_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Overflow$4', null), Lcom_google_gwt_dom_client_Style$Position_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Position', values_1), _3Lcom_google_gwt_dom_client_Style$Position_2_classLit = createForArray('[Lcom.google.gwt.dom.client.', 'Style$Position;'), Lcom_google_gwt_dom_client_Style$Position$1_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Position$1', null), Lcom_google_gwt_dom_client_Style$Position$2_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Position$2', null), Lcom_google_gwt_dom_client_Style$Position$3_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Position$3', null), Lcom_google_gwt_dom_client_Style$Position$4_2_classLit = createForEnum('com.google.gwt.dom.client.', 'Style$Position$4', null), Lcom_google_gwt_event_shared_GwtEvent_2_classLit = createForClass('com.google.gwt.event.shared.', 'GwtEvent'), Lcom_google_gwt_event_shared_GwtEvent$Type_2_classLit = createForClass('com.google.gwt.event.shared.', 'GwtEvent$Type'), Lcom_google_gwt_event_logical_shared_CloseEvent_2_classLit = createForClass('com.google.gwt.event.logical.shared.', 'CloseEvent'), Lcom_google_gwt_event_logical_shared_OpenEvent_2_classLit = createForClass('com.google.gwt.event.logical.shared.', 'OpenEvent'), Lcom_google_gwt_event_logical_shared_ResizeEvent_2_classLit = createForClass('com.google.gwt.event.logical.shared.', 'ResizeEvent'), Lcom_google_gwt_event_shared_DefaultHandlerRegistration_2_classLit = createForClass('com.google.gwt.event.shared.', 'DefaultHandlerRegistration'), Lcom_google_gwt_event_shared_HandlerManager_2_classLit = createForClass('com.google.gwt.event.shared.', 'HandlerManager'), Lcom_google_gwt_event_shared_HandlerManager$HandlerRegistry_2_classLit = createForClass('com.google.gwt.event.shared.', 'HandlerManager$HandlerRegistry'), Lcom_google_gwt_event_shared_HandlerManager$1_2_classLit = createForClass('com.google.gwt.event.shared.', 'HandlerManager$1'), Lcom_google_gwt_http_client_Request_2_classLit = createForClass('com.google.gwt.http.client.', 'Request'), Lcom_google_gwt_http_client_Response_2_classLit = createForClass('com.google.gwt.http.client.', 'Response'), Lcom_google_gwt_http_client_Request$1_2_classLit = createForClass('com.google.gwt.http.client.', 'Request$1'), Lcom_google_gwt_http_client_Request$3_2_classLit = createForClass('com.google.gwt.http.client.', 'Request$3'), Lcom_google_gwt_http_client_RequestBuilder_2_classLit = createForClass('com.google.gwt.http.client.', 'RequestBuilder'), Lcom_google_gwt_http_client_RequestBuilder$Method_2_classLit = createForClass('com.google.gwt.http.client.', 'RequestBuilder$Method'), Lcom_google_gwt_http_client_RequestBuilder$1_2_classLit = createForClass('com.google.gwt.http.client.', 'RequestBuilder$1'), Lcom_google_gwt_http_client_RequestException_2_classLit = createForClass('com.google.gwt.http.client.', 'RequestException'), Lcom_google_gwt_http_client_RequestPermissionException_2_classLit = createForClass('com.google.gwt.http.client.', 'RequestPermissionException'), Lcom_google_gwt_http_client_RequestTimeoutException_2_classLit = createForClass('com.google.gwt.http.client.', 'RequestTimeoutException'), Lcom_google_gwt_layout_client_LayoutImpl_2_classLit = createForClass('com.google.gwt.layout.client.', 'LayoutImpl'), Lcom_google_gwt_layout_client_Layout_2_classLit = createForClass('com.google.gwt.layout.client.', 'Layout'), Lcom_google_gwt_layout_client_Layout$Alignment_2_classLit = createForEnum('com.google.gwt.layout.client.', 'Layout$Alignment', values_3), _3Lcom_google_gwt_layout_client_Layout$Alignment_2_classLit = createForArray('[Lcom.google.gwt.layout.client.', 'Layout$Alignment;'), Lcom_google_gwt_layout_client_Layout$Layer_2_classLit = createForClass('com.google.gwt.layout.client.', 'Layout$Layer'), Lcom_google_gwt_layout_client_Layout$1_2_classLit = createForClass('com.google.gwt.layout.client.', 'Layout$1'), Lcom_google_gwt_layout_client_LayoutImplIE8_2_classLit = createForClass('com.google.gwt.layout.client.', 'LayoutImplIE8'), Lcom_google_gwt_layout_client_LayoutImplIE6_2_classLit = createForClass('com.google.gwt.layout.client.', 'LayoutImplIE6'), Lcom_google_gwt_layout_client_LayoutImplIE6$1_2_classLit = createForClass('com.google.gwt.layout.client.', 'LayoutImplIE6$1'), _3Ljava_lang_Object_2_classLit = createForArray('[Ljava.lang.', 'Object;'), Lcom_google_gwt_query_client_GQuery_2_classLit = createForClass('com.google.gwt.query.client.', 'GQuery'), Lcom_google_gwt_query_client_Function_2_classLit = createForClass('com.google.gwt.query.client.', 'Function'), _3Lcom_google_gwt_query_client_Function_2_classLit = createForArray('[Lcom.google.gwt.query.client.', 'Function;'), Lcom_google_gwt_query_client_plugins_Events_2_classLit = createForClass('com.google.gwt.query.client.plugins.', 'Events'), Lcom_google_gwt_query_client_plugins_Events$1_2_classLit = createForClass('com.google.gwt.query.client.plugins.', 'Events$1'), Lcom_google_gwt_query_client_plugins_EventsListener_2_classLit = createForClass('com.google.gwt.query.client.plugins.', 'EventsListener'), Lcom_google_gwt_query_client_plugins_EventsListener$BindFunction_2_classLit = createForClass('com.google.gwt.query.client.plugins.', 'EventsListener$BindFunction'), Lcom_google_gwt_query_client_GQuery$1_2_classLit = createForClass('com.google.gwt.query.client.', 'GQuery$1'), Lcom_google_gwt_query_client_SelectorEngine_2_classLit = createForClass('com.google.gwt.query.client.', 'SelectorEngine'), Lcom_google_gwt_resources_client_impl_ImageResourcePrototype_2_classLit = createForClass('com.google.gwt.resources.client.impl.', 'ImageResourcePrototype'), Lcom_google_gwt_uibinder_client_UiBinderUtil$TempAttachment_2_classLit = createForClass('com.google.gwt.uibinder.client.', 'UiBinderUtil$TempAttachment'), Lcom_google_gwt_user_client_impl_WindowImplIE$1_2_classLit = createForClass('com.google.gwt.user.client.impl.', 'WindowImplIE$1'), Lcom_google_gwt_user_client_impl_WindowImplIE$2_2_classLit = createForClass('com.google.gwt.user.client.impl.', 'WindowImplIE$2'), Lcom_google_gwt_user_client_impl_com_1google_1gwt_1user_1client_1impl_1WindowImplIE_1Resources_1default_1StaticClientBundleGenerator$1_2_classLit = createForClass('com.google.gwt.user.client.impl.', 'com_google_gwt_user_client_impl_WindowImplIE_Resources_default_StaticClientBundleGenerator$1'), Lcom_google_gwt_user_client_impl_com_1google_1gwt_1user_1client_1impl_1WindowImplIE_1Resources_1default_1StaticClientBundleGenerator$2_2_classLit = createForClass('com.google.gwt.user.client.impl.', 'com_google_gwt_user_client_impl_WindowImplIE_Resources_default_StaticClientBundleGenerator$2'), Lcom_google_gwt_user_client_ui_impl_ClippedImageImpl$1_2_classLit = createForClass('com.google.gwt.user.client.ui.impl.', 'ClippedImageImpl$1'), Lcom_google_gwt_user_client_ui_impl_ClippedImageImplIE6$1_2_classLit = createForClass('com.google.gwt.user.client.ui.impl.', 'ClippedImageImplIE6$1'), Lcom_google_gwt_user_client_ui_UIObject_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'UIObject'), Lcom_google_gwt_user_client_ui_Widget_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'Widget'), Lcom_google_gwt_user_client_ui_Panel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'Panel'), Lcom_google_gwt_user_client_ui_ComplexPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'ComplexPanel'), Lcom_google_gwt_user_client_ui_AbsolutePanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'AbsolutePanel'), _3Ljava_lang_Throwable_2_classLit = createForArray('[Ljava.lang.', 'Throwable;'), Lcom_google_gwt_user_client_ui_AttachDetachException_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'AttachDetachException'), Lcom_google_gwt_user_client_ui_AttachDetachException$1_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'AttachDetachException$1'), Lcom_google_gwt_user_client_ui_AttachDetachException$2_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'AttachDetachException$2'), Lcom_google_gwt_user_client_ui_CellPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'CellPanel'), Lcom_google_gwt_user_client_ui_ComplexPanel$1_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'ComplexPanel$1'), Lcom_google_gwt_user_client_ui_Composite_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'Composite'), Lcom_google_gwt_user_client_ui_SimplePanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'SimplePanel'), _3Lcom_google_gwt_user_client_ui_Widget_2_classLit = createForArray('[Lcom.google.gwt.user.client.ui.', 'Widget;'), Lcom_google_gwt_user_client_ui_DisclosurePanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'DisclosurePanel'), Lcom_google_gwt_user_client_ui_DisclosurePanel$ClickableHeader_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'DisclosurePanel$ClickableHeader'), Lcom_google_gwt_user_client_ui_DisclosurePanel$ContentAnimation_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'DisclosurePanel$ContentAnimation'), Lcom_google_gwt_user_client_ui_DisclosurePanel$DefaultHeader_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'DisclosurePanel$DefaultHeader'), Lcom_google_gwt_user_client_ui_DisclosurePanel$DefaultHeader$2_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'DisclosurePanel$DefaultHeader$2'), Lcom_google_gwt_user_client_ui_DockLayoutPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'DockLayoutPanel'), Lcom_google_gwt_user_client_ui_DockLayoutPanel$Direction_2_classLit = createForEnum('com.google.gwt.user.client.ui.', 'DockLayoutPanel$Direction', values_4), _3Lcom_google_gwt_user_client_ui_DockLayoutPanel$Direction_2_classLit = createForArray('[Lcom.google.gwt.user.client.ui.', 'DockLayoutPanel$Direction;'), Lcom_google_gwt_user_client_ui_DockLayoutPanel$LayoutData_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'DockLayoutPanel$LayoutData'), Lcom_google_gwt_user_client_ui_LayoutCommand_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'LayoutCommand'), Lcom_google_gwt_user_client_ui_DockLayoutPanel$DockAnimateCommand_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'DockLayoutPanel$DockAnimateCommand'), Lcom_google_gwt_user_client_ui_FlowPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'FlowPanel'), Lcom_google_gwt_user_client_ui_Label_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'Label'), Lcom_google_gwt_user_client_ui_HTMLPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'HTMLPanel'), Lcom_google_gwt_user_client_ui_HasHorizontalAlignment$HorizontalAlignmentConstant_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'HasHorizontalAlignment$HorizontalAlignmentConstant'), Lcom_google_gwt_user_client_ui_HasVerticalAlignment$VerticalAlignmentConstant_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'HasVerticalAlignment$VerticalAlignmentConstant'), Lcom_google_gwt_user_client_ui_Image_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'Image'), Lcom_google_gwt_user_client_ui_Image$State_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'Image$State'), Lcom_google_gwt_user_client_ui_Image$ClippedState_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'Image$ClippedState'), Ljava_util_AbstractCollection_2_classLit = createForClass('java.util.', 'AbstractCollection'), Ljava_util_AbstractList_2_classLit = createForClass('java.util.', 'AbstractList'), Ljava_util_ArrayList_2_classLit = createForClass('java.util.', 'ArrayList'), Lcom_google_gwt_user_client_ui_LayoutCommand$1_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'LayoutCommand$1'), Lcom_google_gwt_user_client_ui_LayoutPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'LayoutPanel'), _3C_classLit = createForArray('', '[C'), Lcom_google_gwt_user_client_ui_RootLayoutPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'RootLayoutPanel'), Lcom_google_gwt_user_client_ui_RootLayoutPanel$1_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'RootLayoutPanel$1'), Lcom_google_gwt_user_client_ui_RootPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'RootPanel'), Lcom_google_gwt_user_client_ui_RootPanel$DefaultRootPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'RootPanel$DefaultRootPanel'), Lcom_google_gwt_user_client_ui_RootPanel$1_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'RootPanel$1'), Lcom_google_gwt_user_client_ui_RootPanel$2_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'RootPanel$2'), Lcom_google_gwt_user_client_ui_ScrollPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'ScrollPanel'), Lcom_google_gwt_user_client_ui_SimplePanel$1_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'SimplePanel$1'), Lcom_google_gwt_user_client_ui_VerticalPanel_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'VerticalPanel'), Lcom_google_gwt_user_client_ui_WidgetCollection_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'WidgetCollection'), Lcom_google_gwt_user_client_ui_WidgetCollection$WidgetIterator_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'WidgetCollection$WidgetIterator'), Lcom_google_gwt_user_client_ui_WidgetIterators$1_2_classLit = createForClass('com.google.gwt.user.client.ui.', 'WidgetIterators$1'), Lcom_google_gwt_user_client_CommandCanceledException_2_classLit = createForClass('com.google.gwt.user.client.', 'CommandCanceledException'), Lcom_google_gwt_user_client_CommandExecutor_2_classLit = createForClass('com.google.gwt.user.client.', 'CommandExecutor'), Lcom_google_gwt_user_client_CommandExecutor$CircularIterator_2_classLit = createForClass('com.google.gwt.user.client.', 'CommandExecutor$CircularIterator'), Lcom_google_gwt_user_client_CommandExecutor$1_2_classLit = createForClass('com.google.gwt.user.client.', 'CommandExecutor$1'), Lcom_google_gwt_user_client_CommandExecutor$2_2_classLit = createForClass('com.google.gwt.user.client.', 'CommandExecutor$2'), Lcom_google_gwt_user_client_Timer$1_2_classLit = createForClass('com.google.gwt.user.client.', 'Timer$1'), Lcom_google_gwt_user_client_Window$ClosingEvent_2_classLit = createForClass('com.google.gwt.user.client.', 'Window$ClosingEvent'), Lcom_google_gwt_user_client_Window$WindowHandlers_2_classLit = createForClass('com.google.gwt.user.client.', 'Window$WindowHandlers'), Lgwtquery_plugins_ui_Ui_2_classLit = createForClass('gwtquery.plugins.ui.', 'Ui'), Lgwtquery_plugins_ui_UiWidget_2_classLit = createForClass('gwtquery.plugins.ui.', 'UiWidget'), Lgwtquery_plugins_ui_interactions_Draggable_2_classLit = createForClass('gwtquery.plugins.ui.interactions.', 'Draggable'), Lgwtquery_plugins_ui_interactions_Draggable$DraggablePlugin_2_classLit = createForClass('gwtquery.plugins.ui.interactions.', 'Draggable$DraggablePlugin'), Lgwtquery_plugins_ui_interactions_Droppable_2_classLit = createForClass('gwtquery.plugins.ui.interactions.', 'Droppable'), Lgwtquery_plugins_ui_interactions_Droppable$DroppablePlugin_2_classLit = createForClass('gwtquery.plugins.ui.interactions.', 'Droppable$DroppablePlugin'), Lgwtquery_plugins_ui_interactions_Resizable_2_classLit = createForClass('gwtquery.plugins.ui.interactions.', 'Resizable'), Lgwtquery_plugins_ui_interactions_Resizable$ResizablePlugin_2_classLit = createForClass('gwtquery.plugins.ui.interactions.', 'Resizable$ResizablePlugin'), Lgwtquery_plugins_ui_interactions_Selectable_2_classLit = createForClass('gwtquery.plugins.ui.interactions.', 'Selectable'), Lgwtquery_plugins_ui_interactions_Selectable$SelectablePlugin_2_classLit = createForClass('gwtquery.plugins.ui.interactions.', 'Selectable$SelectablePlugin'), Lgwtquery_plugins_ui_interactions_Sortable_2_classLit = createForClass('gwtquery.plugins.ui.interactions.', 'Sortable'), Lgwtquery_plugins_ui_interactions_Sortable$SortablePlugin_2_classLit = createForClass('gwtquery.plugins.ui.interactions.', 'Sortable$SortablePlugin'), Lgwtquery_plugins_ui_utilities_Position_2_classLit = createForClass('gwtquery.plugins.ui.utilities.', 'Position'), Lgwtquery_plugins_ui_utilities_Position$PositionPlugin_2_classLit = createForClass('gwtquery.plugins.ui.utilities.', 'Position$PositionPlugin'), Lgwtquery_plugins_ui_widgets_Accordion_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Accordion'), Lgwtquery_plugins_ui_widgets_Accordion$AccordionPlugin_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Accordion$AccordionPlugin'), Lgwtquery_plugins_ui_widgets_Button_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Button'), Lgwtquery_plugins_ui_widgets_Button$ButtonPlugin_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Button$ButtonPlugin'), Lgwtquery_plugins_ui_widgets_Buttonset_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Buttonset'), Lgwtquery_plugins_ui_widgets_Buttonset$ButtonPlugin_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Buttonset$ButtonPlugin'), Lgwtquery_plugins_ui_widgets_Datepicker_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Datepicker'), Lgwtquery_plugins_ui_widgets_Datepicker$DatepickerPlugin_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Datepicker$DatepickerPlugin'), Lgwtquery_plugins_ui_widgets_Dialog_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Dialog'), Lgwtquery_plugins_ui_widgets_Dialog$DialogPlugin_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Dialog$DialogPlugin'), Lgwtquery_plugins_ui_widgets_Progressbar_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Progressbar'), Lgwtquery_plugins_ui_widgets_Progressbar$ProgressbarPlugin_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Progressbar$ProgressbarPlugin'), Lgwtquery_plugins_ui_widgets_Slider_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Slider'), Lgwtquery_plugins_ui_widgets_Slider$SliderPlugin_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Slider$SliderPlugin'), Lgwtquery_plugins_ui_widgets_Tabs_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Tabs'), Lgwtquery_plugins_ui_widgets_Tabs$TabsPlugin_2_classLit = createForClass('gwtquery.plugins.ui.widgets.', 'Tabs$TabsPlugin'), Lgwtquery_plugins_ui_Ui$UiGQueryPlugin_2_classLit = createForClass('gwtquery.plugins.ui.', 'Ui$UiGQueryPlugin'), Lgwtquery_samples_client_accordions_AbstractAccordionDemo_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'AbstractAccordionDemo'), _3Lgwtquery_samples_client_Demo_2_classLit = createForArray('[Lgwtquery.samples.client.', 'Demo;'), Lgwtquery_samples_client_DemoPanel_2_classLit = createForClass('gwtquery.samples.client.', 'DemoPanel'), Lgwtquery_samples_client_accordions_AccordionSamples_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'AccordionSamples'), Lgwtquery_samples_client_accordions_Accordions_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'Accordions'), Lgwtquery_samples_client_accordions_CollapseContent_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'CollapseContent'), Lgwtquery_samples_client_accordions_CustomizeIcons_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'CustomizeIcons'), Lgwtquery_samples_client_accordions_CustomizeIcons$1_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'CustomizeIcons$1'), Lgwtquery_samples_client_accordions_CustomizeIcons$2_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'CustomizeIcons$2'), Lgwtquery_samples_client_accordions_FillSpace_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'FillSpace'), Lgwtquery_samples_client_accordions_FillSpace$1_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'FillSpace$1'), Lgwtquery_samples_client_accordions_NoAutoHeight_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'NoAutoHeight'), Lgwtquery_samples_client_accordions_OpenOnMouseOver_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'OpenOnMouseOver'), Lgwtquery_samples_client_accordions_Sortable_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'Sortable'), Lgwtquery_samples_client_accordions_Sortable$Stop_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'Sortable$Stop'), Lgwtquery_samples_client_accordions_Sortable$1_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'Sortable$1'), Lgwtquery_samples_client_accordions_Sortable$2_2_classLit = createForClass('gwtquery.samples.client.accordions.', 'Sortable$2'), Lgwtquery_samples_client_buttons_AbstractButtonDemo_2_classLit = createForClass('gwtquery.samples.client.buttons.', 'AbstractButtonDemo'), Lgwtquery_samples_client_buttons_ButtonSamples_2_classLit = createForClass('gwtquery.samples.client.buttons.', 'ButtonSamples'), Lgwtquery_samples_client_buttons_Buttons_2_classLit = createForClass('gwtquery.samples.client.buttons.', 'Buttons'), Lgwtquery_samples_client_buttons_Buttons$1_2_classLit = createForClass('gwtquery.samples.client.buttons.', 'Buttons$1'), Lgwtquery_samples_client_buttons_Checkboxes_2_classLit = createForClass('gwtquery.samples.client.buttons.', 'Checkboxes'), Lgwtquery_samples_client_buttons_Icons_2_classLit = createForClass('gwtquery.samples.client.buttons.', 'Icons'), Lgwtquery_samples_client_buttons_Radios_2_classLit = createForClass('gwtquery.samples.client.buttons.', 'Radios'), Lgwtquery_samples_client_datepickers_AbstractDatepickerDemo_2_classLit = createForClass('gwtquery.samples.client.datepickers.', 'AbstractDatepickerDemo'), Lgwtquery_samples_client_datepickers_DatepickerSamples_2_classLit = createForClass('gwtquery.samples.client.datepickers.', 'DatepickerSamples'), Lgwtquery_samples_client_datepickers_Datepickers_2_classLit = createForClass('gwtquery.samples.client.datepickers.', 'Datepickers'), Lgwtquery_samples_client_datepickers_Format_2_classLit = createForClass('gwtquery.samples.client.datepickers.', 'Format'), Lgwtquery_samples_client_datepickers_Format$1_2_classLit = createForClass('gwtquery.samples.client.datepickers.', 'Format$1'), Lgwtquery_samples_client_datepickers_RestrictRange_2_classLit = createForClass('gwtquery.samples.client.datepickers.', 'RestrictRange'), Lgwtquery_samples_client_dialogs_AbstractDialogDemo_2_classLit = createForClass('gwtquery.samples.client.dialogs.', 'AbstractDialogDemo'), Lgwtquery_samples_client_dialogs_Animated_2_classLit = createForClass('gwtquery.samples.client.dialogs.', 'Animated'), Lgwtquery_samples_client_dialogs_Animated$1_2_classLit = createForClass('gwtquery.samples.client.dialogs.', 'Animated$1'), Lgwtquery_samples_client_dialogs_DialogSamples_2_classLit = createForClass('gwtquery.samples.client.dialogs.', 'DialogSamples'), Lgwtquery_samples_client_dialogs_Dialogs_2_classLit = createForClass('gwtquery.samples.client.dialogs.', 'Dialogs'), Lgwtquery_samples_client_dialogs_ModalDialog_2_classLit = createForClass('gwtquery.samples.client.dialogs.', 'ModalDialog'), Lgwtquery_samples_client_dialogs_ModalMessage_2_classLit = createForClass('gwtquery.samples.client.dialogs.', 'ModalMessage'), Lgwtquery_samples_client_dialogs_ModalMessage$1_2_classLit = createForClass('gwtquery.samples.client.dialogs.', 'ModalMessage$1'), Lgwtquery_samples_client_draggables_AbstractDraggableDemo_2_classLit = createForClass('gwtquery.samples.client.draggables.', 'AbstractDraggableDemo'), Lgwtquery_samples_client_draggables_DraggableSamples_2_classLit = createForClass('gwtquery.samples.client.draggables.', 'DraggableSamples'), Lgwtquery_samples_client_draggables_Draggables_2_classLit = createForClass('gwtquery.samples.client.draggables.', 'Draggables'), Lgwtquery_samples_client_draggables_Event_2_classLit = createForClass('gwtquery.samples.client.draggables.', 'Event'), Lgwtquery_samples_client_draggables_Event$1_2_classLit = createForClass('gwtquery.samples.client.draggables.', 'Event$1'), Lgwtquery_samples_client_draggables_Event$2_2_classLit = createForClass('gwtquery.samples.client.draggables.', 'Event$2'), Lgwtquery_samples_client_draggables_Event$3_2_classLit = createForClass('gwtquery.samples.client.draggables.', 'Event$3'), Lgwtquery_samples_client_droppables_AbstractDroppableDemo_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'AbstractDroppableDemo'), Lgwtquery_samples_client_droppables_AcceptedElements_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'AcceptedElements'), Lgwtquery_samples_client_droppables_AcceptedElements$1_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'AcceptedElements$1'), Lgwtquery_samples_client_droppables_DroppableSamples_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'DroppableSamples'), Lgwtquery_samples_client_droppables_Droppables_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'Droppables'), Lgwtquery_samples_client_droppables_Droppables$1_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'Droppables$1'), Lgwtquery_samples_client_droppables_PreventPropagation_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'PreventPropagation'), Lgwtquery_samples_client_droppables_PreventPropagation$1_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'PreventPropagation$1'), Lgwtquery_samples_client_droppables_PreventPropagation$2_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'PreventPropagation$2'), Lgwtquery_samples_client_droppables_Revert_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'Revert'), Lgwtquery_samples_client_droppables_Revert$1_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'Revert$1'), Lgwtquery_samples_client_droppables_ShoppingCart_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'ShoppingCart'), Lgwtquery_samples_client_droppables_ShoppingCart$1_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'ShoppingCart$1'), Lgwtquery_samples_client_droppables_VisualFeedback_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'VisualFeedback'), Lgwtquery_samples_client_droppables_VisualFeedback$1_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'VisualFeedback$1'), Lgwtquery_samples_client_droppables_VisualFeedback$2_2_classLit = createForClass('gwtquery.samples.client.droppables.', 'VisualFeedback$2'), Lgwtquery_samples_client_positions_AbstractPositionDemo_2_classLit = createForClass('gwtquery.samples.client.positions.', 'AbstractPositionDemo'), Lgwtquery_samples_client_positions_PositionSamples_2_classLit = createForClass('gwtquery.samples.client.positions.', 'PositionSamples'), Lgwtquery_samples_client_positions_Positions_2_classLit = createForClass('gwtquery.samples.client.positions.', 'Positions'), Lgwtquery_samples_client_positions_Positions$1_2_classLit = createForClass('gwtquery.samples.client.positions.', 'Positions$1'), Lgwtquery_samples_client_positions_Positions$2_2_classLit = createForClass('gwtquery.samples.client.positions.', 'Positions$2'), Lgwtquery_samples_client_progressbars_AbstractProgressbarDemo_2_classLit = createForClass('gwtquery.samples.client.progressbars.', 'AbstractProgressbarDemo'), Lgwtquery_samples_client_progressbars_Animated_2_classLit = createForClass('gwtquery.samples.client.progressbars.', 'Animated'), Lgwtquery_samples_client_progressbars_ProgressbarSamples_2_classLit = createForClass('gwtquery.samples.client.progressbars.', 'ProgressbarSamples'), Lgwtquery_samples_client_progressbars_Progressbars_2_classLit = createForClass('gwtquery.samples.client.progressbars.', 'Progressbars'), Lgwtquery_samples_client_progressbars_Resizable_2_classLit = createForClass('gwtquery.samples.client.progressbars.', 'Resizable'), Lgwtquery_samples_client_selectables_AbstractSelectableDemo_2_classLit = createForClass('gwtquery.samples.client.selectables.', 'AbstractSelectableDemo'), Lgwtquery_samples_client_selectables_DisplayAsGrid_2_classLit = createForClass('gwtquery.samples.client.selectables.', 'DisplayAsGrid'), Lgwtquery_samples_client_selectables_SelectableSamples_2_classLit = createForClass('gwtquery.samples.client.selectables.', 'SelectableSamples'), Lgwtquery_samples_client_selectables_Selectables_2_classLit = createForClass('gwtquery.samples.client.selectables.', 'Selectables'), Lgwtquery_samples_client_selectables_Serialize_2_classLit = createForClass('gwtquery.samples.client.selectables.', 'Serialize'), Lgwtquery_samples_client_selectables_Serialize$1_2_classLit = createForClass('gwtquery.samples.client.selectables.', 'Serialize$1'), Lgwtquery_samples_client_selectables_Serialize$1$1_2_classLit = createForClass('gwtquery.samples.client.selectables.', 'Serialize$1$1'), Lgwtquery_samples_client_sliders_AbstractSliderDemo_2_classLit = createForClass('gwtquery.samples.client.sliders.', 'AbstractSliderDemo'), Lgwtquery_samples_client_sliders_RangeSlider_2_classLit = createForClass('gwtquery.samples.client.sliders.', 'RangeSlider'), Lgwtquery_samples_client_sliders_RangeSlider$1_2_classLit = createForClass('gwtquery.samples.client.sliders.', 'RangeSlider$1'), Lgwtquery_samples_client_sliders_SliderSamples_2_classLit = createForClass('gwtquery.samples.client.sliders.', 'SliderSamples'), Lgwtquery_samples_client_sliders_Sliders_2_classLit = createForClass('gwtquery.samples.client.sliders.', 'Sliders'), Lgwtquery_samples_client_sliders_SnapToIncrement_2_classLit = createForClass('gwtquery.samples.client.sliders.', 'SnapToIncrement'), Lgwtquery_samples_client_sliders_SnapToIncrement$1_2_classLit = createForClass('gwtquery.samples.client.sliders.', 'SnapToIncrement$1'), Lgwtquery_samples_client_tabs_AbstractTabsDemo_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'AbstractTabsDemo'), Lgwtquery_samples_client_tabs_Collapsible_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'Collapsible'), Lgwtquery_samples_client_tabs_OpenOnMouseOver_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'OpenOnMouseOver'), Lgwtquery_samples_client_tabs_SimpleManipulation_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'SimpleManipulation'), Lgwtquery_samples_client_tabs_SimpleManipulation$1_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'SimpleManipulation$1'), Lgwtquery_samples_client_tabs_SimpleManipulation$2_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'SimpleManipulation$2'), Lgwtquery_samples_client_tabs_SimpleManipulation$3_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'SimpleManipulation$3'), Lgwtquery_samples_client_tabs_SimpleManipulation$4_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'SimpleManipulation$4'), Lgwtquery_samples_client_tabs_SimpleManipulation$5_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'SimpleManipulation$5'), Lgwtquery_samples_client_tabs_SimpleManipulation$6_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'SimpleManipulation$6'), Lgwtquery_samples_client_tabs_SimpleManipulation$7_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'SimpleManipulation$7'), Lgwtquery_samples_client_tabs_SimpleManipulation$8_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'SimpleManipulation$8'), Lgwtquery_samples_client_tabs_Sortable_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'Sortable'), Lgwtquery_samples_client_tabs_Tabs_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'Tabs'), Lgwtquery_samples_client_tabs_TabsSamples_2_classLit = createForClass('gwtquery.samples.client.tabs.', 'TabsSamples'), Lgwtquery_samples_client_DemoPanel$1_2_classLit = createForClass('gwtquery.samples.client.', 'DemoPanel$1'), Lgwtquery_samples_client_DemoPanel$1$1_2_classLit = createForClass('gwtquery.samples.client.', 'DemoPanel$1$1'), Lgwtquery_samples_client_GwtQueryUiModule_2_classLit = createForClass('gwtquery.samples.client.', 'GwtQueryUiModule'), Lgwtquery_samples_client_ViewSourcePanel_2_classLit = createForClass('gwtquery.samples.client.', 'ViewSourcePanel'), Lgwtquery_samples_client_ViewSourcePanel$1_2_classLit = createForClass('gwtquery.samples.client.', 'ViewSourcePanel$1'), Ljava_lang_IndexOutOfBoundsException_2_classLit = createForClass('java.lang.', 'IndexOutOfBoundsException'), Ljava_lang_ArrayStoreException_2_classLit = createForClass('java.lang.', 'ArrayStoreException'), Ljava_lang_Boolean_2_classLit = createForClass('java.lang.', 'Boolean'), Ljava_lang_Number_2_classLit = createForClass('java.lang.', 'Number'), Ljava_lang_Class_2_classLit = createForClass('java.lang.', 'Class'), Ljava_lang_ClassCastException_2_classLit = createForClass('java.lang.', 'ClassCastException'), Ljava_lang_Double_2_classLit = createForClass('java.lang.', 'Double'), Ljava_lang_IllegalArgumentException_2_classLit = createForClass('java.lang.', 'IllegalArgumentException'), Ljava_lang_IllegalStateException_2_classLit = createForClass('java.lang.', 'IllegalStateException'), Ljava_lang_Integer_2_classLit = createForClass('java.lang.', 'Integer'), _3Ljava_lang_Integer_2_classLit = createForArray('[Ljava.lang.', 'Integer;'), Ljava_lang_NullPointerException_2_classLit = createForClass('java.lang.', 'NullPointerException'), Ljava_lang_NumberFormatException_2_classLit = createForClass('java.lang.', 'NumberFormatException'), Ljava_lang_StringBuffer_2_classLit = createForClass('java.lang.', 'StringBuffer'), Ljava_lang_UnsupportedOperationException_2_classLit = createForClass('java.lang.', 'UnsupportedOperationException'), Ljava_util_AbstractMap_2_classLit = createForClass('java.util.', 'AbstractMap'), Ljava_util_AbstractHashMap_2_classLit = createForClass('java.util.', 'AbstractHashMap'), Ljava_util_AbstractSet_2_classLit = createForClass('java.util.', 'AbstractSet'), Ljava_util_AbstractHashMap$EntrySet_2_classLit = createForClass('java.util.', 'AbstractHashMap$EntrySet'), Ljava_util_AbstractHashMap$EntrySetIterator_2_classLit = createForClass('java.util.', 'AbstractHashMap$EntrySetIterator'), Ljava_util_AbstractMapEntry_2_classLit = createForClass('java.util.', 'AbstractMapEntry'), Ljava_util_AbstractHashMap$MapEntryNull_2_classLit = createForClass('java.util.', 'AbstractHashMap$MapEntryNull'), Ljava_util_AbstractHashMap$MapEntryString_2_classLit = createForClass('java.util.', 'AbstractHashMap$MapEntryString'), Ljava_util_AbstractList$IteratorImpl_2_classLit = createForClass('java.util.', 'AbstractList$IteratorImpl'), Ljava_util_AbstractMap$1_2_classLit = createForClass('java.util.', 'AbstractMap$1'), Ljava_util_AbstractMap$1$1_2_classLit = createForClass('java.util.', 'AbstractMap$1$1'), Ljava_util_HashMap_2_classLit = createForClass('java.util.', 'HashMap'), Ljava_util_HashSet_2_classLit = createForClass('java.util.', 'HashSet'), Ljava_util_MapEntryImpl_2_classLit = createForClass('java.util.', 'MapEntryImpl'), Ljava_util_NoSuchElementException_2_classLit = createForClass('java.util.', 'NoSuchElementException');
 $stats && $stats({moduleName:'gwtquery.samples.GwtQueryUi',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalEnd'});
 if ($wnd.gwtquery_samples_GwtQueryUi) $wnd.gwtquery_samples_GwtQueryUi.onScriptLoad();
 --></script></body></html>
