@@ -3,7 +3,7 @@
   <parent>
     <groupId>com.google.gwt</groupId>
     <artifactId>gwtquery-ui-parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>r72</version>
   </parent>
 
   <name>GwtQuery UI Samples</name>
