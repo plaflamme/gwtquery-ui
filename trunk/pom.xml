@@ -3,7 +3,7 @@
   <groupId>com.google.gwt</groupId>
   <artifactId>gwtquery-ui-parent</artifactId>
   <packaging>pom</packaging>
-  <version>r72</version>
+  <version>1.0.0-SNAPSHOT</version>
   <name>GwtQuery UI Plugin Project</name>
   <url>http://gwtquery-ui.googlecode.com</url>
   <description>GwtQuery UI is a plugin for GwtQuery for integrating JQuery UI.</description>
@@ -26,9 +26,9 @@
   </developers>
 
   <scm>
-    <connection>scm:svn:http://gwtquery-ui.googlecode.com/svn/tags/r72</connection>
-    <developerConnection>scm:svn:https://gwtquery-ui.googlecode.com/svn/tags/r72</developerConnection>
-    <url>http://code.google.com/p/gwtquery-ui/source/browse/tags/r72</url>
+    <connection>scm:svn:http://gwtquery-ui.googlecode.com/svn/trunk</connection>
+    <developerConnection>scm:svn:https://gwtquery-ui.googlecode.com/svn/trunk</developerConnection>
+    <url>http://code.google.com/p/gwtquery-ui/source/browse/trunk</url>
   </scm>
 
   <modules>
