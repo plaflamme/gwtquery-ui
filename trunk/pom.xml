@@ -64,6 +64,7 @@
         <configuration>
           <releaseProfiles>prod</releaseProfiles>
           <tagBase>https://gwtquery-ui.googlecode.com/svn/tags</tagBase>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
         </configuration>
       </plugin>
       <plugin>
