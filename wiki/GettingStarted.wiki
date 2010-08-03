@@ -29,13 +29,13 @@ Then, add the following dependency:
     <dependency>
       <groupId>com.google.gwt</groupId>
       <artifactId>gwtquery-ui</artifactId>
-      <version>r40</version>
+      <version>r72</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
 }}}
 
-Please note that at of this writing, the only available version of gwtquery-ui is r40. Look [http://gwtquery-ui.googlecode.com/svn/mavenrepo/com/google/gwt/gwtquery-ui/ here] to see if more recent version(s) exist.
+Please note that at of this writing, the only available version of gwtquery-ui is r72. Look [http://gwtquery-ui.googlecode.com/svn/mavenrepo/com/google/gwt/gwtquery-ui/ here] to see if more recent version(s) exist.
 
 == Using another build tool ==
 
@@ -46,10 +46,12 @@ Directly download the Jar file from the maven repository [http://gwtquery-ui.goo
 Your GWT module must inherit from the plugin in order to use it. Add the following line to your GWT module descriptor (Module.gwt.xml):
 
 {{{
-  <inherits name='gwtquery.plugins.Ui' />
+  <inherits name='gwtquery.plugins.UiEmbedded' />
 }}}
 
-= Using the plugin = 
+This will also inject jQuery and jQuery-ui libraries into the host page. See below for more control on how to inject these libraries.
+
+= Using the plugin =
 
 To use any widget or interaction, you must obtain an instance of the gwtquery.plugins.ui.Ui class. This is done through the plugin system of GWT Query.
 
@@ -69,9 +71,34 @@ Please refer to the [http://gwtquery-ui.googlecode.com/svn/demos/GwtQueryUi.html
 
 = jQuery-ui !JavaScript dependency = 
 
-Currently, jQuery-ui and jQuery !JavaScript dependencies are embedded with the plugin and will be added to your GWT distribution when you inherit from the plugin.
+This plugin has a dependency on jQuery and jQuery-ui !JavaScript libraries. GWT Query-ui can help you add these dependencies to your project. You can choose to:
+# add them as static resources provided by the plugin
+# add them using Google's CDN
 
-We plan to have other ways of getting those dependencies, such as using CDNs or custom setups. Please see issue 1 to track progress of this feature.
+== Using static resources ==
+
+To load the libraries as static resources (part of your application's resources) you must inherit from `UiEmbedded` instead of `Ui`:
+
+{{{
+  <inherits name='gwtquery.plugins.UiEmbedded' />
+}}}
+
+== Using Google's CDN ==
+
+To use [http://code.google.com/apis/libraries/ Google's CDN], simply inherit from `UiGoogleCdn`:
+
+{{{
+  <inherits name='gwtquery.plugins.UiGoogleCdn' />
+}}}
+
+== Manual Setup ==
+
+If you already have these libraries installed or don't want this plugin to interfere with your `<head>` node, that's ok to. The plugin will simply "expect" that jQuery and jQuery-ui 
+have been loaded.
+
+{{{
+  <inherits name='gwtquery.plugins.Ui' />
+}}}
 
 = Themeing = 
 
