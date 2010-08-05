@@ -6,6 +6,7 @@ import gwtquery.plugins.ui.UiWidget;
 import gwtquery.plugins.ui.WidgetOptions;
 
 import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsArrayString;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.NodeList;
@@ -66,11 +67,19 @@ public class Autocomplete extends UiWidget<Autocomplete, Autocomplete.Options> {
       return this;
     };
 
-    public native final Options source(Source[] source)
+    public native final Options source(JsArray<Source> source)
     /*-{
       this["source"] = source;
       return this;
     }-*/;
+
+    public final Options source(Source... source) {
+      JsArray<Source> a = JavaScriptObject.createArray().cast();
+      for(Source s : source)
+        a.push(s);
+      source(a);
+      return this;
+    };
 
     public native final Options source(String url)
     /*-{
