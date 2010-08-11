@@ -172,9 +172,10 @@ function gwtquery_samples_GwtQueryUi(){
   }
 
   providers['selectorCapability'] = function(){
-    if (document.querySelectorAll && /native/.test(String(document.querySelectorAll))) {
+    if ($doc_0.location.href.indexOf('_selector_force_js') != -1)
+      return 'js';
+    if ($doc_0.querySelectorAll && /native/.test(String($doc_0.querySelectorAll)))
       return 'native';
-    }
     return 'js';
   }
   ;
@@ -245,18 +246,18 @@ function gwtquery_samples_GwtQueryUi(){
   $stats && $stats({moduleName:'gwtquery.samples.GwtQueryUi', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'bootstrap', millis:(new Date).getTime(), type:'selectingPermutation'});
   if (!isHostedMode()) {
     try {
-      unflattenKeylistIntoAnswers(['native', 'ie6'], '22BE79F019A3ABA9089CB1F8E4BB0530');
-      unflattenKeylistIntoAnswers(['js', 'ie8'], '2F451A3F8E25039B463AFBCA1D09D3BB');
-      unflattenKeylistIntoAnswers(['native', 'opera'], '4361A1B80F2CEF22A72487E61B7B554E');
-      unflattenKeylistIntoAnswers(['native', 'gecko1_8'], '61E1900B1BDAAE112E9070B3298EB82B');
-      unflattenKeylistIntoAnswers(['js', 'gecko'], '7631779C392D430FAF5288741390C45B');
-      unflattenKeylistIntoAnswers(['js', 'ie6'], '8F1E176550598159A25562DD8D700D8C');
-      unflattenKeylistIntoAnswers(['js', 'safari'], '966C2777EBD80E2857AA8E463C0A4C3A');
-      unflattenKeylistIntoAnswers(['native', 'safari'], 'AA1724D906A37EF0A4E241F1CFB16853');
-      unflattenKeylistIntoAnswers(['js', 'opera'], 'BA4B5B8E3EE2BC21F8AA741B8E6222C5');
-      unflattenKeylistIntoAnswers(['js', 'gecko1_8'], 'CF80DF92F20E4E3CEBD7B647B3C1F475');
-      unflattenKeylistIntoAnswers(['native', 'ie8'], 'E493220274EA977670B52B9B4FEE025D');
-      unflattenKeylistIntoAnswers(['native', 'gecko'], 'F48063482AE7CD24CD9A1D79B79B8D39');
+      unflattenKeylistIntoAnswers(['native', 'opera'], '04A8B98B1E784EDF9D5E28E4B7390C4C');
+      unflattenKeylistIntoAnswers(['native', 'safari'], '1B7A11D1BFFBB7F5B179D6A74EF22AA2');
+      unflattenKeylistIntoAnswers(['js', 'ie6'], '2D24A332EB358D6078C3685719A82046');
+      unflattenKeylistIntoAnswers(['js', 'safari'], '2DF2D25AA789971D03EE67FEDCC23564');
+      unflattenKeylistIntoAnswers(['js', 'gecko'], '3A9B4958FCA915F22D198BF333FD3CB7');
+      unflattenKeylistIntoAnswers(['native', 'ie6'], '550C4A810E8553B4BBBA8E09CEE54225');
+      unflattenKeylistIntoAnswers(['native', 'gecko1_8'], '5C7BFD1F993CBCE520570B72B1010112');
+      unflattenKeylistIntoAnswers(['native', 'ie8'], 'B615D25EED29E14914705FB43F33E95C');
+      unflattenKeylistIntoAnswers(['js', 'ie8'], 'DF1FC9EDDAEDD08A4F69B4990BBC378E');
+      unflattenKeylistIntoAnswers(['native', 'gecko'], 'E43A791E89F3C1D5131BB5478E677D9D');
+      unflattenKeylistIntoAnswers(['js', 'gecko1_8'], 'E5F62EBC13953E1DA57E1127C700698D');
+      unflattenKeylistIntoAnswers(['js', 'opera'], 'FCDD799A5967DC7AD0F599C1596F3E2E');
       strongName = answers[computePropValue('selectorCapability')][computePropValue('user.agent')];
       initialHtml = strongName + '.cache.html';
     }
@@ -305,9 +306,9 @@ function gwtquery_samples_GwtQueryUi(){
     __gwt_scriptsLoaded['http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'] = true;
     document.write('<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"><\/script>');
   }
-  if (!__gwt_scriptsLoaded['http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js']) {
-    __gwt_scriptsLoaded['http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js'] = true;
-    document.write('<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js"><\/script>');
+  if (!__gwt_scriptsLoaded['http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js']) {
+    __gwt_scriptsLoaded['http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js'] = true;
+    document.write('<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"><\/script>');
   }
   if (!__gwt_scriptsLoaded['http://jqueryui.com/themeroller/themeswitchertool/']) {
     __gwt_scriptsLoaded['http://jqueryui.com/themeroller/themeswitchertool/'] = true;

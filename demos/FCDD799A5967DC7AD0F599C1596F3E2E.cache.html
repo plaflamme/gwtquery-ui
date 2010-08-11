@@ -5,7 +5,7 @@ var $gwt_version = "2.0.3";
 var $wnd = parent;
 var $doc = $wnd.document;
 var $moduleName, $moduleBase;
-var $strongName = 'BA4B5B8E3EE2BC21F8AA741B8E6222C5';
+var $strongName = 'FCDD799A5967DC7AD0F599C1596F3E2E';
 var $stats = $wnd.__gwtStatsEvent ? function(a) {return $wnd.__gwtStatsEvent(a);} : null,
 $sessionId = $wnd.__gwtStatsSessionId ? $wnd.__gwtStatsSessionId : null;
 $stats && $stats({moduleName:'gwtquery.samples.GwtQueryUi',sessionId:$sessionId,subSystem:'startup',evtGroup:'moduleStartup',millis:(new Date()).getTime(),type:'moduleEvalStart'});
@@ -28,7 +28,7 @@ function hashCode_0(){
   return this.$H || (this.$H = ++sNextHashId);
 }
 
-function toString_0(){
+function toString_1(){
   return (this.typeMarker$ == nullMethod || this.typeId$ == 2?this.getClass$():Lcom_google_gwt_core_client_JavaScriptObject_2_classLit).typeName + '@' + toPowerOfTwoString(this.typeMarker$ == nullMethod || this.typeId$ == 2?this.hashCode$():this.$H || (this.$H = ++sNextHashId), 4);
 }
 
@@ -39,7 +39,7 @@ _ = Object_0.prototype = {};
 _.equals$ = equals;
 _.getClass$ = getClass_0;
 _.hashCode$ = hashCode_0;
-_.toString$ = toString_0;
+_.toString$ = toString_1;
 _.toString = function(){
   return this.toString$();
 }
@@ -239,7 +239,7 @@ function getMessage(){
   return this.detailMessage;
 }
 
-function toString_1(){
+function toString_2(){
   var className, msg;
   className = this.getClass$().typeName;
   msg = this.getMessage();
@@ -257,7 +257,7 @@ function Throwable(){
 _ = Throwable.prototype = new Object_0;
 _.getClass$ = getClass_4;
 _.getMessage = getMessage;
-_.toString$ = toString_1;
+_.toString$ = toString_2;
 _.typeId$ = 6;
 _.cause = null;
 _.detailMessage = null;
@@ -824,7 +824,7 @@ function hashCode_2(){
   return this.$H || (this.$H = ++sNextHashId);
 }
 
-function toString_3(){
+function toString_4(){
   return this.name_0;
 }
 
@@ -835,7 +835,7 @@ _ = Enum.prototype = new Object_0;
 _.equals$ = equals_1;
 _.getClass$ = getClass_18;
 _.hashCode$ = hashCode_2;
-_.toString$ = toString_3;
+_.toString$ = toString_4;
 _.typeId$ = 10;
 _.name_0 = null;
 _.ordinal = 0;
@@ -1341,7 +1341,7 @@ function getClass_39(){
   return Lcom_google_gwt_event_shared_GwtEvent_2_classLit;
 }
 
-function toString_4(){
+function toString_5(){
   return 'An event type';
 }
 
@@ -1350,7 +1350,7 @@ function GwtEvent(){
 
 _ = GwtEvent.prototype = new Object_0;
 _.getClass$ = getClass_39;
-_.toString$ = toString_4;
+_.toString$ = toString_5;
 _.typeId$ = 0;
 _.dead = false;
 _.source = null;
@@ -1468,7 +1468,7 @@ function hashCode_3(){
   return this.index_0;
 }
 
-function toString_5(){
+function toString_6(){
   return 'Event type';
 }
 
@@ -1478,7 +1478,7 @@ function GwtEvent$Type(){
 _ = GwtEvent$Type.prototype = new Object_0;
 _.getClass$ = getClass_44;
 _.hashCode$ = hashCode_3;
-_.toString$ = toString_5;
+_.toString$ = toString_6;
 _.typeId$ = 0;
 _.index_0 = 0;
 var nextHashCode = 0;
@@ -1877,7 +1877,7 @@ function getClass_54(){
   return Lcom_google_gwt_http_client_RequestBuilder$Method_2_classLit;
 }
 
-function toString_6(){
+function toString_7(){
   return this.name_0;
 }
 
@@ -1886,7 +1886,7 @@ function RequestBuilder$Method(){
 
 _ = RequestBuilder$Method.prototype = new Object_0;
 _.getClass$ = getClass_54;
-_.toString$ = toString_6;
+_.toString$ = toString_7;
 _.typeId$ = 0;
 _.name_0 = null;
 function $RequestException(this$static, message){
@@ -2701,7 +2701,7 @@ function $allNextSiblingElements(firstChildElement, result, elem){
 }
 
 function $appendTo(this$static, other){
-  $domManip_0(other, this$static, 1);
+  $domManip(other, this$static, 1);
   return this$static;
 }
 
@@ -2733,24 +2733,7 @@ function $css(this$static, prop_0, val){
   return this$static;
 }
 
-function $domManip(this$static, htmlString, func){
-  var cache, d, e, e$array, e$index, e$max, g, ret;
-  ret = $GQuery(new GQuery, []);
-  cache = $HashMap(new HashMap);
-  for (e$array = ($clinit_125() , this$static.elements) , e$index = 0 , e$max = e$array.length; e$index < e$max; ++e$index) {
-    e = e$array[e$index];
-    d = e.nodeType == 9?e:e.ownerDocument;
-    g = dynamicCast(!d?cache.nullSlot:$getHashValue(cache, d, ~~(d.$H || (d.$H = ++sNextHashId))), 38);
-    if (!g) {
-      g = cleanHtmlString(htmlString, d);
-      !d?$putNullSlot(cache, g):$putHashValue(cache, d, g, ~~(d.$H || (d.$H = ++sNextHashId)));
-    }
-    $add(ret, $domManip_0(this$static, g, func));
-  }
-  return ret;
-}
-
-function $domManip_0(this$static, g, func){
+function $domManip(this$static, g, func){
   var e, i, j, n, newNodes;
   newNodes = [];
   for (i = 0; i < ($clinit_125() , this$static.elements).length; ++i) {
@@ -2779,6 +2762,23 @@ function $domManip_0(this$static, g, func){
   return this$static;
 }
 
+function $domManip_0(this$static, htmlString, func){
+  var cache, d, e, e$array, e$index, e$max, g, ret;
+  ret = $GQuery(new GQuery, []);
+  cache = $HashMap(new HashMap);
+  for (e$array = ($clinit_125() , this$static.elements) , e$index = 0 , e$max = e$array.length; e$index < e$max; ++e$index) {
+    e = e$array[e$index];
+    d = e.nodeType == 9?e:e.ownerDocument;
+    g = dynamicCast(!d?cache.nullSlot:$getHashValue(cache, d, ~~(d.$H || (d.$H = ++sNextHashId))), 38);
+    if (!g) {
+      g = cleanHtmlString(htmlString, d);
+      !d?$putNullSlot(cache, g):$putHashValue(cache, d, g, ~~(d.$H || (d.$H = ++sNextHashId)));
+    }
+    $add(ret, $domManip(this$static, g, func));
+  }
+  return ret;
+}
+
 function $each(this$static, f){
   var f1, f1$array, f1$index, f1$max, i;
   if (f != null) {
@@ -2796,8 +2796,15 @@ function $empty(this$static){
   var e, e$array, e$index, e$max;
   for (e$array = ($clinit_125() , this$static.elements) , e$index = 0 , e$max = e$array.length; e$index < e$max; ++e$index) {
     e = e$array[e$index];
-    while (e.firstChild) {
-      e.removeChild(e.firstChild);
+    if (e.nodeType == 9) {
+      e.open();
+      e.write('<head/><body/>');
+      e.close();
+    }
+     else {
+      while (e.firstChild) {
+        e.removeChild(e.firstChild);
+      }
     }
   }
   return this$static;
@@ -2825,7 +2832,7 @@ function $hasClass(this$static, classes){
     e = e$array[e$index];
     for (clz$array = classes , clz$index = 0 , clz$max = clz$array.length; clz$index < clz$max; ++clz$index) {
       clz = clz$array[clz$index];
-      if ($matches(' ' + e.className + ' ', '.*\\s' + clz + '\\s.*')) {
+      if ($matches(e.className, '(^|.*\\s)' + clz + '(\\s.*|$)')) {
         return true;
       }
     }
@@ -3121,7 +3128,7 @@ function getClass_65(){
   return Lcom_google_gwt_query_client_GQuery_2_classLit;
 }
 
-function toString_7(){
+function toString_8(){
   return $toString_2(this, false);
 }
 
@@ -3135,7 +3142,7 @@ function GQuery(){
 _ = GQuery.prototype = new Object_0;
 _.bind_0 = bind;
 _.getClass$ = getClass_65;
-_.toString$ = toString_7;
+_.toString$ = toString_8;
 _.trigger = trigger;
 _.typeId$ = 40;
 _.currentSelector = null;
@@ -3152,6 +3159,8 @@ function f_3(e){
   return this.val$fn[n].f_1(e);
 }
 
+--></script>
+<script><!--
 function getClass_66(){
   return Lcom_google_gwt_query_client_GQuery$1_2_classLit;
 }
@@ -3162,8 +3171,6 @@ function GQuery$1(){
 _ = GQuery$1.prototype = new Function_0;
 _.f_1 = f_3;
 _.getClass$ = getClass_66;
---></script>
-<script><!--
 _.typeId$ = 41;
 _.click = 0;
 _.val$fn = null;
@@ -4250,7 +4257,7 @@ function setStyleName(elem, style, add){
   add?$addClassName(elem, style):$removeClassName(elem, style);
 }
 
-function toString_9(){
+function toString_10(){
   if (!this.element) {
     return '(null handle)';
   }
@@ -4262,7 +4269,7 @@ function UIObject(){
 
 _ = UIObject.prototype = new Object_0;
 _.getClass$ = getClass_88;
-_.toString$ = toString_9;
+_.toString$ = toString_10;
 _.typeId$ = 54;
 _.element = null;
 function $addHandler_1(this$static, handler, type){
@@ -6927,7 +6934,7 @@ function $DemoPanel(this$static, title, demo, demos){
   $text_0($_0('h3', this$static.html.element), title);
   for (d$array = demos , d$index = 0 , d$max = d$array.length; d$index < d$max; ++d$index) {
     d = d$array[d$index];
-    $domManip_0($_0('ul', this$static.html.element), $bindOrFire($('<li><a href="#">' + d.getName() + '<\/a><\/li>'), 1, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 250, 18, [$DemoPanel$1(new DemoPanel$1, demo, d)])), 1);
+    $domManip($_0('ul', this$static.html.element), $bindOrFire($('<li><a href="#">' + d.getName() + '<\/a><\/li>'), 1, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 250, 18, [$DemoPanel$1(new DemoPanel$1, demo, d)])), 1);
   }
   return this$static;
 }
@@ -8748,7 +8755,7 @@ function $Serialize$1$1(this$static, val$result){
 function f_28(e){
   var index;
   index = $index($('#selectable li'), e);
-  $domManip(this.val$result, ' #' + (index + 1), 1);
+  $domManip_0(this.val$result, ' #' + (index + 1), 1);
 }
 
 function getClass_245(){
@@ -9049,7 +9056,7 @@ function f_32(e, data){
   event_0 = dynamicCastJso(data);
   tab_content = (v = $vals(this.val$tab_content_input) , v != null && v.length > 0?v[0]:'');
   (tab_content == null || !tab_content.length) && (tab_content = 'Tab ' + this.this$0.tab_counter + ' content.');
-  $domManip(($clinit_125() , $GQuery(new GQuery, [event_0['panel']])), '<p>' + tab_content + '<\/p>', 1);
+  $domManip_0(($clinit_125() , $GQuery(new GQuery, [event_0['panel']])), '<p>' + tab_content + '<\/p>', 1);
   $bindOrFire($_0('span.ui-icon-close', (parent_0 = ($clinit_32() , event_0['tab']).parentNode , (!parent_0 || parent_0.nodeType != 1) && (parent_0 = null) , parent_0)), 1, null, initValues(_3Lcom_google_gwt_query_client_Function_2_classLit, 250, 18, [this.val$removeTab]));
   return false;
 }
@@ -9312,7 +9319,7 @@ function hashCode_4(){
   return this.value_0?1231:1237;
 }
 
-function toString_10(){
+function toString_11(){
   return this.value_0?'true':'false';
 }
 
@@ -9323,7 +9330,7 @@ _ = Boolean_0.prototype = new Object_0;
 _.equals$ = equals_2;
 _.getClass$ = getClass_269;
 _.hashCode$ = hashCode_4;
-_.toString$ = toString_10;
+_.toString$ = toString_11;
 _.typeId$ = 218;
 _.value_0 = false;
 var FALSE;
@@ -9354,7 +9361,7 @@ function getClass_270(){
   return Ljava_lang_Class_2_classLit;
 }
 
-function toString_11(){
+function toString_12(){
   return ((this.modifiers & 2) != 0?'interface ':(this.modifiers & 1) != 0?'':'class ') + this.typeName;
 }
 
@@ -9363,7 +9370,7 @@ function Class(){
 
 _ = Class.prototype = new Object_0;
 _.getClass$ = getClass_270;
-_.toString$ = toString_11;
+_.toString$ = toString_12;
 _.typeId$ = 0;
 _.modifiers = 0;
 _.typeName = null;
@@ -9490,7 +9497,7 @@ function toPowerOfTwoString(value, shift){
   return __valueOf(buf, pos, bufSize);
 }
 
-function toString_12(){
+function toString_13(){
   return '' + this.value_0;
 }
 
@@ -9512,7 +9519,7 @@ _ = Integer.prototype = new Number_0;
 _.equals$ = equals_3;
 _.getClass$ = getClass_276;
 _.hashCode$ = hashCode_5;
-_.toString$ = toString_12;
+_.toString$ = toString_13;
 _.typeId$ = 224;
 _.value_0 = 0;
 function $clinit_423(){
@@ -9560,7 +9567,7 @@ function getClass_278(){
   return Ljava_lang_StackTraceElement_2_classLit;
 }
 
-function toString_13(){
+function toString_14(){
   return this.className_0 + '.' + this.methodName + '(' + this.fileName + ':' + this.lineNumber + ')';
 }
 
@@ -9569,7 +9576,7 @@ function StackTraceElement(){
 
 _ = StackTraceElement.prototype = new Object_0;
 _.getClass$ = getClass_278;
-_.toString$ = toString_13;
+_.toString$ = toString_14;
 _.typeId$ = 226;
 _.className_0 = null;
 _.fileName = null;
@@ -9692,7 +9699,7 @@ function hashCode_6(){
   return getHashCode_0(this);
 }
 
-function toString_14(){
+function toString_15(){
   return this;
 }
 
@@ -9700,7 +9707,7 @@ _ = String.prototype;
 _.equals$ = equals_4;
 _.getClass$ = getClass_279;
 _.hashCode$ = hashCode_6;
-_.toString$ = toString_14;
+_.toString$ = toString_15;
 _.typeId$ = 2;
 function $clinit_430(){
   $clinit_430 = nullMethod;
@@ -9761,7 +9768,7 @@ function getClass_280(){
   return Ljava_lang_StringBuffer_2_classLit;
 }
 
-function toString_15(){
+function toString_16(){
   return this.impl.string;
 }
 
@@ -9770,7 +9777,7 @@ function StringBuffer(){
 
 _ = StringBuffer.prototype = new Object_0;
 _.getClass$ = getClass_280;
-_.toString$ = toString_15;
+_.toString$ = toString_16;
 _.typeId$ = 227;
 function $UnsupportedOperationException(this$static, message){
   $fillInStackTrace();
@@ -9840,7 +9847,7 @@ function toArray(a){
   return a;
 }
 
-function toString_16(){
+function toString_17(){
   return $toString_4(this);
 }
 
@@ -9852,7 +9859,7 @@ _.add = add_0;
 _.contains_0 = contains;
 _.getClass$ = getClass_282;
 _.toArray = toArray;
-_.toString$ = toString_16;
+_.toString$ = toString_17;
 _.typeId$ = 0;
 function $keySet(this$static){
   var entrySet;
@@ -9901,7 +9908,7 @@ function hashCode_7(){
   return hashCode;
 }
 
-function toString_17(){
+function toString_18(){
   var comma, entry, iter, s;
   s = '{';
   comma = false;
@@ -9922,7 +9929,7 @@ _ = AbstractMap.prototype = new Object_0;
 _.equals$ = equals_5;
 _.getClass$ = getClass_283;
 _.hashCode$ = hashCode_7;
-_.toString$ = toString_17;
+_.toString$ = toString_18;
 _.typeId$ = 0;
 function $addAllHashEntries(this$static, dest){
   var hashCodeMap = this$static.hashCodeMap;
@@ -10237,7 +10244,7 @@ function hashCode_9(){
   return keyHash ^ valueHash;
 }
 
-function toString_18(){
+function toString_19(){
   return this.getKey() + '=' + this.getValue();
 }
 
@@ -10248,7 +10255,7 @@ _ = AbstractMapEntry.prototype = new Object_0;
 _.equals$ = equals_7;
 _.getClass$ = getClass_288;
 _.hashCode$ = hashCode_9;
-_.toString$ = toString_18;
+_.toString$ = toString_19;
 _.typeId$ = 231;
 function $AbstractHashMap$MapEntryNull(this$static, this$0){
   this$static.this$0 = this$0;
@@ -10628,7 +10635,7 @@ function size_3(){
   return this.map.size;
 }
 
-function toString_19(){
+function toString_20(){
   return $toString_4($keySet(this.map));
 }
 
@@ -10641,7 +10648,7 @@ _.contains_0 = contains_3;
 _.getClass$ = getClass_297;
 _.iterator_0 = iterator_6;
 _.size_0 = size_3;
-_.toString$ = toString_19;
+_.toString$ = toString_20;
 _.typeId$ = 237;
 _.map = null;
 function $MapEntryImpl(this$static, key, value){
