@@ -2,7 +2,7 @@
   <inherits name='gwtquery.plugins.Ui' />
   <public path="embedded"/>
   <script src="jquery-ui/jquery-1.4.2.min.js" />
-  <script src="jquery-ui/ui/minified/jquery-ui-min.js" />
+  <script src="jquery-ui/jquery-ui-1.8.4.min.js" />
 </module>
     
 

@@ -4,6 +4,7 @@ import gwtquery.plugins.ui.Ui;
 import gwtquery.plugins.ui.UiPlugin;
 import gwtquery.plugins.ui.UiWidget;
 import gwtquery.plugins.ui.WidgetOptions;
+import gwtquery.plugins.ui.utilities.Position;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
@@ -51,6 +52,17 @@ public class Autocomplete extends UiWidget<Autocomplete, Autocomplete.Options> {
     public native final int minLength()
     /*-{
       return this["minLength"];
+    }-*/;
+
+    public native final Options position(Position.Options position)
+    /*-{
+      this["position"] = position;
+      return this;
+    }-*/;
+
+    public native final Position.Options position()
+    /*-{
+      return this["position"];
     }-*/;
 
     public native final Options source(JsArrayString source)

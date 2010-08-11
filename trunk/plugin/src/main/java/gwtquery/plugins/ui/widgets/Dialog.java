@@ -4,6 +4,8 @@ import gwtquery.plugins.ui.Ui;
 import gwtquery.plugins.ui.UiPlugin;
 import gwtquery.plugins.ui.UiWidget;
 import gwtquery.plugins.ui.WidgetOptions;
+import gwtquery.plugins.ui.utilities.Position;
+import gwtquery.plugins.ui.widgets.Autocomplete.Options;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.dom.client.Element;
@@ -208,7 +210,13 @@ public class Dialog extends UiWidget<Dialog, Dialog.Options> {
       return this;
     }-*/;
 
-    public native final String position()
+    public native final Options position(Position.Options position)
+    /*-{
+      this["position"] = position;
+      return this;
+    }-*/;
+
+    public native final Position.Options position()
     /*-{
       return this["position"];
     }-*/;
