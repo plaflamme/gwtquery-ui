@@ -5,7 +5,6 @@ import gwtquery.plugins.ui.UiPlugin;
 import gwtquery.plugins.ui.UiWidget;
 import gwtquery.plugins.ui.WidgetOptions;
 import gwtquery.plugins.ui.utilities.Position;
-import gwtquery.plugins.ui.widgets.Autocomplete.Options;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.dom.client.Element;
