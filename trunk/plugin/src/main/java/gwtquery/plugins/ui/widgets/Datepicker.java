@@ -371,15 +371,15 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
       return this["nextText"];
     }-*/;
 
-    public native final Options numberOfMonths(Integer numberOfMonths)
+    public native final Options numberOfMonths(int numberOfMonths)
     /*-{
       this["numberOfMonths"] = numberOfMonths;
       return this;
     }-*/;
 
-    public native final Options numberOfMonths(JsArrayInteger numberOfMonths)
+    public native final Options numberOfMonths(int rows, int cols)
     /*-{
-      this["numberOfMonths"] = numberOfMonths;
+      this["numberOfMonths"] = [rows, cols];
       return this;
     }-*/;
 
