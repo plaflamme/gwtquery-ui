@@ -95,6 +95,17 @@ To use [http://code.google.com/apis/libraries/ Google's CDN], simply inherit fro
 
 This will add two `<script>` nodes to the `<head>` node of the host page pointing to Google CDN.
 
+== Using Microsoft's CDN ==
+
+To use [http://www.asp.net/ajaxlibrary/cdn.ashx Microsoft's CDN], simply inherit from `UiMicrosoftCdn`:
+
+{{{
+  <inherits name='gwtquery.plugins.UiMicrosoftCdn' />
+}}}
+
+This will add two `<script>` nodes to the `<head>` node of the host page pointing to Microsoft CDN.
+
+
 == Manual Setup ==
 
 If you already have these libraries installed or don't want this plugin to interfere with your `<head>` node, that's ok to. The plugin will simply "expect" that jQuery and jQuery-ui have been loaded.
