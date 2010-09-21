@@ -120,7 +120,7 @@
       </activation>
 
       <properties>
-        <gwt.version>2.0.3</gwt.version>
+        <gwt.version>2.0.4</gwt.version>
         <gwtquery.version>1.0.0-SNAPSHOT</gwtquery.version>
         <gwt.loglevel>INFO</gwt.loglevel>
         <gwt.outputstyle>PRETTY</gwt.outputstyle>
@@ -131,7 +131,7 @@
     <profile>
       <id>dev</id>
       <properties>
-        <gwt.version>2.0.3</gwt.version>
+        <gwt.version>2.0.4</gwt.version>
         <gwtquery.version>1.0.0-SNAPSHOT</gwtquery.version>
         <gwt.loglevel>WARN</gwt.loglevel>
         <gwt.modulesuffix>Dev</gwt.modulesuffix>
@@ -142,7 +142,7 @@
     <profile>
       <id>prod</id>
       <properties>
-        <gwtversion>2.0.3</gwtversion>
+        <gwtversion>2.0.4</gwtversion>
         <gwtquery.version>1.0.0-SNAPSHOT</gwtquery.version>
         <gwt.loglevel>ERROR</gwt.loglevel>
         <gwt.outputstyle>OBF</gwt.outputstyle>

@@ -39,17 +39,6 @@ public class Progressbar extends UiWidget<Progressbar, Progressbar.Options> {
       this["value"] = value;
       return this;
     }-*/;
-
-    public native final Options value(Number value)
-    /*-{
-      this["value"] = value;
-      return this;
-    }-*/;
-
-    public native final Number value()
-    /*-{
-      return this["value"];
-    }-*/;
   }
 
   /**
@@ -87,10 +76,4 @@ public class Progressbar extends UiWidget<Progressbar, Progressbar.Options> {
     invoke("value", value);
     return this;
   }
-
-  public Progressbar value(Number value) {
-    invoke("value", value);
-    return this;
-  }
-
 }

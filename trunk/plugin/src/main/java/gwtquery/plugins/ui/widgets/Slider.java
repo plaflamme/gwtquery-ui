@@ -55,26 +55,28 @@ public class Slider extends UiWidget<Slider, Slider.Options> {
       return this["animate"];
     }-*/;
 
-    public native final Options max(Number max)
+    public native final Options max(int max)
     /*-{
       this["max"] = max;
       return this;
     }-*/;
 
-    public native final Number max()
+    public native final Options max(float max)
     /*-{
-      return this["max"];
+      this["max"] = max;
+      return this;
     }-*/;
-
-    public native final Options min(Number min)
+    
+    public native final Options min(int min)
     /*-{
       this["min"] = min;
       return this;
     }-*/;
 
-    public native final Number min()
+    public native final Options min(float min)
     /*-{
-      return this["min"];
+      this["min"] = min;
+      return this;
     }-*/;
 
     public native final Options orientation(String orientation)
@@ -110,26 +112,28 @@ public class Slider extends UiWidget<Slider, Slider.Options> {
       return this["range"];
     }-*/;
 
-    public native final Options step(Number step)
+    public native final Options step(int step)
     /*-{
       this["step"] = step;
       return this;
     }-*/;
 
-    public native final Number step()
+    public native final Options step(float step)
     /*-{
-      return this["step"];
+      this["step"] = step;
+      return this;
     }-*/;
 
-    public native final Options value(Number value)
+    public native final Options value(int value)
     /*-{
       this["value"] = value;
       return this;
     }-*/;
 
-    public native final Number value()
+    public native final Options value(float value)
     /*-{
-      return this["value"];
+      this["value"] = value;
+      return this;
     }-*/;
 
     public native final Options values(JsArrayNumber values)
@@ -144,16 +148,12 @@ public class Slider extends UiWidget<Slider, Slider.Options> {
       return this;
     }-*/;
 
-    public native final Options values(Number lower, Number upper)
+    public native final Options values(float lower, float upper)
     /*-{
       this["values"] = [lower, upper];
       return this;
     }-*/;
 
-    public native final JsArrayNumber values()
-    /*-{
-      return this["values"];
-    }-*/;
   }
 
   public static class Event extends JavaScriptObject {
