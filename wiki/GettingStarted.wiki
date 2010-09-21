@@ -73,7 +73,7 @@ Please refer to the [http://gwtquery-ui.googlecode.com/svn/demos/GwtQueryUi.html
 
 This plugin has a dependency on jQuery and jQuery-ui !JavaScript libraries. GWT Query-ui can help you add these dependencies to your project. You can choose to:
 # add them as static resources provided by the plugin
-# add them using Google's CDN
+# add them using a "Content Delivery Network" (either Google or Microsoft CDN)
 
 == Using static resources ==
 
