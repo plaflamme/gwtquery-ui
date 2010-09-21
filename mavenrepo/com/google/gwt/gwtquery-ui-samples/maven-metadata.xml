@@ -4,11 +4,12 @@
   <artifactId>gwtquery-ui-samples</artifactId>
   <version>r40</version>
   <versioning>
-    <release>r72</release>
+    <release>r104</release>
     <versions>
       <version>r40</version>
       <version>r72</version>
+      <version>r104</version>
     </versions>
-    <lastUpdated>20100803194741</lastUpdated>
+    <lastUpdated>20100921180248</lastUpdated>
   </versioning>
 </metadata>
