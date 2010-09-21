@@ -29,7 +29,7 @@ Then, add the following dependency:
     <dependency>
       <groupId>com.google.gwt</groupId>
       <artifactId>gwtquery-ui</artifactId>
-      <version>r72</version>
+      <version>r104</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
@@ -113,7 +113,3 @@ If you already have these libraries installed or don't want this plugin to inter
 {{{
   <inherits name='gwtquery.plugins.Ui' />
 }}}
-
-= Themeing = 
-
-TODO
