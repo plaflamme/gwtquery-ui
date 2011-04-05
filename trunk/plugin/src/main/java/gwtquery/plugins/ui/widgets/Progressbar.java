@@ -5,9 +5,6 @@ import gwtquery.plugins.ui.UiPlugin;
 import gwtquery.plugins.ui.UiWidget;
 import gwtquery.plugins.ui.WidgetOptions;
 
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.dom.client.NodeList;
-
 /**
  * Implements jQuery-UI's Progressbar
  * 
@@ -47,7 +44,7 @@ public class Progressbar extends UiWidget<Progressbar, Progressbar.Options> {
   private static class ProgressbarPlugin implements UiPlugin<Progressbar> {
 
     public Progressbar init(Ui ui, WidgetOptions<?> options) {
-      return new Progressbar(ui.get(), (Progressbar.Options) options.cast());
+      return new Progressbar(ui, (Progressbar.Options) options.cast());
     }
 
   }
@@ -58,8 +55,8 @@ public class Progressbar extends UiWidget<Progressbar, Progressbar.Options> {
     registerPlugin(Progressbar.class, new ProgressbarPlugin());
   }
 
-  public Progressbar(NodeList<Element> list, Progressbar.Options options) {
-    super(list, "progressbar", options);
+  public Progressbar(Ui ui, Progressbar.Options options) {
+    super(ui, "progressbar", options);
   }
 
   public native final Number value()

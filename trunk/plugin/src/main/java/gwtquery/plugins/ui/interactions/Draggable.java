@@ -403,7 +403,7 @@ public class Draggable extends UiWidget<Draggable, Draggable.Options> {
   private static class DraggablePlugin implements UiPlugin<Draggable> {
 
     public Draggable init(Ui ui, WidgetOptions<?> options) {
-      return new Draggable(ui.get(), (Draggable.Options) options.cast());
+      return new Draggable(ui, (Draggable.Options) options.cast());
     }
 
   }
@@ -414,7 +414,7 @@ public class Draggable extends UiWidget<Draggable, Draggable.Options> {
     registerPlugin(Draggable.class, new DraggablePlugin());
   }
 
-  public Draggable(NodeList<Element> list, Draggable.Options options) {
-    super(list, "draggable", options);
+  public Draggable(Ui ui, Draggable.Options options) {
+    super(ui, "draggable", options);
   }
 }

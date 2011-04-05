@@ -10,8 +10,6 @@ import java.util.Date;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArrayInteger;
 import com.google.gwt.core.client.JsArrayString;
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.dom.client.NodeList;
 import com.google.gwt.query.client.Function;
 
 /**
@@ -573,7 +571,7 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
   private static class DatepickerPlugin implements UiPlugin<Datepicker> {
 
     public Datepicker init(Ui ui, WidgetOptions<?> options) {
-      return new Datepicker(ui.get(), (Options) options.cast());
+      return new Datepicker(ui, (Options) options.cast());
     }
   }
 
@@ -583,8 +581,8 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
     registerPlugin(Datepicker.class, new DatepickerPlugin());
   }
 
-  public Datepicker(NodeList<Element> list, Datepicker.Options options) {
-    super(list, "datepicker", options);
+  public Datepicker(Ui ui, Datepicker.Options options) {
+    super(ui, "datepicker", options);
   }
 
   public Datepicker close() {

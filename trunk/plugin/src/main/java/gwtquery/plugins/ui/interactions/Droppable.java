@@ -154,7 +154,7 @@ public class Droppable extends UiWidget<Droppable, Droppable.Options> {
   private static class DroppablePlugin implements UiPlugin<Droppable> {
 
     public Droppable init(Ui ui, WidgetOptions<?> options) {
-      return new Droppable(ui.get(), (Droppable.Options) options.cast());
+      return new Droppable(ui, (Droppable.Options) options.cast());
     }
 
   }
@@ -165,7 +165,7 @@ public class Droppable extends UiWidget<Droppable, Droppable.Options> {
     registerPlugin(Droppable.class, new DroppablePlugin());
   }
 
-  public Droppable(NodeList<Element> list, Droppable.Options options) {
-    super(list, "droppable", options);
+  public Droppable(Ui ui, Droppable.Options options) {
+    super(ui, "droppable", options);
   }
 }

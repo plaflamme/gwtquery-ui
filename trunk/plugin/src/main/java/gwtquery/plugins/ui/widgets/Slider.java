@@ -8,8 +8,6 @@ import gwtquery.plugins.ui.WidgetOptions;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArrayInteger;
 import com.google.gwt.core.client.JsArrayNumber;
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.dom.client.NodeList;
 
 /**
  * Implements jQuery-UI's Slider
@@ -66,7 +64,7 @@ public class Slider extends UiWidget<Slider, Slider.Options> {
       this["max"] = max;
       return this;
     }-*/;
-    
+
     public native final Options min(int min)
     /*-{
       this["min"] = min;
@@ -193,7 +191,7 @@ public class Slider extends UiWidget<Slider, Slider.Options> {
   private static class SliderPlugin implements UiPlugin<Slider> {
 
     public Slider init(Ui ui, WidgetOptions<?> options) {
-      return new Slider(ui.get(), (Options) options.cast());
+      return new Slider(ui, (Options) options.cast());
     }
   }
 
@@ -203,8 +201,8 @@ public class Slider extends UiWidget<Slider, Slider.Options> {
     registerPlugin(Slider.class, new SliderPlugin());
   }
 
-  public Slider(NodeList<Element> list, Slider.Options options) {
-    super(list, "slider", options);
+  public Slider(Ui ui, Slider.Options options) {
+    super(ui, "slider", options);
   }
 
   public Slider value(Number value) {

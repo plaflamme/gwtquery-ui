@@ -8,7 +8,6 @@ import gwtquery.plugins.ui.WidgetOptions;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArrayInteger;
 import com.google.gwt.dom.client.Element;
-import com.google.gwt.dom.client.NodeList;
 
 /**
  * Implements jQuery-UI's Tabs
@@ -208,7 +207,7 @@ public class Tabs extends UiWidget<Tabs, Tabs.Options> {
   private static class TabsPlugin implements UiPlugin<Tabs> {
 
     public Tabs init(Ui ui, WidgetOptions<?> options) {
-      return new Tabs(ui.get(), (Options) options.cast());
+      return new Tabs(ui, (Options) options.cast());
     }
   }
 
@@ -218,8 +217,8 @@ public class Tabs extends UiWidget<Tabs, Tabs.Options> {
     registerPlugin(Tabs.class, new TabsPlugin());
   }
 
-  public Tabs(NodeList<Element> list, Tabs.Options options) {
-    super(list, "tabs", options);
+  public Tabs(Ui ui, Tabs.Options options) {
+    super(ui, "tabs", options);
   }
 
   public Tabs add(String url, String label) {

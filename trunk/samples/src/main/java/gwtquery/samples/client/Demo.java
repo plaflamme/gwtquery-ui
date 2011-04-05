@@ -7,7 +7,7 @@ public interface Demo {
   public String getName();
 
   public String getDemoHtml();
-  
+
   public String getJavaSource();
 
   public void setupDemoElement(Element demo);

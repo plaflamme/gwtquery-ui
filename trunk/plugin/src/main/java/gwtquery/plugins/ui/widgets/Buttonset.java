@@ -5,9 +5,6 @@ import gwtquery.plugins.ui.UiPlugin;
 import gwtquery.plugins.ui.UiWidget;
 import gwtquery.plugins.ui.WidgetOptions;
 
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.dom.client.NodeList;
-
 /**
  * Implements jQuery-UI's Buttonset
  * 
@@ -23,7 +20,7 @@ public class Buttonset extends UiWidget<Buttonset, Button.Options> {
   private static class ButtonPlugin implements UiPlugin<Buttonset> {
 
     public Buttonset init(Ui ui, WidgetOptions<?> options) {
-      return new Buttonset(ui.get(), (Button.Options) options.cast());
+      return new Buttonset(ui, (Button.Options) options.cast());
     }
   }
 
@@ -33,8 +30,8 @@ public class Buttonset extends UiWidget<Buttonset, Button.Options> {
     registerPlugin(Buttonset.class, new ButtonPlugin());
   }
 
-  public Buttonset(NodeList<Element> list, Button.Options options) {
-    super(list, "buttonset", options);
+  public Buttonset(Ui ui, Button.Options options) {
+    super(ui, "buttonset", options);
   }
 
   public Buttonset refresh() {

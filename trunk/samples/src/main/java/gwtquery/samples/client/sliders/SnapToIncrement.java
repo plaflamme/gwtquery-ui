@@ -23,7 +23,7 @@ public class SnapToIncrement extends AbstractSliderDemo {
     $("#slider").as(Ui).slider("{value:100, min: 0, max: 500, step: 50}").bind(Slider.Event.slide, new Function() {
       @Override
       public boolean f(Event e, Object data) {
-        Slider.Event slideEvent = ((JavaScriptObject)data).cast(); 
+        Slider.Event slideEvent = ((JavaScriptObject) data).cast();
         $("#amount").val("$" + slideEvent.intValue());
         return false;
       }

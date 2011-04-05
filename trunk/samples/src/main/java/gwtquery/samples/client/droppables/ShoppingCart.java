@@ -38,17 +38,15 @@ public class ShoppingCart extends AbstractDroppableDemo {
 
     // TODO add this when sortable events are implemented:
     /*
-     sort: function() {
-        // gets added unintentionally by droppable interacting with sortable
-        // using connectWithSortable fixes this, but doesn't allow you to customize active/hoverClass options
-        $(this).removeClass("ui-state-default");
-      }
+     * sort: function() { // gets added unintentionally by droppable interacting with sortable // using
+     * connectWithSortable fixes this, but doesn't allow you to customize active/hoverClass options
+     * $(this).removeClass("ui-state-default"); }
      */
 
   }
 
   public native final String stringify(JavaScriptObject o) /*-{
-    return JSON.stringify(o);
-  }-*/;
+                                                           return JSON.stringify(o);
+                                                           }-*/;
 
 }

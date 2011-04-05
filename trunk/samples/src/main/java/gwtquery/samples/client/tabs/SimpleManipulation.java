@@ -30,7 +30,7 @@ public class SimpleManipulation extends AbstractTabsDemo {
     final GQuery tab_title_input = $("#tab_title");
     final GQuery tab_content_input = $("#tab_content");
     tab_counter = 2;
-    
+
     final Function removeTab = new Function() {
       public boolean f(Event close) {
         // Find the tab's index
@@ -59,7 +59,7 @@ public class SimpleManipulation extends AbstractTabsDemo {
         return false;
       }
     });
-    
+
     $("#tabs span.ui-icon-close").click(removeTab);
 
     final Function addTab = new Function() {
@@ -67,9 +67,9 @@ public class SimpleManipulation extends AbstractTabsDemo {
       public void f(Element e) {
         String tab_title = tab_title_input.val();
         if(tab_title == null || tab_title.isEmpty()) {
-          tab_title = "Tab "+tab_counter;
+          tab_title = "Tab " + tab_counter;
         }
-        tabs.add("#tabs-"+tab_counter, tab_title);
+        tabs.add("#tabs-" + tab_counter, tab_title);
         tab_counter++;
       }
     };
@@ -79,7 +79,7 @@ public class SimpleManipulation extends AbstractTabsDemo {
     .buttons(Buttons.create() //
     .define("Add", new Function() {
       public boolean f(Event e) {
-        addTab.f((Element)null);
+        addTab.f((Element) null);
         $("#dialog").as(Ui).dialog().close();
         return false;
       }

@@ -6,8 +6,6 @@ import gwtquery.plugins.ui.UiWidget;
 import gwtquery.plugins.ui.WidgetOptions;
 
 import com.google.gwt.core.client.JavaScriptObject;
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.dom.client.NodeList;
 import com.google.gwt.query.client.Function;
 
 /**
@@ -237,7 +235,7 @@ public class Accordion extends UiWidget<Accordion, Accordion.Options> {
   private static class AccordionPlugin implements UiPlugin<Accordion> {
 
     public Accordion init(Ui ui, WidgetOptions<?> options) {
-      return new Accordion(ui.get(), (Options) options.cast());
+      return new Accordion(ui, (Options) options.cast());
     }
   }
 
@@ -247,8 +245,8 @@ public class Accordion extends UiWidget<Accordion, Accordion.Options> {
     registerPlugin(Accordion.class, new AccordionPlugin());
   }
 
-  public Accordion(NodeList<Element> list, Accordion.Options options) {
-    super(list, "accordion", options);
+  public Accordion(Ui ui, Accordion.Options options) {
+    super(ui, "accordion", options);
   }
 
   public Accordion resize() {

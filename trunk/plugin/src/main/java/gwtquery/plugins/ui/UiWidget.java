@@ -26,10 +26,10 @@ public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions
    * @param widgetType the type of widget to build (button, accordion, etc.)
    * @param options the widget options (may be null).
    */
-  protected UiWidget(NodeList<Element> nodeList, String widgetType, O options) {
+  protected UiWidget(Ui nodeList, String widgetType, O options) {
     super(nodeList);
     this.widgetType = widgetType;
-    ui = initUiWidget(widgetType, nodeList, options);
+    ui = initUiWidget(widgetType, nodeList.get(), options);
   }
 
   public T destroy() {

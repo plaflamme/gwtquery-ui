@@ -20,34 +20,33 @@ import com.google.gwt.query.client.GQuery;
 public class Selectable extends UiWidget<Selectable, Selectable.Options> {
 
   public static class Options extends WidgetOptions<Options> {
-    
+
     protected Options() {
-      
+
     }
 
     public static native final Options create() /*-{
-      return {};
-    }-*/;
-    
+                                                return {};
+                                                }-*/;
 
     public native final Options autoRefresh(boolean autoRefresh) /*-{
-      this["autoRefresh"] = autoRefresh;
-      return this;
-    }-*/;
+                                                                 this["autoRefresh"] = autoRefresh;
+                                                                 return this;
+                                                                 }-*/;
 
     public native final boolean autoRefresh() /*-{
-      return this["autoRefresh"];
-    }-*/;
-    
+                                              return this["autoRefresh"];
+                                              }-*/;
+
     public native final Options cancel(String selector) /*-{
-      this["cancel"] = selector;
-      return this;
-    }-*/;
+                                                        this["cancel"] = selector;
+                                                        return this;
+                                                        }-*/;
 
     public native final Options cancel(NodeList<?> selector) /*-{
-      this["cancel"] = selector;
-      return this;
-    }-*/;
+                                                             this["cancel"] = selector;
+                                                             return this;
+                                                             }-*/;
 
     public final Options cancel(GQuery selector) {
       this.cancel(selector.get());
@@ -55,36 +54,36 @@ public class Selectable extends UiWidget<Selectable, Selectable.Options> {
     }
 
     public native final String cancel() /*-{
-      return this["cancel"];
-    }-*/;
+                                        return this["cancel"];
+                                        }-*/;
 
     public native final Options delay(int delay) /*-{
-      this["delay"] = delay;
-      return this;
-    }-*/;
+                                                 this["delay"] = delay;
+                                                 return this;
+                                                 }-*/;
 
     public native final int delay() /*-{
-      return this["delay"];
-    }-*/;
+                                    return this["delay"];
+                                    }-*/;
 
     public native final Options distance(int distance) /*-{
-      this["distance"] = distance;
-      return this;
-    }-*/;
+                                                       this["distance"] = distance;
+                                                       return this;
+                                                       }-*/;
 
     public native final int distance() /*-{
-      return this["distance"];
-    }-*/;
+                                       return this["distance"];
+                                       }-*/;
 
     public native final Options filter(String filter) /*-{
-      this["filter"] = filter;
-      return this;
-    }-*/;
+                                                      this["filter"] = filter;
+                                                      return this;
+                                                      }-*/;
 
     public native final Options filter(NodeList<?> selector) /*-{
-      this["filter"] = selector;
-      return this;
-    }-*/;
+                                                             this["filter"] = selector;
+                                                             return this;
+                                                             }-*/;
 
     public final Options filter(GQuery selector) {
       this.filter(selector.get());
@@ -92,56 +91,61 @@ public class Selectable extends UiWidget<Selectable, Selectable.Options> {
     }
 
     public native final String filter() /*-{
-      return this["filter"];
-    }-*/;
+                                        return this["filter"];
+                                        }-*/;
 
     public native final Options tolerance(String tolerance) /*-{
-      this["tolerance"] = tolerance;
-      return this;
-    }-*/;
+                                                            this["tolerance"] = tolerance;
+                                                            return this;
+                                                            }-*/;
 
     public native final String tolerance() /*-{
-      return this["tolerance"];
-    }-*/;
+                                           return this["tolerance"];
+                                           }-*/;
   }
 
   public static class Event extends JavaScriptObject {
-    
+
     public static final String selected = "selectableselected";
+
     public static final String selecting = "selectableselecting";
+
     public static final String start = "selectablestart";
+
     public static final String stop = "selectablestop";
+
     public static final String unselected = "selectableunselected";
+
     public static final String unselecting = "selectableunselecting";
 
     protected Event() {
-      
+
     }
 
     public native final Element selected() /*-{
-      return this["selected"];
-    }-*/;
+                                           return this["selected"];
+                                           }-*/;
 
     public native final Element selecting() /*-{
-      return this["selecting"];
-    }-*/;
+                                            return this["selecting"];
+                                            }-*/;
 
     public native final Element unselected() /*-{
-      return this["unselected"];
-    }-*/;
+                                             return this["unselected"];
+                                             }-*/;
 
     public native final Element unselecting() /*-{
-      return this["unselecting"];
-    }-*/;
+                                              return this["unselecting"];
+                                              }-*/;
   }
-  
+
   /**
    * Used to register the plugin.
    */
   private static class SelectablePlugin implements UiPlugin<Selectable> {
 
     public Selectable init(Ui ui, WidgetOptions<?> options) {
-      return new Selectable(ui.get(), (Selectable.Options)options.cast());
+      return new Selectable(ui, (Selectable.Options) options.cast());
     }
 
   }
@@ -152,10 +156,10 @@ public class Selectable extends UiWidget<Selectable, Selectable.Options> {
     registerPlugin(Selectable.class, new SelectablePlugin());
   }
 
-  public Selectable(NodeList<Element> list, Selectable.Options options) {
-    super(list, "selectable", options);
+  public Selectable(Ui ui, Selectable.Options options) {
+    super(ui, "selectable", options);
   }
-  
+
   public Selectable refresh() {
     invoke("refresh");
     return this;

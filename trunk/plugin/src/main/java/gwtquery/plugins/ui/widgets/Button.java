@@ -1,13 +1,11 @@
 package gwtquery.plugins.ui.widgets;
 
 import gwtquery.plugins.ui.Ui;
-import gwtquery.plugins.ui.UiWidget;
 import gwtquery.plugins.ui.UiPlugin;
+import gwtquery.plugins.ui.UiWidget;
 import gwtquery.plugins.ui.WidgetOptions;
 
 import com.google.gwt.core.client.JavaScriptObject;
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.dom.client.NodeList;
 
 /**
  * Implements jQuery-UI's Button
@@ -104,7 +102,7 @@ public class Button extends UiWidget<Button, Button.Options> {
   private static class ButtonPlugin implements UiPlugin<Button> {
 
     public Button init(Ui ui, WidgetOptions<?> options) {
-      return new Button(ui.get(), (Options) options.cast());
+      return new Button(ui, (Options) options.cast());
     }
   }
 
@@ -114,8 +112,8 @@ public class Button extends UiWidget<Button, Button.Options> {
     registerPlugin(Button.class, new ButtonPlugin());
   }
 
-  public Button(NodeList<Element> list, Button.Options options) {
-    super(list, "button", options);
+  public Button(Ui ui, Button.Options options) {
+    super(ui, "button", options);
   }
 
   public Button refresh() {

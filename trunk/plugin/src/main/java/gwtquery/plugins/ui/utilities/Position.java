@@ -111,7 +111,7 @@ public class Position extends UiWidget<Position, Position.Options> {
   private static class PositionPlugin implements UiPlugin<Position> {
 
     public Position init(Ui ui, WidgetOptions<?> options) {
-      return new Position(ui.get(), (Position.Options) options.cast());
+      return new Position(ui, (Position.Options) options.cast());
     }
 
   }
@@ -122,7 +122,7 @@ public class Position extends UiWidget<Position, Position.Options> {
     registerPlugin(Position.class, new PositionPlugin());
   }
 
-  public Position(NodeList<Element> list, Position.Options options) {
-    super(list, "position", options);
+  public Position(Ui ui, Position.Options options) {
+    super(ui, "position", options);
   }
 }

@@ -9,8 +9,6 @@ import gwtquery.plugins.ui.utilities.Position;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsArrayString;
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.dom.client.NodeList;
 
 /**
  * Implements jQuery-UI's Autocomplete
@@ -163,7 +161,7 @@ public class Autocomplete extends UiWidget<Autocomplete, Autocomplete.Options> {
   private static class AutocompletePlugin implements UiPlugin<Autocomplete> {
 
     public Autocomplete init(Ui ui, WidgetOptions<?> options) {
-      return new Autocomplete(ui.get(), (Options) options.cast());
+      return new Autocomplete(ui, (Options) options.cast());
     }
   }
 
@@ -173,8 +171,8 @@ public class Autocomplete extends UiWidget<Autocomplete, Autocomplete.Options> {
     registerPlugin(Autocomplete.class, new AutocompletePlugin());
   }
 
-  public Autocomplete(NodeList<Element> list, Autocomplete.Options options) {
-    super(list, "autocomplete", options);
+  public Autocomplete(Ui ui, Autocomplete.Options options) {
+    super(ui, "autocomplete", options);
   }
 
   public Autocomplete search() {

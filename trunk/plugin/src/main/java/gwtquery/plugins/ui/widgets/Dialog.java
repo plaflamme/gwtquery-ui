@@ -7,8 +7,6 @@ import gwtquery.plugins.ui.WidgetOptions;
 import gwtquery.plugins.ui.utilities.Position;
 
 import com.google.gwt.core.client.JavaScriptObject;
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.dom.client.NodeList;
 import com.google.gwt.query.client.Function;
 
 /**
@@ -346,7 +344,7 @@ public class Dialog extends UiWidget<Dialog, Dialog.Options> {
   private static class DialogPlugin implements UiPlugin<Dialog> {
 
     public Dialog init(Ui ui, WidgetOptions<?> options) {
-      return new Dialog(ui.get(), (Options) options.cast());
+      return new Dialog(ui, (Options) options.cast());
     }
   }
 
@@ -356,8 +354,8 @@ public class Dialog extends UiWidget<Dialog, Dialog.Options> {
     registerPlugin(Dialog.class, new DialogPlugin());
   }
 
-  public Dialog(NodeList<Element> list, Dialog.Options options) {
-    super(list, "dialog", options);
+  public Dialog(Ui ui, Dialog.Options options) {
+    super(ui, "dialog", options);
   }
 
   public Dialog close() {

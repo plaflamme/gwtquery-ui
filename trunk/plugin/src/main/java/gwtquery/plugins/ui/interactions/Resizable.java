@@ -5,9 +5,6 @@ import gwtquery.plugins.ui.UiPlugin;
 import gwtquery.plugins.ui.UiWidget;
 import gwtquery.plugins.ui.WidgetOptions;
 
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.dom.client.NodeList;
-
 /**
  * Implements jQuery-UI's Resizable
  * 
@@ -39,7 +36,7 @@ public class Resizable extends UiWidget<Resizable, Resizable.Options> {
   private static class ResizablePlugin implements UiPlugin<Resizable> {
 
     public Resizable init(Ui ui, WidgetOptions<?> options) {
-      return new Resizable(ui.get(), (Resizable.Options) options.cast());
+      return new Resizable(ui, (Resizable.Options) options.cast());
     }
 
   }
@@ -50,7 +47,7 @@ public class Resizable extends UiWidget<Resizable, Resizable.Options> {
     registerPlugin(Resizable.class, new ResizablePlugin());
   }
 
-  public Resizable(NodeList<Element> list, Resizable.Options options) {
-    super(list, "resizable", options);
+  public Resizable(Ui ui, Resizable.Options options) {
+    super(ui, "resizable", options);
   }
 }

@@ -34,33 +34,32 @@ import gwtquery.plugins.ui.widgets.Slider;
 import gwtquery.plugins.ui.widgets.Tabs;
 
 import com.google.gwt.core.client.JsonUtils;
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.dom.client.NodeList;
 import com.google.gwt.query.client.GQuery;
-import com.google.gwt.query.client.JSArray;
-import com.google.gwt.query.client.JsMap;
-import com.google.gwt.query.client.Plugin;
+import com.google.gwt.query.client.js.JsMap;
+import com.google.gwt.query.client.plugins.Plugin;
 
 /**
  * Experimental Gwt Query plugin for integrating JQuery UI.
+ * 
  * @author Philippe Laflamme
  */
 public class Ui extends GQuery {
 
+  public static final Class<Ui> Ui = Ui.class;
+
   /**
    * Used to register the plugin.
    */
-  private static class UiGQueryPlugin implements Plugin<Ui> {
-
-    public Ui init(GQuery gq) {
-      return new Ui(gq.get());
-    }
+  static {
+    GQuery.registerPlugin(Ui.class, new Plugin<Ui>() {
+      public Ui init(GQuery gq) {
+        return new Ui(gq);
+      }
+    });
   }
 
-  public static final Class<Ui> Ui = Ui.class;
-
-  static {
-    GQuery.registerPlugin(Ui.class, new UiGQueryPlugin());
+  public Ui(GQuery gq) {
+    super(gq);
   }
 
   public static void registerPlugin(Class<? extends Ui> plugin, UiPlugin<? extends Ui> pluginFactory) {
@@ -71,18 +70,6 @@ public class Ui extends GQuery {
   }
 
   private static JsMap<Class<? extends Ui>, UiPlugin<? extends Ui>> plugins;
-
-  public Ui(Element element) {
-    super(element);
-  }
-
-  public Ui(JSArray elements) {
-    super(elements);
-  }
-
-  public Ui(NodeList<Element> list) {
-    super(list);
-  }
 
   public final Accordion accordion() {
     return asWidget(Accordion);

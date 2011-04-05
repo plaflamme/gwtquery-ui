@@ -21,15 +21,15 @@ public class ModalMessage extends AbstractDialogDemo {
 
   public void setupDemoElement(Element demo) {
     $("#dialog-message", demo).as(Ui).dialog(//
-      Dialog.Options.create().modal(true)//
-        .buttons(Buttons.create()//
-          .define("Ok", new Function() {
-            @Override
-            public boolean f(Event e) {
-              // we can't use $(this)
-              $("#dialog-message").as(Ui).dialog().close();
-              return false;
-            }
-          })));
+    Dialog.Options.create().modal(true)//
+    .buttons(Buttons.create()//
+    .define("Ok", new Function() {
+      @Override
+      public boolean f(Event e) {
+        // we can't use $(this)
+        $("#dialog-message").as(Ui).dialog().close();
+        return false;
+      }
+    })));
   }
 }
