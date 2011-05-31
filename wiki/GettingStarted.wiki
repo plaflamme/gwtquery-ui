@@ -29,13 +29,13 @@ Then, add the following dependency:
     <dependency>
       <groupId>com.google.gwt</groupId>
       <artifactId>gwtquery-ui</artifactId>
-      <version>r104</version>
+      <version>r127</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
 }}}
 
-Please note that at of this writing, the only available version of gwtquery-ui is r72. Look [http://gwtquery-ui.googlecode.com/svn/mavenrepo/com/google/gwt/gwtquery-ui/ here] to see if more recent version(s) exist.
+Please note that at of this writing, the only available version of gwtquery-ui is r127. Look [http://gwtquery-ui.googlecode.com/svn/mavenrepo/com/google/gwt/gwtquery-ui/ here] to see if more recent version(s) exist.
 
 == Using another build tool ==
 
