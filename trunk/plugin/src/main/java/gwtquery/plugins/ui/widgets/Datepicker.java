@@ -5,11 +5,10 @@ import gwtquery.plugins.ui.UiPlugin;
 import gwtquery.plugins.ui.UiWidget;
 import gwtquery.plugins.ui.WidgetOptions;
 
-import java.util.Date;
-
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArrayInteger;
 import com.google.gwt.core.client.JsArrayString;
+import com.google.gwt.core.client.JsDate;
 import com.google.gwt.query.client.Function;
 
 /**
@@ -214,7 +213,7 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
       return this["dayNamesShort"];
     }-*/;
 
-    public native final Options defaultDate(Date defaultDate)
+    public native final Options defaultDate(JsDate defaultDate)
     /*-{
       this["defaultDate"] = defaultDate;
       return this;
@@ -289,7 +288,7 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
       return this["isRTL"];
     }-*/;
 
-    public native final Options maxDate(Date maxDate)
+    public native final Options maxDate(JsDate maxDate)
     /*-{
       this["maxDate"] = maxDate;
       return this;
@@ -307,7 +306,7 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
       return this;
     }-*/;
 
-    public native final Options minDate(Date minDate)
+    public native final Options minDate(JsDate minDate)
     /*-{
       this["minDate"] = minDate;
       return this;
@@ -590,7 +589,7 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
     return this;
   }
 
-  public Datepicker dialog(Date date, Function onSelect, Options settings, JsArrayInteger position) {
+  public Datepicker dialog(JsDate date, Function onSelect, Options settings, JsArrayInteger position) {
     // TODO: implement for other arguments
     invoke("dialog", date);
     return this;
@@ -616,12 +615,12 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
     return this;
   }
 
-  public Date getDate() {
+  public JsDate getDate() {
     invoke("getDate");
     return null;
   }
 
-  public Datepicker setDate(Date date) {
+  public Datepicker setDate(JsDate date) {
     invoke("setDate", date);
     return this;
   }
