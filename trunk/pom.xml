@@ -52,6 +52,7 @@
         <artifactId>gwtquery</artifactId>
         <version>${gwtquery.version}</version>
         <type>jar</type>
+        <classifier>${gwtquery.classifier}</classifier>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -153,7 +154,8 @@
       <properties>
         <gwt.version>2.2.0</gwt.version>
         <gwtquery.groupId>com.googlecode.gwtquery</gwtquery.groupId>
-        <gwtquery.version>1.0.0-SNAPSHOT</gwtquery.version>
+        <gwtquery.version>1.0.0</gwtquery.version>
+        <gwtquery.classifier>2.2.0</gwtquery.classifier>
         <gwt.loglevel>ERROR</gwt.loglevel>
         <gwt.outputstyle>OBF</gwt.outputstyle>
         <gwt.modulesuffix />
