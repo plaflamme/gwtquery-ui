@@ -70,7 +70,7 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
       return this;
     }-*/;
 
-    public native final Boolean autoSize()
+    public native final boolean autoSize()
     /*-{
       return this["autoSize"];
     }-*/;
@@ -86,13 +86,13 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
       return this["buttonImage"];
     }-*/;
 
-    public native final Options buttonImageOnly(Boolean buttonImageOnly)
+    public native final Options buttonImageOnly(boolean buttonImageOnly)
     /*-{
       this["buttonImageOnly"] = buttonImageOnly;
       return this;
     }-*/;
 
-    public native final Boolean buttonImageOnly()
+    public native final boolean buttonImageOnly()
     /*-{
       return this["buttonImageOnly"];
     }-*/;
@@ -114,24 +114,24 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
       return this;
     }-*/;
 
-    public native final Options changeMonth(Boolean changeMonth)
+    public native final Options changeMonth(boolean changeMonth)
     /*-{
       this["changeMonth"] = changeMonth;
       return this;
     }-*/;
 
-    public native final Boolean changeMonth()
+    public native final boolean changeMonth()
     /*-{
       return this["changeMonth"];
     }-*/;
 
-    public native final Options changeYear(Boolean changeYear)
+    public native final Options changeYear(boolean changeYear)
     /*-{
       this["changeYear"] = changeYear;
       return this;
     }-*/;
 
-    public native final Boolean changeYear()
+    public native final boolean changeYear()
     /*-{
       return this["changeYear"];
     }-*/;
@@ -147,13 +147,13 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
       return this["closeText"];
     }-*/;
 
-    public native final Options constrainInput(Boolean constrainInput)
+    public native final Options constrainInput(boolean constrainInput)
     /*-{
       this["constrainInput"] = constrainInput;
       return this;
     }-*/;
 
-    public native final Boolean constrainInput()
+    public native final boolean constrainInput()
     /*-{
       return this["constrainInput"];
     }-*/;
@@ -219,7 +219,7 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
       return this;
     }-*/;
 
-    public native final Options defaultDate(Number defaultDate)
+    public native final Options defaultDate(int defaultDate)
     /*-{
       this["defaultDate"] = defaultDate;
       return this;
@@ -237,53 +237,53 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
       return this;
     }-*/;
 
-    public native final Options duration(Number duration)
+    public native final Options duration(int duration)
     /*-{
       this["duration"] = duration;
       return this;
     }-*/;
 
-    public native final Options firstDay(Number firstDay)
+    public native final Options firstDay(int firstDay)
     /*-{
       this["firstDay"] = firstDay;
       return this;
     }-*/;
 
-    public native final Number firstDay()
+    public native final int firstDay()
     /*-{
       this["firstDay"] = firstDay;
       return this;
     }-*/;
 
-    public native final Options gotoCurrent(Boolean gotoCurrent)
+    public native final Options gotoCurrent(boolean gotoCurrent)
     /*-{
       this["gotoCurrent"] = gotoCurrent;
       return this;
     }-*/;
 
-    public native final Boolean gotoCurrent()
+    public native final boolean gotoCurrent()
     /*-{
       return this["gotoCurrent"];
     }-*/;
 
-    public native final Options hideIfNoPrevNext(Boolean hideIfNoPrevNext)
+    public native final Options hideIfNoPrevNext(boolean hideIfNoPrevNext)
     /*-{
       this["hideIfNoPrevNext"] = hideIfNoPrevNext;
       return this;
     }-*/;
 
-    public native final Boolean hideIfNoPrevNext()
+    public native final boolean hideIfNoPrevNext()
     /*-{
       return this["hideIfNoPrevNext"];
     }-*/;
 
-    public native final Options isRTL(Boolean isRTL)
+    public native final Options isRTL(boolean isRTL)
     /*-{
       this["isRTL"] = isRTL;
       return this;
     }-*/;
 
-    public native final Boolean isRTL()
+    public native final boolean isRTL()
     /*-{
       return this["isRTL"];
     }-*/;
@@ -294,7 +294,7 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
       return this;
     }-*/;
 
-    public native final Options maxDate(Number maxDate)
+    public native final Options maxDate(int maxDate)
     /*-{
       this["maxDate"] = maxDate;
       return this;
@@ -312,7 +312,7 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
       return this;
     }-*/;
 
-    public native final Options minDate(Number minDate)
+    public native final Options minDate(int minDate)
     /*-{
       this["minDate"] = minDate;
       return this;
@@ -346,13 +346,13 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
       return this["monthNamesShort"];
     }-*/;
 
-    public native final Options navigationAsDateFormat(Boolean navigationAsDateFormat)
+    public native final Options navigationAsDateFormat(boolean navigationAsDateFormat)
     /*-{
       this["navigationAsDateFormat"] = navigationAsDateFormat;
       return this;
     }-*/;
 
-    public native final Boolean navigationAsDateFormat()
+    public native final boolean navigationAsDateFormat()
     /*-{
       return this["navigationAsDateFormat"];
     }-*/;
@@ -391,13 +391,13 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
       return this["prevText"];
     }-*/;
 
-    public native final Options selectOtherMonths(Boolean selectOtherMonths)
+    public native final Options selectOtherMonths(boolean selectOtherMonths)
     /*-{
       this["selectOtherMonths"] = selectOtherMonths;
       return this;
     }-*/;
 
-    public native final Boolean selectOtherMonths()
+    public native final boolean selectOtherMonths()
     /*-{
       return this["selectOtherMonths"];
     }-*/;
@@ -408,7 +408,7 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
       return this;
     }-*/;
 
-    public native final Options shortYearCutoff(Number shortYearCutoff)
+    public native final Options shortYearCutoff(int shortYearCutoff)
     /*-{
       this["shortYearCutoff"] = shortYearCutoff;
       return this;
@@ -425,35 +425,35 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
       return this["showAnim"];
     }-*/;
 
-    public native final Options showButtonPanel(Boolean showButtonPanel)
+    public native final Options showButtonPanel(boolean showButtonPanel)
     /*-{
       this["showButtonPanel"] = showButtonPanel;
       return this;
     }-*/;
 
-    public native final Boolean showButtonPanel()
+    public native final boolean showButtonPanel()
     /*-{
       return this["showButtonPanel"];
     }-*/;
 
-    public native final Options showCurrentAtPos(Number showCurrentAtPos)
+    public native final Options showCurrentAtPos(int showCurrentAtPos)
     /*-{
       this["showCurrentAtPos"] = showCurrentAtPos;
       return this;
     }-*/;
 
-    public native final Number showCurrentAtPos()
+    public native final int showCurrentAtPos()
     /*-{
       return this["showCurrentAtPos"];
     }-*/;
 
-    public native final Options showMonthAfterYear(Boolean showMonthAfterYear)
+    public native final Options showMonthAfterYear(boolean showMonthAfterYear)
     /*-{
       this["showMonthAfterYear"] = showMonthAfterYear;
       return this;
     }-*/;
 
-    public native final Boolean showMonthAfterYear()
+    public native final boolean showMonthAfterYear()
     /*-{
       return this["showMonthAfterYear"];
     }-*/;
@@ -480,35 +480,35 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
       return this["showOptions"];
     }-*/;
 
-    public native final Options showOtherMonths(Boolean showOtherMonths)
+    public native final Options showOtherMonths(boolean showOtherMonths)
     /*-{
       this["showOtherMonths"] = showOtherMonths;
       return this;
     }-*/;
 
-    public native final Boolean showOtherMonths()
+    public native final boolean showOtherMonths()
     /*-{
       return this["showOtherMonths"];
     }-*/;
 
-    public native final Options showWeek(Boolean showWeek)
+    public native final Options showWeek(boolean showWeek)
     /*-{
       this["showWeek"] = showWeek;
       return this;
     }-*/;
 
-    public native final Boolean showWeek()
+    public native final boolean showWeek()
     /*-{
       return this["showWeek"];
     }-*/;
 
-    public native final Options stepMonths(Number stepMonths)
+    public native final Options stepMonths(int stepMonths)
     /*-{
       this["stepMonths"] = stepMonths;
       return this;
     }-*/;
 
-    public native final Number stepMonths()
+    public native final int stepMonths()
     /*-{
       return this["stepMonths"];
     }-*/;
