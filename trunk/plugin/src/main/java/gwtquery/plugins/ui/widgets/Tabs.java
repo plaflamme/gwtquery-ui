@@ -139,13 +139,13 @@ public class Tabs extends UiWidget<Tabs, Tabs.Options> {
       return this["panelTemplate"];
     }-*/;
 
-    public native final Options selected(Number selected)
+    public native final Options selected(int selected)
     /*-{
       this["selected"] = selected;
       return this;
     }-*/;
 
-    public native final Number selected()
+    public native final int selected()
     /*-{
       return this["selected"];
     }-*/;

@@ -62,6 +62,10 @@ public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions
     return getWidgetInstance();
   }
 
+  public O option() {
+    return invoke(ui, widgetType, "option").cast();
+  }
+
   /**
    * Binds a custom event to a callback function. This is used by jQuery-ui's event binding system.
    * 
