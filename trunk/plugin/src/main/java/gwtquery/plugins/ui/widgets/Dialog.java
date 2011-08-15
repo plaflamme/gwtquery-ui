@@ -101,13 +101,7 @@ public class Dialog extends UiWidget<Dialog, Dialog.Options> {
       return this;
     }-*/;
 
-    public native final Options height(float height)
-    /*-{
-      this["height"] = height;
-      return this;
-    }-*/;
-
-    public native final Number height()
+    public native final int height()
     /*-{
       return this["height"];
     }-*/;
@@ -129,13 +123,7 @@ public class Dialog extends UiWidget<Dialog, Dialog.Options> {
       return this;
     }-*/;
 
-    public native final Options maxHeight(float maxHeight)
-    /*-{
-      this["maxHeight"] = maxHeight;
-      return this;
-    }-*/;
-
-    public native final Number maxHeight()
+    public native final int maxHeight()
     /*-{
       return this["maxHeight"];
     }-*/;
@@ -146,13 +134,7 @@ public class Dialog extends UiWidget<Dialog, Dialog.Options> {
       return this;
     }-*/;
 
-    public native final Options maxWidth(float maxWidth)
-    /*-{
-      this["maxWidth"] = maxWidth;
-      return this;
-    }-*/;
-
-    public native final Number maxWidth()
+    public native final int maxWidth()
     /*-{
       return this["maxWidth"];
     }-*/;
@@ -163,13 +145,7 @@ public class Dialog extends UiWidget<Dialog, Dialog.Options> {
       return this;
     }-*/;
 
-    public native final Options minHeight(float minHeight)
-    /*-{
-      this["maxHeight"] = maxHeight;
-      return this;
-    }-*/;
-
-    public native final Number minHeight()
+    public native final int minHeight()
     /*-{
       return this["minHeight"];
     }-*/;
@@ -180,12 +156,7 @@ public class Dialog extends UiWidget<Dialog, Dialog.Options> {
       return this;
     }-*/;
 
-    public native final Options minWidth(float minWidth) /*-{
-                                                         this["minWidth"] = minWidth;
-                                                         return this;
-                                                         }-*/;
-
-    public native final Number minWidth()
+    public native final int minWidth()
     /*-{
       return this["minWidth"];
     }-*/;
@@ -268,13 +239,7 @@ public class Dialog extends UiWidget<Dialog, Dialog.Options> {
       return this;
     }-*/;
 
-    public native final Options width(float width)
-    /*-{
-      this["width"] = width;
-      return this;
-    }-*/;
-
-    public native final Number width()
+    public native final int width()
     /*-{
       return this["width"];
     }-*/;
