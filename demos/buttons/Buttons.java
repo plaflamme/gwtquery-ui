@@ -8,11 +8,11 @@ import com.google.gwt.query.client.Function;
 import com.google.gwt.user.client.Event;
 
 public class Buttons extends AbstractButtonDemo {
-  
+
   public Buttons() {
     super("Buttons");
   }
-  
+
   public String getName() {
     return "Default Functionality";
   }

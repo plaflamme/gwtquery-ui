@@ -2,7 +2,7 @@ function gwtquery_samples_GwtQueryUi(){
   var $wnd_0 = window, $doc_0 = document, $stats = $wnd_0.__gwtStatsEvent?function(a){
     return $wnd_0.__gwtStatsEvent(a);
   }
-  :null, $sessionId_0 = $wnd_0.__gwtStatsSessionId?$wnd_0.__gwtStatsSessionId:null, scriptsDone, loadDone, bodyDone, base = '', metaProps = {}, values = [], providers = [], answers = [], onLoadErrorFunc, propertyErrorFunc;
+  :null, $sessionId_0 = $wnd_0.__gwtStatsSessionId?$wnd_0.__gwtStatsSessionId:null, scriptsDone, loadDone, bodyDone, base = '', metaProps = {}, values = [], providers = [], answers = [], softPermutationId = 0, onLoadErrorFunc, propertyErrorFunc;
   $stats && $stats({moduleName:'gwtquery.samples.GwtQueryUi', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'bootstrap', millis:(new Date).getTime(), type:'begin'});
   if (!$wnd_0.__gwt_stylesLoaded) {
     $wnd_0.__gwt_stylesLoaded = {};
@@ -36,19 +36,12 @@ function gwtquery_samples_GwtQueryUi(){
         ;
       }
       gwtquery_samples_GwtQueryUi = null;
-      frameWnd.gwtOnLoad(onLoadErrorFunc, 'gwtquery.samples.GwtQueryUi', base);
+      frameWnd.gwtOnLoad(onLoadErrorFunc, 'gwtquery.samples.GwtQueryUi', base, softPermutationId);
       $stats && $stats({moduleName:'gwtquery.samples.GwtQueryUi', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'moduleStartup', millis:(new Date).getTime(), type:'end'});
     }
   }
 
   function computeScriptBase(){
-    var thisScript, markerId = '__gwt_marker_gwtquery.samples.GwtQueryUi', markerScript;
-    $doc_0.write('<script id="' + markerId + '"><\/script>');
-    markerScript = $doc_0.getElementById(markerId);
-    thisScript = markerScript && markerScript.previousSibling;
-    while (thisScript && thisScript.tagName != 'SCRIPT') {
-      thisScript = thisScript.previousSibling;
-    }
     function getDirectoryOfFile(path){
       var hashIndex = path.lastIndexOf('#');
       if (hashIndex == -1) {
@@ -62,75 +55,135 @@ function gwtquery_samples_GwtQueryUi(){
       return slashIndex >= 0?path.substring(0, slashIndex + 1):'';
     }
 
-    ;
-    if (thisScript && thisScript.src) {
-      base = getDirectoryOfFile(thisScript.src);
-    }
-    if (base == '') {
-      var baseElements = $doc_0.getElementsByTagName('base');
-      if (baseElements.length > 0) {
-        base = baseElements[baseElements.length - 1].href;
+    function ensureAbsoluteUrl(url){
+      if (url.match(/^\w+:\/\//)) {
       }
        else {
-        base = getDirectoryOfFile($doc_0.location.href);
+        var img = $doc_0.createElement('img');
+        img.src = url + 'clear.cache.gif';
+        url = getDirectoryOfFile(img.src);
       }
+      return url;
     }
-     else if (base.match(/^\w+:\/\//)) {
+
+    function tryMetaTag(){
+      var metaVal = __gwt_getMetaProperty('baseUrl');
+      if (metaVal != null) {
+        return metaVal;
+      }
+      return '';
     }
-     else {
-      var img = $doc_0.createElement('img');
-      img.src = base + 'clear.cache.gif';
-      base = getDirectoryOfFile(img.src);
+
+    function tryNocacheJsTag(){
+      var scriptTags = $doc_0.getElementsByTagName('script');
+      for (var i = 0; i < scriptTags.length; ++i) {
+        if (scriptTags[i].src.indexOf('gwtquery.samples.GwtQueryUi.nocache.js') != -1) {
+          return getDirectoryOfFile(scriptTags[i].src);
+        }
+      }
+      return '';
     }
-    if (markerScript) {
-      markerScript.parentNode.removeChild(markerScript);
+
+    function tryMarkerScript(){
+      var thisScript;
+      if (typeof isBodyLoaded == 'undefined' || !isBodyLoaded()) {
+        var markerId = '__gwt_marker_gwtquery.samples.GwtQueryUi';
+        var markerScript;
+        $doc_0.write('<script id="' + markerId + '"><\/script>');
+        markerScript = $doc_0.getElementById(markerId);
+        thisScript = markerScript && markerScript.previousSibling;
+        while (thisScript && thisScript.tagName != 'SCRIPT') {
+          thisScript = thisScript.previousSibling;
+        }
+        if (markerScript) {
+          markerScript.parentNode.removeChild(markerScript);
+        }
+        if (thisScript && thisScript.src) {
+          return getDirectoryOfFile(thisScript.src);
+        }
+      }
+      return '';
     }
+
+    function tryBaseTag(){
+      var baseElements = $doc_0.getElementsByTagName('base');
+      if (baseElements.length > 0) {
+        return baseElements[baseElements.length - 1].href;
+      }
+      return '';
+    }
+
+    var tempBase = tryMetaTag();
+    if (tempBase == '') {
+      tempBase = tryNocacheJsTag();
+    }
+    if (tempBase == '') {
+      tempBase = tryMarkerScript();
+    }
+    if (tempBase == '') {
+      tempBase = tryBaseTag();
+    }
+    if (tempBase == '') {
+      tempBase = getDirectoryOfFile($doc_0.location.href);
+    }
+    tempBase = ensureAbsoluteUrl(tempBase);
+    base = tempBase;
+    return tempBase;
   }
 
   function processMetas(){
     var metas = document.getElementsByTagName('meta');
     for (var i = 0, n = metas.length; i < n; ++i) {
-      var meta = metas[i], name_0 = meta.getAttribute('name'), content;
+      var meta = metas[i], name_0 = meta.getAttribute('name'), content_0;
       if (name_0) {
+        name_0 = name_0.replace('gwtquery.samples.GwtQueryUi::', '');
+        if (name_0.indexOf('::') >= 0) {
+          continue;
+        }
         if (name_0 == 'gwt:property') {
-          content = meta.getAttribute('content');
-          if (content) {
-            var value, eq = content.indexOf('=');
+          content_0 = meta.getAttribute('content');
+          if (content_0) {
+            var value, eq = content_0.indexOf('=');
             if (eq >= 0) {
-              name_0 = content.substring(0, eq);
-              value = content.substring(eq + 1);
+              name_0 = content_0.substring(0, eq);
+              value = content_0.substring(eq + 1);
             }
              else {
-              name_0 = content;
+              name_0 = content_0;
               value = '';
             }
             metaProps[name_0] = value;
           }
         }
          else if (name_0 == 'gwt:onPropertyErrorFn') {
-          content = meta.getAttribute('content');
-          if (content) {
+          content_0 = meta.getAttribute('content');
+          if (content_0) {
             try {
-              propertyErrorFunc = eval(content);
+              propertyErrorFunc = eval(content_0);
             }
              catch (e) {
-              alert('Bad handler "' + content + '" for "gwt:onPropertyErrorFn"');
+              alert('Bad handler "' + content_0 + '" for "gwt:onPropertyErrorFn"');
             }
           }
         }
          else if (name_0 == 'gwt:onLoadErrorFn') {
-          content = meta.getAttribute('content');
-          if (content) {
+          content_0 = meta.getAttribute('content');
+          if (content_0) {
             try {
-              onLoadErrorFunc = eval(content);
+              onLoadErrorFunc = eval(content_0);
             }
              catch (e) {
-              alert('Bad handler "' + content + '" for "gwt:onLoadErrorFn"');
+              alert('Bad handler "' + content_0 + '" for "gwt:onLoadErrorFn"');
             }
           }
         }
       }
     }
+  }
+
+  function __gwt_getMetaProperty(name_0){
+    var value = metaProps[name_0];
+    return value == null?null:value;
   }
 
   function unflattenKeylistIntoAnswers(propValArray, value){
@@ -171,15 +224,6 @@ function gwtquery_samples_GwtQueryUi(){
     }
   }
 
-  providers['selectorCapability'] = function(){
-    if ($doc_0.location.href.indexOf('_selector_force_js') != -1)
-      return 'js';
-    if ($doc_0.querySelectorAll && /native/.test(String($doc_0.querySelectorAll)))
-      return 'native';
-    return 'js';
-  }
-  ;
-  values['selectorCapability'] = {js:0, 'native':1};
   providers['user.agent'] = function(){
     var ua = navigator.userAgent.toLowerCase();
     var makeVersion = function(result){
@@ -207,17 +251,12 @@ function gwtquery_samples_GwtQueryUi(){
       }
     }
      else if (ua.indexOf('gecko') != -1) {
-      var result_0 = /rv:([0-9]+)\.([0-9]+)/.exec(ua);
-      if (result_0 && result_0.length == 3) {
-        if (makeVersion(result_0) >= 1008)
-          return 'gecko1_8';
-      }
-      return 'gecko';
+      return 'gecko1_8';
     }
     return 'unknown';
   }
   ;
-  values['user.agent'] = {gecko:0, gecko1_8:1, ie6:2, ie8:3, opera:4, safari:5};
+  values['user.agent'] = {gecko1_8:0, ie6:1, ie8:2, opera:3, safari:4};
   gwtquery_samples_GwtQueryUi.onScriptLoad = function(){
     if (frameInjected) {
       loadDone = true;
@@ -231,6 +270,7 @@ function gwtquery_samples_GwtQueryUi(){
     maybeStartModule();
   }
   ;
+  processMetas();
   computeScriptBase();
   var strongName;
   var initialHtml;
@@ -242,23 +282,20 @@ function gwtquery_samples_GwtQueryUi(){
     initialHtml = 'hosted.html?gwtquery_samples_GwtQueryUi';
     strongName = '';
   }
-  processMetas();
   $stats && $stats({moduleName:'gwtquery.samples.GwtQueryUi', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'bootstrap', millis:(new Date).getTime(), type:'selectingPermutation'});
   if (!isHostedMode()) {
     try {
-      unflattenKeylistIntoAnswers(['native', 'safari'], '0DA9A220AEFE1982D52A705D15C3C502');
-      unflattenKeylistIntoAnswers(['js', 'ie8'], '357A6DAD1B2900E59407263535121B18');
-      unflattenKeylistIntoAnswers(['js', 'ie6'], '48DF2D86EB36A46487741FF8DE07D24A');
-      unflattenKeylistIntoAnswers(['js', 'gecko'], '874BACB891CCBDAE2282BEF400137849');
-      unflattenKeylistIntoAnswers(['js', 'safari'], '8AD581711924E5436AB95484974792FA');
-      unflattenKeylistIntoAnswers(['native', 'gecko'], '8CF6243AA8C1E41CDD51DCC45C21E7EB');
-      unflattenKeylistIntoAnswers(['js', 'gecko1_8'], 'A237AB3B4A050F3783772DF5002AEF24');
-      unflattenKeylistIntoAnswers(['native', 'gecko1_8'], 'B95B72FAF4CB489D1AD455059181EB8F');
-      unflattenKeylistIntoAnswers(['js', 'opera'], 'CF7413AB5895ED9805C16A269009137A');
-      unflattenKeylistIntoAnswers(['native', 'ie8'], 'D16E830C7FCD9F77C296520D17B8E4AD');
-      unflattenKeylistIntoAnswers(['native', 'ie6'], 'DD146F2E0C25A890F4B141C740F64695');
-      unflattenKeylistIntoAnswers(['native', 'opera'], 'E551D02FC4834DCD194961319C9D76E6');
-      strongName = answers[computePropValue('selectorCapability')][computePropValue('user.agent')];
+      unflattenKeylistIntoAnswers(['gecko1_8'], '15035BB1385549605DD1B21D97A84200');
+      unflattenKeylistIntoAnswers(['safari'], '25E16F45BE0F51ACEF22E61A70642CE0');
+      unflattenKeylistIntoAnswers(['ie6'], '6338C66314E730CB55FD742EA3A73834');
+      unflattenKeylistIntoAnswers(['opera'], '6C5E7BDC759C2FDD14447D4CC75D1BE3');
+      unflattenKeylistIntoAnswers(['ie8'], 'B0872CA8012651A196717FCF7F143A3E');
+      strongName = answers[computePropValue('user.agent')];
+      var idx = strongName.indexOf(':');
+      if (idx != -1) {
+        softPermutationId = Number(strongName.substring(idx + 1));
+        strongName = strongName.substring(0, idx);
+      }
       initialHtml = strongName + '.cache.html';
     }
      catch (e) {

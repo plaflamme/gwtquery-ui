@@ -20,8 +20,9 @@ public class Sortable extends AbstractAccordionDemo {
   public void setupDemoElement(final Element demo) {
     // Mimics the closure's environment.
     final Stop stop = new Stop();
-    
-    // Note: the interaction between the sortable "stop" event and the accordion click event is currently not working. Not sure why. Maybe due to missing stopImmediatePropagation() (see below).
+
+    // Note: the interaction between the sortable "stop" event and the accordion click event is currently not working.
+    // Not sure why. Maybe due to missing stopImmediatePropagation() (see below).
 
     $("#accordion h3", demo).click(new Function() {
       @Override

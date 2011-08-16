@@ -7,6 +7,6 @@ import com.google.gwt.user.client.ui.HasWidgets;
 public class TabsSamples extends DemoPanel {
 
   public TabsSamples(HasWidgets demo) {
-    super("Tabs", demo, new Tabs(),new OpenOnMouseOver(), new Collapsible(), new Sortable(), new SimpleManipulation());
+    super("Tabs", demo, new Tabs(), new OpenOnMouseOver(), new Collapsible(), new Sortable(), new SimpleManipulation());
   }
 }

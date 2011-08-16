@@ -21,7 +21,7 @@ public class PreventPropagation extends AbstractDroppableDemo {
   public void setupDemoElement(Element demo) {
     $("#draggable").as(Ui).draggable();
 
-    // TODO: figure out why this is not behaving like it should. Seems like all #droppables 
+    // TODO: figure out why this is not behaving like it should. Seems like all #droppables
     // are receiving the drop event regardless of where the draggable is dropped
 
     $("#droppable, #droppable-inner").as(Ui).droppable("{activeClass:'ui-state-hover', hoverClass:'ui-state-active'}")//

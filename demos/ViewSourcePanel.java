@@ -32,15 +32,15 @@ public class ViewSourcePanel extends Composite {
     htmlSource.setText(html);
     fetchJava(demo);
   }
-  
+
   protected void fetchJava(Demo demo) {
     RequestBuilder rb = new RequestBuilder(RequestBuilder.GET, GWT.getModuleBaseURL() + demo.getJavaSource());
     rb.setCallback(new RequestCallback() {
-      
+
       public void onResponseReceived(Request request, Response response) {
         javaSource.setText(response.getText());
       }
-      
+
       public void onError(Request request, Throwable exception) {
       }
     });
