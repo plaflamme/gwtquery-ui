@@ -7,8 +7,10 @@ import gwtquery.plugins.ui.WidgetOptions;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArrayInteger;
+import com.google.gwt.core.client.JsArrayMixed;
 import com.google.gwt.core.client.JsArrayString;
 import com.google.gwt.core.client.JsDate;
+import com.google.gwt.dom.client.InputElement;
 import com.google.gwt.query.client.Function;
 
 /**
@@ -545,23 +547,90 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
     /*-{
       return this["yearSuffix"];
     }-*/;
+
+    public native final Options beforeShow(DatepickerCallbacks callback)
+    /*-{
+      this['beforeShow'] = function(input, instance) {
+        return callback.@gwtquery.plugins.ui.widgets.Datepicker.DatepickerCallbacks::beforeShow(Lcom/google/gwt/dom/client/InputElement;Lcom/google/gwt/core/client/JavaScriptObject;)(input, instance);
+      };
+      return this;
+    }-*/;
+
+    public native final Options beforeShowDay(DatepickerCallbacks callback)
+    /*-{
+      this['beforeShowDay'] = function(date) {
+        return callback.@gwtquery.plugins.ui.widgets.Datepicker.DatepickerCallbacks::beforeShowDay(Lcom/google/gwt/core/client/JsDate;)(date);
+      };
+      return this;
+    }-*/;
+
+    public native final Options onChangeMonthYear(DatepickerCallbacks callback)
+    /*-{
+      this['onChangeMonthYear'] = function(year, month, ui) {
+        return callback.@gwtquery.plugins.ui.widgets.Datepicker.DatepickerCallbacks::onChangeMonthYear(IILcom/google/gwt/core/client/JavaScriptObject;)(year, month, ui);
+      };
+      return this;
+    }-*/;
+
+    public native final Options onClose(DatepickerCallbacks callback)
+    /*-{
+      this['onClose'] = function(date, ui) {
+        return callback.@gwtquery.plugins.ui.widgets.Datepicker.DatepickerCallbacks::onClose(Ljava/lang/String;Lcom/google/gwt/core/client/JavaScriptObject;)(date, ui);
+      };
+      return this;
+    }-*/;
+
+    public native final Options onSelect(DatepickerCallbacks callback)
+    /*-{
+      this['onSelect'] = function(date, ui) {
+        return callback.@gwtquery.plugins.ui.widgets.Datepicker.DatepickerCallbacks::onSelect(Ljava/lang/String;Lcom/google/gwt/core/client/JavaScriptObject;)(date, ui);
+      };
+      return this;
+    }-*/;
+
   }
 
   public static class Event extends JavaScriptObject {
 
-    public static final String beforeShow = "beforeShow";
-
-    public static final String beforeShowDay = "beforeShowDay";
-
-    public static final String onChangeMonthYear = "onChangeMonthYear";
-
-    public static final String onClose = "onClose";
-
-    public static final String onSelect = "onSelect";
+    public static final String create = "datepickercreate";
 
     protected Event() {
     }
 
+  }
+
+  public static class DatepickerCallbacks {
+
+    public Options beforeShow(InputElement input, JavaScriptObject ui) {
+      return Options.create();
+    }
+
+    /**
+     * The function takes a date as a parameter and must return an array with [0] equal to true/false indicating whether
+     * or not this date is selectable, [1] equal to a CSS class name(s) or '' for the default presentation, and [2] an
+     * optional popup tooltip for this date. It is called for each day in the datepicker before it is displayed.
+     * 
+     * @param date the date being displayed
+     * @return an array
+     */
+    public JsArrayMixed beforeShowDay(JsDate date) {
+      JsArrayMixed mixed = JsArrayMixed.createArray().cast();
+      mixed.push(true);
+      mixed.push("");
+      return mixed;
+    }
+
+    public void onChangeMonthYear(int year, int month, JavaScriptObject ui) {
+
+    }
+
+    public void onClose(String dateStr, JavaScriptObject ui) {
+
+    }
+
+    public void onSelect(String dateStr, JavaScriptObject ui) {
+
+    }
   }
 
   /**
