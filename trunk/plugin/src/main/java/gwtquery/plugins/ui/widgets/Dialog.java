@@ -338,4 +338,8 @@ public class Dialog extends UiWidget<Dialog, Dialog.Options> {
     return this;
   }
 
+  public boolean isOpen() {
+    return invokeForBoolean("isOpen");
+  }
+
 }

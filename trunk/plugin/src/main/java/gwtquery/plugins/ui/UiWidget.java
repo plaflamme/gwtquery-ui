@@ -17,7 +17,7 @@ public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions
 
   protected final String widgetType;
 
-  protected JavaScriptObject ui = null;
+  protected final JavaScriptObject ui;
 
   /**
    * Constructor for building a jQuery-UI widget.
@@ -29,7 +29,7 @@ public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions
   protected UiWidget(Ui nodeList, String widgetType, O options) {
     super(nodeList);
     this.widgetType = widgetType;
-    ui = initUiWidget(widgetType, nodeList.get(), options);
+    this.ui = initUiWidget(widgetType, nodeList.get(), options);
   }
 
   public T destroy() {
@@ -82,24 +82,32 @@ public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions
     return this;
   }-*/;
 
-  protected void invoke(String method) {
-    ui = invoke(ui, widgetType, method);
+  protected JavaScriptObject invoke(String method) {
+    return invoke(ui, widgetType, method);
   }
 
-  protected void invoke(String method, Object arg) {
-    ui = invoke(ui, widgetType, method, arg);
+  protected int invokeForInt(String method) {
+    return invokeForInt(ui, widgetType, method);
   }
 
-  protected void invoke(String method, int arg) {
-    ui = invoke(ui, widgetType, method, arg);
+  protected boolean invokeForBoolean(String method) {
+    return invokeForBoolean(ui, widgetType, method);
   }
 
-  protected void invoke(String method, boolean arg) {
-    ui = invoke(ui, widgetType, method, arg);
+  protected JavaScriptObject invoke(String method, Object arg) {
+    return invoke(ui, widgetType, method, arg);
   }
 
-  protected void invoke(String method, String option, Object value) {
-    invoke(ui, widgetType, method, option, value);
+  protected JavaScriptObject invoke(String method, int arg) {
+    return invoke(ui, widgetType, method, arg);
+  }
+
+  protected JavaScriptObject invoke(String method, boolean arg) {
+    return invoke(ui, widgetType, method, arg);
+  }
+
+  protected JavaScriptObject invoke(String method, String option, Object value) {
+    return invoke(ui, widgetType, method, option, value);
   }
 
   protected native final T getWidgetInstance()
@@ -108,6 +116,11 @@ public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions
   }-*/;
 
   protected native final int invokeForInt(JavaScriptObject ui, String type, String method)
+  /*-{
+    return ui[type](method);
+  }-*/;
+
+  protected native final boolean invokeForBoolean(JavaScriptObject ui, String type, String method)
   /*-{
     return ui[type](method);
   }-*/;

@@ -616,8 +616,7 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
   }
 
   public JsDate getDate() {
-    invoke("getDate");
-    return null;
+    return invoke("getDate").cast();
   }
 
   public Datepicker setDate(JsDate date) {

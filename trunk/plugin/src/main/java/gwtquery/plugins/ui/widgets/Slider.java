@@ -219,7 +219,7 @@ public class Slider extends UiWidget<Slider, Slider.Options> {
   }
 
   public Slider values(int index, JsArrayNumber values) {
-    ui = invoke(ui, widgetType, "values", index, values);
+    invoke(ui, widgetType, "values", index, values);
     return this;
   }
 
