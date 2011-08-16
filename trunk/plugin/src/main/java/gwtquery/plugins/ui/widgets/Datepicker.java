@@ -665,8 +665,7 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
   }
 
   public boolean isDisabled() {
-    // TODO: implement for other arguments
-    throw new UnsupportedOperationException();
+    return invokeForBoolean("isDisabled");
   }
 
   public Datepicker hide() {
