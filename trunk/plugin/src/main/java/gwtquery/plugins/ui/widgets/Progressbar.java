@@ -59,11 +59,6 @@ public class Progressbar extends UiWidget<Progressbar, Progressbar.Options> {
     super(ui, "progressbar", options);
   }
 
-  public native final Number value()
-  /*-{
-    return this.@gwtquery.plugins.ui.UiWidget::ui["progressbar"]("value");
-  }-*/;
-
   public Progressbar value(int value) {
     invoke("value", value);
     return this;
@@ -72,5 +67,13 @@ public class Progressbar extends UiWidget<Progressbar, Progressbar.Options> {
   public Progressbar value(float value) {
     invoke("value", value);
     return this;
+  }
+
+  public int intValue() {
+    return invokeForInt("value");
+  }
+
+  public float floatValue() {
+    return invokeForFloat("value");
   }
 }

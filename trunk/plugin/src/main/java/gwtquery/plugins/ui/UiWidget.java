@@ -90,8 +90,20 @@ public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions
     return invokeForInt(ui, widgetType, method);
   }
 
+  protected int invokeForInt(String method, int index) {
+    return invokeForInt(ui, widgetType, method, index);
+  }
+
   protected boolean invokeForBoolean(String method) {
     return invokeForBoolean(ui, widgetType, method);
+  }
+
+  protected float invokeForFloat(String method) {
+    return invokeForFloat(ui, widgetType, method);
+  }
+
+  protected float invokeForFloat(String method, int index) {
+    return invokeForFloat(ui, widgetType, method, index);
   }
 
   protected JavaScriptObject invoke(String method, Object arg) {
@@ -100,6 +112,10 @@ public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions
 
   protected JavaScriptObject invoke(String method, int arg) {
     return invoke(ui, widgetType, method, arg);
+  }
+
+  protected JavaScriptObject invoke(String method, int arg, Object arg2) {
+    return invoke(ui, widgetType, method, arg, arg2);
   }
 
   protected JavaScriptObject invoke(String method, boolean arg) {
@@ -120,9 +136,24 @@ public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions
     return ui[type](method);
   }-*/;
 
+  protected native final int invokeForInt(JavaScriptObject ui, String type, String method, int arg)
+  /*-{
+    return ui[type](method, arg);
+  }-*/;
+
   protected native final boolean invokeForBoolean(JavaScriptObject ui, String type, String method)
   /*-{
     return ui[type](method);
+  }-*/;
+
+  protected native final float invokeForFloat(JavaScriptObject ui, String type, String method)
+  /*-{
+    return ui[type](method);
+  }-*/;
+
+  protected native final float invokeForFloat(JavaScriptObject ui, String type, String method, int arg)
+  /*-{
+    return ui[type](method, arg);
   }-*/;
 
   private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method)

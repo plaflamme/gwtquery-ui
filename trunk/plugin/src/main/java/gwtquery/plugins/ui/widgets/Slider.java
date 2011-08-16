@@ -167,7 +167,7 @@ public class Slider extends UiWidget<Slider, Slider.Options> {
     protected Event() {
     }
 
-    public native final Number value()
+    public native final float floatValue()
     /*-{
       return this["value"];
     }-*/;
@@ -205,31 +205,34 @@ public class Slider extends UiWidget<Slider, Slider.Options> {
     super(ui, "slider", options);
   }
 
-  public Slider value(Number value) {
+  public Slider value(int value) {
     invoke("value", value);
     return this;
   }
 
-  public int intValue() {
-    return invokeForInt(ui, widgetType, "value");
-  }
-
-  public int intValues(int index) {
-    return invoke(ui, widgetType, "values", index);
-  }
-
-  public Slider values(int index, JsArrayNumber values) {
-    invoke(ui, widgetType, "values", index, values);
+  public Slider value(float value) {
+    invoke("value", value);
     return this;
   }
 
-  private native final int invoke(JavaScriptObject ui, String type, String method, int index)
-  /*-{
-    return ui[type](method, index);
-  }-*/;
+  public Slider values(int index, JsArrayNumber values) {
+    invoke("values", index, values);
+    return this;
+  }
 
-  private native final JavaScriptObject invoke(JavaScriptObject ui, String type, String method, int index, Object args)
-  /*-{
-    return ui[type](method, index, args);
-  }-*/;
+  public int intValue() {
+    return invokeForInt("value");
+  }
+
+  public float floatValue() {
+    return invokeForFloat("value");
+  }
+
+  public int intValues(int index) {
+    return invokeForInt("values", index);
+  }
+
+  public float floatValues(int index) {
+    return invokeForFloat("values", index);
+  }
 }

@@ -66,7 +66,7 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
       return this["appendText"];
     }-*/;
 
-    public native final Options autoSize(Boolean autoSize)
+    public native final Options autoSize(boolean autoSize)
     /*-{
       this["autoSize"] = autoSize;
       return this;
