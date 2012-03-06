@@ -649,6 +649,27 @@ public class Datepicker extends UiWidget<Datepicker, Datepicker.Options> {
     registerPlugin(Datepicker.class, new DatepickerPlugin());
   }
 
+  // Utility functions
+  public static final native void setDefaults(Options options)
+  /*-{
+    $wnd.jQuery.datepicker.seDefaults(options);
+  }-*/;
+
+  public static final native JsDate parseDate(String format, String value, String settings)
+  /*-{
+    return $wnd.jQuery.datepicker.parseDate(format, value, settings);
+  }-*/;
+
+  public static final native String formatDate(String format, JsDate date, String settings)
+  /*-{
+    return $wnd.jQuery.datepicker.formatDate(format, date, settings);
+  }-*/;
+
+  public static final native int iso8601Week(JsDate date)
+  /*-{
+    return $wnd.jQuery.datepicker.iso8601Week(date);
+  }-*/;
+
   public Datepicker(Ui ui, Datepicker.Options options) {
     super(ui, "datepicker", options);
   }
