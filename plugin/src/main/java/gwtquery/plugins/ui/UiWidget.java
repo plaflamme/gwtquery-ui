@@ -77,7 +77,7 @@ public abstract class UiWidget<T extends UiWidget<?, ?>, O extends WidgetOptions
   public native final T bind(String name, Function f)
   /*-{
     this.@gwtquery.plugins.ui.UiWidget::ui = this.@gwtquery.plugins.ui.UiWidget::ui.bind(name, function(event, ui) {
-      f.@com.google.gwt.query.client.Function::f(Lcom/google/gwt/user/client/Event;Ljava/lang/Object;)(event, ui);
+      f.@com.google.gwt.query.client.Function::f(Lcom/google/gwt/user/client/Event;[Ljava/lang/Object;)(event, [ui]);
     });
     return this;
   }-*/;
